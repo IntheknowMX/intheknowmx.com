@@ -136,7 +136,7 @@ export default function Home() {
         </div>
         <div style={{ flex: 1, minWidth: '280px', textAlign: 'center' }}>
           <img
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600"
+            src="/images/headshot.jpg"
             alt="Lisa May Cobham — Relocation Specialist, In The Know Mexico"
             style={{ width: '100%', maxWidth: '420px', borderRadius: '8px', objectFit: 'cover' }}
           />
@@ -431,7 +431,7 @@ export default function Home() {
             </div>
             <div style={{ flex: 1, minWidth: '280px' }}>
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600"
+                src="/images/home-care.jpg"
                 alt="Beautiful home in San Miguel de Allende"
                 style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }}
               />

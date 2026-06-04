@@ -40,72 +40,19 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section style={{
-        backgroundColor: '#7D3B4E',
-        padding: '110px 40px',
-        textAlign: 'center',
-        backgroundImage: 'linear-gradient(rgba(125,59,78,0.85), rgba(125,59,78,0.85)), url(https://images.unsplash.com/photo-1518638150340-f706e86654de?w=1600)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-        <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '5px', marginBottom: '20px', fontWeight: '600' }}>
-          SAN MIGUEL DE ALLENDE · MEXICO
-        </p>
-        <h1 style={{
-          color: 'white',
-          fontSize: '56px',
-          lineHeight: '1.15',
-          maxWidth: '820px',
-          margin: '0 auto 24px',
-          fontWeight: 'normal',
-          fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)"
-        }}>
-          The Mexico newcomer's guide<br />
-          <span style={{ color: '#E8C47A' }}>to getting it right from day one.</span>
-        </h1>
-        <p style={{
-          color: '#F5E0E6',
-          fontSize: '19px',
-          maxWidth: '640px',
-          margin: '0 auto 16px',
-          lineHeight: '1.75'
-        }}>
-          Relocation support, rental property showings, home care, and on-the-ground expertise
-          for newcomers moving to — and thriving in — Mexico.
-        </p>
-        <p style={{
-          color: '#E8A598',
-          fontSize: '14px',
-          maxWidth: '500px',
-          margin: '0 auto 44px',
-          lineHeight: '1.6',
-          fontStyle: 'italic'
-        }}>
-          Lisa May Cobham · Relocation Specialist · San Miguel de Allende
-        </p>
-        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-            backgroundColor: '#C4622D',
-            color: 'white',
-            padding: '18px 40px',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            fontSize: '16px',
-            fontWeight: '700',
-            letterSpacing: '0.5px'
-          }}>✦ Book Your Consultation</a>
-          <a href="#services" style={{
-            backgroundColor: 'transparent',
-            color: 'white',
-            padding: '18px 36px',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            fontSize: '16px',
-            border: '1px solid rgba(255,255,255,0.5)'
-          }}>See How I Help</a>
+      <section style={{ display: "flex", minHeight: "92vh", flexWrap: "wrap" }}>
+        <div style={{ flex: "0 0 45%", minWidth: "320px", backgroundColor: "#FDF6F0", padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <p style={{ color: "#C97B8A", fontSize: "11px", letterSpacing: "5px", marginBottom: "28px", fontWeight: "700" }}>SAN MIGUEL DE ALLENDE · MEXICO</p>
+          <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>The Mexico<br />newcomer<br /><span style={{ color: "#C97B8A" }}>insider.</span></h1>
+          <div style={{ width: "48px", height: "2px", backgroundColor: "#D4A017", marginBottom: "28px" }} />
+          <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rental property showings, home care, and on-the-ground expertise for newcomers moving to Mexico.</p>
+          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: "#C4622D", color: "white", padding: "16px 36px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Book Your Consultation</a>
+            <a href="#services" style={{ backgroundColor: "transparent", color: "#2C1810", padding: "16px 28px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", border: "1px solid #2C1810" }}>See How I Help</a>
+          </div>
         </div>
+        <div style={{ flex: "1 1 55%", minWidth: "320px", minHeight: "500px", backgroundImage: "url(/images/hero.jpg)", backgroundSize: "cover", backgroundPosition: "center top" }} />
       </section>
-
       {/* Stats Bar */}
       <section style={{
         backgroundColor: '#2C1810',

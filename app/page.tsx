@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export default function Home() {
   return (
     <main style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>

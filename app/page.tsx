@@ -43,7 +43,7 @@ export default function Home() {
       <section style={{ display: "flex", minHeight: "92vh", flexWrap: "wrap" }}>
         <div style={{ flex: "0 0 45%", minWidth: "320px", backgroundColor: "#FDF6F0", padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <p style={{ color: "#C97B8A", fontSize: "11px", letterSpacing: "5px", marginBottom: "28px", fontWeight: "700" }}>SAN MIGUEL DE ALLENDE · MEXICO</p>
-          <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>The Mexico<br />newcomer<br /><span style={{ color: "#C97B8A" }}>insider.</span></h1>
+          <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>San Miguel<br /><span style={{ color: "#7D3B4E" }}>Insider.</span></h1><p style={{ color: "#C97B8A", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Helping Mexico Newcomers since 2015.</p>
           <div style={{ width: "48px", height: "2px", backgroundColor: "#D4A017", marginBottom: "28px" }} />
           <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rental property showings, home care, and on-the-ground expertise for newcomers moving to Mexico.</p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>

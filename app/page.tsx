@@ -15,7 +15,7 @@ export default function Home() {
         top: 0,
         zIndex: 100
       }}>
-        <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#C97B8A', letterSpacing: '2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+        <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#7D3B4E', letterSpacing: '2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
           IN THE KNOW MEXICO
         </div>
         <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
@@ -42,8 +42,8 @@ export default function Home() {
       {/* Hero */}
       <section style={{ display: "flex", minHeight: "92vh", flexWrap: "wrap" }}>
         <div style={{ flex: "0 0 45%", minWidth: "320px", backgroundColor: "#FDF6F0", padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-          <p style={{ color: "#C97B8A", fontSize: "11px", letterSpacing: "5px", marginBottom: "28px", fontWeight: "700" }}>SAN MIGUEL DE ALLENDE · MEXICO</p>
-          <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>San Miguel<br /><span style={{ color: "#7D3B4E" }}>Insider.</span></h1><p style={{ color: "#C97B8A", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Helping Mexico Newcomers since 2015.</p>
+          <p style={{ color: "#7D3B4E", fontSize: "11px", letterSpacing: "5px", marginBottom: "28px", fontWeight: "700" }}>SAN MIGUEL DE ALLENDE · MEXICO</p>
+          <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>San Miguel<br /><span style={{ color: "#7D3B4E" }}>Insider.</span></h1><p style={{ color: "#7D3B4E", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Helping Mexico Newcomers since 2015.</p>
           <div style={{ width: "48px", height: "2px", backgroundColor: "#D4A017", marginBottom: "28px" }} />
           <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rental property showings, home care, and on-the-ground expertise for newcomers moving to Mexico.</p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
@@ -104,7 +104,7 @@ export default function Home() {
       {/* About */}
       <section id="about" style={{ padding: '90px 40px', maxWidth: '1100px', margin: '0 auto', display: 'flex', gap: '70px', alignItems: 'center', flexWrap: 'wrap' }}>
         <div style={{ flex: 1, minWidth: '300px' }}>
-          <p style={{ color: '#C97B8A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>ABOUT ME</p>
+          <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>ABOUT ME</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', lineHeight: '1.2', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
             The insider every<br />Mexico newcomer needs.
           </h2>
@@ -140,7 +140,7 @@ export default function Home() {
             alt="Lisa May Cobham — Relocation Specialist, In The Know Mexico"
             style={{ width: '100%', maxWidth: '420px', borderRadius: '8px', objectFit: 'cover' }}
           />
-          <p style={{ fontSize: '13px', color: '#C97B8A', marginTop: '12px', letterSpacing: '1px' }}>
+          <p style={{ fontSize: '13px', color: '#7D3B4E', marginTop: '12px', letterSpacing: '1px' }}>
             📍 San Miguel de Allende, Mexico
           </p>
         </div>
@@ -240,7 +240,7 @@ export default function Home() {
       {/* Rentals Section */}
       <section id="rentals" style={{ backgroundColor: '#FDF6F0', padding: '90px 40px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <p style={{ color: '#C97B8A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>RENTAL PROPERTIES</p>
+          <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>RENTAL PROPERTIES</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '20px', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
             Find Your Home in San Miguel —<br />with a Personal Agent at Your Side
           </h2>
@@ -282,7 +282,7 @@ export default function Home() {
 
             <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '1px solid #E8A598' }}>
               <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Essential Day</h4>
-              <p style={{ fontSize: '13px', color: '#C97B8A', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL AGENT · FULL DAY</p>
+              <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL AGENT · FULL DAY</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '20px' }}>
                 <li>Pre-curated property list based on your needs</li>
                 <li>Personal escort to all showings</li>
@@ -300,7 +300,7 @@ export default function Home() {
             <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '2px solid #C4622D' }}>
               <p style={{ fontSize: '11px', backgroundColor: '#C4622D', color: 'white', display: 'inline-block', padding: '4px 12px', borderRadius: '20px', marginBottom: '12px', fontWeight: '600', letterSpacing: '1px' }}>MOST POPULAR</p>
               <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Full Experience Day</h4>
-              <p style={{ fontSize: '13px', color: '#C97B8A', marginBottom: '16px', letterSpacing: '1px' }}>WITH PRIVATE DRIVER + ROOFTOP DEBRIEF</p>
+              <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>WITH PRIVATE DRIVER + ROOFTOP DEBRIEF</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '20px' }}>
                 <li>Everything in Essential Day</li>
                 <li>Private driver for the full day — no logistics stress</li>
@@ -332,7 +332,7 @@ export default function Home() {
 
           {/* MLS Link */}
           <div style={{ textAlign: 'center', padding: '40px', backgroundColor: '#FAE8E0', borderRadius: '8px' }}>
-            <p style={{ fontSize: '13px', color: '#C97B8A', letterSpacing: '3px', marginBottom: '12px', fontWeight: '600' }}>BROWSE AVAILABLE RENTALS</p>
+            <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '3px', marginBottom: '12px', fontWeight: '600' }}>BROWSE AVAILABLE RENTALS</p>
             <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px' }}>
               View San Miguel Rental Listings
             </h3>
@@ -382,11 +382,11 @@ export default function Home() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{ display: 'flex', gap: '70px', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{ flex: 1, minWidth: '300px' }}>
-              <p style={{ color: '#C97B8A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>HOME & LIFE CARE</p>
+              <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>HOME & LIFE CARE</p>
               <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '8px', color: '#2C1810', lineHeight: '1.2', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
                 Your Mexico Life, Maintained.
               </h2>
-              <p style={{ fontSize: '17px', color: '#C97B8A', marginBottom: '28px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+              <p style={{ fontSize: '17px', color: '#7D3B4E', marginBottom: '28px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
                 Home, pets, and everything in between — while you're away.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
@@ -497,7 +497,7 @@ export default function Home() {
       {/* Testimonials */}
       <section id="testimonials" style={{ padding: '90px 40px', backgroundColor: '#FDF6F0' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <p style={{ color: '#C97B8A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT CLIENTS SAY</p>
+          <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT CLIENTS SAY</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '60px', textAlign: 'center', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
             Trusted by Mexico Newcomers
           </h2>
@@ -534,7 +534,7 @@ export default function Home() {
                   "{t.quote}"
                 </p>
                 <div style={{ color: '#7D3B4E', fontWeight: 'bold', fontSize: '15px' }}>{t.name}</div>
-                <div style={{ color: '#C97B8A', fontSize: '13px', marginTop: '4px' }}>{t.title}</div>
+                <div style={{ color: '#7D3B4E', fontSize: '13px', marginTop: '4px' }}>{t.title}</div>
               </div>
             ))}
           </div>
@@ -576,7 +576,7 @@ export default function Home() {
         <p style={{ color: '#E8A598', fontSize: '14px', marginBottom: '8px' }}>
           © 2026 In The Know Mexico · Lisa May Cobham, Relocation Specialist · San Miguel de Allende, México
         </p>
-        <p style={{ color: '#C97B8A', fontSize: '13px' }}>
+        <p style={{ color: '#7D3B4E', fontSize: '13px' }}>
           In partnership with <a href="https://sanmiguelrealestate.com.mx" target="_blank" style={{ color: '#E8A598' }}>Tiffany Paige, The Agency SMA</a>
         </p>
       </footer>

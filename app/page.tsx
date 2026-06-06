@@ -45,8 +45,10 @@ export default function Home() {
         position: "relative",
         minHeight: "100vh",
         backgroundImage: "url('/images/hero.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center 30%",
+        backgroundSize: "contain",
+        backgroundPosition: "right center",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "#FDF6F0",
         display: "flex",
         alignItems: "center",
       }}>

@@ -64,7 +64,7 @@ export default function Home() {
         {/* Right — full uncropped photo */}
         <div style={{ flex: "0 0 58%", backgroundColor: "#FDF6F0", overflow: "hidden" }}>
           <img
-            src="/images/hero.jpg"
+            src="/images/herocropped.jpg"
             alt="San Miguel de Allende"
             style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
           />

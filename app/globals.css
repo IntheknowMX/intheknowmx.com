@@ -25,3 +25,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.press-card {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.press-card:hover {
+  transform: translateY(-4px);
+  opacity: 0.88;
+}

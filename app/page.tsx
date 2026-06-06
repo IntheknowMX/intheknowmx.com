@@ -75,6 +75,32 @@ export default function Home() {
         ))}
       </section>
 
+      {/* Press / Media */}
+      <section style={{ backgroundColor: '#2C1810', padding: '70px 40px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', marginBottom: '16px', textAlign: 'center', fontWeight: '700' }}>AS SEEN &amp; HEARD</p>
+          <h2 style={{ fontSize: '36px', fontWeight: 'normal', marginBottom: '48px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+            Lisa May Cobham in the Media
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px' }}>
+            {[
+              { img: '/images/press-business-insider.webp', label: 'Business Insider', href: 'https://www.businessinsider.com/how-to-be-an-expat-digital-nomad-living-abroad-2016-10' },
+              { img: '/images/press-american-real.png', label: 'American Real', href: 'https://youtu.be/F7Nowbi5Am8' },
+              { img: '/images/press-london-real.png', label: 'London Real · Real Talk', href: 'https://youtu.be/xKV6V0BRjvk' },
+              { img: '/images/press-quiet-broad.png', label: 'A Quiet Broad Abroad', href: 'https://www.youtube.com/live/YY3Jkjbcbeg' },
+              { img: '/images/press-over50.png', label: 'Over 50 Expat Interview', href: 'https://www.youtube.com/live/YY3Jkjbcbeg' },
+            ].map((item) => (
+              <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" className="press-card" style={{ display: 'block', borderRadius: '6px', overflow: 'hidden', textDecoration: 'none', backgroundColor: '#1A0E09' }}>
+                <img src={item.img} alt={item.label} style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', display: 'block' }} />
+                <div style={{ padding: '14px 16px', textAlign: 'center' }}>
+                  <span style={{ color: '#FDF6F0', fontSize: '13px', letterSpacing: '0.5px' }}>{item.label}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Book CTA Band */}
       <section style={{
         backgroundColor: '#C4622D',

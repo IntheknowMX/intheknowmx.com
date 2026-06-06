@@ -41,10 +41,36 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section style={{ display: "flex", minHeight: "92vh", flexWrap: "wrap" }}>
-        <div style={{ flex: "0 0 45%", minWidth: "320px", backgroundColor: "#FDF6F0", padding: "80px 60px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+      <section style={{
+        position: "relative",
+        minHeight: "100vh",
+        backgroundImage: "url('/images/hero.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center top",
+        display: "flex",
+        alignItems: "center",
+      }}>
+        {/* Bottom-only dark gradient overlay */}
+        <div style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3) 100%)",
+          pointerEvents: "none",
+        }} />
+        {/* Text panel — left side, semi-transparent cream */}
+        <div style={{
+          position: "relative",
+          zIndex: 1,
+          backgroundColor: "rgba(253,246,240,0.88)",
+          backdropFilter: "blur(2px)",
+          padding: "64px 56px",
+          maxWidth: "520px",
+          marginLeft: "60px",
+          borderRadius: "4px",
+        }}>
           <p style={{ color: "#7D3B4E", fontSize: "11px", letterSpacing: "5px", marginBottom: "28px", fontWeight: "700" }}>SAN MIGUEL DE ALLENDE · MEXICO</p>
-          <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>San Miguel<br /><span style={{ color: "#7D3B4E" }}>Insider.</span></h1><p style={{ color: "#7D3B4E", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Helping Mexico Newcomers since 2015.</p>
+          <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>San Miguel<br /><span style={{ color: "#7D3B4E" }}>Insider.</span></h1>
+          <p style={{ color: "#7D3B4E", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Helping Mexico Newcomers since 2015.</p>
           <div style={{ width: "48px", height: "2px", backgroundColor: "#D4A017", marginBottom: "28px" }} />
           <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rental property showings, home care, and on-the-ground expertise for newcomers moving to Mexico.</p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
@@ -52,7 +78,6 @@ export default function Home() {
             <a href="#services" style={{ backgroundColor: "transparent", color: "#2C1810", padding: "16px 28px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", border: "1px solid #2C1810" }}>See How I Help</a>
           </div>
         </div>
-        <div style={{ flex: "1 1 55%", minWidth: "320px", minHeight: "500px", backgroundImage: "url('/images/hero.jpg')", backgroundSize: "contain", backgroundPosition: "center center", backgroundColor: "#FDF6F0" }} />
       </section>
       {/* Stats Bar */}
       <section style={{

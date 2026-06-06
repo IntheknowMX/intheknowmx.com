@@ -36,12 +36,12 @@ export default function Home() {
             fontSize: '14px',
             fontWeight: '600',
             letterSpacing: '0.5px'
-          }}>Book a Call</a>
+          }}>Strategy Session</a>
         </div>
       </nav>
 
       {/* Hero */}
-      <section style={{ display: "flex", minHeight: "90vh" }}>
+      <section style={{ display: "flex", minHeight: "90vh", alignItems: "stretch" }}>
         {/* Left — text panel */}
         <div style={{
           flex: "0 0 42%",
@@ -53,9 +53,9 @@ export default function Home() {
         }}>
           <p style={{ color: "#7D3B4E", fontSize: "11px", letterSpacing: "5px", marginBottom: "28px", fontWeight: "700" }}>SAN MIGUEL DE ALLENDE · MEXICO</p>
           <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>San Miguel<br /><span style={{ color: "#7D3B4E" }}>Insider.</span></h1>
-          <p style={{ color: "#7D3B4E", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Helping Mexico Newcomers since 2015.</p>
+          <p style={{ color: "#2C1810", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Helping Mexico Newcomers since 2015.</p>
           <div style={{ width: "48px", height: "2px", backgroundColor: "#D4A017", marginBottom: "28px" }} />
-          <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rental property showings, home care — your boots on the ground in Mexico since 2015.</p>
+          <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rental property showings, home care, and on-the-ground presence — your person in Mexico since 2015.</p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: "#C4622D", color: "white", padding: "16px 36px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Book a Strategy Session</a>
             <a href="#services" style={{ backgroundColor: "transparent", color: "#2C1810", padding: "16px 28px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", border: "1px solid #2C1810" }}>See How I Help</a>

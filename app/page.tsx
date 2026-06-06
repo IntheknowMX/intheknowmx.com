@@ -41,33 +41,15 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section style={{
-        position: "relative",
-        minHeight: "100vh",
-        backgroundImage: "url('/images/hero.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center 15%",
-        backgroundRepeat: "no-repeat",
-        display: "flex",
-        alignItems: "center",
-      }}>
-        {/* Bottom-only dark gradient overlay */}
+      <section style={{ display: "flex", minHeight: "90vh" }}>
+        {/* Left — text panel */}
         <div style={{
-          position: "absolute",
-          inset: 0,
-          background: "linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3) 100%)",
-          pointerEvents: "none",
-        }} />
-        {/* Text panel — left side, semi-transparent cream */}
-        <div style={{
-          position: "relative",
-          zIndex: 1,
-          backgroundColor: "rgba(253,246,240,0.88)",
-          backdropFilter: "blur(2px)",
-          padding: "64px 56px",
-          maxWidth: "520px",
-          marginLeft: "60px",
-          borderRadius: "4px",
+          flex: "0 0 42%",
+          backgroundColor: "#FDF6F0",
+          padding: "80px 60px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
         }}>
           <p style={{ color: "#7D3B4E", fontSize: "11px", letterSpacing: "5px", marginBottom: "28px", fontWeight: "700" }}>SAN MIGUEL DE ALLENDE · MEXICO</p>
           <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>San Miguel<br /><span style={{ color: "#7D3B4E" }}>Insider.</span></h1>
@@ -78,6 +60,14 @@ export default function Home() {
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: "#C4622D", color: "white", padding: "16px 36px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Book a Strategy Session</a>
             <a href="#services" style={{ backgroundColor: "transparent", color: "#2C1810", padding: "16px 28px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", border: "1px solid #2C1810" }}>See How I Help</a>
           </div>
+        </div>
+        {/* Right — full uncropped photo */}
+        <div style={{ flex: "0 0 58%", backgroundColor: "#FDF6F0", overflow: "hidden" }}>
+          <img
+            src="/images/hero.jpg"
+            alt="San Miguel de Allende"
+            style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center top", display: "block" }}
+          />
         </div>
       </section>
       {/* Stats Bar */}

@@ -141,7 +141,7 @@ export default function Home() {
           fontSize: '15px',
           fontWeight: '700',
           letterSpacing: '0.5px'
-        }}>✦ Book Your Consultation Now</a>
+        }}>✦ Book a Strategy Session Now</a>
       </section>
 
       {/* About */}
@@ -174,7 +174,7 @@ export default function Home() {
               textDecoration: 'none',
               fontSize: '15px',
               fontWeight: '700'
-            }}>✦ Book a Consultation</a>
+            }}>✦ Book a Strategy Session</a>
           </div>
         </div>
         <div style={{ flex: 1, minWidth: '280px', textAlign: 'center' }}>
@@ -212,7 +212,7 @@ export default function Home() {
               fontSize: '15px',
               fontWeight: '700',
               display: 'inline-block'
-            }}>✦ Book Your Consultation</a>
+            }}>✦ Book a Strategy Session</a>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px' }}>
 
@@ -248,7 +248,7 @@ export default function Home() {
                 <li>Post-surgery companionship & recovery support</li>
                 <li>Home delivery coordination</li>
               </ul>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Call →</a>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Strategy Session →</a>
             </div>
 
             {/* Service 3 */}
@@ -415,7 +415,7 @@ export default function Home() {
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
               backgroundColor: 'white', color: '#2C1810', padding: '14px 36px',
               borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700'
-            }}>✦ Book a Consultation First</a>
+            }}>✦ Book a Strategy Session First</a>
           </div>
         </div>
       </section>
@@ -470,7 +470,7 @@ export default function Home() {
                 textDecoration: 'none',
                 fontSize: '15px',
                 fontWeight: '700'
-              }}>✦ Book a Consultation</a>
+              }}>✦ Book a Strategy Session</a>
             </div>
             <div style={{ flex: 1, minWidth: '280px' }}>
               <img
@@ -629,7 +629,7 @@ export default function Home() {
           letterSpacing: '0.5px',
           display: 'inline-block',
           marginBottom: '40px'
-        }}>✦ Book Your Consultation</a>
+        }}>✦ Book a Strategy Session</a>
         <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '16px' }}>
           <a href="mailto:Lisa@InTheKnowMx.com" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Lisa@InTheKnowMx.com</a>
           <a href="https://www.instagram.com/in.the.know.mexico/" target="_blank" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Instagram</a>

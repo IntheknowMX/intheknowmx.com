@@ -66,7 +66,7 @@ export default function Home() {
           <img
             src="/images/hero.jpg"
             alt="San Miguel de Allende"
-            style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center top", display: "block" }}
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
           />
         </div>
       </section>

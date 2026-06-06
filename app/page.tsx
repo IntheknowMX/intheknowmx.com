@@ -45,7 +45,7 @@ export default function Home() {
         position: "relative",
         minHeight: "100vh",
         backgroundImage: "url('/images/hero.jpg')",
-        backgroundSize: "120%",
+        backgroundSize: "cover",
         backgroundPosition: "center 20%",
         display: "flex",
         alignItems: "center",

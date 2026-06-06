@@ -48,7 +48,6 @@ export default function Home() {
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
-        backgroundColor: "#FDF6F0",
         display: "flex",
         alignItems: "center",
       }}>

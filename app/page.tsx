@@ -52,7 +52,7 @@ export default function Home() {
             <a href="#services" style={{ backgroundColor: "transparent", color: "#2C1810", padding: "16px 28px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", border: "1px solid #2C1810" }}>See How I Help</a>
           </div>
         </div>
-        <div style={{ flex: "1 1 55%", minWidth: "320px", minHeight: "500px", backgroundImage: "url(/images/hero.jpg)", backgroundSize: "cover", backgroundPosition: "center top" }} />
+        <div style={{ flex: "1 1 55%", minWidth: "320px", minHeight: "500px", backgroundImage: "url('/images/hero.jpg')", backgroundSize: "cover", backgroundPosition: "center center" }} />
       </section>
       {/* Stats Bar */}
       <section style={{

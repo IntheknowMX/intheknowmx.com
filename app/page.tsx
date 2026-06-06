@@ -21,9 +21,10 @@ export default function Home() {
         <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
           <a href="#about" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>About</a>
           <a href="#services" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Residency</a>
-          <a href="#rentals" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Rentals</a>
-          <a href="#properties" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Buy</a>
+          <a href="#rentals" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Renting</a>
+          <a href="#properties" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Owning</a>
           <a href="#caretaking" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Property & Pet Care</a>
+          <a href="#local-companion" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Local Companion</a>
           <a href="#welcome-table" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Welcome Table</a>
           <a href="#testimonials" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Testimonials</a>
           <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
@@ -478,6 +479,31 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Local Companion */}
+      <section id="local-companion" style={{ backgroundColor: '#2C1810', padding: '90px 40px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <p style={{ color: '#D4A017', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>LOCAL COMPANION</p>
+          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2', maxWidth: '700px' }}>
+            Sometimes you just need someone who knows every corner.
+          </h2>
+          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '720px', marginBottom: '40px' }}>
+            Inspired by Japan's beloved rental person culture — sometimes you just need a trusted local by your side.
+            Whether it's dinner for one that shouldn't be, a medical appointment, a cultural event, or simply exploring
+            San Miguel with someone who knows every corner. I show up. No agenda. Just good company.
+          </p>
+          <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
+            backgroundColor: '#C4622D',
+            color: 'white',
+            padding: '16px 36px',
+            borderRadius: '4px',
+            textDecoration: 'none',
+            fontSize: '15px',
+            fontWeight: '700',
+            display: 'inline-block'
+          }}>✦ Book a Strategy Session</a>
         </div>
       </section>
 

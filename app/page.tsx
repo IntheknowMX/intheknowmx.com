@@ -23,7 +23,7 @@ export default function Home() {
           <a href="#services" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Residency</a>
           <a href="#rentals" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Rentals</a>
           <a href="#properties" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Buy</a>
-          <a href="#caretaking" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Home Care</a>
+          <a href="#caretaking" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Property & Pet Care</a>
           <a href="#welcome-table" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Welcome Table</a>
           <a href="#testimonials" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Testimonials</a>
           <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{

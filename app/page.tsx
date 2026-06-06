@@ -231,10 +231,10 @@ export default function Home() {
             {/* Service 2 */}
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🌮</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexico Newcomer Support</h3>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexico Newcomers Concierge</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
-                For newcomers already in Mexico who need help getting grounded. I handle the practical side
-                of building your life here — so you can actually enjoy it.
+                From your first question to your first week unpacked — and everything after. I handle the practical side
+                of building your life in Mexico so you can actually enjoy it. I walk beside you so nothing falls through the cracks.
               </p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '20px' }}>
                 <li>Utility setup & bill payment</li>
@@ -246,22 +246,9 @@ export default function Home() {
                 <li>Reasonable home & clothing shopping guidance</li>
                 <li>SSA & Mexican government account setup</li>
                 <li>Post-surgery companionship & recovery support</li>
-                <li>Home delivery coordination</li>
+                <li>Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
               </ul>
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Strategy Session →</a>
-            </div>
-
-            {/* Service 3 */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>✈️</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Full Relocation Concierge</h3>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '20px' }}>
-                From your first question to your first week unpacked — I coordinate every step.
-                Shipping logistics, visa preparation, banking setup, internet, utilities, household staff,
-                finding your gym, your doctor, your favorite coffee spot. I walk beside you so nothing
-                falls through the cracks.
-              </p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Get Started →</a>
             </div>
 
             {/* Service 4 - Immigration */}

@@ -254,13 +254,13 @@ export default function Home() {
             {/* Service 4 - Immigration */}
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛂</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Immigration Referrals</h3>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexican Residency, Sorted</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '20px' }}>
                 My residency team is your residency team. I connect you directly, coordinate every step,
                 and even show up with you. Temporary residency, permanent residency, or heritage citizenship
                 — navigated together.
               </p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Ask Me About This →</a>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Strategy Session →</a>
             </div>
 
           </div>

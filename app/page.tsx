@@ -46,7 +46,7 @@ export default function Home() {
         minHeight: "100vh",
         backgroundImage: "url('/images/hero.jpg')",
         backgroundSize: "contain",
-        backgroundPosition: "right top",
+        backgroundPosition: "right center",
         backgroundRepeat: "no-repeat",
         backgroundColor: "#FDF6F0",
         display: "flex",

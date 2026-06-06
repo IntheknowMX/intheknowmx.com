@@ -20,7 +20,7 @@ export default function Home() {
         </div>
         <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
           <a href="#about" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>About</a>
-          <a href="#services" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Services</a>
+          <a href="#services" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Residency</a>
           <a href="#rentals" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Rentals</a>
           <a href="#properties" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Buy</a>
           <a href="#caretaking" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Home Care</a>
@@ -47,7 +47,7 @@ export default function Home() {
           <div style={{ width: "48px", height: "2px", backgroundColor: "#D4A017", marginBottom: "28px" }} />
           <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rental property showings, home care, and on-the-ground expertise for newcomers moving to Mexico.</p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
-            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: "#C4622D", color: "white", padding: "16px 36px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Book Your Consultation</a>
+            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: "#C4622D", color: "white", padding: "16px 36px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Book a Strategy Session</a>
             <a href="#services" style={{ backgroundColor: "transparent", color: "#2C1810", padding: "16px 28px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", border: "1px solid #2C1810" }}>See How I Help</a>
           </div>
         </div>

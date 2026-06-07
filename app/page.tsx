@@ -95,6 +95,57 @@ export default function Home() {
         ))}
       </section>
 
+      {/* Ticker Tape */}
+      <style>{`
+        @keyframes ticker {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
+      <section style={{ backgroundColor: '#2C1810', padding: '16px 0', overflow: 'hidden', whiteSpace: 'nowrap' }}>
+        <div style={{ display: 'inline-flex', animation: 'ticker 40s linear infinite' }}>
+          {[0, 1].map((copy) => (
+            <span key={copy} style={{ display: 'inline-flex', alignItems: 'center' }}>
+              {[
+                { text: '"We never worried once."', name: 'Amy H.' },
+                { text: '"The hardest part about having her is saying goodbye."', name: 'Michelle & Scott' },
+                { text: '"My home was running like a well-oiled machine."', name: 'Janet A.' },
+                { text: '"Left our house perfectly clean and exactly how we left it, just a little better."', name: 'Claire H.' },
+                { text: '"I always feel safe when she sits my pets."', name: 'Karla S.' },
+                { text: '"Lisa is a god send."', name: 'Amy H.' },
+                { text: '"You will not be disappointed."', name: 'Maggie G.' },
+                { text: '"She goes above and beyond."', name: 'Kathryn W.' },
+              ].map((r) => (
+                <span key={r.name + r.text} style={{ display: 'inline-flex', alignItems: 'center', padding: '0 8px' }}>
+                  <span style={{ color: '#D4A017', marginRight: '10px' }}>⭐⭐⭐⭐⭐</span>
+                  <span style={{ color: '#FDF6F0', fontStyle: 'italic', fontSize: '14px' }}>{r.text}</span>
+                  <span style={{ color: '#E8A598', fontSize: '14px', marginLeft: '8px' }}>— {r.name}</span>
+                  <span style={{ color: '#8B1A2A', margin: '0 28px', fontSize: '16px' }}>· · ·</span>
+                </span>
+              ))}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* Pull Quotes Band */}
+      <section style={{ backgroundColor: '#FDF6F0', padding: '48px 40px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '48px' }}>
+          {[
+            { quote: 'From the moment I got off the plane, Lisa showed up with kindness and clarity.', name: 'Brian Keith Webster', title: 'Author' },
+            { quote: 'She handled everything with exceptional grace and competence.', name: 'Sugar & Sandy Hudson', title: 'Mayor, Los Frailes SMA' },
+            { quote: "She's not just a concierge — she's a trusted guide.", name: 'Tiffany Paige', title: 'Licensed Real Estate Advisor, The Agency SMA' },
+          ].map((q) => (
+            <div key={q.name}>
+              <div style={{ fontSize: '64px', color: '#8B1A2A', lineHeight: '0.8', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>"</div>
+              <p style={{ fontSize: '17px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.75', color: '#2C1810', marginBottom: '20px' }}>{q.quote}</p>
+              <div style={{ fontSize: '12px', letterSpacing: '2px', color: '#C97B8A', fontWeight: '700', textTransform: 'uppercase' }}>{q.name}</div>
+              <div style={{ fontSize: '11px', letterSpacing: '1px', color: '#C97B8A', marginTop: '4px' }}>{q.title}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Why Lisa? */}
       <section style={{ backgroundColor: '#FDF6F0', padding: '80px 40px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -562,6 +613,19 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+              <div style={{ marginBottom: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                {[
+                  { quote: "My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May as a caring companion.", name: 'Janet A.', date: 'November 2018', detail: '3 dogs, 8 cats, pool' },
+                  { quote: "We have a daughter in and out of the hospital out of state. Lisa has been so accommodating and even willing to stay extra days when needed. It's such a stress relief to me and my husband knowing she's taking care of our pup.", name: 'Kathryn W.', date: 'October 2020', detail: '105lb rescue dog' },
+                  { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success over the years. Our guests have raved about her! We recommend Lisa May wholeheartedly — you'll be able to enjoy your time away and return to a clean home and happy pets.", name: 'Michelle & Scott', date: 'November 2018', detail: 'Belize' },
+                ].map((r) => (
+                  <div key={r.name} style={{ backgroundColor: 'white', padding: '24px 20px', borderRadius: '8px', borderLeft: '4px solid #E8A598' }}>
+                    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', fontStyle: 'italic', marginBottom: '12px' }}>"{r.quote}"</p>
+                    <div style={{ fontSize: '13px', fontWeight: 'bold', color: '#7D3B4E' }}>{r.name}</div>
+                    <div style={{ fontSize: '12px', color: '#C97B8A', marginTop: '2px' }}>{r.date} · {r.detail}</div>
+                  </div>
+                ))}
+              </div>
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
                 backgroundColor: '#C4622D',
                 color: 'white',
@@ -671,38 +735,31 @@ export default function Home() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
             {[
-              {
-                quote: "From the moment I got off the plane, Lisa showed up with kindness, clarity, and a deep knowledge of how things work here. She met me at my Airbnb, took me grocery shopping, helped me with the ATM, showed me around San Miguel, and helped me find my apartment. Lisa is more than a service provider — she's a support system, a guide, and a true friend.",
-                name: 'Brian Keith Webster',
-                title: 'Author'
-              },
-              {
-                quote: "A plumbing disaster occurred while we were off the grid on a cruise — Lisa handled everything with exceptional grace and competence. She contacted neighbors, coordinated local plumbers and electricians, and ensured our pets and property were safe and cared for. Far beyond what we could have hoped for.",
-                name: 'Sugar & Sandy',
-                title: 'Mayor, Los Frailes SMA & Administrator, Lakeside Insurance'
-              },
-              {
-                quote: "She's tenacious, organized, and deeply caring — going above and beyond to make sure her clients feel seen, supported, and completely at ease. Lisa has an intuitive understanding of people's needs, paired with the practical skills and local know-how to get things done. She's a trusted guide.",
-                name: 'Tiffany Paige',
-                title: 'Licensed Real Estate Advisor, The Agency SMA'
-              },
-              {
-                quote: "I could not be more pleased with Lisa! She was very responsive, reasonable and she stayed with the program until we were successful! With Lisa's help, all the delinquent funds arrived. Do business with Lisa and she will solve your problems!",
-                name: 'Terry M.',
-                title: 'San Miguel Expat'
-              }
+              { quote: "She is tenacious, organized, and deeply caring — going above and beyond to make sure her clients feel seen, supported, and completely at ease. She's not just a relocation concierge — she's a trusted guide.", name: 'Tiffany Paige', title: 'Licensed Real Estate Advisor, The Agency SMA', date: '2026' },
+              { quote: "I could not be more pleased with Lisa! She was very responsive, reasonable and she stayed with the program until we were successful. Do business with Lisa and she will solve your problems!", name: 'Terry M.', title: 'San Miguel Expat', date: '2026' },
+              { quote: "From the moment I got off the plane, Lisa showed up with kindness, clarity, and a deep knowledge of how things work here. She met me at my Airbnb, took me grocery shopping, helped me with the ATM, showed me around San Miguel, and helped me find my apartment. Lisa is more than a service provider — she's a support system, a guide, and a true friend.", name: 'Brian Keith Webster', title: 'Author', date: '2025' },
+              { quote: "A plumbing disaster occurred while we were off the grid on a cruise — Lisa handled everything with exceptional grace and competence. She contacted neighbors, coordinated local plumbers and electricians, and ensured our pets and property were safe and cared for.", name: 'Sugar & Sandy Hudson', title: 'Mayor, Los Frailes SMA', date: '2025' },
+              { quote: "Left our house perfectly clean and exactly how we left it, just a little better. Turtle was happy and healthy upon our return and we're so grateful he was in good hands.", name: 'Claire H.', title: '', date: '2023' },
+              { quote: "Oh my gosh! Lisa was amazing and so great to work with. She took great care of Miss Prissy and our house. I hope to use her again in the future.", name: 'Joni S.', title: '', date: '2023' },
+              { quote: "Lisa is wonderful! She took care of our two big dogs and watched our home any time we traveled. My husband and I are very particular about who watches our dogs, and she met every single criteria and need. You will not regret hiring her!", name: 'Maggie G.', title: '', date: '2023' },
+              { quote: "Lisa was a great pet and house sitter. Very conscientious and helpful. I would recommend her fully!", name: 'Tina H.', title: '', date: '2023' },
+              { quote: "There ended up being severe storms so our return flights were canceled and we didn't know when we'd get home and she was very understanding and flexible, making sure our dog was taken care of. It was a huge weight off our shoulders!", name: 'Emily M.', title: '', date: '2021' },
+              { quote: "Coming home to a wonderfully clean home is just priceless! She loves and cares for our pets like we would. She knows their personalities and treats them accordingly.", name: 'Amy H.', title: '', date: '2021' },
+              { quote: "She is dedicated and took very good care of my older dog who had health issues. She went beyond the call of duty on some errands I needed while I was in the hospital and was very flexible with me.", name: 'Paula P.', title: '', date: '2021' },
+              { quote: "She took care of our 3 dogs, cat and bird for almost 2 weeks including pool and greenhouse. Her experience with pets and homes made it so easy to leave our fur babies. I have never had any house sitter clean the sheets on the bed she used before. If you are lucky enough to use Lisa's many services, you will not be disappointed.", name: 'Wendy E.', title: '', date: '2021' },
+              { quote: "We have a daughter that is in and out of the hospital out of state. Lisa has been so accommodating and even willing to stay extra days when needed. Such a stress relief knowing she's taking care of our pup.", name: 'Kathryn W.', title: '', date: '2020' },
+              { quote: "Lisa was prompt, professional and everything you could want in a dog sitter. She even adjusted her schedule to take Charlie on an extra walk when our flight was delayed. I cannot say enough good things about her.", name: 'Brandon S.', title: '', date: '2019' },
+              { quote: "When we arrived home we found a cooked dinner, well kept house — cleaner than we left it — and a happy cat. Strongly recommend her to anyone who is in need of house and pet sitting.", name: 'Neslihan S.', title: '', date: '2018' },
+              { quote: "My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May.", name: 'Janet A.', title: '', date: '2018' },
+              { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success. Our guests have raved about her! The hardest part about having her is saying goodbye.", name: 'Michelle & Scott', title: '', date: '2018' },
             ].map((t) => (
-              <div key={t.name} style={{
-                backgroundColor: 'white',
-                padding: '36px 28px',
-                borderRadius: '8px',
-                borderLeft: '4px solid #C97B8A'
-              }}>
+              <div key={t.name + t.date} style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', borderLeft: '4px solid #C97B8A' }}>
                 <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', marginBottom: '24px' }}>
                   "{t.quote}"
                 </p>
                 <div style={{ color: '#7D3B4E', fontWeight: 'bold', fontSize: '15px' }}>{t.name}</div>
-                <div style={{ color: '#7D3B4E', fontSize: '13px', marginTop: '4px' }}>{t.title}</div>
+                {t.title && <div style={{ color: '#7D3B4E', fontSize: '13px', marginTop: '4px' }}>{t.title}</div>}
+                <div style={{ display: 'inline-block', marginTop: '8px', fontSize: '11px', color: '#C97B8A', letterSpacing: '1px', fontWeight: '600', backgroundColor: '#FDF6F0', padding: '2px 8px', borderRadius: '10px' }}>{t.date}</div>
               </div>
             ))}
           </div>

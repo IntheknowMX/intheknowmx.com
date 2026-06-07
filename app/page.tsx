@@ -103,9 +103,9 @@ export default function Home() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '28px' }}>
             {[
-              { emoji: '📍', title: 'She lives here.', body: 'Lisa is not consulting from a distance. She walks the same streets, knows the same neighbors, and has navigated the same systems you are about to face — for over a decade.' },
-              { emoji: '🤝', title: 'She knows everyone.', body: 'The notary, the landlord, the best immigration attorney in town, the plumber who shows up, the doctor who speaks English — Lisa has spent 12 years building the network that makes things actually happen.' },
-              { emoji: '🚶', title: 'She shows up with you.', body: "When your residency appointment is at INM, she's there. When you're seeing rentals, she escorts you. When the lease needs reviewing, she reads every line. Lisa doesn't hand you off — she shows up." },
+              { emoji: '📍', title: 'She lives here.', body: 'Not managing your move from a laptop in another country. Lisa is physically in San Miguel de Allende — she knows the landlords, the plumbers, the notary, the neighborhoods, and the unspoken rules.' },
+              { emoji: '🤝', title: 'She knows everyone.', body: '11 years of relationships in SMA means you get access to trusted doctors, attorneys, contractors, household staff, and real estate connections that no search engine can give you.' },
+              { emoji: '🚶', title: 'She shows up with you.', body: "From residency appointments to rental showings to medical visits — Lisa doesn't hand off names and numbers. She walks in with you." },
             ].map((card) => (
               <div key={card.title} style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', boxShadow: '0 2px 12px rgba(44,24,16,0.06)' }}>
                 <div style={{ fontSize: '32px', marginBottom: '14px' }}>{card.emoji}</div>
@@ -308,39 +308,37 @@ export default function Home() {
 
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
               <div style={{ fontSize: '32px', marginBottom: '14px' }}>📞</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Strategy Session</h3>
-              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '2px', marginBottom: '20px', fontWeight: '600' }}>1-HOUR VIDEO CALL</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '28px' }}>
-                A deep-dive planning call covering your specific situation: housing, residency, neighborhoods, healthcare, budget, and your personal roadmap. You leave with clarity — not more questions.
+              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>Strategy Session</h3>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px' }}>
+                Your first step. We map out your entire Mexico plan together.
               </p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book Now →</a>
+              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Book to confirm rate</p>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Strategy Session</a>
             </div>
 
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', border: '2px solid #C4622D', position: 'relative' }}>
-              <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST REQUESTED</p>
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
               <div style={{ fontSize: '32px', marginBottom: '14px' }}>🌮</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Mexico Newcomers Concierge</h3>
-              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '2px', marginBottom: '20px', fontWeight: '600' }}>ONGOING · RETAINER-BASED</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '28px' }}>
-                From your first question to your first week unpacked — and everything after. Bank accounts, leases, utilities, staff oversight, and day-to-day problem solving. Custom scoped to your needs.
+              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>Mexico Newcomers Concierge</h3>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px' }}>
+                Day-to-day life in Mexico, handled.
               </p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>✦ Book a Strategy Session</a>
+              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Custom packages available</p>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Strategy Session</a>
             </div>
 
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
               <div style={{ fontSize: '32px', marginBottom: '14px' }}>🛂</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Full Residency Support</h3>
-              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '2px', marginBottom: '20px', fontWeight: '600' }}>APPLICATION TO APPROVAL</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '28px' }}>
-                I connect you with licensed Mexican immigration attorneys, coordinate every step, translate the process into plain language, and show up with you when it counts. Temporary, permanent, or heritage citizenship.
+              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>Full Residency Support</h3>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px' }}>
+                My team walks you through every step to legal residency in Mexico.
               </p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>✦ Book a Strategy Session</a>
+              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Starting rates vary by case</p>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Strategy Session with My Residency Team</a>
             </div>
 
           </div>
           <p style={{ textAlign: 'center', color: '#E8A598', fontSize: '14px', lineHeight: '1.8' }}>
-            Property & Pet Care, Rental Showing Days, and Local Companion are scoped individually.<br />
-            All pricing discussed directly — no surprises, no packages that don't fit.
+            Rental property showing packages, property &amp; pet care, senior concierge, and local companion services are priced individually. Ask Lisa during your strategy session.
           </p>
         </div>
       </section>
@@ -352,24 +350,27 @@ export default function Home() {
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '12px', lineHeight: '1.2' }}>
             There is a reason people come here<br />and never leave.
           </h2>
-          <p style={{ fontSize: '16px', color: '#7D3B4E', textAlign: 'center', marginBottom: '56px', lineHeight: '1.7', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            UNESCO World Heritage City · Voted #1 City in the World, multiple years running
+          <p style={{ fontSize: '17px', color: '#5C3A2E', textAlign: 'center', marginBottom: '56px', lineHeight: '1.7' }}>
+            UNESCO World Heritage city. World-class food, art, and community. And the most beautiful light you have ever seen.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px', marginBottom: '56px' }}>
             {[
-              { name: 'Centro', desc: 'The historic heart — cobblestone streets, the iconic Parroquia, world-class restaurants, and rooftop bars above 300-year-old buildings. Where everyone starts and many stay.' },
-              { name: 'San Antonio', desc: 'Leafy and local. A quiet residential neighborhood with excellent taco stands, long-term expat community, and a slower, more authentic pace just minutes from everything.' },
-              { name: 'Guadiana', desc: 'Tucked in a verdant ravine, Guadiana is one of the most beautiful and walkable neighborhoods in the city. Artists, writers, and longtime residents call it home.' },
-              { name: 'Atascadero', desc: 'More space, more garden, more sky. A favorite for those who want a real home rather than a pied-à-terre — with stunning views and a genuine neighborhood feel.' },
+              { name: 'Centro', subtitle: 'The heart of it all', desc: 'The historic heart — cobblestone streets, the iconic Parroquia, world-class restaurants, and rooftop bars above 300-year-old buildings. Where everyone starts and many stay.' },
+              { name: 'San Antonio', subtitle: 'Quiet, walkable, local', desc: 'Leafy and local. A quiet residential neighborhood with excellent taco stands, long-term expat community, and a slower, more authentic pace just minutes from everything.' },
+              { name: 'Guadiana', subtitle: 'Leafy streets, expat community', desc: 'Tucked in a verdant ravine, Guadiana is one of the most beautiful and walkable neighborhoods in the city. Artists, writers, and longtime residents call it home.' },
+              { name: 'Atascadero', subtitle: 'Views, space, serenity', desc: 'More space, more garden, more sky. A favorite for those who want a real home rather than a pied-à-terre — with stunning views and a genuine neighborhood feel.' },
             ].map((n) => (
-              <div key={n.name} style={{ backgroundColor: 'white', padding: '32px 24px', borderRadius: '8px', borderTop: '3px solid #D4A017', boxShadow: '0 2px 12px rgba(44,24,16,0.06)' }}>
-                <h3 style={{ fontSize: '20px', fontWeight: 'normal', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>{n.name}</h3>
-                <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810' }}>{n.desc}</p>
-              </div>
+              <a key={n.name} href="#contact" style={{ textDecoration: 'none' }}>
+                <div style={{ backgroundColor: 'white', padding: '32px 24px', borderRadius: '8px', borderTop: '3px solid #D4A017', boxShadow: '0 2px 12px rgba(44,24,16,0.06)', height: '100%', boxSizing: 'border-box' }}>
+                  <h3 style={{ fontSize: '20px', fontWeight: 'normal', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '4px' }}>{n.name}</h3>
+                  <p style={{ fontSize: '12px', color: '#D4A017', letterSpacing: '2px', fontWeight: '600', marginBottom: '12px' }}>{n.subtitle.toUpperCase()}</p>
+                  <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810' }}>{n.desc}</p>
+                </div>
+              </a>
             ))}
           </div>
           <p style={{ textAlign: 'center', fontSize: '16px', color: '#5C3A2E', lineHeight: '1.8', maxWidth: '600px', margin: '0 auto 32px' }}>
-            Not sure which neighborhood is right for you? That's exactly what your strategy session is for.
+            Not sure which neighborhood is right for you? That is exactly what a strategy session is for.
           </p>
           <div style={{ textAlign: 'center' }}>
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '16px 40px', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>✦ Book a Strategy Session</a>

@@ -102,7 +102,7 @@ export default function Home() {
             Mexico is a life, not a checklist.
           </h2>
           <p style={{ fontSize: '17px', lineHeight: '1.8', color: '#5C3A2E', textAlign: 'center', maxWidth: '680px', margin: '0 auto 48px' }}>
-            Residency and housing are just the beginning. The real work is building a life you actually love — your grocery store, your doctor, your gym, your people, your Saturday morning, your favorite table at your favorite restaurant. That's where I come in.
+            Residency and housing are just the beginning. The real work is building a life you actually love — your grocery store, your doctor, your gym, your people, your Saturday morning, your favorite table at your favorite restaurant. That's where we come in.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '28px' }}>
             {[

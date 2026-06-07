@@ -55,7 +55,7 @@ export default function Home() {
         }}>
           <p style={{ color: "#7D3B4E", fontSize: "11px", letterSpacing: "5px", marginBottom: "28px", fontWeight: "700" }}>SAN MIGUEL DE ALLENDE · MEXICO</p>
           <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>San Miguel<br /><span style={{ color: "#7D3B4E" }}>Insider.</span></h1>
-          <p style={{ color: "#2C1810", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Helping Mexico Newcomers since 2015.</p>
+          <p style={{ color: "#2C1810", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Known here. Trusted here. Since 2015.</p>
           <div style={{ width: "48px", height: "2px", backgroundColor: "#D4A017", marginBottom: "28px" }} />
           <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rentals, home care, and on-the-ground presence — your person in Mexico since 2015.</p>
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
@@ -84,7 +84,7 @@ export default function Home() {
         {[
           { number: '12+', label: 'Years in Mexico' },
           { number: '100%', label: 'In-Person Service' },
-          { number: '5★', label: 'Client Rated' },
+          { number: '500+', label: 'Five-Star Reviews' },
           { number: '24/7', label: 'On-the-Ground Support' },
         ].map((stat) => (
           <div key={stat.label} style={{ textAlign: 'center' }}>
@@ -99,13 +99,13 @@ export default function Home() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>WHY LISA</p>
           <h2 style={{ fontSize: '40px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '48px', lineHeight: '1.2', maxWidth: '700px', margin: '0 auto 48px' }}>
-            Not a website. Not a remote service.<br />A real person who lives here.
+            The difference between a website and a person who actually lives here.
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '28px' }}>
             {[
-              { emoji: '📍', title: 'She lives here.', body: 'Not managing your move from a laptop in another country. Lisa is physically in San Miguel de Allende — she knows the landlords, the plumbers, the notary, the neighborhoods, and the unspoken rules.' },
-              { emoji: '🤝', title: 'She knows everyone.', body: '11 years of relationships in SMA means you get access to trusted doctors, attorneys, contractors, household staff, and real estate connections that no search engine can give you.' },
-              { emoji: '🚶', title: 'She shows up with you.', body: "From residency appointments to rental showings to medical visits — Lisa doesn't hand off names and numbers. She walks in with you." },
+              { emoji: '📍', title: 'Known in San Miguel.', body: '11 years of real relationships — landlords, attorneys, doctors, contractors, household staff, and neighbors. Not a contact list. A community.' },
+              { emoji: '🤝', title: 'Trusted by the community.', body: '500+ five-star reviews. Not because nothing ever goes wrong — but because when it does, Lisa handles it before you ever have to know. You clear your head. She clears the problem. You come home to exactly what you left.' },
+              { emoji: '🚶', title: 'She shows up. Every time.', body: "Residency appointments. Rental showings. Bureaucratic roadblocks. The technological moments that put your life on hold — SSA accounts, Mexican government portals, banking apps, online bill pay, booking any travel. Whatever stands between you and your Mexico life, Lisa shows up and gets it handled. Eleven years of real relationships means the right doors open. Not because she knows everyone. Because everyone knows her." },
             ].map((card) => (
               <div key={card.title} style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', boxShadow: '0 2px 12px rgba(44,24,16,0.06)' }}>
                 <div style={{ fontSize: '32px', marginBottom: '14px' }}>{card.emoji}</div>
@@ -174,23 +174,22 @@ export default function Home() {
       {/* About */}
       <section id="about" style={{ padding: '90px 40px', maxWidth: '1100px', margin: '0 auto', display: 'flex', gap: '70px', alignItems: 'center', flexWrap: 'wrap' }}>
         <div style={{ flex: 1, minWidth: '300px' }}>
-          <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>ABOUT ME</p>
+          <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>ABOUT LISA MAY COBHAM</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', lineHeight: '1.2', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            The insider every<br />Mexico newcomer needs.
+            I didn't just move to San Miguel.<br />I became part of it.
           </h2>
           <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
-            Hi, I'm <strong>Lisa May Cobham</strong>, Relocation Specialist and founder of In The Know Mexico.
-            I'm a New Yorker replanted in San Miguel de Allende — and I've spent 12 years learning exactly
-            what it takes to make Mexico not just livable, but extraordinary.
+            I'm <strong>Lisa May Cobham</strong> — a New Yorker who landed in San Miguel de Allende and never looked back.
+            For over a decade I've been building relationships, learning every colonia, and becoming the person
+            that both locals and expats call when they need someone they can actually trust.
           </p>
           <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
-            I work with <strong>Mexico newcomers</strong> who need more than a checklist — they need someone
-            who already knows the plumber, the notary, the landlord, the neighborhood, and the unspoken rules
+            I work with <strong>Mexico newcomers</strong> who need more than a checklist. They need someone
+            who already knows the plumber, the notary, the landlord, and the unspoken rules
             that no guidebook will tell you. <strong>Friend-level trust. Professional-grade follow-through.</strong>
           </p>
           <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#2C1810' }}>
-            I am your local contact — the cousin, aunt, or longtime friend you wish you already had here.
-            <em> I got you.</em>
+            The town knows me. My clients know me. Now you do too.<em> I got you.</em>
           </p>
           <div style={{ marginTop: '32px' }}>
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
@@ -224,10 +223,10 @@ export default function Home() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT I OFFER</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '16px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            Turn Mexico into a Reality
+            Your Mexico life — built by someone who already lives it.
           </h2>
           <p style={{ color: '#F5E0E6', fontSize: '17px', textAlign: 'center', maxWidth: '600px', margin: '0 auto 16px', lineHeight: '1.75' }}>
-            Every service is personal, hands-on, and built around your specific situation — not a package, not a script.
+            Every service is personal, in-person, and built around your specific situation. Not a package. Not a script. Not a remote service.
           </p>
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
@@ -248,9 +247,8 @@ export default function Home() {
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>📞</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>1-Hour Relocation Consultation</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '20px' }}>
-                A deep-dive video call built for serious Mexico newcomers. We cover housing, neighborhoods,
-                visas, healthcare, safety, daily life, budget planning, and your personal step-by-step roadmap.
-                You leave with clarity — not more questions.
+                Everything in your head about Mexico — sorted. In one conversation we map your housing, residency,
+                budget, timeline, and next steps. You leave with a real plan.
               </p>
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book Now →</a>
             </div>
@@ -260,8 +258,9 @@ export default function Home() {
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🌮</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexico Newcomers Concierge</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
-                From your first question to your first week unpacked — and everything after. I handle the practical side
-                of building your life in Mexico so you can actually enjoy it. I walk beside you so nothing falls through the cracks.
+                From your first question to your first year unpacked. Banking, utilities, household staff, lease review,
+                internet, government accounts, post-surgery support — I handle the practical side of your Mexico life
+                so you can actually enjoy it.
               </p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '20px' }}>
                 <li>Utility setup & bill payment</li>
@@ -283,9 +282,9 @@ export default function Home() {
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛂</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexican Residency, Sorted</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '20px' }}>
-                My residency team is your residency team. I connect you directly, coordinate every step,
-                and even show up with you. Temporary residency, permanent residency, or heritage citizenship
-                — navigated together.
+                My residency team is your residency team. I coordinate every step, set your appointments,
+                and walk in with you. Temporary residency, permanent residency, heritage citizenship —
+                navigated together by people who know this city and this process.
               </p>
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Strategy Session →</a>
             </div>
@@ -528,16 +527,15 @@ export default function Home() {
                 Your Mexico Life, Maintained.
               </h2>
               <p style={{ fontSize: '17px', color: '#7D3B4E', marginBottom: '28px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-                Home, pets, and everything in between — while you're away.
+                500+ five-star reviews from people who trusted Lisa with their most precious things while they were away.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
-                Pipes burst at 2am. Power goes out during a storm. Your housekeeper doesn't show.
-                A neighbor reports water coming under your door. These things happen — even in the
-                most beautiful homes in San Miguel.
+                Pipes burst. Power goes out. Staff doesn't show. These things happen — even in the most
+                beautiful homes in San Miguel. The question is who do you trust to handle it.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '28px', color: '#2C1810' }}>
-                <strong>When you leave, I stay.</strong> I am your eyes, your voice, and your trusted
-                presence on the ground.
+                <strong>When you leave, I stay.</strong> I am your eyes, your voice, and your most trusted
+                presence on the ground. The town knows me. Your neighbors know me. Your home is safe.
               </p>
               <div style={{ backgroundColor: '#FAE8E0', padding: '32px', borderRadius: '8px', marginBottom: '28px' }}>
                 <p style={{ fontSize: '15px', fontWeight: 'bold', color: '#7D3B4E', marginBottom: '18px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>What this looks like in practice:</p>
@@ -665,7 +663,7 @@ export default function Home() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT CLIENTS SAY</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '60px', textAlign: 'center', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            Trusted by Mexico Newcomers
+            The town knows. Now hear it from them.
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
             {[
@@ -711,10 +709,10 @@ export default function Home() {
       <section style={{ backgroundColor: '#7D3B4E', padding: '90px 40px', textAlign: 'center' }}>
         <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '20px', fontWeight: '600' }}>YOUR NEXT STEP</p>
         <h2 style={{ fontSize: '46px', fontWeight: 'normal', marginBottom: '24px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
-          The life you came here<br />looking for is absolutely real.
+          The life you came here looking for is absolutely real.
         </h2>
         <p style={{ color: '#F5E0E6', fontSize: '18px', maxWidth: '520px', margin: '0 auto 48px', lineHeight: '1.75' }}>
-          Book a consultation and let's build your roadmap to Mexico — together.
+          And so is the person who will help you build it. Book a strategy session and let's map your Mexico — together.
         </p>
         <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
           backgroundColor: '#C4622D',
@@ -741,6 +739,9 @@ export default function Home() {
       <footer style={{ backgroundColor: '#1A0E09', padding: '32px 40px', textAlign: 'center' }}>
         <p style={{ color: '#E8A598', fontSize: '14px', marginBottom: '8px' }}>
           © 2026 In The Know Mexico · Lisa May Cobham, Relocation Specialist · San Miguel de Allende, México
+        </p>
+        <p style={{ color: '#7D3B4E', fontSize: '13px', marginBottom: '6px' }}>
+          Known here since 2015.
         </p>
         <p style={{ color: '#7D3B4E', fontSize: '13px' }}>
           In partnership with <a href="https://sanmiguelrealestate.com.mx" target="_blank" style={{ color: '#E8A598' }}>Tiffany Paige, The Agency SMA</a>

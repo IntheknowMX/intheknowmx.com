@@ -98,9 +98,12 @@ export default function Home() {
       <section style={{ backgroundColor: '#FDF6F0', padding: '80px 40px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>WHY LISA</p>
-          <h2 style={{ fontSize: '40px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '48px', lineHeight: '1.2', maxWidth: '700px', margin: '0 auto 48px' }}>
-            The difference between a website and a person who actually lives here.
+          <h2 style={{ fontSize: '40px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', lineHeight: '1.2', maxWidth: '700px', margin: '0 auto 24px' }}>
+            Mexico is a life, not a checklist.
           </h2>
+          <p style={{ fontSize: '17px', lineHeight: '1.8', color: '#5C3A2E', textAlign: 'center', maxWidth: '680px', margin: '0 auto 48px' }}>
+            Residency and housing are just the beginning. The real work is building a life you actually love — your grocery store, your doctor, your gym, your people, your Saturday morning, your favorite table at your favorite restaurant. That's where I come in.
+          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '28px' }}>
             {[
               { emoji: '📍', title: 'Known in San Miguel.', body: '11 years of real relationships — landlords, attorneys, doctors, contractors, household staff, and neighbors. Not a contact list. A community.' },

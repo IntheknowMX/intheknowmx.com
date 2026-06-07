@@ -23,7 +23,6 @@ export default function Home() {
         <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
           <a href="#about" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>About</a>
           <a href="#services" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Residency</a>
-          <a href="/residency" style={{ color: '#8B1A2A', textDecoration: 'none', fontSize: '14px', fontWeight: '600' }}>Do I Qualify?</a>
           <a href="#rentals" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Renting</a>
           <a href="#properties" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Owning</a>
           <a href="#caretaking" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Property & Pet Care</a>

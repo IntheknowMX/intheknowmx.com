@@ -62,6 +62,7 @@ export default function Home() {
           <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: "#C4622D", color: "white", padding: "16px 36px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Book a Strategy Session</a>
             <a href="#services" style={{ backgroundColor: "transparent", color: "#2C1810", padding: "16px 28px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", border: "1px solid #2C1810" }}>See How I Help</a>
+            <a href="/residency" className="qualify-link" style={{ color: "#8B1A2A", textDecoration: "none", fontSize: "15px", padding: "16px 0" }}>See If I Qualify →</a>
           </div>
         </div>
         {/* Right — full uncropped photo */}

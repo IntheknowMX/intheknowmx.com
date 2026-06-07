@@ -26,6 +26,10 @@ body {
   }
 }
 
+.qualify-link:hover {
+  text-decoration: underline;
+}
+
 .press-card {
   transition: transform 0.2s ease, opacity 0.2s ease;
 }

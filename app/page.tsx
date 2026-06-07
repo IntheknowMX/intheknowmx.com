@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+import MexicoPathQuiz from './components/MexicoPathQuiz'
+
 export default function Home() {
   return (
     <main style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
@@ -91,6 +93,8 @@ export default function Home() {
           </div>
         ))}
       </section>
+
+      <MexicoPathQuiz />
 
       {/* Press / Media */}
       <section style={{ backgroundColor: '#2C1810', padding: '70px 40px' }}>

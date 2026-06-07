@@ -85,7 +85,8 @@ export default function Home() {
           { number: '12+', label: 'Years in Mexico' },
           { number: '100%', label: 'In-Person Service' },
           { number: '500+', label: 'Five-Star Reviews' },
-          { number: '24/7', label: 'On-the-Ground Support' },
+          { number: '124+', label: 'Repeat Clients' },
+          { number: '24/7', label: 'On the Ground' },
         ].map((stat) => (
           <div key={stat.label} style={{ textAlign: 'center' }}>
             <div style={{ color: '#E8A598', fontSize: '34px', fontWeight: 'bold', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{stat.number}</div>

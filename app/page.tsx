@@ -108,7 +108,7 @@ export default function Home() {
             <span key={copy} style={{ display: 'inline-flex', alignItems: 'center' }}>
               {[
                 { text: '"We never worried once."', name: 'Amy H.' },
-                { text: '"The hardest part about having her is saying goodbye."', name: 'Michelle & Scott' },
+                { text: '"The hardest part about having her is saying goodbye."', name: 'Michelle & Scott Lyons, Gecko Bungalows Resort · Belize · 2018' },
                 { text: '"My home was running like a well-oiled machine."', name: 'Janet A.' },
                 { text: '"Left our house perfectly clean and exactly how we left it, just a little better."', name: 'Claire H.' },
                 { text: '"I always feel safe when she sits my pets."', name: 'Karla S.' },
@@ -617,7 +617,7 @@ export default function Home() {
                 {[
                   { quote: "My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May as a caring companion.", name: 'Janet A.', date: 'November 2018', detail: '3 dogs, 8 cats, pool' },
                   { quote: "We have a daughter in and out of the hospital out of state. Lisa has been so accommodating and even willing to stay extra days when needed. It's such a stress relief to me and my husband knowing she's taking care of our pup.", name: 'Kathryn W.', date: 'October 2020', detail: '105lb rescue dog' },
-                  { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success over the years. Our guests have raved about her! We recommend Lisa May wholeheartedly — you'll be able to enjoy your time away and return to a clean home and happy pets.", name: 'Michelle & Scott', date: 'November 2018', detail: 'Belize' },
+                  { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success over the years. Our guests have raved about her! We recommend Lisa May wholeheartedly — you'll be able to enjoy your time away and return to a clean home and happy pets.", name: 'Michelle & Scott Lyons, Gecko Bungalows Resort · Belize · 2018', date: 'November 2018', detail: 'Belize' },
                 ].map((r) => (
                   <div key={r.name} style={{ backgroundColor: 'white', padding: '24px 20px', borderRadius: '8px', borderLeft: '4px solid #E8A598' }}>
                     <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', fontStyle: 'italic', marginBottom: '12px' }}>"{r.quote}"</p>
@@ -751,7 +751,7 @@ export default function Home() {
               { quote: "Lisa was prompt, professional and everything you could want in a dog sitter. She even adjusted her schedule to take Charlie on an extra walk when our flight was delayed. I cannot say enough good things about her.", name: 'Brandon S.', title: '', date: '2019' },
               { quote: "When we arrived home we found a cooked dinner, well kept house — cleaner than we left it — and a happy cat. Strongly recommend her to anyone who is in need of house and pet sitting.", name: 'Neslihan S.', title: '', date: '2018' },
               { quote: "My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May.", name: 'Janet A.', title: '', date: '2018' },
-              { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success. Our guests have raved about her! The hardest part about having her is saying goodbye.", name: 'Michelle & Scott', title: '', date: '2018' },
+              { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success. Our guests have raved about her! The hardest part about having her is saying goodbye.", name: 'Michelle & Scott Lyons, Gecko Bungalows Resort · Belize · 2018', title: '', date: '2018' },
             ].map((t) => (
               <div key={t.name + t.date} style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', borderLeft: '4px solid #C97B8A' }}>
                 <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', marginBottom: '24px' }}>

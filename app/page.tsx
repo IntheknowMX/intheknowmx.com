@@ -83,7 +83,7 @@ export default function Home() {
       }}>
         {[
           { number: '12+', label: 'Years in Mexico' },
-          { number: '100%', label: 'Personal Service' },
+          { number: '100%', label: 'In-Person Service' },
           { number: '5★', label: 'Client Rated' },
           { number: '24/7', label: 'On-the-Ground Support' },
         ].map((stat) => (

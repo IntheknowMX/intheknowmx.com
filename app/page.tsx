@@ -84,7 +84,7 @@ export default function Home() {
         {[
           { number: '12+', label: 'Years in Mexico' },
           { number: '100%', label: 'In-Person Service' },
-          { number: '500+', label: 'Five-Star Reviews' },
+          { number: '300+', label: 'Five-Star Reviews' },
           { number: '124+', label: 'Repeat Clients' },
           { number: '24/7', label: 'On the Ground' },
         ].map((stat) => (

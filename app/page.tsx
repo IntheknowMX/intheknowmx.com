@@ -343,7 +343,18 @@ export default function Home() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px' }}>
 
-            {/* Service 2 */}
+            {/* Service - Immigration */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛂</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexican Residency, Sorted</h3>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>
+                My residency team is your residency team. I coordinate every step, set your appointments, and walk in with you. Temporary residency, permanent residency, heritage citizenship — navigated together by people who know this city and this process. You don't show up to a consulate alone with a stack of papers you don't understand. You arrive prepared, accompanied, and confident. We review your eligibility together, identify the right path for your specific situation, and handle the coordination from start to finish. Not outsourced. Not handed off. Lisa and her licensed immigration team stay present until you are fully taken care of — from your first question to the day you hold your residency card and beyond.
+              </p>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>My residency team is your residency team.</p>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+            </div>
+
+            {/* Service - Concierge */}
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🌮</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexico Newcomers Concierge</h3>
@@ -364,18 +375,6 @@ export default function Home() {
                 <li>Post-surgery companionship & recovery support</li>
                 <li>Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
               </ul>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
-            </div>
-
-            {/* Service 4 - Immigration */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛂</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexican Residency, Sorted</h3>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '20px' }}>
-                My residency team is your residency team. I coordinate every step, set your appointments,
-                and walk in with you. Temporary residency, permanent residency, heritage citizenship —
-                navigated together by people who know this city and this process.
-              </p>
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
             </div>
 

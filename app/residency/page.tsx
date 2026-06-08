@@ -54,6 +54,9 @@ export default function ResidencyPage() {
         <h1 style={{ fontSize: '52px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '20px', lineHeight: '1.15' }}>
           Mexican Residency, Sorted.
         </h1>
+        <p style={{ fontSize: '18px', fontStyle: 'italic', color: '#FDF6F0', maxWidth: '700px', margin: '0 auto 28px', lineHeight: '1.75', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+          Not outsourced. Not handed off. Lisa and her team are with you every step — from your first question to the day you hold your residency card and beyond.
+        </p>
         <div style={{ width: '48px', height: '2px', backgroundColor: '#D4A017', margin: '0 auto 24px' }} />
         <p style={{ fontSize: '18px', color: '#F5D0D8', maxWidth: '560px', margin: '0 auto 40px', lineHeight: '1.75' }}>
           Answer 6 questions and find your path to living in Mexico legally.

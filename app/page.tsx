@@ -58,9 +58,9 @@ export default function Home() {
           <p style={{ color: "#2C1810", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Known here. Trusted here. Since 2015.</p>
           <div style={{ width: "48px", height: "2px", backgroundColor: "#D4A017", marginBottom: "28px" }} />
           <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rentals, home care, and on-the-ground presence — your person in Mexico since 2015.</p>
-          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
-            <a href="/residency" style={{ backgroundColor: "#C4622D", color: "white", padding: "16px 48px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>See If I Qualify →</a>
-            <a href="/residency" style={{ backgroundColor: "transparent", color: "#8B1A2A", padding: "16px 48px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "600", border: "1.5px solid #8B1A2A" }}>Free Residency Assessment</a>
+          <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", alignItems: "center" }}>
+            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: "#C4622D", color: "white", padding: "16px 48px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Book a Planning Call</a>
+            <a href="/residency" style={{ color: "#8B1A2A", textDecoration: "none", fontSize: "15px", fontWeight: "600" }}>See If I Qualify →</a>
           </div>
         </div>
         {/* Right — full uncropped photo */}

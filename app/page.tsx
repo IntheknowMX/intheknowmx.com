@@ -309,7 +309,7 @@ export default function Home() {
                 emoji: '📋',
                 title: 'From Dream to Action Plan',
                 subtitle: "You've been talking about Mexico for years. Let's turn that into a real outline.",
-                body: "This call is for the serious dreamer who needs structure. Together we build a step-by-step action plan — what to do first, what to do next, and what can wait. We identify the gaps between where you are now and where you want to be, and we close them one by one.",
+                body: "This call is for the serious dreamer who needs structure. Together we build a step-by-step action plan — what to do first, what to do next, and what can wait. We identify the gaps between where you are now and where you want to be, and we close them one by one. We cover the practical questions you've been putting off — housing options, neighborhood fit, budget reality, income sources, healthcare access, and what moving actually looks like for your specific life. Nothing vague. Nothing generic. A real plan built around your real situation. You've done the dreaming. This is where the doing begins.",
                 closing: "Dreams don’t move you to Mexico. Plans do.",
               },
               {

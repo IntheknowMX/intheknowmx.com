@@ -278,10 +278,10 @@ export default function Home() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT I OFFER</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '16px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            Your Mexico life — built by someone who already lives it.
+            Your Mexico life — built with someone who already lives it.
           </h2>
           <p style={{ color: '#F5E0E6', fontSize: '17px', textAlign: 'center', maxWidth: '600px', margin: '0 auto 16px', lineHeight: '1.75' }}>
-            Every service is personal, in-person, and built around your specific situation. Not a package. Not a script. Not a remote service.
+            Every service is personal, in-person, and built around your specific situation. Not outsourced. Not handed off. Lisa and her team are with you every step — from your first question to the day you hold your residency card and beyond.
           </p>
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{

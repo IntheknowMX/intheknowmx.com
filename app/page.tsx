@@ -38,7 +38,7 @@ export default function Home() {
             fontSize: '14px',
             fontWeight: '600',
             letterSpacing: '0.5px'
-          }}>Strategy Session</a>
+          }}>Book a Planning Call</a>
         </div>
       </nav>
 
@@ -223,7 +223,7 @@ export default function Home() {
           fontSize: '15px',
           fontWeight: '700',
           letterSpacing: '0.5px'
-        }}>✦ Book a Strategy Session Now</a>
+        }}>✦ Book a Planning Call Now</a>
       </section>
 
       {/* About */}
@@ -255,7 +255,7 @@ export default function Home() {
               textDecoration: 'none',
               fontSize: '15px',
               fontWeight: '700'
-            }}>✦ Book a Strategy Session</a>
+            }}>✦ Book a Planning Call</a>
           </div>
         </div>
         <div style={{ flex: 1, minWidth: '280px', textAlign: 'center' }}>
@@ -293,7 +293,7 @@ export default function Home() {
               fontSize: '15px',
               fontWeight: '700',
               display: 'inline-block'
-            }}>✦ Book a Strategy Session</a>
+            }}>✦ Book a Planning Call</a>
           </div>
           {/* Planning Calls */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px', marginBottom: '28px' }}>
@@ -326,7 +326,7 @@ export default function Home() {
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>{card.subtitle}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>{card.body}</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
-                <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Strategy Session →</a>
+                <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
               </div>
             ))}
           </div>
@@ -364,7 +364,7 @@ export default function Home() {
                 <li>Post-surgery companionship & recovery support</li>
                 <li>Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
               </ul>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Strategy Session →</a>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
             </div>
 
             {/* Service 4 - Immigration */}
@@ -376,7 +376,7 @@ export default function Home() {
                 and walk in with you. Temporary residency, permanent residency, heritage citizenship —
                 navigated together by people who know this city and this process.
               </p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Strategy Session →</a>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
             </div>
 
           </div>
@@ -397,12 +397,12 @@ export default function Home() {
 
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
               <div style={{ fontSize: '32px', marginBottom: '14px' }}>📞</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>Strategy Session</h3>
+              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>Book a Planning Call</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px' }}>
                 Your first step. We map out your entire Mexico plan together.
               </p>
               <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Book to confirm rate</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Strategy Session</a>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
             </div>
 
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
@@ -412,7 +412,7 @@ export default function Home() {
                 Day-to-day life in Mexico, handled.
               </p>
               <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Custom packages available</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Strategy Session</a>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
             </div>
 
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
@@ -422,7 +422,7 @@ export default function Home() {
                 My team walks you through every step to legal residency in Mexico.
               </p>
               <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Starting rates vary by case</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Strategy Session with My Residency Team</a>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call with My Residency Team</a>
             </div>
 
           </div>
@@ -462,7 +462,7 @@ export default function Home() {
             Not sure which neighborhood is right for you? That is exactly what a strategy session is for.
           </p>
           <div style={{ textAlign: 'center' }}>
-            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '16px 40px', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>✦ Book a Strategy Session</a>
+            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '16px 40px', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>✦ Book a Planning Call</a>
           </div>
         </div>
       </section>
@@ -602,7 +602,7 @@ export default function Home() {
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
               backgroundColor: 'white', color: '#2C1810', padding: '14px 36px',
               borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700'
-            }}>✦ Book a Strategy Session First</a>
+            }}>✦ Book a Planning Call First</a>
           </div>
         </div>
       </section>
@@ -669,7 +669,7 @@ export default function Home() {
                 textDecoration: 'none',
                 fontSize: '15px',
                 fontWeight: '700'
-              }}>✦ Book a Strategy Session</a>
+              }}>✦ Book a Planning Call</a>
             </div>
             <div style={{ flex: 1, minWidth: '280px' }}>
               <img
@@ -718,7 +718,7 @@ export default function Home() {
             fontSize: '15px',
             fontWeight: '700',
             display: 'inline-block'
-          }}>✦ Book a Strategy Session</a>
+          }}>✦ Book a Planning Call</a>
           <p style={{ marginTop: '28px', fontSize: '14px', color: '#E8A598', lineHeight: '1.7' }}>
             Full concierge support for Mexico newcomers also available — <a href="#services" style={{ color: '#E8A598', fontWeight: '600' }}>ask Lisa during your strategy session.</a>
           </p>
@@ -824,7 +824,7 @@ export default function Home() {
           letterSpacing: '0.5px',
           display: 'inline-block',
           marginBottom: '40px'
-        }}>✦ Book a Strategy Session</a>
+        }}>✦ Book a Planning Call</a>
         <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '16px' }}>
           <a href="mailto:Lisa@InTheKnowMx.com" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Lisa@InTheKnowMx.com</a>
           <a href="https://www.instagram.com/in.the.know.mexico/" target="_blank" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Instagram</a>

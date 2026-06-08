@@ -414,19 +414,77 @@ export default function Home() {
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
             </div>
 
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
+            {/* Residency Tiered Cards */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontSize: '32px', marginBottom: '14px' }}>🛂</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>Full Residency Support</h3>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px' }}>
-                My team walks you through every step to legal residency in Mexico.
-              </p>
-              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Starting rates vary by case</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call with My Residency Team</a>
+              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Residency Planning Call</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$89</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>50 minutes. Everything you need to know about your residency options. Includes a free DIY document checklist to get started on your own.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>50-minute video or phone call</li>
+                <li>Pre-call intake questionnaire</li>
+                <li>Free DIY residency document checklist</li>
+                <li>48-hour written follow-up with summary and next steps</li>
+                <li>$89 credited toward any package upgrade</li>
+              </ul>
+              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($91), Stripe ($92), or PayPal ($92)</p>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block', textAlign: 'center' }}>Book for $89</a>
+            </div>
+
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ fontSize: '32px', marginBottom: '14px' }}>📋</div>
+              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Residency Guided Package</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$397</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>I coordinate everything, prep you fully, and accompany you to your appointments. Attorney fees quoted separately.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>Pre-call intake questionnaire</li>
+                <li>Full eligibility review</li>
+                <li>Document preparation guidance</li>
+                <li>Appointment coordination — consulate and INM</li>
+                <li>In-person accompaniment to all appointments</li>
+                <li>48-hour written follow-up</li>
+                <li>WhatsApp support throughout</li>
+                <li>Attorney fees quoted separately based on your case</li>
+              </ul>
+              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($406), Stripe ($410), or PayPal ($410)</p>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block', textAlign: 'center' }}>Book for $397</a>
+            </div>
+
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', border: '2px solid #C4622D', position: 'relative', display: 'flex', flexDirection: 'column' }}>
+              <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST POPULAR</p>
+              <div style={{ fontSize: '32px', marginBottom: '14px' }}>⭐</div>
+              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Full Residency Concierge</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$797</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>White glove, start to finish. Coordination, accompaniment, and attorney fees included. No surprises.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>Everything in Guided Package</li>
+                <li>Licensed immigration attorney fees included</li>
+                <li>Full document preparation</li>
+                <li>Consulate and INM appointments secured</li>
+                <li>In-person accompaniment — every step</li>
+                <li>Priority WhatsApp support</li>
+                <li>One flat price — no surprise invoices</li>
+              </ul>
+              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($814), Stripe ($821), or PayPal ($821)</p>
+              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block', textAlign: 'center' }}>Book for $797</a>
             </div>
 
           </div>
           <p style={{ textAlign: 'center', color: '#E8A598', fontSize: '14px', lineHeight: '1.8' }}>
-            Rental property showing packages, property &amp; pet care, senior concierge, and local companion services are priced individually. Ask Lisa during your strategy session.
+            Rental property showing packages, property &amp; pet care, senior concierge, and local companion services are priced individually. Ask Lisa during your planning call.
+          </p>
+        </div>
+      </section>
+
+      {/* Booking & Cancellation Policy */}
+      <section style={{ backgroundColor: '#2C1810', padding: '60px 40px', borderTop: '1px solid #3D2418' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '28px', textAlign: 'center' }}>Booking &amp; Cancellation Policy</h3>
+          <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598', marginBottom: '20px' }}>
+            All sessions require payment in full to confirm. You will receive a confirmation email with your intake questionnaire within 24 hours of booking. Please complete your questionnaire at least 48 hours before your scheduled call so we arrive fully prepared.
+          </p>
+          <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598' }}>
+            Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice.
           </p>
         </div>
       </section>
@@ -770,7 +828,7 @@ export default function Home() {
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '60px', textAlign: 'center', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
             The town knows. Now hear it from them.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
             {[
               { quote: "She is tenacious, organized, and deeply caring — going above and beyond to make sure her clients feel seen, supported, and completely at ease. She's not just a relocation concierge — she's a trusted guide.", name: 'Tiffany Paige', title: 'Licensed Real Estate Advisor, The Agency SMA', date: '2026' },
               { quote: "I could not be more pleased with Lisa! She was very responsive, reasonable and she stayed with the program until we were successful. Do business with Lisa and she will solve your problems!", name: 'Terry M.', title: 'San Miguel Expat', date: '2026' },
@@ -788,15 +846,69 @@ export default function Home() {
               { quote: "Lisa was prompt, professional and everything you could want in a dog sitter. She even adjusted her schedule to take Charlie on an extra walk when our flight was delayed. I cannot say enough good things about her.", name: 'Brandon S.', title: '', date: '2019' },
               { quote: "When we arrived home we found a cooked dinner, well kept house — cleaner than we left it — and a happy cat. Strongly recommend her to anyone who is in need of house and pet sitting.", name: 'Neslihan S.', title: '', date: '2018' },
               { quote: "My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May.", name: 'Janet A.', title: '', date: '2018' },
-              { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success. Our guests have raved about her! The hardest part about having her is saying goodbye.", name: 'Michelle & Scott Lyons, Gecko Bungalows Resort · Belize · 2018', title: '', date: '2018' },
-            ].map((t) => (
-              <div key={t.name + t.date} style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', borderLeft: '4px solid #C97B8A' }}>
-                <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', marginBottom: '24px' }}>
+              { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success. Our guests have raved about her! The hardest part about having her is saying goodbye.", name: 'Michelle & Scott Lyons', title: 'Gecko Bungalows Resort · Belize', date: '2018' },
+              { quote: "Lisa was fantastic with our puppy! Great communication as well.", name: 'Sue C.', title: '', date: '2019' },
+              { quote: "Lisa was great with our 4-month old puppy Puddin. Excellent communication and pictures of their walk. I would encourage you to hire her.", name: 'Sue C.', title: '', date: '2019' },
+              { quote: "Lisa was wonderful. We had a last minute booking and she was able to take good care of our three dogs. She took great care of our house and sent us photos of the dogs every day we were gone.", name: 'Alex C.', title: '', date: '2019' },
+              { quote: "Lisa was great. She took great care of our home and our old dog, getting him out for walks even when it was raining. The house was clean when we got home too.", name: 'Rachel B.', title: '', date: '2019' },
+              { quote: "Lisa May put me at ease. My home was running like a well-oiled machine. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May as a caring companion.", name: 'Doris O.', title: '', date: '2018' },
+              { quote: "Lisa May was a blessing to find. Friendly and professional. When we arrived home we found a cooked dinner, well kept house and a happy cat. Strongly recommend.", name: 'Neslihan S.', title: '', date: '2018' },
+              { quote: "Greetings from Belize! We have had Lisa May house sit for us on several occasions. She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success over the years. Our guests have raved about her!", name: 'Michelle & Scott Lyons', title: 'Gecko Bungalows Resort', date: '2018' },
+              { quote: "Lisa had our cat well taken care of. She sent us pictures of him while we were away and I'm sure gave him lots of love. Would definitely hire her again.", name: 'Katherine A.', title: '', date: '2019' },
+              { quote: "Lisa is very dependable and is great at communicating timely and thoroughly! She is very flexible and willing to adapt to my dogs daily needs.", name: 'Alicia F.', title: '', date: '2019' },
+              { quote: "Lisa was AMAZING! She sent me pics and kept me up to date on everything! I would highly recommend her. I will definitely hire her again!!", name: 'Leslie F.', title: '', date: '2019' },
+              { quote: "Lisa took great care of our girls Lola and Hershey! She was quick to respond, sent pictures, and was sweet with our difficult-one-when-we-are-gone Lola!", name: 'Nicole H.', title: '', date: '2019' },
+              { quote: "Lisa has been a great help to us with all of our travel! Would highly recommend!", name: 'Amanda C.', title: '', date: '2019' },
+              { quote: "I'm so sorry about the accident! Thank you again for moving the plant inside.", name: 'Emily B.', title: '', date: '2019' },
+              { quote: "Lisa was timely and reliable and friendly with my pup. I would definitely use her again!", name: 'Ashley H.', title: '', date: '2019' },
+              { quote: "Lisa was so great caring for my cat! I loved getting pictures and detailed updates.", name: 'Jordan L.', title: '', date: '2019' },
+              { quote: "Lisa was super flexible despite my concierge not showing up to give her my apartment key. She walked my pup almost a full mile in a short period of time. She is extremely responsive and I will be using her again!", name: 'Madeleine H.', title: '', date: '2019' },
+              { quote: "What a great sitter for my foster pup!! She takes great photos, is prompt, and leaves great summaries. I highly recommend her.", name: 'Allison A.', title: '', date: '2019' },
+              { quote: "Lisa was great! She really helped me out on a day where I couldn't get home to let Louie out. Would highly recommend and use her anytime.", name: 'Erica R.', title: '', date: '2019' },
+              { quote: "Lisa was prompt, professional and everything you could want in a dog sitter. She even adjusted her schedule to take Charlie on an extra walk when our flight was delayed.", name: 'Brandon S.', title: '', date: '2019' },
+              { quote: "She even managed to grab my Dog Lily when her harness failed! Amazing!", name: 'Derek S.', title: '', date: '2019' },
+              { quote: "Lisa as always does a stellar job!", name: 'William S.', title: '', date: '2019' },
+              { quote: "You're amazing! Thank you! I feel so good knowing they are taken care of.", name: 'Celeste G.', title: '', date: '2019' },
+              { quote: "Lisa was great and sent very good updates!", name: 'Casey S.', title: '', date: '2019' },
+              { quote: "We feel very comfortable leaving our fur-babies in her care.", name: 'Maggie G.', title: '', date: '2019' },
+              { quote: "Lisa was great! I knew Charlie was in good hands!", name: 'Courtney D.', title: '', date: '2019' },
+              { quote: "Feels great knowing your dog is in good hands!", name: 'Michael K.', title: '', date: '2019' },
+              { quote: "You are amazing! Thank you so much for attending to mine and Poppy's needs!!!", name: 'Amber K.', title: '', date: '2019' },
+              { quote: "Professional. Made me feel comfortable while I was away. Highly recommend.", name: 'Elyse T.', title: '', date: '2019' },
+              { quote: "Lisa was great with Hazel! Super perceptive and very proactive and reliable.", name: 'Yangzi L.', title: '', date: '2019' },
+              { quote: "Lisa was very patient with Miller and took great photos of him along the way.", name: 'Catherine N.', title: '', date: '2019' },
+              { quote: "Lisa was timely and attentive! Would use again!", name: 'Ellen C.', title: '', date: '2019' },
+              { quote: "Great communicator, would recommend.", name: 'Reggie & Katie F.', title: '', date: '2020' },
+              { quote: "Lisa was very patient and helpful with my very skittish dog!", name: 'Chalet B.', title: '', date: '2020' },
+              { quote: "Love Lisa, will use her again for sure!", name: 'Jenny W.', title: '', date: '2020' },
+              { quote: "Lisa is great at communicating and goes out of the way to make sure my Pretzel gets everything he needs while I'm away.", name: 'Sarah M.', title: '', date: '2019' },
+              { quote: "Lisa was great! Showed up early!", name: 'Kyle S.', title: '', date: '2019' },
+              { quote: "Amazing for my first time experience!!", name: 'Meghan M.', title: '', date: '2019' },
+              { quote: "Loved the pictures!", name: 'Tyler N.', title: '', date: '2019' },
+              { quote: "Lisa is awesome! She watched my two dogs and did a great job.", name: 'Marlow A.', title: '', date: '2021' },
+              { quote: "We were so happy with Lisa. We came home to a happy, calm dog and clean house.", name: 'Cindy M.', title: '', date: '2020' },
+              { quote: "Lisa stayed with our two fur-babies and did a great job. One of them got sick while we were gone and Lisa took good care of him.", name: 'Mary K.', title: '', date: '2020' },
+              { quote: "Lisa was wonderful! Very communicative and Otto loved her!", name: 'Jeana M.', title: '', date: '2020' },
+              { quote: "Lisa was excellent in every way! She has a beautiful personality.", name: 'Paula P.', title: '', date: '2020' },
+              { quote: "Lisa has been nothing short of spectacular! She goes above and beyond sending pics of our pup.", name: 'Kathryn W.', title: '', date: '2020' },
+              { quote: "Lisa was great with Zeus! She took notes at our meet up to ensure she knew how to properly take care of him.", name: 'Sarah H.', title: '', date: '2020' },
+              { quote: "Lisa was incredible. She accepted a request last minute and saved us!", name: 'Jazmine O.', title: '', date: '2021' },
+              { quote: "Lisa was AMAZING. We never worried once!!!", name: 'Amy H.', title: '', date: '2021' },
+              { quote: "Lisa took great care of my dog and home while on vacation. Will rebook again.", name: 'Oliver E.', title: '', date: '2021' },
+              { quote: "Lisa did a great job taking care of my dog and home. Very conscientious and helpful.", name: 'Heather H.', title: '', date: '2021' },
+              { quote: "Lisa was friendly, professional, and sweet to our dog. This was our first experience with Rover and everything went smoothly.", name: 'Drew H.', title: '', date: '2021' },
+              { quote: "I highly recommend Lisa without any hesitation!! She went beyond the call of duty and my house was left in pristine condition.", name: 'Paula P.', title: '', date: '2021' },
+              { quote: "Lisa watched our house and dog when we went to Mexico. She was very communicative throughout and everything was taken care of when we got home.", name: 'Emily M.', title: '', date: '2021' },
+              { quote: "Lisa took great care of Henry.", name: 'William F.', title: '', date: '2023' },
+              { quote: "Lisa is a total pro. Left our house perfectly clean and exactly how we left it, just a little better.", name: 'Claire H.', title: '', date: '2023' },
+            ].map((t, i) => (
+              <div key={t.name + t.date + i} style={{ backgroundColor: 'white', padding: '28px 24px', borderRadius: '8px', borderLeft: '4px solid #E8A598' }}>
+                <p style={{ fontSize: '14px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', marginBottom: '16px' }}>
                   "{t.quote}"
                 </p>
-                <div style={{ color: '#7D3B4E', fontWeight: 'bold', fontSize: '15px' }}>{t.name}</div>
-                {t.title && <div style={{ color: '#7D3B4E', fontSize: '13px', marginTop: '4px' }}>{t.title}</div>}
-                <div style={{ display: 'inline-block', marginTop: '8px', fontSize: '11px', color: '#C97B8A', letterSpacing: '1px', fontWeight: '600', backgroundColor: '#FDF6F0', padding: '2px 8px', borderRadius: '10px' }}>{t.date}</div>
+                <div style={{ color: '#7D3B4E', fontWeight: 'bold', fontSize: '14px' }}>{t.name}</div>
+                {t.title && <div style={{ color: '#C97B8A', fontSize: '12px', marginTop: '3px' }}>{t.title}</div>}
+                <div style={{ display: 'inline-block', marginTop: '6px', fontSize: '11px', color: '#C97B8A', letterSpacing: '1px', fontWeight: '600', backgroundColor: '#FDF6F0', padding: '2px 8px', borderRadius: '10px' }}>{t.date}</div>
               </div>
             ))}
           </div>

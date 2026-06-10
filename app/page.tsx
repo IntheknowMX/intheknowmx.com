@@ -1,5 +1,6 @@
 'use client'
 /* eslint-disable react/no-unescaped-entities */
+import Image from 'next/image'
 import { useState } from 'react'
 import MexicoPathQuiz from './components/MexicoPathQuiz'
 
@@ -107,11 +108,13 @@ export default function Home() {
       {/* Hero */}
       <section className="responsive-section hero-section">
         <div className="hero-photo">
-          <img
+          <Image
             src="/images/herocropped.jpg"
             alt="San Miguel de Allende"
             className="responsive-img"
-            loading="lazy"
+            priority
+            width={1600}
+            height={1200}
             style={{ objectFit: 'cover', objectPosition: 'center top', width: '100%', height: '100%', display: 'block' }}
           />
         </div>
@@ -234,7 +237,7 @@ export default function Home() {
               { img: '/images/press-over50.png', label: 'Over 50 Expat Interview', href: 'https://www.youtube.com/live/YY3Jkjbcbeg' },
             ].map((item) => (
               <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" className="press-card" style={{ display: 'block', borderRadius: '6px', overflow: 'hidden', textDecoration: 'none', backgroundColor: '#1A0E09' }}>
-                <img src={item.img} alt={item.label} className="responsive-img" loading="lazy" style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', display: 'block' }} />
+                <Image src={item.img} alt={item.label} className="responsive-img" loading="lazy" width={600} height={338} style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', display: 'block' }} />
                 <div style={{ padding: '14px 16px', textAlign: 'center' }}>
                   <span style={{ color: '#FDF6F0', fontSize: '13px', letterSpacing: '0.5px' }}>{item.label}</span>
                 </div>
@@ -288,11 +291,13 @@ export default function Home() {
           </div>
         </div>
         <div style={{ flex: 1, minWidth: '280px', textAlign: 'center' }}>
-          <img
+          <Image
             src="/images/headshot.jpg"
             alt="Lisa May Cobham — Relocation Specialist, In The Know Mexico"
             className="responsive-img"
             loading="lazy"
+            width={420}
+            height={560}
             style={{ width: '100%', maxWidth: '420px', borderRadius: '8px', objectFit: 'cover' }}
           />
           <p style={{ fontSize: '13px', color: '#7D3B4E', marginTop: '12px', letterSpacing: '1px' }}>
@@ -752,11 +757,13 @@ export default function Home() {
               }}>✦ Book a Planning Call</a>
             </div>
             <div style={{ flex: 1, minWidth: '280px' }}>
-              <img
+              <Image
                 src="/images/home-care.jpg"
                 alt="Beautiful home in San Miguel de Allende"
                 className="responsive-img"
                 loading="lazy"
+                width={900}
+                height={600}
                 style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }}
               />
               <div style={{

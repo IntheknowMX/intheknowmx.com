@@ -1,114 +1,158 @@
+'use client'
 /* eslint-disable react/no-unescaped-entities */
+import { useState } from 'react'
 import MexicoPathQuiz from './components/MexicoPathQuiz'
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
-    <main style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
+    <main className="page-root" style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
+      <style>{`
+        .page-root { overflow-x: hidden; }
+        .main-nav { background-color: #FDF6F0; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E8A598; position: sticky; top: 0; z-index: 100; }
+        .nav-brand { font-size: 18px; font-weight: bold; color: #7D3B4E; letter-spacing: 2px; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }
+        .nav-right { display: flex; align-items: center; gap: 20px; position: relative; }
+        .nav-links { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+        .nav-links a { color: #2C1810; text-decoration: none; font-size: 14px; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; }
+        .nav-toggle span { width: 22px; height: 2px; background: #2C1810; display: block; border-radius: 1px; }
+        .nav-cta { background-color: #C4622D; color: white; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; }
+        .hero-section { display: flex; flex-direction: row-reverse; min-height: 90vh; align-items: stretch; overflow: hidden; }
+        .hero-photo { flex: 0 0 58%; min-height: 380px; overflow: hidden; }
+        .hero-copy { flex: 0 0 42%; background-color: #FDF6F0; padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+        .hero-copy p.lead { color: #7D3B4E; font-size: 11px; letter-spacing: 5px; margin-bottom: 28px; font-weight: 700; }
+        .hero-copy h1 { color: #2C1810; font-size: 52px; line-height: 1.1; margin-bottom: 28px; font-weight: normal; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }
+        .hero-copy h1 span { color: #7D3B4E; }
+        .hero-copy .hero-description { color: #2C1810; font-size: 17px; line-height: 1.8; margin-bottom: 40px; }
+        .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+        .button-link { display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; text-decoration: none; font-size: 15px; font-weight: 700; padding: 16px 48px; }
+        .button-link.secondary { background: none; color: #8B1A2A; padding: 16px 0; font-weight: 600; }
+        .responsive-img { width: 100%; height: auto; display: block; }
+        .content-wrapper { max-width: 1100px; width: 100%; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
+        .responsive-section { padding: 80px 40px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(5, minmax(120px, 1fr)); gap: 40px; justify-items: center; width: 100%; }
+        .stats-card { text-align: center; }
+        .stats-card .stat-number { color: #E8A598; font-size: 34px; font-weight: bold; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }
+        .stats-card .stat-label { color: #FDF6F0; font-size: 12px; letter-spacing: 2px; margin-top: 4px; }
+        .ticker-section { background-color: #2C1810; padding: 16px 0; overflow: hidden; white-space: nowrap; }
+        .ticker-track { display: inline-flex; animation: ticker 40s linear infinite; }
+        .ticker-item { display: inline-flex; align-items: center; padding: 0 8px; }
+        .ticker-item .quote { color: #FDF6F0; font-style: italic; font-size: 14px; }
+        .ticker-item .source { color: #E8A598; font-size: 14px; margin-left: 8px; }
+        .ticker-item .separator { color: #8B1A2A; margin: 0 28px; font-size: 16px; }
+        .pull-quotes-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; }
+        .why-grid { display: grid; grid-template-columns: repeat(3, minmax(280px, 1fr)); gap: 28px; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .press-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .button-row { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+        .hero-columns, .two-column-stack, .flex-stack { display: flex; gap: 70px; align-items: center; flex-wrap: wrap; }
+        .hero-columns > *, .two-column-stack > * { flex: 1 1 300px; }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+        @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @media (max-width: 767px) {
+          .main-nav { padding: 16px 20px; }
+          .nav-links { display: none; position: absolute; top: 100%; right: 20px; background: #FDF6F0; box-shadow: 0 12px 32px rgba(0,0,0,.12); border: 1px solid #E8A598; border-radius: 8px; flex-direction: column; width: calc(100vw - 40px); max-width: 320px; z-index: 110; }
+          .nav-links.open { display: flex; }
+          .nav-links a { padding: 12px 18px; border-bottom: 1px solid #E8A598; }
+          .nav-links a:last-child { border-bottom: none; }
+          .nav-toggle { display: flex; }
+          .hero-section { flex-direction: column; min-height: auto; }
+          .hero-photo, .hero-copy { flex: 1 1 100%; }
+          .hero-copy { padding: 48px 20px; }
+          .hero-copy h1 { font-size: 36px !important; }
+          .hero-buttons { flex-direction: column; width: 100%; }
+          .button-link { width: 100%; padding: 16px 20px; }
+          .responsive-section { padding: 48px 20px; }
+          .content-wrapper { padding: 0; }
+          .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+          .ticker-track { animation-duration: 55s; }
+          .pull-quotes-grid, .why-grid, .press-grid, .service-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
+          .press-grid { grid-template-columns: repeat(2, 1fr); }
+          .button-row { flex-direction: column; align-items: stretch; }
+          .hero-columns, .two-column-stack, .flex-stack { flex-direction: column; }
+          main h1 { font-size: 36px !important; }
+          main h2 { font-size: 28px !important; }
+          main h3 { font-size: 20px !important; }
+          main h4 { font-size: 18px !important; }
+          .responsive-img { max-width: 100%; height: auto; }
+        }
+      `}</style>
 
       {/* Navigation */}
-      <nav style={{
-        backgroundColor: '#FDF6F0',
-        padding: '20px 40px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        borderBottom: '1px solid #E8A598',
-        position: 'sticky',
-        top: 0,
-        zIndex: 100
-      }}>
-        <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#7D3B4E', letterSpacing: '2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-          IN THE KNOW MEXICO
-        </div>
-        <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-          <a href="#about" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>About</a>
-          <a href="#services" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Residency</a>
-          <a href="#rentals" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Renting</a>
-          <a href="#properties" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Owning</a>
-          <a href="#caretaking" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Property & Pet Care</a>
-          <a href="#local-companion" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Local Companion</a>
-          <a href="#welcome-table" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Welcome Table</a>
-          <a href="#testimonials" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Testimonials</a>
-          <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-            backgroundColor: '#C4622D',
-            color: 'white',
-            padding: '10px 22px',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            fontSize: '14px',
-            fontWeight: '600',
-            letterSpacing: '0.5px'
-          }}>Book a Planning Call</a>
+      <nav className="main-nav">
+        <div className="nav-brand">IN THE KNOW MEXICO</div>
+        <div className="nav-right">
+          <button className="nav-toggle" aria-label="Toggle navigation" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            <span />
+            <span />
+            <span />
+          </button>
+          <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
+            <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
+            <a href="#services" onClick={() => setMobileMenuOpen(false)}>Residency</a>
+            <a href="#rentals" onClick={() => setMobileMenuOpen(false)}>Renting</a>
+            <a href="#properties" onClick={() => setMobileMenuOpen(false)}>Owning</a>
+            <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Property & Pet Care</a>
+            <a href="#local-companion" onClick={() => setMobileMenuOpen(false)}>Local Companion</a>
+            <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
+            <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
+          </div>
+          <a className="button-link nav-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
         </div>
       </nav>
 
       {/* Hero */}
-      <section style={{ display: "flex", minHeight: "90vh", alignItems: "stretch" }}>
-        {/* Left — text panel */}
-        <div style={{
-          flex: "0 0 42%",
-          backgroundColor: "#FDF6F0",
-          padding: "80px 60px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}>
-          <p style={{ color: "#7D3B4E", fontSize: "11px", letterSpacing: "5px", marginBottom: "28px", fontWeight: "700" }}>SAN MIGUEL DE ALLENDE · MEXICO</p>
-          <h1 style={{ color: "#2C1810", fontSize: "52px", lineHeight: "1.1", marginBottom: "28px", fontWeight: "normal", fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>San Miguel<br /><span style={{ color: "#7D3B4E" }}>Insider.</span></h1>
-          <p style={{ color: "#2C1810", fontSize: "15px", marginBottom: "28px", letterSpacing: "1px" }}>Known here. Trusted here. Since 2015.</p>
-          <div style={{ width: "48px", height: "2px", backgroundColor: "#D4A017", marginBottom: "28px" }} />
-          <p style={{ color: "#2C1810", fontSize: "17px", lineHeight: "1.8", marginBottom: "40px" }}>Relocation support, rentals, home care, and on-the-ground presence — your person in Mexico since 2015.</p>
-          <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", alignItems: "center" }}>
-            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: "#C4622D", color: "white", padding: "16px 48px", borderRadius: "4px", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Book a Planning Call</a>
-            <a href="/residency" style={{ color: "#8B1A2A", textDecoration: "none", fontSize: "15px", fontWeight: "600" }}>See If I Qualify →</a>
-          </div>
-        </div>
-        {/* Right — full uncropped photo */}
-        <div style={{ flex: "0 0 58%", backgroundColor: "#FDF6F0", overflow: "hidden" }}>
+      <section className="responsive-section hero-section">
+        <div className="hero-photo">
           <img
             src="/images/herocropped.jpg"
             alt="San Miguel de Allende"
-            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
+            className="responsive-img"
+            loading="lazy"
+            style={{ objectFit: 'cover', objectPosition: 'center top', width: '100%', height: '100%', display: 'block' }}
           />
+        </div>
+        <div className="hero-copy">
+          <p className="lead">SAN MIGUEL DE ALLENDE · MEXICO</p>
+          <h1>San Miguel<br /><span>Insider.</span></h1>
+          <p style={{ color: '#2C1810', fontSize: '15px', marginBottom: '28px', letterSpacing: '1px' }}>Known here. Trusted here. Since 2015.</p>
+          <div style={{ width: '48px', height: '2px', backgroundColor: '#D4A017', marginBottom: '28px' }} />
+          <p className="hero-description">Relocation support, rentals, home care, and on-the-ground presence — your person in Mexico since 2015.</p>
+          <div className="hero-buttons">
+            <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
+            <a className="button-link secondary" href="/residency">See If I Qualify →</a>
+          </div>
         </div>
       </section>
       {/* Stats Bar */}
-      <section style={{
-        backgroundColor: '#2C1810',
-        padding: '36px 40px',
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '80px',
-        flexWrap: 'wrap'
-      }}>
-        {[
-          { number: '12+', label: 'Years in Mexico' },
-          { number: '100%', label: 'In-Person Service' },
-          { number: '300+', label: 'Five-Star Reviews' },
-          { number: '124+', label: 'Repeat Clients' },
-          { number: '24/7', label: 'On the Ground' },
-        ].map((stat) => (
-          <div key={stat.label} style={{ textAlign: 'center' }}>
-            <div style={{ color: '#E8A598', fontSize: '34px', fontWeight: 'bold', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{stat.number}</div>
-            <div style={{ color: '#FDF6F0', fontSize: '12px', letterSpacing: '2px', marginTop: '4px' }}>{stat.label}</div>
-          </div>
-        ))}
+      <section className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
+        <div className="content-wrapper stats-grid">
+          {[
+            { number: '12+', label: 'Years in Mexico' },
+            { number: '100%', label: 'In-Person Service' },
+            { number: '300+', label: 'Five-Star Reviews' },
+            { number: '124+', label: 'Repeat Clients' },
+            { number: '24/7', label: 'On the Ground' },
+          ].map((stat) => (
+            <div key={stat.label} className="stats-card">
+              <div className="stat-number">{stat.number}</div>
+              <div className="stat-label">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Ticker Tape */}
-      <style>{`
-        @keyframes ticker {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
-      <section style={{ backgroundColor: '#2C1810', padding: '16px 0', overflow: 'hidden', whiteSpace: 'nowrap' }}>
-        <div style={{ display: 'inline-flex', animation: 'ticker 40s linear infinite' }}>
+      <section className="ticker-section">
+        <div className="ticker-track">
           {[0, 1].map((copy) => (
-            <span key={copy} style={{ display: 'inline-flex', alignItems: 'center' }}>
+            <span key={copy} className="ticker-item">
               {[
                 { text: '"We never worried once."', name: 'Amy H.' },
-                { text: '"The hardest part about having her is saying goodbye."', name: 'Michelle & Scott Lyons, Gecko Bungalows Resort · Belize · 2018' },
+                { text: '"The hardest part about having her is saying goodbye."', name: 'Michelle & Sandy Hudson' },
                 { text: '"My home was running like a well-oiled machine."', name: 'Janet A.' },
                 { text: '"Left our house perfectly clean and exactly how we left it, just a little better."', name: 'Claire H.' },
                 { text: '"I always feel safe when she sits my pets."', name: 'Karla S.' },
@@ -116,11 +160,11 @@ export default function Home() {
                 { text: '"You will not be disappointed."', name: 'Maggie G.' },
                 { text: '"She goes above and beyond."', name: 'Kathryn W.' },
               ].map((r) => (
-                <span key={r.name + r.text} style={{ display: 'inline-flex', alignItems: 'center', padding: '0 8px' }}>
+                <span key={r.name + r.text} className="ticker-item">
                   <span style={{ color: '#D4A017', marginRight: '10px' }}>⭐⭐⭐⭐⭐</span>
-                  <span style={{ color: '#FDF6F0', fontStyle: 'italic', fontSize: '14px' }}>{r.text}</span>
-                  <span style={{ color: '#E8A598', fontSize: '14px', marginLeft: '8px' }}>— {r.name}</span>
-                  <span style={{ color: '#8B1A2A', margin: '0 28px', fontSize: '16px' }}>· · ·</span>
+                  <span className="quote">{r.text}</span>
+                  <span className="source">— {r.name}</span>
+                  <span className="separator">· · ·</span>
                 </span>
               ))}
             </span>
@@ -129,8 +173,8 @@ export default function Home() {
       </section>
 
       {/* Pull Quotes Band */}
-      <section style={{ backgroundColor: '#FDF6F0', padding: '48px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '48px' }}>
+      <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+        <div className="content-wrapper pull-quotes-grid">
           {[
             { quote: 'From the moment I got off the plane, Lisa showed up with kindness and clarity.', name: 'Brian Keith Webster', title: 'Author' },
             { quote: 'She handled everything with exceptional grace and competence.', name: 'Sugar & Sandy Hudson', title: 'Mayor, Los Frailes SMA' },
@@ -147,8 +191,8 @@ export default function Home() {
       </section>
 
       {/* Why Lisa? */}
-      <section style={{ backgroundColor: '#FDF6F0', padding: '80px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+        <div className="content-wrapper">
           <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>WHY LISA &amp; THE IN THE KNOW MEXICO TEAM</p>
           <h2 style={{ fontSize: '40px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', lineHeight: '1.2', maxWidth: '700px', margin: '0 auto 24px' }}>
             Mexico is a life, not a checklist.
@@ -175,13 +219,13 @@ export default function Home() {
       <MexicoPathQuiz />
 
       {/* Press / Media */}
-      <section style={{ backgroundColor: '#2C1810', padding: '70px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
+        <div className="content-wrapper">
           <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', marginBottom: '16px', textAlign: 'center', fontWeight: '700' }}>AS SEEN &amp; HEARD</p>
           <h2 style={{ fontSize: '36px', fontWeight: 'normal', marginBottom: '48px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
             Lisa May Cobham in the Media
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px' }}>
+          <div className="press-grid">
             {[
               { img: '/images/press-business-insider.webp', label: 'Business Insider', href: 'https://www.businessinsider.com/how-to-be-an-expat-digital-nomad-living-abroad-2016-10' },
               { img: '/images/press-american-real.png', label: 'American Real', href: 'https://youtu.be/F7Nowbi5Am8' },
@@ -190,7 +234,7 @@ export default function Home() {
               { img: '/images/press-over50.png', label: 'Over 50 Expat Interview', href: 'https://www.youtube.com/live/YY3Jkjbcbeg' },
             ].map((item) => (
               <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" className="press-card" style={{ display: 'block', borderRadius: '6px', overflow: 'hidden', textDecoration: 'none', backgroundColor: '#1A0E09' }}>
-                <img src={item.img} alt={item.label} style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', display: 'block' }} />
+                <img src={item.img} alt={item.label} className="responsive-img" loading="lazy" style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', display: 'block' }} />
                 <div style={{ padding: '14px 16px', textAlign: 'center' }}>
                   <span style={{ color: '#FDF6F0', fontSize: '13px', letterSpacing: '0.5px' }}>{item.label}</span>
                 </div>
@@ -201,34 +245,19 @@ export default function Home() {
       </section>
 
       {/* Book CTA Band */}
-      <section style={{
-        backgroundColor: '#C4622D',
-        padding: '28px 40px',
-        textAlign: 'center',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '32px',
-        flexWrap: 'wrap'
-      }}>
-        <p style={{ color: 'white', fontSize: '18px', margin: 0, fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", fontStyle: 'italic' }}>
-          Ready to make San Miguel your home?
-        </p>
-        <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-          backgroundColor: 'white',
-          color: '#C4622D',
-          padding: '14px 36px',
-          borderRadius: '4px',
-          textDecoration: 'none',
-          fontSize: '15px',
-          fontWeight: '700',
-          letterSpacing: '0.5px'
-        }}>✦ Book a Planning Call Now</a>
+      <section className="responsive-section" style={{ backgroundColor: '#C4622D' }}>
+        <div className="content-wrapper button-row" style={{ textAlign: 'center', justifyContent: 'center' }}>
+          <p style={{ color: 'white', fontSize: '18px', margin: 0, fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", fontStyle: 'italic' }}>
+            Ready to make San Miguel your home?
+          </p>
+          <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">✦ Book a Planning Call Now</a>
+        </div>
       </section>
 
       {/* About */}
-      <section id="about" style={{ padding: '90px 40px', maxWidth: '1100px', margin: '0 auto', display: 'flex', gap: '70px', alignItems: 'center', flexWrap: 'wrap' }}>
-        <div style={{ flex: 1, minWidth: '300px' }}>
+      <section id="about" className="responsive-section">
+        <div className="content-wrapper two-column-stack" style={{ alignItems: 'center' }}>
+          <div style={{ flex: 1, minWidth: '300px' }}>
           <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>ABOUT LISA MAY COBHAM</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', lineHeight: '1.2', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
             I didn't just move to San Miguel.<br />I became part of it.
@@ -262,20 +291,19 @@ export default function Home() {
           <img
             src="/images/headshot.jpg"
             alt="Lisa May Cobham — Relocation Specialist, In The Know Mexico"
+            className="responsive-img"
+            loading="lazy"
             style={{ width: '100%', maxWidth: '420px', borderRadius: '8px', objectFit: 'cover' }}
           />
           <p style={{ fontSize: '13px', color: '#7D3B4E', marginTop: '12px', letterSpacing: '1px' }}>
             📍 San Miguel de Allende, Mexico
           </p>
         </div>
+        </div>
       </section>
 
-      {/* Divider */}
-      <div style={{ borderTop: '1px solid #E8A598', maxWidth: '1100px', margin: '0 auto' }} />
-
-      {/* Services */}
-      <section id="services" style={{ backgroundColor: '#7D3B4E', padding: '90px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section id="services" className="responsive-section" style={{ backgroundColor: '#7D3B4E' }}>
+        <div className="content-wrapper">
           <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT I OFFER</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '16px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
             Your Mexico life — built with someone who already lives it.
@@ -284,19 +312,15 @@ export default function Home() {
             Every service is personal, in-person, and built around your specific situation. Not outsourced. Not handed off. Lisa and her team are with you every step — from your first question to the day you hold your residency card and beyond.
           </p>
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
+            <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
               backgroundColor: '#C4622D',
               color: 'white',
-              padding: '14px 36px',
               borderRadius: '4px',
-              textDecoration: 'none',
-              fontSize: '15px',
-              fontWeight: '700',
               display: 'inline-block'
             }}>✦ Book a Planning Call</a>
           </div>
           {/* Planning Calls */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px', marginBottom: '28px' }}>
+          <div className="service-grid" style={{ marginBottom: '28px' }}>
             {[
               {
                 emoji: '🗺️',
@@ -326,7 +350,7 @@ export default function Home() {
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>{card.subtitle}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>{card.body}</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
-                <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+                <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
               </div>
             ))}
           </div>
@@ -341,7 +365,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px' }}>
+          <div className="service-grid">
 
             {/* Service - Immigration */}
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -351,7 +375,7 @@ export default function Home() {
                 My residency team is your residency team. I coordinate every step, set your appointments, and walk in with you. Temporary residency, permanent residency, heritage citizenship — navigated together by people who know this city and this process. You don't show up to a consulate alone with a stack of papers you don't understand. You arrive prepared, accompanied, and confident. We review your eligibility together, identify the right path for your specific situation, and handle the coordination from start to finish. Not outsourced. Not handed off. Lisa and her licensed immigration team stay present until you are fully taken care of — from your first question to the day you hold your residency card and beyond.
               </p>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>My residency team is your residency team.</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
             </div>
 
             {/* Service - Concierge */}
@@ -375,7 +399,7 @@ export default function Home() {
                 <li>Post-surgery companionship & recovery support</li>
                 <li>Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
               </ul>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
             </div>
 
           </div>
@@ -383,8 +407,8 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section style={{ backgroundColor: '#2C1810', padding: '90px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
+        <div className="content-wrapper">
           <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>TRANSPARENT PRICING</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '12px', lineHeight: '1.2' }}>
             Simple, honest pricing.
@@ -392,7 +416,7 @@ export default function Home() {
           <p style={{ fontSize: '17px', color: '#E8A598', textAlign: 'center', marginBottom: '56px', lineHeight: '1.7' }}>
             Every service is personal. Here is where we start.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '40px' }}>
+          <div className="pricing-grid" style={{ marginBottom: '40px' }}>
 
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
               <div style={{ fontSize: '32px', marginBottom: '14px' }}>📞</div>
@@ -401,7 +425,7 @@ export default function Home() {
                 Your first step. We map out your entire Mexico plan together.
               </p>
               <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Book to confirm rate</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
+              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
             </div>
 
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
@@ -477,8 +501,8 @@ export default function Home() {
       </section>
 
       {/* Booking & Cancellation Policy */}
-      <section style={{ backgroundColor: '#2C1810', padding: '60px 40px', borderTop: '1px solid #3D2418' }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <section className="responsive-section" style={{ backgroundColor: '#2C1810', borderTop: '1px solid #3D2418' }}>
+        <div className="content-wrapper" style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '28px', textAlign: 'center' }}>Booking &amp; Cancellation Policy</h3>
           <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598', marginBottom: '20px' }}>
             All sessions require payment in full to confirm. You will receive a confirmation email with your intake questionnaire within 24 hours of booking. Please complete your questionnaire at least 48 hours before your scheduled call so we arrive fully prepared.
@@ -490,8 +514,8 @@ export default function Home() {
       </section>
 
       {/* Why San Miguel */}
-      <section style={{ backgroundColor: '#FDF6F0', padding: '90px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+        <div className="content-wrapper">
           <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>WHY SAN MIGUEL DE ALLENDE</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '12px', lineHeight: '1.2' }}>
             There is a reason people come here<br />and never leave.
@@ -499,7 +523,7 @@ export default function Home() {
           <p style={{ fontSize: '17px', color: '#5C3A2E', textAlign: 'center', marginBottom: '56px', lineHeight: '1.7' }}>
             UNESCO World Heritage city. World-class food, art, and community. And the most beautiful light you have ever seen.
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px', marginBottom: '56px' }}>
+          <div className="why-grid" style={{ marginBottom: '56px' }}>
             {[
               { name: 'Centro', subtitle: 'The heart of it all', desc: 'The historic heart — cobblestone streets, the iconic Parroquia, world-class restaurants, and rooftop bars above 300-year-old buildings. Where everyone starts and many stay.' },
               { name: 'San Antonio', subtitle: 'Quiet, walkable, local', desc: 'Leafy and local. A quiet residential neighborhood with excellent taco stands, long-term expat community, and a slower, more authentic pace just minutes from everything.' },
@@ -525,8 +549,8 @@ export default function Home() {
       </section>
 
       {/* Rentals Section */}
-      <section id="rentals" style={{ backgroundColor: '#FDF6F0', padding: '90px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section id="rentals" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+        <div className="content-wrapper">
           <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>RENTAL PROPERTIES</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '20px', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
             Find Your Home in San Miguel —<br />with a Personal Agent at Your Side
@@ -635,8 +659,8 @@ export default function Home() {
       </section>
 
       {/* Buy / Properties Section */}
-      <section id="properties" style={{ backgroundColor: '#2C1810', padding: '90px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section id="properties" className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
+        <div className="content-wrapper">
           <p style={{ color: '#E8A598', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>BUY IN SAN MIGUEL</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '20px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
             Ready to Buy? Meet Tiffany Paige.
@@ -665,9 +689,9 @@ export default function Home() {
       </section>
 
       {/* Home Caretaking */}
-      <section id="caretaking" style={{ padding: '90px 40px', backgroundColor: '#FDF6F0' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ display: 'flex', gap: '70px', alignItems: 'center', flexWrap: 'wrap' }}>
+      <section id="caretaking" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+        <div className="content-wrapper">
+          <div className="flex-stack">
             <div style={{ flex: 1, minWidth: '300px' }}>
               <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>PROPERTY & PET CARE</p>
               <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '8px', color: '#2C1810', lineHeight: '1.2', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
@@ -718,10 +742,9 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
+              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
                 backgroundColor: '#C4622D',
                 color: 'white',
-                padding: '14px 32px',
                 borderRadius: '4px',
                 textDecoration: 'none',
                 fontSize: '15px',
@@ -732,6 +755,8 @@ export default function Home() {
               <img
                 src="/images/home-care.jpg"
                 alt="Beautiful home in San Miguel de Allende"
+                className="responsive-img"
+                loading="lazy"
                 style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }}
               />
               <div style={{
@@ -755,8 +780,8 @@ export default function Home() {
       </section>
 
       {/* Local Companion */}
-      <section id="local-companion" style={{ backgroundColor: '#2C1810', padding: '90px 40px' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section id="local-companion" className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
+        <div className="content-wrapper">
           <p style={{ color: '#D4A017', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>LOCAL COMPANION</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2', maxWidth: '700px' }}>
             Sometimes you just need someone who knows every corner.
@@ -766,10 +791,9 @@ export default function Home() {
             Whether it's dinner for one that shouldn't be, a medical appointment, a cultural event, or simply exploring
             San Miguel with someone who knows every corner. I show up. No agenda. Just good company.
           </p>
-          <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
+          <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
             backgroundColor: '#C4622D',
             color: 'white',
-            padding: '16px 36px',
             borderRadius: '4px',
             textDecoration: 'none',
             fontSize: '15px',
@@ -783,8 +807,8 @@ export default function Home() {
       </section>
 
       {/* Welcome Table */}
-      <section id="welcome-table" style={{ backgroundColor: '#E8A598', padding: '90px 40px' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+      <section id="welcome-table" className="responsive-section" style={{ backgroundColor: '#E8A598' }}>
+        <div className="content-wrapper button-row" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>COMMUNITY</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
             The Welcome Table
@@ -799,19 +823,17 @@ export default function Home() {
             Every Saturday 10am–1pm at The Agency, Aldama 31. Always free.
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://sanmiguelrealestate.com.mx/welcome-table" target="_blank" style={{
+            <a className="button-link" href="https://sanmiguelrealestate.com.mx/welcome-table" target="_blank" style={{
               backgroundColor: '#2C1810',
               color: 'white',
-              padding: '16px 36px',
               borderRadius: '4px',
               textDecoration: 'none',
               fontSize: '15px',
               fontWeight: 'bold'
             }}>Learn More & RSVP →</a>
-            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
+            <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
               backgroundColor: '#C4622D',
               color: 'white',
-              padding: '16px 36px',
               borderRadius: '4px',
               textDecoration: 'none',
               fontSize: '15px',
@@ -822,13 +844,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" style={{ padding: '90px 40px', backgroundColor: '#FDF6F0' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+      <section id="testimonials" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+        <div className="content-wrapper">
           <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT CLIENTS SAY</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '60px', textAlign: 'center', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
             The town knows. Now hear it from them.
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+          <div className="testimonials-grid">
             {[
               { quote: "She is tenacious, organized, and deeply caring — going above and beyond to make sure her clients feel seen, supported, and completely at ease. She's not just a relocation concierge — she's a trusted guide.", name: 'Tiffany Paige', title: 'Licensed Real Estate Advisor, The Agency SMA', date: '2026' },
               { quote: "I could not be more pleased with Lisa! She was very responsive, reasonable and she stayed with the program until we were successful. Do business with Lisa and she will solve your problems!", name: 'Terry M.', title: 'San Miguel Expat', date: '2026' },
@@ -916,7 +938,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section style={{ backgroundColor: '#7D3B4E', padding: '90px 40px', textAlign: 'center' }}>
+      <section className="responsive-section" style={{ backgroundColor: '#7D3B4E', textAlign: 'center' }}>
         <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '20px', fontWeight: '600' }}>YOUR NEXT STEP</p>
         <h2 style={{ fontSize: '46px', fontWeight: 'normal', marginBottom: '24px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
           The life you came here looking for is absolutely real.
@@ -924,10 +946,9 @@ export default function Home() {
         <p style={{ color: '#F5E0E6', fontSize: '18px', maxWidth: '520px', margin: '0 auto 48px', lineHeight: '1.75' }}>
           And so is the person who will help you build it. Book a strategy session and let's map your Mexico — together.
         </p>
-        <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
+        <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
           backgroundColor: '#C4622D',
           color: 'white',
-          padding: '20px 56px',
           borderRadius: '4px',
           textDecoration: 'none',
           fontSize: '18px',
@@ -936,7 +957,7 @@ export default function Home() {
           display: 'inline-block',
           marginBottom: '40px'
         }}>✦ Book a Planning Call</a>
-        <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '16px' }}>
+        <div className="button-row" style={{ justifyContent: 'center', marginTop: '16px' }}>
           <a href="mailto:Lisa@InTheKnowMx.com" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Lisa@InTheKnowMx.com</a>
           <a href="https://www.instagram.com/in.the.know.mexico/" target="_blank" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Instagram</a>
           <a href="https://www.facebook.com/InTheKnowMex" target="_blank" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Facebook</a>

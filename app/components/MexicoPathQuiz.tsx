@@ -132,8 +132,8 @@ export default function MexicoPathQuiz() {
   }
 
   return (
-    <section id="find-your-path" style={{ backgroundColor: '#FDF6F0', padding: '80px 40px' }}>
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+    <section id="find-your-path" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+      <div className="content-wrapper" style={{ maxWidth: '1000px', margin: '0 auto' }}>
         <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>FIND YOUR PATH</p>
         <h2 style={{ fontSize: '40px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '12px', lineHeight: '1.2' }}>
           Find Your Mexico Path

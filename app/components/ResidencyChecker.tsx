@@ -163,8 +163,8 @@ export default function ResidencyChecker() {
   }
 
   return (
-    <section style={{ backgroundColor: '#FDF6F0', padding: '80px 40px' }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+      <div className="content-wrapper" style={{ maxWidth: '800px', margin: '0 auto' }}>
         <div style={{ backgroundColor: 'white', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 24px rgba(44,24,16,0.1)' }}>
 
           {/* Progress bar */}

@@ -385,6 +385,7 @@ export default function Home() {
                 subtitle: 'Everything in your head about Mexico — sorted.',
                 body: "You'll complete a brief pre-call questionnaire so we arrive prepared and nothing gets missed. In our one-hour conversation we map your housing, residency, budget, timeline, pets, furniture, remote income, healthcare, and your personal next steps. Within 48 hours you receive a written summary of our call, specific answers to every question you raised, any additional resources I promised, and a timeline. You don't just leave with clarity — you leave with a document that becomes your Mexico roadmap.",
                 closing: 'You will know exactly what your next step is.',
+                price: '$89 per call',
               },
               {
                 emoji: '📋',
@@ -392,6 +393,7 @@ export default function Home() {
                 subtitle: "You've been talking about Mexico for years. Let's turn that into a real outline.",
                 body: "This call is for the serious dreamer who needs structure. Together we build a step-by-step action plan — what to do first, what to do next, and what can wait. We identify the gaps between where you are now and where you want to be, and we close them one by one. We cover the practical questions you've been putting off — housing options, neighborhood fit, budget reality, income sources, healthcare access, and what moving actually looks like for your specific life. Nothing vague. Nothing generic. A real plan built around your real situation. You've done the dreaming. This is where the doing begins.",
                 closing: "Dreams don’t move you to Mexico. Plans do.",
+                price: ‘$89 per call’,
               },
               {
                 emoji: '💛',
@@ -399,6 +401,7 @@ export default function Home() {
                 subtitle: 'Sometimes the only thing standing between you and the life you want is fear.',
                 body: "Projected fear from loved ones. Fear of the unknown. Uncertainty about healthcare, personal safety, language, or leaving things behind. These are real — and they deserve a real conversation. This call is a mindful coaching session. We talk honestly about what's holding you back, work through the emotional and practical blocks, and build concrete steps to motivate you to take that first real move. If San Miguel isn't right for you, we discuss other parts of Mexico or the world. Your fears are addressed directly — with care and acceptance.",
                 closing: "You don't need to have it all figured out. You simply need a brainstorming session.",
+                price: '$89 per call',
               },
             ].map((card) => (
               <div key={card.title} style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -406,7 +409,8 @@ export default function Home() {
                 <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>{card.title}</h3>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>{card.subtitle}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>{card.body}</p>
-                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
+                <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '12px', fontWeight: '600' }}>{card.price}</p>
                 {renderCardActions(card.title, '#services')}
               </div>
             ))}
@@ -780,6 +784,7 @@ export default function Home() {
 
             <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '1px solid #E8A598' }}>
               <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Essential Day</h4>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '4px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$75</p>
               <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL AGENT · FULL DAY</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '0' }}>
                 <li>Pre-curated property list based on your needs</li>
@@ -800,11 +805,11 @@ export default function Home() {
             <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '2px solid #C4622D' }}>
               <p style={{ fontSize: '11px', backgroundColor: '#C4622D', color: 'white', display: 'inline-block', padding: '4px 12px', borderRadius: '20px', marginBottom: '12px', fontWeight: '600', letterSpacing: '1px' }}>MOST POPULAR</p>
               <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Full Experience Day</h4>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '4px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$150</p>
               <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>WITH PRIVATE DRIVER + ROOFTOP DEBRIEF</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '0' }}>
                 <li>Everything in Essential Day</li>
                 <li>Private driver for the full day — no logistics stress</li>
-                <li>Rooftop dinner or sunset snack package</li>
                 <li>Post-showing debrief: we review every property together</li>
                 <li>Pros/cons breakdown, my honest recommendations</li>
                 <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of Mexico Newcomers Concierge support</li>

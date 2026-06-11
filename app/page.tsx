@@ -405,6 +405,93 @@ export default function Home() {
                 <li>Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
               </ul>
               <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+              <div style={{ marginTop: '16px', fontSize: '13px', color: '#7D3B4E', fontWeight: '600' }}>
+                <div>Hourly — $35/hour · No minimum</div>
+                <div>Starter 8 hours — $250</div>
+                <div>Standard 16 hours — $480</div>
+                <div>Full Support 24 hours — $700</div>
+                <div>Monthly Retainer — $480/month · 16 hours · Priority scheduling + WhatsApp availability</div>
+                <div style={{ fontSize: '12px', marginTop: '8px', color: '#2C1810', fontWeight: 'normal' }}>Includes: all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, weekly usage report</div>
+              </div>
+            </div>
+
+            {/* Service - Personal Assistant */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛒</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Personal Assistant</h3>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>The errands, the projects, the things that pile up when life gets busy.</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
+                Sometimes you just need an extra pair of hands. Whether it's running errands across town, picking up groceries from your favorite market, light cooking for the week, or tackling that home project that's been sitting on your list — this is where I come in.
+              </p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
+                <li>🚗 Errand runs using your vehicle</li>
+                <li>🛍️ Shopping — groceries, markets, specialty stores</li>
+                <li>🍳 Light cooking and meal prep</li>
+                <li>🔧 Special home projects and coordination</li>
+                <li>📦 Deliveries pickups and drop-offs</li>
+                <li>🌿 Anything else that needs doing</li>
+              </ul>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You have a life to live. Let's keep it running smoothly.</p>
+              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '12px', fontWeight: '600' }}>$35/hour · No minimum</p>
+              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+            </div>
+
+            {/* Service - Tech Concierge */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>💻</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Tech Concierge</h3>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Technology should make your life easier. When it doesn't — call Lisa.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
+                <li>💻 Laptop and tablet setup and troubleshooting</li>
+                <li>📱 Phone setup — Mexican SIM WhatsApp apps</li>
+                <li>🔒 VPN setup and internet security</li>
+                <li>✈️ Mexican travel apps — Uber ADO bus VivaAerobus Aeromexico</li>
+                <li>💊 Health apps and medical record management</li>
+                <li>🏦 Online banking and money transfer apps</li>
+                <li>📺 Streaming setup — Netflix Amazon Prime Disney+</li>
+                <li>🖨️ Printer setup and scanning</li>
+                <li>📧 Email organization and management</li>
+                <li>🔐 Password management setup</li>
+                <li>📹 Video calling — Zoom FaceTime WhatsApp Video</li>
+                <li>🌐 Google Translate and essential Mexico apps</li>
+                <li>📋 SSA and government portal navigation</li>
+                <li>🛒 Amazon.mx setup and navigation</li>
+                <li>📸 Photo backup and organization</li>
+              </ul>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If it has a screen and it is not cooperating — I can help.</p>
+              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '12px', fontWeight: '600' }}>$35/hour · No minimum</p>
+              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+            </div>
+
+            {/* Service - Medical Concierge */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🏥</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Medical Concierge</h3>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Navigating Mexican healthcare should not be something you do alone.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>🔍 Pre-appointment research — finding the right specialist confirming English spoken verifying insurance acceptance</li>
+                <li>🚗 Transportation coordination to and from appointment</li>
+                <li>♿ Wheelchair assistance and physical accompaniment</li>
+                <li>🗣️ Doctor communication and real-time translation</li>
+                <li>🧪 Helping navigate any medical tests — labs imaging procedures</li>
+                <li>📋 Recording and organizing all medical information and records</li>
+                <li>📝 Post-appointment written summary — diagnosis instructions medications follow-up dates</li>
+                <li>💊 Prescription pickup on appointment day</li>
+                <li>💊 Explaining each medication — what it is for dosage where to fill it affordably</li>
+                <li>📄 Filling out all forms in Spanish and English</li>
+                <li>💳 Facilitating payments</li>
+                <li>📅 Follow-up appointment scheduling</li>
+                <li>📞 Communication with family back home if needed</li>
+                <li>🚨 Emergency contact coordination</li>
+                <li>🏥 Navigating Mexican healthcare vs US insurance reimbursement</li>
+                <li>👨‍⚕️ Accompanying to specialist referrals</li>
+              </ul>
+              <div style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '12px', fontWeight: '600' }}>
+                <div>$22/hour · Minimum 2 hours ($44)</div>
+                <div>Half Day 4 hours — $80</div>
+                <div>Full Day 8 hours — $150</div>
+              </div>
+              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
             </div>
 
           </div>
@@ -438,6 +525,13 @@ export default function Home() {
             <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
           </ul>
           <p style={{ fontSize: '15px', color: '#7D3B4E', fontStyle: 'italic', marginBottom: '20px' }}>You didn't move to Mexico to struggle. You moved here to live.</p>
+          <div style={{ fontSize: '13px', color: '#7D3B4E', fontWeight: '600', marginBottom: '20px' }}>
+            <div>Hourly — $35/hour · No minimum</div>
+            <div>Starter 8 hours — $250</div>
+            <div>Standard 16 hours — $480</div>
+            <div>Full Support 24 hours — $700</div>
+            <div>Monthly Retainer — $480/month · 16 hours</div>
+          </div>
           <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
         </div>
       </section>
@@ -784,8 +878,32 @@ export default function Home() {
                 borderRadius: '4px',
                 textDecoration: 'none',
                 fontSize: '15px',
-                fontWeight: '700'
+                fontWeight: '700',
+                marginBottom: '20px'
               }}>✦ Book a Planning Call</a>
+              <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', marginBottom: '24px' }}>
+                <div style={{ marginBottom: '12px', fontWeight: '700' }}>WITHOUT PETS — Property Watch Only</div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
+                  <div><strong>Daily</strong><br/>$250 pesos (~$1.56 USD)</div>
+                  <div><strong>Weekly</strong><br/>$1,500 pesos (~$9.35 USD)</div>
+                  <div><strong>Monthly</strong><br/>$5,500 pesos (~$34 USD)</div>
+                </div>
+                <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '12px' }}>Includes: home walk-through, WhatsApp photo updates, mail and deliveries, plant watering, emergency response</div>
+                <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>WITH 1 PET</div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
+                  <div><strong>Daily</strong><br/>$350 pesos (~$2.18 USD)</div>
+                  <div><strong>Weekly</strong><br/>$2,100 pesos (~$13 USD)</div>
+                  <div><strong>Monthly</strong><br/>$7,700 pesos (~$48 USD)</div>
+                </div>
+                <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px' }}>Includes: everything above plus 2-3 feedings, 2 walks, 1-2 litter changes per day</div>
+                <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>ADD-ONS</div>
+                <div style={{ fontSize: '12px', color: '#7D3B4E' }}>
+                  <div>+$100 pesos per additional animal per day</div>
+                  <div>Oral medication up to 2x daily: +$30 pesos/day · +$210 pesos/week · +$840 pesos/month</div>
+                  <div>Medical injection: +$25 pesos/day · +$175 pesos/week · +$700 pesos/month</div>
+                  <div>Asthma inhaler: +$25 pesos/day · +$175 pesos/week · +$700 pesos/month</div>
+                </div>
+              </div>
             </div>
             <div style={{ flex: 1, minWidth: '280px' }}>
               <Image
@@ -836,9 +954,16 @@ export default function Home() {
             textDecoration: 'none',
             fontSize: '15px',
             fontWeight: '700',
-            display: 'inline-block'
+            display: 'inline-block',
+            marginBottom: '20px'
           }}>✦ Book a Planning Call</a>
-          <p style={{ marginTop: '28px', fontSize: '14px', color: '#E8A598', lineHeight: '1.7', fontStyle: 'italic' }}>
+          <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', marginBottom: '20px' }}>
+            <div>Hourly — $15/hour</div>
+            <div>Half Day 4 hours — $56</div>
+            <div>Full Day 8 hours — $96</div>
+            <div style={{ fontSize: '12px', marginTop: '8px', color: '#7D3B4E', fontWeight: 'normal' }}>Client covers all outing costs — meals transportation admission fees and activities.</div>
+          </div>
+          <p style={{ marginTop: '0', fontSize: '14px', color: '#E8A598', lineHeight: '1.7', fontStyle: 'italic' }}>
             In The Know Mexico. Because having an insider makes all the difference.
           </p>
         </div>

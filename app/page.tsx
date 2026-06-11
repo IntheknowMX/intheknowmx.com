@@ -386,6 +386,7 @@ export default function Home() {
                 body: "You'll complete a brief pre-call questionnaire so we arrive prepared and nothing gets missed. In our one-hour conversation we map your housing, residency, budget, timeline, pets, furniture, remote income, healthcare, and your personal next steps. Within 48 hours you receive a written summary of our call, specific answers to every question you raised, any additional resources I promised, and a timeline. You don't just leave with clarity — you leave with a document that becomes your Mexico roadmap.",
                 closing: 'You will know exactly what your next step is.',
                 price: '$89 per call',
+                priceTag: '$89',
               },
               {
                 emoji: '📋',
@@ -407,6 +408,7 @@ export default function Home() {
               <div key={card.title} style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ fontSize: '34px', marginBottom: '14px' }}>{card.emoji}</div>
                 <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>{card.title}</h3>
+                {card.priceTag && <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.priceTag}</p>}
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>{card.subtitle}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>{card.body}</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
@@ -780,16 +782,16 @@ export default function Home() {
           <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>
             Property Showing Day Packages
           </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '20px' }}>
 
             <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '1px solid #E8A598' }}>
-              <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Essential Day</h4>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '4px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$75</p>
+              <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Rental Showing Day</h4>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '4px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$150</p>
               <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL AGENT · FULL DAY</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '0' }}>
-                <li>Pre-curated property list based on your needs</li>
-                <li>Personal escort to all showings</li>
-                <li>Translation & negotiation support</li>
+                <li>4 property showings, pre-curated to your needs</li>
+                <li>Private driver for the full day</li>
+                <li>Personal escort, translation & negotiation support</li>
                 <li>Lease review included</li>
                 <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of newcomer concierge support</li>
               </ul>
@@ -802,28 +804,13 @@ export default function Home() {
               }}>Book This Package →</a>
             </div>
 
-            <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '2px solid #C4622D' }}>
-              <p style={{ fontSize: '11px', backgroundColor: '#C4622D', color: 'white', display: 'inline-block', padding: '4px 12px', borderRadius: '20px', marginBottom: '12px', fontWeight: '600', letterSpacing: '1px' }}>MOST POPULAR</p>
-              <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Full Experience Day</h4>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '4px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$150</p>
-              <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>WITH PRIVATE DRIVER + ROOFTOP DEBRIEF</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '0' }}>
-                <li>Everything in Essential Day</li>
-                <li>Private driver for the full day — no logistics stress</li>
-                <li>Post-showing debrief: we review every property together</li>
-                <li>Pros/cons breakdown, my honest recommendations</li>
-                <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of newcomer concierge support</li>
-              </ul>
-              <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 6px', lineHeight: '1.6' }}>1 free reschedule available</p>
-              <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>No refunds within 48 hours of showing day.</p>
-              <div style={{ height: '16px' }} />
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-                backgroundColor: '#C4622D', color: 'white', padding: '12px 24px',
-                borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold', display: 'inline-block'
-              }}>Book This Package →</a>
-            </div>
-
           </div>
+          <p style={{ fontSize: '14px', color: '#5C3A2E', lineHeight: '1.7', marginBottom: '40px' }}>
+            Customized showing packages available — simply send your needs via{' '}
+            <a href="https://wa.me/5214731218554" target="_blank" style={{ color: '#C4622D', fontWeight: '600', textDecoration: 'none' }}>WhatsApp</a>
+            {' '}or{' '}
+            <a href="mailto:Lisa@InTheKnowMx.com" style={{ color: '#C4622D', fontWeight: '600', textDecoration: 'none' }}>email</a>.
+          </p>
 
           {/* Client Agreement Note */}
           <div style={{ backgroundColor: '#2C1810', padding: '32px 36px', borderRadius: '8px', marginBottom: '40px' }}>

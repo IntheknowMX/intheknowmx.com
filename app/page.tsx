@@ -263,12 +263,10 @@ export default function Home() {
           <div style={{ flex: 1, minWidth: '300px' }}>
           <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>ABOUT LISA MAY COBHAM</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', lineHeight: '1.2', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            I didn't just move to San Miguel.<br />I became part of it.
+            Known here. Trusted here. Since 2015.
           </h2>
           <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
-            I'm <strong>Lisa May Cobham</strong> — a New Yorker who landed in San Miguel de Allende and never looked back.
-            For over a decade I've been building relationships, learning every colonia, and becoming the person
-            that both locals and expats call when they need someone they can actually trust.
+            I didn't plan to stay. San Miguel charmed me into it. The joy of this city — the light, the people, the pace, the way life actually feels here — made leaving impossible. Eleven years later I am still here, still discovering, and still completely in love with this country.
           </p>
           <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
             I work with <strong>Mexico newcomers</strong> who need more than a checklist. They need someone

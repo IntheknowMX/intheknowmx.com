@@ -598,6 +598,8 @@ export default function Home() {
                 <li>Translation & negotiation support</li>
                 <li>Lease review included</li>
                 <li>No refunds on day-of pricing</li>
+                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>1 free reschedule available</li>
+                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>No refunds within 48 hours of showing day.</li>
                 <li style={{ color: '#C4622D', fontWeight: 'bold' }}>Lease signed? $70 credit toward in-Mexico concierge services</li>
               </ul>
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
@@ -617,6 +619,8 @@ export default function Home() {
                 <li>Post-showing debrief: we review every property together</li>
                 <li>Pros/cons breakdown, my honest recommendations</li>
                 <li>No refunds on day-of pricing</li>
+                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>1 free reschedule available</li>
+                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>No refunds within 48 hours of showing day.</li>
                 <li style={{ color: '#C4622D', fontWeight: 'bold' }}>Lease signed? $70 credit toward in-Mexico concierge services</li>
               </ul>
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{

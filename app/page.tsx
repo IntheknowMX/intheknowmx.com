@@ -558,10 +558,7 @@ export default function Home() {
             Find Your Home in San Miguel —<br />with a Personal Agent at Your Side
           </h2>
           <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#2C1810', maxWidth: '780px', marginBottom: '20px' }}>
-            Finding a rental in Mexico is not like searching Zillow. The best homes are
-            never listed publicly, landlords expect a trusted introduction, and leases are
-            written in Spanish. As your personal rental agent, I do the work — so you
-            see only the properties that are genuinely right for you.
+            Finding a rental in Mexico is not like searching Zillow. The best homes aren't always listed publicly, landlords expect a trusted connection, and leases are written in Spanish. As your personal representative, I do the research and coordination — so you see only the properties that are genuinely suited to you.
           </p>
 
           {/* What I Do For You */}

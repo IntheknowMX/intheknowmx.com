@@ -159,7 +159,7 @@ export default function Home() {
             <span key={copy} className="ticker-item">
               {[
                 { text: '"We never worried once."', name: 'Amy H.' },
-                { text: '"The hardest part about having her is saying goodbye."', name: 'Michelle & Sandy Hudson' },
+                { text: '"The hardest part about having her is saying goodbye."', name: 'Michelle L., Gecko Bungalows Resort · Belize' },
                 { text: '"My home was running like a well-oiled machine."', name: 'Janet A.' },
                 { text: '"Left our house perfectly clean and exactly how we left it, just a little better."', name: 'Claire H.' },
                 { text: '"I always feel safe when she sits my pets."', name: 'Karla S.' },

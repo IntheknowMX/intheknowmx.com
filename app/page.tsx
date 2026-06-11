@@ -592,16 +592,16 @@ export default function Home() {
             <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '1px solid #E8A598' }}>
               <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Essential Day</h4>
               <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL AGENT · FULL DAY</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '20px' }}>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
                 <li>Pre-curated property list based on your needs</li>
                 <li>Personal escort to all showings</li>
                 <li>Translation & negotiation support</li>
                 <li>Lease review included</li>
-                <li>No refunds on day-of pricing</li>
-                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>1 free reschedule available</li>
-                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>No refunds within 48 hours of showing day.</li>
-                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>Lease signed? $70 credit toward in-Mexico concierge services</li>
+                <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of Mexico Newcomers Concierge support</li>
               </ul>
+              <div style={{ height: '1px', backgroundColor: '#E8A598', margin: '18px 0' }} />
+              <p style={{ fontSize: '13px', color: '#C97B8A', margin: '6px 0 4px', lineHeight: '1.6' }}>1 free reschedule available</p>
+              <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0', lineHeight: '1.6' }}>No refunds within 48 hours of showing day.</p>
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
                 backgroundColor: '#C4622D', color: 'white', padding: '12px 24px',
                 borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold', display: 'inline-block'
@@ -612,17 +612,17 @@ export default function Home() {
               <p style={{ fontSize: '11px', backgroundColor: '#C4622D', color: 'white', display: 'inline-block', padding: '4px 12px', borderRadius: '20px', marginBottom: '12px', fontWeight: '600', letterSpacing: '1px' }}>MOST POPULAR</p>
               <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Full Experience Day</h4>
               <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>WITH PRIVATE DRIVER + ROOFTOP DEBRIEF</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '20px' }}>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
                 <li>Everything in Essential Day</li>
                 <li>Private driver for the full day — no logistics stress</li>
                 <li>Rooftop dinner or sunset snack package</li>
                 <li>Post-showing debrief: we review every property together</li>
                 <li>Pros/cons breakdown, my honest recommendations</li>
-                <li>No refunds on day-of pricing</li>
-                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>1 free reschedule available</li>
-                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>No refunds within 48 hours of showing day.</li>
-                <li style={{ color: '#C4622D', fontWeight: 'bold' }}>Lease signed? $70 credit toward in-Mexico concierge services</li>
+                <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of Mexico Newcomers Concierge support</li>
               </ul>
+              <div style={{ height: '1px', backgroundColor: '#E8A598', margin: '18px 0' }} />
+              <p style={{ fontSize: '13px', color: '#C97B8A', margin: '6px 0 4px', lineHeight: '1.6' }}>1 free reschedule available</p>
+              <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0', lineHeight: '1.6' }}>No refunds within 48 hours of showing day.</p>
               <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
                 backgroundColor: '#C4622D', color: 'white', padding: '12px 24px',
                 borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold', display: 'inline-block'

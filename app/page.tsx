@@ -411,6 +411,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Senior Concierge */}
+      <section id="senior-concierge" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+        <div className="content-wrapper">
+          <p style={{ color: '#D4A017', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>SENIOR CONCIERGE</p>
+          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '14px', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>Senior Concierge</h2>
+          <div style={{ fontSize: '34px', marginBottom: '12px' }}>🌺</div>
+          <p style={{ fontSize: '17px', color: '#7D3B4E', marginBottom: '18px', fontStyle: 'italic', maxWidth: '820px' }}>Mexico is extraordinary at every age. Some days it just needs a little more navigation.</p>
+          <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px', maxWidth: '820px' }}>
+            Why won't Amazon.mx take my card? How do I access my SSA account from Mexico? How the hell do I navigate submitting my insurance reimbursement with my Medicaid insurance? How do I find a trustworthy CNA to help me a few hours per week to cook, clean and pick up my meds from the pharmacy? How do I use the translation app to navigate my day? How do I use the Uber app to receive a cheaper rate? How do I use the bus system? How do I get to my medical appointment when I don't have a car and don't speak Spanish?
+          </p>
+          <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px', maxWidth: '820px' }}>
+            These are not small problems. They are the things that turn a beautiful day in San Miguel into a frustrating one. And they are completely solvable — with the right person by your side.
+          </p>
+          <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '18px', maxWidth: '820px' }}>
+            The Senior Concierge is for the person who wants to live fully, independently, and confidently in Mexico — with a trusted support system available when the details get complicated.
+          </p>
+          <ul style={{ fontSize: '15px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '18px', maxWidth: '820px' }}>
+            <li>📱 Tech support — phones, apps, banking portals, streaming, Amazon.mx</li>
+            <li>🏥 Medical accompaniment and appointment coordination</li>
+            <li>💊 Pharmacy navigation and prescription support</li>
+            <li>🏛️ SSA and government account setup and troubleshooting</li>
+            <li>💸 Online bill pay and money transfer support</li>
+            <li>🚗 Transportation coordination</li>
+            <li>📋 Post-surgery companionship and recovery support</li>
+            <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
+          </ul>
+          <p style={{ fontSize: '15px', color: '#7D3B4E', fontStyle: 'italic', marginBottom: '20px' }}>You didn't move to Mexico to slow down. You moved here to live.</p>
+          <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
         <div className="content-wrapper">

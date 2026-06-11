@@ -52,6 +52,10 @@ export default function Home() {
         .hero-columns, .two-column-stack, .flex-stack { display: flex; gap: 70px; align-items: center; flex-wrap: wrap; }
         .hero-columns > *, .two-column-stack > * { flex: 1 1 300px; }
         .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+        .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-bottom: 32px; }
+        .footer-col h4 { color: #D4A017; font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 16px; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }
+        .footer-col a { color: #FDF6F0; text-decoration: none; font-size: 13px; line-height: 1.9; display: block; }
+        .footer-col a:hover { color: #E8A598; }
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         @media (max-width: 767px) {
           .main-nav { padding: 16px 20px; }
@@ -70,6 +74,7 @@ export default function Home() {
           .content-wrapper { padding: 0; }
           .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
           .ticker-track { animation-duration: 55s; }
+          .footer-grid { grid-template-columns: 1fr; gap: 32px; }
           .pull-quotes-grid, .why-grid, .press-grid, .service-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
           .press-grid { grid-template-columns: repeat(2, 1fr); }
           .button-row { flex-direction: column; align-items: stretch; }
@@ -93,13 +98,13 @@ export default function Home() {
           </button>
           <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
             <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="#services" onClick={() => setMobileMenuOpen(false)}>Residency</a>
-            <a href="#rentals" onClick={() => setMobileMenuOpen(false)}>Renting</a>
+            <a href="#services" onClick={() => setMobileMenuOpen(false)}>Concierge</a>
+            <a href="/residency" onClick={() => setMobileMenuOpen(false)}>Residency</a>
+            <a href="#rentals" onClick={() => setMobileMenuOpen(false)}>Rentals</a>
             <a href="#properties" onClick={() => setMobileMenuOpen(false)}>Owning</a>
-            <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Property & Pet Care</a>
+            <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Home & Pet</a>
             <a href="#local-companion" onClick={() => setMobileMenuOpen(false)}>Local Companion</a>
             <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
-            <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
           </div>
           <a className="button-link nav-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
         </div>
@@ -969,16 +974,48 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: '#1A0E09', padding: '32px 40px', textAlign: 'center' }}>
-        <p style={{ color: '#E8A598', fontSize: '14px', marginBottom: '8px' }}>
-          © 2026 In The Know Mexico · Lisa May Cobham, Relocation Specialist · San Miguel de Allende, México
-        </p>
-        <p style={{ color: '#7D3B4E', fontSize: '13px', marginBottom: '6px' }}>
-          Known here since 2015.
-        </p>
-        <p style={{ color: '#7D3B4E', fontSize: '13px' }}>
-          In partnership with <a href="https://sanmiguelrealestate.com.mx" target="_blank" style={{ color: '#E8A598' }}>Tiffany Paige, The Agency SMA</a>
-        </p>
+      <footer style={{ backgroundColor: '#1A0E09', padding: '60px 40px 40px' }}>
+        <div className="footer-grid">
+          <div className="footer-col">
+            <h4>SERVICES</h4>
+            <a href="#services">Concierge</a>
+            <a href="/residency">Residency</a>
+            <a href="#rentals">Rental Properties</a>
+            <a href="#properties">Buy in SMA</a>
+            <a href="#caretaking">Property & Pet Care</a>
+            <a href="#senior-concierge">Senior Concierge</a>
+            <a href="#local-companion">Local Companion</a>
+          </div>
+          <div className="footer-col">
+            <h4>PLANNING CALLS</h4>
+            <a href="#services">The Relocation Planning Call</a>
+            <a href="#services">From Dream to Action Plan</a>
+            <a href="#services">Moving Through Fear</a>
+            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
+          </div>
+          <div className="footer-col">
+            <h4>RESOURCES</h4>
+            <a href="#find-your-path">Find Your Mexico Path</a>
+            <a href="/residency">Do I Qualify?</a>
+            <a href="#welcome-table">Welcome Table</a>
+            <a href="#why-san-miguel">Why San Miguel</a>
+          </div>
+          <div className="footer-col">
+            <h4>CONNECT</h4>
+            <a href="#about">About Lisa</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#press">Press & Media</a>
+            <a href="https://www.instagram.com/in.the.know.mexico/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/InTheKnowMex" target="_blank">Facebook</a>
+            <a href="https://www.facebook.com/groups/655871853479437" target="_blank">Facebook Group</a>
+            <a href="https://www.linkedin.com/in/lisamcobham" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+        <div style={{ borderTop: '1px solid #2C1810', paddingTop: '24px', marginTop: '24px' }}>
+          <p style={{ color: '#FDF6F0', fontSize: '13px', margin: '0' }}>
+            © 2026 In The Know Mexico · Lisa May Cobham, Relocation Specialist · San Miguel de Allende, México · Known here since 2015.
+          </p>
+        </div>
       </footer>
 
     </main>

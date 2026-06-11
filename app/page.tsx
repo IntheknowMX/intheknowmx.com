@@ -68,8 +68,9 @@ export default function Home() {
         .nav-right { display: flex; align-items: center; gap: 20px; position: relative; }
         .nav-links { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
         .nav-links a { color: #2C1810; text-decoration: none; font-size: 14px; }
-        .nav-toggle { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 8px; }
-        .nav-toggle span { width: 22px; height: 2px; background: #2C1810; display: block; border-radius: 1px; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; font-size: 24px; color: #2C1810; line-height: 1; }
+        .mobile-menu-close-row { display: none; }
+        .mobile-menu-cta { display: none; }
         .nav-cta { background-color: #C4622D; color: white; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; }
         .hero-section { display: flex; flex-direction: row-reverse; min-height: 90vh; align-items: stretch; overflow: hidden; }
         .hero-photo { flex: 0 0 58%; min-height: 380px; overflow: hidden; }
@@ -111,11 +112,14 @@ export default function Home() {
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         @media (max-width: 767px) {
           .main-nav { padding: 16px 20px; }
-          .nav-links { display: none; position: absolute; top: 100%; right: 20px; background: #FDF6F0; box-shadow: 0 12px 32px rgba(0,0,0,.12); border: 1px solid #E8A598; border-radius: 8px; flex-direction: column; width: calc(100vw - 40px); max-width: 320px; z-index: 110; }
+          .nav-cta { display: none; }
+          .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #FDF6F0; box-shadow: 0 8px 24px rgba(44,24,16,.12); flex-direction: column; z-index: 110; border-top: 1px solid #E8A598; }
           .nav-links.open { display: flex; }
-          .nav-links a { padding: 12px 18px; border-bottom: 1px solid #E8A598; }
-          .nav-links a:last-child { border-bottom: none; }
-          .nav-toggle { display: flex; }
+          .nav-links a { padding: 14px 24px; border-bottom: 1px solid #E8A598; color: #2C1810; font-size: 15px; }
+          .nav-toggle { display: flex; align-items: center; justify-content: center; }
+          .mobile-menu-close-row { display: flex; justify-content: flex-end; padding: 10px 16px; border-bottom: 1px solid #E8A598; }
+          .mobile-menu-close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: #2C1810; padding: 4px 8px; line-height: 1; }
+          .mobile-menu-cta { display: block; margin: 16px !important; background-color: #C4622D !important; color: white !important; text-align: center; padding: 16px !important; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 15px; border-bottom: none !important; }
           .hero-section { flex-direction: column; min-height: auto; }
           .hero-photo, .hero-copy { flex: 1 1 100%; }
           .hero-copy { padding: 48px 20px; }
@@ -144,11 +148,12 @@ export default function Home() {
         <div className="nav-brand">IN THE KNOW MEXICO</div>
         <div className="nav-right">
           <button className="nav-toggle" aria-label="Toggle navigation" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            <span />
-            <span />
-            <span />
+            ☰
           </button>
           <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
+            <div className="mobile-menu-close-row">
+              <button className="mobile-menu-close-btn" aria-label="Close menu" onClick={() => setMobileMenuOpen(false)}>✕</button>
+            </div>
             <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
             <a href="#services" onClick={() => setMobileMenuOpen(false)}>Concierge</a>
             <a href="/residency" onClick={() => setMobileMenuOpen(false)}>Residency</a>
@@ -157,6 +162,7 @@ export default function Home() {
             <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Home & Pet</a>
             <a href="#local-companion" onClick={() => setMobileMenuOpen(false)}>Local Companion</a>
             <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
+            <a className="mobile-menu-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" onClick={() => setMobileMenuOpen(false)}>Book a Planning Call</a>
           </div>
           <a className="button-link nav-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
         </div>

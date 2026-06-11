@@ -571,16 +571,16 @@ export default function Home() {
             </h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
               {[
-                '🔍 Deep research into your needs, budget, and non-negotiables',
-                '🏠 Pre-screening every property before you see it',
-                '📍 Knowledge of every colonia — I know which blocks to avoid',
-                '🗝️ Personally escorting you through each property showing',
-                '🗣️ Full translation & cultural context during every visit',
-                '📝 Bilingual lease review — line by line',
-                '💬 Negotiation on your behalf with landlords',
-                '✅ Final walkthrough checklist before you sign anything',
-                '📞 Landlord introductions and relationship setup',
-                '🤝 Ongoing support after you move in',
+                '🔍 Deep research into your needs, budget, and non-negotiables — Before we look at a single property, you complete a 10-minute survey. Your answers shape everything — neighborhood, budget, must-haves, and dealbreakers. No wasted showings. No surprises.',
+                '🏠 Pre-screening every property — For virtual clients, every property is previewed before you arrive. Photos, video walkthroughs, and honest assessments — so your in-person time is spent on real contenders only.',
+                '📍 Knowledge of every colonia — matched to your lifestyle — Centro, San Antonio, Guadiana, Atascadero — each neighborhood has a different feel, pace, and price point. Lisa matches you to the colonia that fits how you actually want to live.',
+                '🗝️ Coordinated property showings until we find the right fit — Not one day, not one shot. We keep looking until the right property appears.',
+                '🗣️ Full translation and cultural context during every property showing — Language, lease implications, neighborhood realities, and the unspoken customs of Mexican rental culture that turns a confusing process into a clear one.',
+                '📝 Bilingual lease review — section by section — Nothing gets signed until you understand every line. Lisa reviews your lease in both languages, flags anything unusual, and explains what it actually means for your daily life.',
+                '💬 Negotiation on your behalf with landlords — Price, terms, included furnishings, maintenance responsibilities — negotiated by someone who knows what is standard, what is flexible, and what is worth pushing back on.',
+                '✅ Final walkthrough checklist before you sign anything — A documented condition report of the property before keys change hands. Your protection from day one.',
+                '📞 Landlord introductions and relationship setup — A warm, professional introduction that sets the right tone from the start. In Mexico, the landlord relationship matters. We start it well.',
+                '🤝 Ongoing support after you move in — Questions don\'t stop at move-in. When you sign your lease, you receive 2 free hours of Mexico Newcomers Concierge support — home setup, utilities, domestic staff, banking, grocery delivery, Mexican SIM setup, pet grooming, healthcare, or whatever you need to completely settle in.',
               ].map((item) => (
                 <p key={item} style={{ fontSize: '14px', color: '#2C1810', margin: '4px 0', lineHeight: '1.6' }}>{item}</p>
               ))}

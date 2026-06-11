@@ -437,7 +437,7 @@ export default function Home() {
             <li>📋 Post-surgery companionship and recovery support</li>
             <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
           </ul>
-          <p style={{ fontSize: '15px', color: '#7D3B4E', fontStyle: 'italic', marginBottom: '20px' }}>You didn't move to Mexico to slow down. You moved here to live.</p>
+          <p style={{ fontSize: '15px', color: '#7D3B4E', fontStyle: 'italic', marginBottom: '20px' }}>You didn't move to Mexico to struggle. You moved here to live.</p>
           <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
         </div>
       </section>

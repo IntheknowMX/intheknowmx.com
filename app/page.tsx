@@ -430,7 +430,7 @@ export default function Home() {
 
           <div className="service-grid">
 
-            {/* Service - Immigration */}
+            {/* Service - Immigration overview */}
             <div id="residency-sorted" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛂</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexican Residency, Sorted</h3>
@@ -439,6 +439,63 @@ export default function Home() {
               </p>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>My residency team is your residency team.</p>
               {renderCardActions('Mexican Residency, Sorted', '/residency')}
+            </div>
+
+            {/* Residency Planning Call — $89 */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛂</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Residency Planning Call</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$89</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>50 minutes. Everything you need to know about your residency options. Includes a free DIY document checklist to get started on your own.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>50-minute video or phone call</li>
+                <li>Pre-call intake questionnaire</li>
+                <li>Free DIY residency document checklist</li>
+                <li>48-hour written follow-up with summary and next steps</li>
+                <li>$89 credited toward any package upgrade</li>
+              </ul>
+              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($91), Stripe ($92), or PayPal ($92)</p>
+              {renderCardActions('Residency Planning Call', '/residency')}
+            </div>
+
+            {/* Residency Guided Package — $397 */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>📋</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Residency Guided Package</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$397</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>I coordinate everything, prep you fully, and accompany you to your appointments. Attorney fees quoted separately.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>Pre-call intake questionnaire</li>
+                <li>Full eligibility review</li>
+                <li>Document preparation guidance</li>
+                <li>Appointment coordination — consulate and INM</li>
+                <li>In-person accompaniment to all appointments</li>
+                <li>48-hour written follow-up</li>
+                <li>WhatsApp support throughout</li>
+                <li>Attorney fees quoted separately based on your case</li>
+              </ul>
+              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($406), Stripe ($410), or PayPal ($410)</p>
+              {renderCardActions('Residency Guided Package', '/residency')}
+            </div>
+
+            {/* Full Residency Concierge — $797 */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', border: '2px solid #C4622D', position: 'relative', display: 'flex', flexDirection: 'column' }}>
+              <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST POPULAR</p>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>⭐</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Full Residency Concierge</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$797</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>White glove, start to finish. Coordination, accompaniment, and attorney fees included. No surprises.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>Everything in Guided Package</li>
+                <li>Licensed immigration attorney fees included</li>
+                <li>Full document preparation</li>
+                <li>Consulate and INM appointments secured</li>
+                <li>In-person accompaniment — every step</li>
+                <li>Priority WhatsApp support</li>
+                <li>One flat price — no surprise invoices</li>
+              </ul>
+              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($814), Stripe ($821), or PayPal ($821)</p>
+              {renderCardActions('Full Residency Concierge', '/residency')}
             </div>
 
             {/* Service - Concierge */}
@@ -600,100 +657,6 @@ export default function Home() {
             </div>
           </div>
           {renderCardActions('Senior Concierge', '#senior-concierge')}
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
-        <div className="content-wrapper">
-          <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>TRANSPARENT PRICING</p>
-          <h2 style={{ fontSize: '42px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '12px', lineHeight: '1.2' }}>
-            Simple, honest pricing.
-          </h2>
-          <p style={{ fontSize: '17px', color: '#E8A598', textAlign: 'center', marginBottom: '56px', lineHeight: '1.7' }}>
-            Every service is personal. Here is where we start.
-          </p>
-          <div className="pricing-grid" style={{ marginBottom: '40px' }}>
-
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '32px', marginBottom: '14px' }}>📞</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>Book a Planning Call</h3>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px' }}>
-                Your first step. We map out your entire Mexico plan together.
-              </p>
-              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Book to confirm rate</p>
-              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
-            </div>
-
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
-              <div style={{ fontSize: '32px', marginBottom: '14px' }}>🌮</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>newcomer concierge support</h3>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px' }}>
-                Day-to-day life in Mexico, handled.
-              </p>
-              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '28px', fontWeight: '600' }}>Custom packages available</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
-            </div>
-
-            {/* Residency Tiered Cards */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '32px', marginBottom: '14px' }}>🛂</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Residency Planning Call</h3>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$89</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>50 minutes. Everything you need to know about your residency options. Includes a free DIY document checklist to get started on your own.</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>50-minute video or phone call</li>
-                <li>Pre-call intake questionnaire</li>
-                <li>Free DIY residency document checklist</li>
-                <li>48-hour written follow-up with summary and next steps</li>
-                <li>$89 credited toward any package upgrade</li>
-              </ul>
-              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($91), Stripe ($92), or PayPal ($92)</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block', textAlign: 'center' }}>Book for $89</a>
-            </div>
-
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '32px', marginBottom: '14px' }}>📋</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Residency Guided Package</h3>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$397</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>I coordinate everything, prep you fully, and accompany you to your appointments. Attorney fees quoted separately.</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>Pre-call intake questionnaire</li>
-                <li>Full eligibility review</li>
-                <li>Document preparation guidance</li>
-                <li>Appointment coordination — consulate and INM</li>
-                <li>In-person accompaniment to all appointments</li>
-                <li>48-hour written follow-up</li>
-                <li>WhatsApp support throughout</li>
-                <li>Attorney fees quoted separately based on your case</li>
-              </ul>
-              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($406), Stripe ($410), or PayPal ($410)</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block', textAlign: 'center' }}>Book for $397</a>
-            </div>
-
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', border: '2px solid #C4622D', position: 'relative', display: 'flex', flexDirection: 'column' }}>
-              <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST POPULAR</p>
-              <div style={{ fontSize: '32px', marginBottom: '14px' }}>⭐</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Full Residency Concierge</h3>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$797</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>White glove, start to finish. Coordination, accompaniment, and attorney fees included. No surprises.</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>Everything in Guided Package</li>
-                <li>Licensed immigration attorney fees included</li>
-                <li>Full document preparation</li>
-                <li>Consulate and INM appointments secured</li>
-                <li>In-person accompaniment — every step</li>
-                <li>Priority WhatsApp support</li>
-                <li>One flat price — no surprise invoices</li>
-              </ul>
-              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($814), Stripe ($821), or PayPal ($821)</p>
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '13px 28px', borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: '700', display: 'inline-block', textAlign: 'center' }}>Book for $797</a>
-            </div>
-
-          </div>
-          <p style={{ textAlign: 'center', color: '#E8A598', fontSize: '14px', lineHeight: '1.8' }}>
-            Rental property showing packages, property &amp; pet care, senior concierge, and local companion services are priced individually. Ask Lisa during your planning call.
-          </p>
         </div>
       </section>
 

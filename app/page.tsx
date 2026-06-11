@@ -807,8 +807,8 @@ export default function Home() {
             fontWeight: '700',
             display: 'inline-block'
           }}>✦ Book a Planning Call</a>
-          <p style={{ marginTop: '28px', fontSize: '14px', color: '#E8A598', lineHeight: '1.7' }}>
-            Full concierge support for Mexico newcomers also available — <a href="#services" style={{ color: '#E8A598', fontWeight: '600' }}>ask Lisa during your strategy session.</a>
+          <p style={{ marginTop: '28px', fontSize: '14px', color: '#E8A598', lineHeight: '1.7', fontStyle: 'italic' }}>
+            In The Know Mexico. Because having an insider makes all the difference.
           </p>
         </div>
       </section>

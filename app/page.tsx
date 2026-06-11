@@ -3,12 +3,64 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import MexicoPathQuiz from './components/MexicoPathQuiz'
+import PaymentModal from './components/PaymentModal'
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [paymentModalOpen, setPaymentModalOpen] = useState(false)
+  const [selectedService, setSelectedService] = useState('')
+
+  const handlePayNow = (service: string) => {
+    setSelectedService(service)
+    setPaymentModalOpen(true)
+  }
+
+  const closePaymentModal = () => {
+    setPaymentModalOpen(false)
+    setSelectedService('')
+  }
+
+  const renderCardActions = (service: string, href: string) => (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '24px' }}>
+      <button
+        onClick={() => handlePayNow(service)}
+        style={{
+          backgroundColor: '#C4622D',
+          color: 'white',
+          border: 'none',
+          borderRadius: '6px',
+          padding: '12px 24px',
+          fontSize: '14px',
+          fontWeight: 700,
+          cursor: 'pointer',
+        }}
+      >
+        Pay Now
+      </button>
+      <a
+        className="button-link secondary"
+        href={href}
+        style={{
+          color: '#2C1810',
+          backgroundColor: '#FDF6F0',
+          border: '1px solid #C4622D',
+          borderRadius: '6px',
+          textDecoration: 'none',
+          fontWeight: 700,
+          padding: '12px 24px',
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        More Info
+      </a>
+    </div>
+  )
 
   return (
     <main className="page-root" style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
+      <PaymentModal open={paymentModalOpen} onClose={closePaymentModal} service={selectedService} />
       <style>{`
         .page-root { overflow-x: hidden; }
         .main-nav { background-color: #FDF6F0; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E8A598; position: sticky; top: 0; z-index: 100; }
@@ -318,14 +370,6 @@ export default function Home() {
           <p style={{ color: '#F5E0E6', fontSize: '17px', textAlign: 'center', maxWidth: '600px', margin: '0 auto 16px', lineHeight: '1.75' }}>
             Every service is personal, in-person, and built around your specific situation. Not outsourced. Not handed off. Lisa and her team are with you every step — from your first question to the day you hold your residency card and beyond.
           </p>
-          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-            <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-              backgroundColor: '#C4622D',
-              color: 'white',
-              borderRadius: '4px',
-              display: 'inline-block'
-            }}>✦ Book a Planning Call</a>
-          </div>
           {/* Planning Calls */}
           <div className="service-grid" style={{ marginBottom: '28px' }}>
             {[
@@ -357,7 +401,7 @@ export default function Home() {
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>{card.subtitle}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>{card.body}</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
-                <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+                {renderCardActions(card.title, '#services')}
               </div>
             ))}
           </div>
@@ -375,18 +419,18 @@ export default function Home() {
           <div className="service-grid">
 
             {/* Service - Immigration */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+            <div id="residency-sorted" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛂</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexican Residency, Sorted</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>
                 My residency team is your residency team. I coordinate every step, set your appointments, and walk in with you. Temporary residency, permanent residency, heritage citizenship — navigated together by people who know this city and this process. You don't show up to a consulate alone with a stack of papers you don't understand. You arrive prepared, accompanied, and confident. We review your eligibility together, identify the right path for your specific situation, and handle the coordination from start to finish. Not outsourced. Not handed off. Lisa and her licensed immigration team stay present until you are fully taken care of — from your first question to the day you hold your residency card and beyond.
               </p>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>My residency team is your residency team.</p>
-              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+              {renderCardActions('Mexican Residency, Sorted', '/residency')}
             </div>
 
             {/* Service - Concierge */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
+            <div id="newcomers-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🌮</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexico Newcomers Concierge</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
@@ -404,7 +448,7 @@ export default function Home() {
                 <li>Post-surgery companionship & recovery support</li>
                 <li>Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
               </ul>
-              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+              {renderCardActions('Mexico Newcomers Concierge', '#services')}
               <div style={{ marginTop: '24px', padding: '22px 20px', backgroundColor: '#FAE8E0', borderRadius: '10px', border: '1px solid #D4A017' }}>
                 <div style={{ fontSize: '14px', fontWeight: '700', color: '#7D3B4E', marginBottom: '10px' }}>Pricing</div>
                 <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', lineHeight: '1.7' }}>
@@ -421,7 +465,7 @@ export default function Home() {
             </div>
 
             {/* Service - Personal Assistant */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
+            <div id="personal-assistant" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛒</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Personal Assistant</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>The errands, the projects, the things that pile up when life gets busy.</p>
@@ -438,11 +482,11 @@ export default function Home() {
               </ul>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You have a life to live. Let's keep it running smoothly.</p>
               <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '12px', fontWeight: '600' }}>$35/hour · No minimum</p>
-              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+              {renderCardActions('Personal Assistant', '#personal-assistant')}
             </div>
 
             {/* Service - Tech Concierge */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
+            <div id="tech-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>💻</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Tech Concierge</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Technology should make your life easier. When it doesn't — call Lisa.</p>
@@ -465,11 +509,11 @@ export default function Home() {
               </ul>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If it has a screen and it is not cooperating — I can help.</p>
               <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '12px', fontWeight: '600' }}>$35/hour · No minimum</p>
-              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+              {renderCardActions('Tech Concierge', '#services')}
             </div>
 
             {/* Service - Medical Concierge */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+            <div id="medical-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🏥</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Medical Concierge</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Navigating Mexican healthcare should not be something you do alone.</p>
@@ -496,7 +540,7 @@ export default function Home() {
                 <div>Half Day 4 hours — $80</div>
                 <div>Full Day 8 hours — $150</div>
               </div>
-              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
+              {renderCardActions('Medical Concierge', '#medical-concierge')}
             </div>
 
           </div>
@@ -543,7 +587,7 @@ export default function Home() {
               Includes: all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and weekly usage report.
             </div>
           </div>
-          <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
+          {renderCardActions('Senior Concierge', '#senior-concierge')}
         </div>
       </section>
 
@@ -646,10 +690,10 @@ export default function Home() {
         <div className="content-wrapper" style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '28px', textAlign: 'center' }}>Booking &amp; Cancellation Policy</h3>
           <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598', marginBottom: '20px' }}>
-            All sessions require payment in full to confirm. You will receive a confirmation email with your intake questionnaire within 24 hours of booking. Please complete your questionnaire at least 48 hours before your scheduled call so we arrive fully prepared.
+            Full payment is required to confirm your booking. You will receive a confirmation email with your intake questionnaire within 24 hours of payment. Please complete it before your session so we arrive fully prepared.
           </p>
           <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598' }}>
-            Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice.
+            Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice — one free reschedule per booking.
           </p>
         </div>
       </section>
@@ -883,15 +927,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-                backgroundColor: '#C4622D',
-                color: 'white',
-                borderRadius: '4px',
-                textDecoration: 'none',
-                fontSize: '15px',
-                fontWeight: '700',
-                marginBottom: '20px'
-              }}>✦ Book a Planning Call</a>
+              {renderCardActions('Property & Pet Care', '#caretaking')}
               <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', marginBottom: '24px' }}>
                 <div style={{ marginBottom: '12px', fontWeight: '700' }}>WITHOUT PETS</div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>

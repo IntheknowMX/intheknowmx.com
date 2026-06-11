@@ -123,7 +123,7 @@ export default function Home() {
           <h1>San Miguel<br /><span>Insider.</span></h1>
           <p style={{ color: '#2C1810', fontSize: '15px', marginBottom: '28px', letterSpacing: '1px' }}>Known here. Trusted here. Since 2015.</p>
           <div style={{ width: '48px', height: '2px', backgroundColor: '#D4A017', marginBottom: '28px' }} />
-          <p className="hero-description">Relocation support, rentals, home care, and on-the-ground presence — your person in Mexico since 2015.</p>
+          <p className="hero-description">Your person on the ground since 2015.</p>
           <div className="hero-buttons">
             <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
             <a className="button-link secondary" href="/residency">See If I Qualify →</a>

@@ -121,7 +121,6 @@ export default function Home() {
         <div className="hero-copy">
           <p className="lead">SAN MIGUEL DE ALLENDE · MEXICO</p>
           <h1>San Miguel<br /><span>Insider.</span></h1>
-          <p style={{ color: '#2C1810', fontSize: '15px', marginBottom: '28px', letterSpacing: '1px' }}>Known here. Trusted here. Since 2015.</p>
           <div style={{ width: '48px', height: '2px', backgroundColor: '#D4A017', marginBottom: '28px' }} />
           <p className="hero-description">Your person on the ground since 2015.</p>
           <div className="hero-buttons">

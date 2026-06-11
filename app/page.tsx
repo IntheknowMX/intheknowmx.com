@@ -405,13 +405,18 @@ export default function Home() {
                 <li>Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
               </ul>
               <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#C4622D', textDecoration: 'none', fontWeight: 'bold', fontSize: '14px' }}>Book a Planning Call →</a>
-              <div style={{ marginTop: '16px', fontSize: '13px', color: '#7D3B4E', fontWeight: '600' }}>
-                <div>Hourly — $35/hour · No minimum</div>
-                <div>Starter 8 hours — $250</div>
-                <div>Standard 16 hours — $480</div>
-                <div>Full Support 24 hours — $700</div>
-                <div>Monthly Retainer — $480/month · 16 hours · Priority scheduling + WhatsApp availability</div>
-                <div style={{ fontSize: '12px', marginTop: '8px', color: '#2C1810', fontWeight: 'normal' }}>Includes: all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, weekly usage report</div>
+              <div style={{ marginTop: '24px', padding: '22px 20px', backgroundColor: '#FAE8E0', borderRadius: '10px', border: '1px solid #D4A017' }}>
+                <div style={{ fontSize: '14px', fontWeight: '700', color: '#7D3B4E', marginBottom: '10px' }}>Pricing</div>
+                <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', lineHeight: '1.7' }}>
+                  <div>Hourly — $35/hour · No minimum</div>
+                  <div>Starter 8 hours — $250</div>
+                  <div>Standard 16 hours — $480</div>
+                  <div>Full Support 24 hours — $700</div>
+                  <div>Monthly Retainer — $480/month · 16 hours · Priority scheduling + WhatsApp availability</div>
+                </div>
+                <div style={{ fontSize: '12px', marginTop: '12px', color: '#2C1810', fontWeight: 'normal', lineHeight: '1.6' }}>
+                  Includes: all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and weekly usage report.
+                </div>
               </div>
             </div>
 
@@ -525,12 +530,18 @@ export default function Home() {
             <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
           </ul>
           <p style={{ fontSize: '15px', color: '#7D3B4E', fontStyle: 'italic', marginBottom: '20px' }}>You didn't move to Mexico to struggle. You moved here to live.</p>
-          <div style={{ fontSize: '13px', color: '#7D3B4E', fontWeight: '600', marginBottom: '20px' }}>
-            <div>Hourly — $35/hour · No minimum</div>
-            <div>Starter 8 hours — $250</div>
-            <div>Standard 16 hours — $480</div>
-            <div>Full Support 24 hours — $700</div>
-            <div>Monthly Retainer — $480/month · 16 hours</div>
+          <div style={{ marginBottom: '24px', padding: '24px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
+            <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '12px' }}>Pricing</div>
+            <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', lineHeight: '1.75' }}>
+              <div>Hourly — $35/hour · No minimum</div>
+              <div>Starter 8 hours — $250</div>
+              <div>Standard 16 hours — $480</div>
+              <div>Full Support 24 hours — $700</div>
+              <div>Monthly Retainer — $480/month · 16 hours · Priority scheduling + WhatsApp availability</div>
+            </div>
+            <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
+              Includes: all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and weekly usage report.
+            </div>
           </div>
           <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>Book a Planning Call</a>
         </div>
@@ -882,26 +893,26 @@ export default function Home() {
                 marginBottom: '20px'
               }}>✦ Book a Planning Call</a>
               <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', marginBottom: '24px' }}>
-                <div style={{ marginBottom: '12px', fontWeight: '700' }}>WITHOUT PETS — Property Watch Only</div>
+                <div style={{ marginBottom: '12px', fontWeight: '700' }}>WITHOUT PETS</div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
-                  <div><strong>Daily</strong><br/>$250 pesos (~$1.56 USD)</div>
-                  <div><strong>Weekly</strong><br/>$1,500 pesos (~$9.35 USD)</div>
-                  <div><strong>Monthly</strong><br/>$5,500 pesos (~$34 USD)</div>
+                  <div><strong>Daily</strong><br/>250 pesos · $1.56 USD</div>
+                  <div><strong>Weekly</strong><br/>1,500 pesos · $9.35 USD</div>
+                  <div><strong>Monthly</strong><br/>5,500 pesos · $34 USD</div>
                 </div>
-                <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '12px' }}>Includes: home walk-through, WhatsApp photo updates, mail and deliveries, plant watering, emergency response</div>
+                <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '12px' }}>Includes: home walk-through, WhatsApp photo updates, mail and deliveries, plant watering, emergency response.</div>
                 <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>WITH 1 PET</div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
-                  <div><strong>Daily</strong><br/>$350 pesos (~$2.18 USD)</div>
-                  <div><strong>Weekly</strong><br/>$2,100 pesos (~$13 USD)</div>
-                  <div><strong>Monthly</strong><br/>$7,700 pesos (~$48 USD)</div>
+                  <div><strong>Daily</strong><br/>350 pesos · $2.18 USD</div>
+                  <div><strong>Weekly</strong><br/>2,100 pesos · $13 USD</div>
+                  <div><strong>Monthly</strong><br/>7,700 pesos · $48 USD</div>
                 </div>
-                <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px' }}>Includes: everything above plus 2-3 feedings, 2 walks, 1-2 litter changes per day</div>
-                <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>ADD-ONS</div>
+                <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px' }}>Includes: everything above plus 2-3 feedings, 2 walks, 1-2 litter changes per day.</div>
+                <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>ADD-ONS per day/week/month</div>
                 <div style={{ fontSize: '12px', color: '#7D3B4E' }}>
-                  <div>+$100 pesos per additional animal per day</div>
-                  <div>Oral medication up to 2x daily: +$30 pesos/day · +$210 pesos/week · +$840 pesos/month</div>
-                  <div>Medical injection: +$25 pesos/day · +$175 pesos/week · +$700 pesos/month</div>
-                  <div>Asthma inhaler: +$25 pesos/day · +$175 pesos/week · +$700 pesos/month</div>
+                  <div>Additional animal +$100 pesos per day</div>
+                  <div>Oral medication up to 2x daily: +$30 / $210 / $840 pesos</div>
+                  <div>Medical injection: +$25 / $175 / $700 pesos</div>
+                  <div>Asthma inhaler: +$25 / $175 / $700 pesos</div>
                 </div>
               </div>
             </div>
@@ -957,11 +968,16 @@ export default function Home() {
             display: 'inline-block',
             marginBottom: '20px'
           }}>✦ Book a Planning Call</a>
-          <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', marginBottom: '20px' }}>
-            <div>Hourly — $15/hour</div>
-            <div>Half Day 4 hours — $56</div>
-            <div>Full Day 8 hours — $96</div>
-            <div style={{ fontSize: '12px', marginTop: '8px', color: '#7D3B4E', fontWeight: 'normal' }}>Client covers all outing costs — meals transportation admission fees and activities.</div>
+          <div style={{ marginBottom: '24px', padding: '24px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', maxWidth: '520px', color: '#2C1810' }}>
+            <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '12px' }}>Pricing</div>
+            <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8' }}>
+              <div>Hourly — $15/hour</div>
+              <div>Half Day 4 hours — $56</div>
+              <div>Full Day 8 hours — $96</div>
+            </div>
+            <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
+              Client covers all outing costs, including meals, transportation, admission fees, and activities.
+            </div>
           </div>
           <p style={{ marginTop: '0', fontSize: '14px', color: '#E8A598', lineHeight: '1.7', fontStyle: 'italic' }}>
             In The Know Mexico. Because having an insider makes all the difference.

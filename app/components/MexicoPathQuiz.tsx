@@ -92,7 +92,7 @@ function getResult(answers: string[]): Result {
     return {
       title: "Your Daily Life, Handled",
       description: "You're here — now let's make it feel like home. From bank accounts to bill payments, SIM cards to shopping guidance, post-surgery support to staff oversight, I handle the practical side so you can actually enjoy Mexico.",
-      service: "Mexico Newcomers Concierge",
+      service: "newcomer concierge support",
       cta: "Book a Strategy Session",
     }
   }
@@ -100,7 +100,7 @@ function getResult(answers: string[]): Result {
     return {
       title: "Let's Build Your Full Mexico Plan",
       description: "You're close — and this is exactly when having someone who knows every step makes all the difference. From shipping logistics to lease signing, banking to your first cup of coffee at your favorite spot, I walk beside you so nothing falls through the cracks.",
-      service: "Mexico Newcomers Concierge",
+      service: "newcomer concierge support",
       cta: "Book a Strategy Session",
     }
   }

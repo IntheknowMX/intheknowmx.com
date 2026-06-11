@@ -442,7 +442,7 @@ export default function Home() {
             {/* Service - Concierge */}
             <div id="newcomers-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🌮</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexico Newcomers Concierge</h3>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>newcomer concierge support</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
                 Mexico has a learning curve. Everyone hits it. The difference is whether you hit it alone or with someone who has already figured it out. I can do it for you — or I can show you how Mexico works. Banking, utilities, household staff, lease review, internet setup, government accounts, healthcare, post-surgery support, Mexican driver's license, car nationalization, setting up a business, travel assistance, home and pet security while you are away, Mexican phone number — we will handle it together until you take the reigns. That's the goal.
               </p>
@@ -458,7 +458,7 @@ export default function Home() {
                 <li>Post-surgery companionship & recovery support</li>
                 <li>Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
               </ul>
-              {renderCardActions('Mexico Newcomers Concierge', '#services')}
+              {renderCardActions('newcomer concierge support', '#services')}
               <div style={{ marginTop: '24px', padding: '22px 20px', backgroundColor: '#FAE8E0', borderRadius: '10px', border: '1px solid #D4A017' }}>
                 <div style={{ fontSize: '14px', fontWeight: '700', color: '#7D3B4E', marginBottom: '10px' }}>Pricing</div>
                 <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', lineHeight: '1.7' }}>
@@ -625,7 +625,7 @@ export default function Home() {
 
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px' }}>
               <div style={{ fontSize: '32px', marginBottom: '14px' }}>🌮</div>
-              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>Mexico Newcomers Concierge</h3>
+              <h3 style={{ fontSize: '21px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px' }}>newcomer concierge support</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px' }}>
                 Day-to-day life in Mexico, handled.
               </p>
@@ -769,7 +769,7 @@ export default function Home() {
                 '📝 Bilingual lease review — section by section — Nothing gets signed until you understand every line. We\'ll review your lease in both languages, flag anything unusual, and explain what it actually means for your daily life.',
                 '💬 Negotiation on your behalf with landlords — Price, terms, included furnishings, maintenance responsibilities — negotiated by someone who knows what is standard, what is flexible, and what is worth pushing back on.',
                 '✅ Final walkthrough checklist before you sign anything — A documented condition report of the property before keys change hands. Your protection from day one.',
-                '🤝 Ongoing support after you move in — Questions don\'t stop at move-in. When you sign your lease, you receive 2 free hours of Mexico Newcomers Concierge support — home setup, utilities, domestic staff, banking, grocery delivery, Mexican SIM setup, pet grooming, healthcare, or whatever you need to completely settle in.',
+                '🤝 Ongoing support after you move in — Questions don\'t stop at move-in. When you sign your lease, you receive 2 free hours of newcomer concierge support — home setup, utilities, domestic staff, banking, grocery delivery, Mexican SIM setup, pet grooming, healthcare, or whatever you need to completely settle in.',
               ].map((item) => (
                 <p key={item} style={{ fontSize: '14px', color: '#2C1810', margin: '4px 0', lineHeight: '1.6' }}>{item}</p>
               ))}
@@ -791,7 +791,7 @@ export default function Home() {
                 <li>Personal escort to all showings</li>
                 <li>Translation & negotiation support</li>
                 <li>Lease review included</li>
-                <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of Mexico Newcomers Concierge support</li>
+                <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of newcomer concierge support</li>
               </ul>
               <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 6px', lineHeight: '1.6' }}>1 free reschedule available</p>
               <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>No refunds within 48 hours of showing day.</p>
@@ -812,7 +812,7 @@ export default function Home() {
                 <li>Private driver for the full day — no logistics stress</li>
                 <li>Post-showing debrief: we review every property together</li>
                 <li>Pros/cons breakdown, my honest recommendations</li>
-                <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of Mexico Newcomers Concierge support</li>
+                <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of newcomer concierge support</li>
               </ul>
               <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 6px', lineHeight: '1.6' }}>1 free reschedule available</p>
               <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>No refunds within 48 hours of showing day.</p>

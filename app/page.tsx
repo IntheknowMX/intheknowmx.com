@@ -385,9 +385,7 @@ export default function Home() {
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🌮</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexico Newcomers Concierge</h3>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
-                From your first question to your first year unpacked. Banking, utilities, household staff, lease review,
-                internet, government accounts, post-surgery support — I handle the practical side of your Mexico life
-                so you can actually enjoy it.
+                Mexico has a learning curve. Everyone hits it. The difference is whether you hit it alone or with someone who has already figured it out. I can do it for you — or I can show you how Mexico works. Banking, utilities, household staff, lease review, internet setup, government accounts, healthcare, post-surgery support, Mexican driver's license, car nationalization, setting up a business, travel assistance, home and pet security while you are away, Mexican phone number — we will handle it together until you take the reigns. That's the goal.
               </p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '20px' }}>
                 <li>Utility setup & bill payment</li>

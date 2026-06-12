@@ -6,8 +6,25 @@ type PaymentModalProps = {
   service?: string
 }
 
+const STRIPE_LINKS: Record<string, string> = {
+  'The Relocation Planning Call': 'https://buy.stripe.com/bJeeVddDK0R84KAd282880j',
+  'From Dream to Action Plan': 'https://buy.stripe.com/aFabJ1fLS43k3Gw9PW2880k',
+  'Moving Through Fear': 'https://buy.stripe.com/3cIbJ1czG7fw1yoaU02880l',
+  'Rental Showing Day': 'https://buy.stripe.com/14A8wPgPWeHYcd26DK2880m',
+}
+
+const RESIDENCY_SERVICES = [
+  'Mexican Residency, Sorted',
+  'Residency Planning Call',
+  'Residency Guided Package',
+  'Full Residency Concierge',
+]
+
 export default function PaymentModal({ open, onClose, service }: PaymentModalProps) {
   if (!open) return null
+
+  const stripeUrl = service ? STRIPE_LINKS[service] : undefined
+  const isResidency = service ? RESIDENCY_SERVICES.includes(service) : false
 
   return (
     <div style={{
@@ -88,8 +105,16 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
           <p style={{ marginBottom: '12px' }}>✅ Zelle — no fee → <strong>sittingprettydc@gmail.com</strong></p>
           <p style={{ marginBottom: '12px' }}>✅ Wise — no fee → <strong>Contact Lisa via WhatsApp for banking details</strong></p>
           <p style={{ marginBottom: '12px' }}>📱 Venmo — +2% fee → <a href="https://venmo.com/code?user_id=3758990584448601525&created=1781206512" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>https://venmo.com/code?user_id=3758990584448601525&created=1781206512</a></p>
-          <p style={{ marginBottom: '12px' }}>💻 PayPal — +3% fee → <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>https://paypal.com/paypalme/lisaMayCo</a></p>
-          <p>💳 Stripe — +3% fee → <em>Link coming soon — contact Lisa via WhatsApp</em></p>
+          <p style={{ marginBottom: isResidency ? '0' : '12px' }}>💻 PayPal — +3% fee → <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>https://paypal.com/paypalme/lisaMayCo</a></p>
+          {!isResidency && (
+            <p>
+              {stripeUrl ? (
+                <>💳 Stripe — +3% fee → <a href={stripeUrl} target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Pay now with Stripe →</a></>
+              ) : (
+                <>💳 Stripe — +3% fee → <em>Link coming soon — contact Lisa via WhatsApp</em></>
+              )}
+            </p>
+          )}
         </div>
         <p style={{ marginTop: '28px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598' }}>
           Your booking is confirmed once payment is received.

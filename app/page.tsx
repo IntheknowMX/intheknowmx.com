@@ -385,7 +385,6 @@ export default function Home() {
                 subtitle: 'Everything in your head about Mexico — sorted.',
                 body: "You'll complete a brief pre-call questionnaire so we arrive prepared and nothing gets missed. In our one-hour conversation we map your housing, residency, budget, timeline, pets, furniture, remote income, healthcare, and your personal next steps. Within 48 hours you receive a written summary of our call, specific answers to every question you raised, any additional resources I promised, and a timeline. You don't just leave with clarity — you leave with a document that becomes your Mexico roadmap.",
                 closing: 'You will know exactly what your next step is.',
-                price: '$89 per call',
                 priceTag: '$89',
               },
               {
@@ -393,8 +392,8 @@ export default function Home() {
                 title: 'From Dream to Action Plan',
                 subtitle: "You've been talking about Mexico for years. Let's turn that into a real outline.",
                 body: "This call is for the serious dreamer who needs structure. Together we build a step-by-step action plan — what to do first, what to do next, and what can wait. We identify the gaps between where you are now and where you want to be, and we close them one by one. We cover the practical questions you've been putting off — housing options, neighborhood fit, budget reality, income sources, healthcare access, and what moving actually looks like for your specific life. Nothing vague. Nothing generic. A real plan built around your real situation. You've done the dreaming. This is where the doing begins.",
-                closing: "Dreams don’t move you to Mexico. Plans do.",
-                price: '$89 per call',
+                closing: "Dreams don't move you to Mexico. Plans do.",
+                priceTag: '$89',
               },
               {
                 emoji: '💛',
@@ -402,7 +401,7 @@ export default function Home() {
                 subtitle: 'Sometimes the only thing standing between you and the life you want is fear.',
                 body: "Projected fear from loved ones. Fear of the unknown. Uncertainty about healthcare, personal safety, language, or leaving things behind. These are real — and they deserve a real conversation. This call is a mindful coaching session. We talk honestly about what's holding you back, work through the emotional and practical blocks, and build concrete steps to motivate you to take that first real move. If San Miguel isn't right for you, we discuss other parts of Mexico or the world. Your fears are addressed directly — with care and acceptance.",
                 closing: "You don't need to have it all figured out. You simply need a brainstorming session.",
-                price: '$89 per call',
+                priceTag: '$89',
               },
             ].map((card) => (
               <div key={card.title} style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -412,7 +411,6 @@ export default function Home() {
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>{card.subtitle}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>{card.body}</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
-                <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '12px', fontWeight: '600' }}>{card.price}</p>
                 {renderCardActions(card.title, '#services')}
               </div>
             ))}

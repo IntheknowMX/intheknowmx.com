@@ -155,7 +155,7 @@ export default function Home() {
               <button className="mobile-menu-close-btn" aria-label="Close menu" onClick={() => setMobileMenuOpen(false)}>✕</button>
             </div>
             <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="#services" onClick={() => setMobileMenuOpen(false)}>Concierge</a>
+            <a href="#planning-calls" onClick={() => setMobileMenuOpen(false)}>Planning Call</a>
             <a href="/residency" onClick={() => setMobileMenuOpen(false)}>Residency</a>
             <a href="#rentals" onClick={() => setMobileMenuOpen(false)}>Rentals</a>
             <a href="#properties" onClick={() => setMobileMenuOpen(false)}>Owning</a>
@@ -367,16 +367,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="responsive-section" style={{ backgroundColor: '#7D3B4E' }}>
+      <section id="planning-calls" style={{ backgroundColor: '#FDF6F0', padding: '80px 40px' }}>
         <div className="content-wrapper">
-          <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT I OFFER</p>
-          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '16px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            Your Mexico life — built with someone who already lives it.
+          <p style={{ color: '#C4622D', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>PLAN YOUR MOVE</p>
+          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '20px', textAlign: 'center', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+            Planning Call
           </h2>
-          <p style={{ color: '#F5E0E6', fontSize: '17px', textAlign: 'center', maxWidth: '600px', margin: '0 auto 16px', lineHeight: '1.75' }}>
-            Every service is personal, in-person, and built around your specific situation. Not outsourced. Not handed off. Lisa and her team are with you every step — from your first question to the day you hold your residency card and beyond.
+          <p style={{ color: '#5C3A2E', fontSize: '17px', textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px', lineHeight: '1.75' }}>
+            Before you pack a single box or fill out a single form — let's talk. A planning call is where clarity begins. Whether you are still dreaming, ready to act, or working through fear — there is a call designed for exactly where you are right now.
           </p>
-          {/* Planning Calls */}
+
+          {/* Planning Call cards */}
           <div className="service-grid" style={{ marginBottom: '28px' }}>
             {[
               {
@@ -404,20 +405,20 @@ export default function Home() {
                 priceTag: '$89',
               },
             ].map((card) => (
-              <div key={card.title} style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <div key={card.title} style={{ backgroundColor: 'white', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 12px rgba(44,24,16,0.07)' }}>
                 <div style={{ fontSize: '34px', marginBottom: '14px' }}>{card.emoji}</div>
                 <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>{card.title}</h3>
                 {card.priceTag && <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.priceTag}</p>}
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>{card.subtitle}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>{card.body}</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
-                {renderCardActions(card.title, '#services')}
+                {renderCardActions(card.title, '#planning-calls')}
               </div>
             ))}
           </div>
 
           {/* Planning Calls Footer Note */}
-          <div style={{ backgroundColor: '#FAE8E0', borderLeft: '4px solid #D4A017', padding: '28px 32px', borderRadius: '8px', marginBottom: '28px' }}>
+          <div style={{ backgroundColor: '#FAE8E0', borderLeft: '4px solid #D4A017', padding: '28px 32px', borderRadius: '8px' }}>
             <p style={{ fontSize: '15px', fontWeight: '700', color: '#7D3B4E', marginBottom: '14px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>All Planning Calls Include:</p>
             <ul style={{ fontSize: '15px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '20px', margin: 0 }}>
               <li>A pre-call questionnaire so we arrive prepared and nothing gets missed</li>
@@ -425,6 +426,18 @@ export default function Home() {
               <li>Real steps to a plan at your fingertips before the week is out</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section id="services" className="responsive-section" style={{ backgroundColor: '#7D3B4E' }}>
+        <div className="content-wrapper">
+          <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT I OFFER</p>
+          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '16px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+            Your Mexico life — built with someone who already lives it.
+          </h2>
+          <p style={{ color: '#F5E0E6', fontSize: '17px', textAlign: 'center', maxWidth: '600px', margin: '0 auto 16px', lineHeight: '1.75' }}>
+            Every service is personal, in-person, and built around your specific situation. Not outsourced. Not handed off. Lisa and her team are with you every step — from your first question to the day you hold your residency card and beyond.
+          </p>
 
           <div className="service-grid">
 

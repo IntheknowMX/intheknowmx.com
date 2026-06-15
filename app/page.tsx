@@ -612,6 +612,28 @@ export default function Home() {
               {renderCardActions('Medical Concierge', '#medical-concierge')}
             </div>
 
+            {/* Service - Travel & Logistics */}
+            <div id="travel-logistics" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>✈️</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Travel & Logistics</h3>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Getting there is half the adventure. Getting there smoothly is the whole point.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>🛫 Flight research and booking assistance</li>
+                <li>🚌 Bus and ground transportation — ADO, local transfers, airport runs</li>
+                <li>🏨 Hotel and accommodation coordination</li>
+                <li>🚗 Car rental guidance and local driving tips</li>
+                <li>📋 Travel document organization — passports, visas, entry requirements</li>
+                <li>🧳 Packing and shipping coordination</li>
+                <li>🗺️ Custom itinerary planning for Mexico travel</li>
+                <li>🔄 Layover and connection logistics</li>
+                <li>📱 Travel app setup — Uber, ADO, VivaAerobus, Aeromexico</li>
+                <li>🚨 Emergency travel support — canceled flights, lost documents, rebooking</li>
+              </ul>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on the journey. I handle the map.</p>
+              <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '12px', fontWeight: '600' }}>$35/hour · No minimum</p>
+              {renderCardActions('Travel & Logistics', '#services')}
+            </div>
+
           </div>
         </div>
       </section>

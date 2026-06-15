@@ -1,14 +1,62 @@
+'use client'
 /* eslint-disable react/no-unescaped-entities */
+import { useState } from 'react'
 import ResidencyChecker from '../components/ResidencyChecker'
-
-export const metadata = {
-  title: 'Mexican Residency, Sorted — In The Know Mexico',
-  description: 'Find out which Mexican residency path is right for you. Answer 6 questions and get a personalized recommendation from Lisa May Cobham, relocation specialist.',
-}
+import PaymentModal from '../components/PaymentModal'
 
 export default function ResidencyPage() {
+  const [paymentModalOpen, setPaymentModalOpen] = useState(false)
+  const [selectedService, setSelectedService] = useState('')
+
+  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [formData, setFormData] = useState({
+    name: '', email: '', whatsapp: '', caseType: '', description: '',
+  })
+
+  const handlePayNow = (service: string) => {
+    setSelectedService(service)
+    setPaymentModalOpen(true)
+  }
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
+  }
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setFormState('submitting')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setFormState('success')
+        setFormData({ name: '', email: '', whatsapp: '', caseType: '', description: '' })
+      } else {
+        setFormState('error')
+      }
+    } catch {
+      setFormState('error')
+    }
+  }
+
+  const inputStyle: React.CSSProperties = {
+    width: '100%',
+    padding: '12px 16px',
+    borderRadius: '6px',
+    border: '1px solid #E8A598',
+    fontSize: '15px',
+    color: '#2C1810',
+    backgroundColor: 'white',
+    boxSizing: 'border-box',
+    fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)",
+  }
+
   return (
     <main style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
+      <PaymentModal open={paymentModalOpen} onClose={() => setPaymentModalOpen(false)} service={selectedService} />
 
       {/* Navigation */}
       <nav style={{
@@ -76,8 +124,212 @@ export default function ResidencyPage() {
       {/* Eligibility Checker */}
       <ResidencyChecker />
 
+      {/* Pricing Tiers */}
+      <section style={{ backgroundColor: '#7D3B4E', padding: '80px 40px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>RESIDENCY SERVICES</p>
+          <h2 style={{ fontSize: '42px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '48px', lineHeight: '1.2' }}>
+            Choose your level of support.
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px', marginBottom: '32px' }}>
+
+            {/* Tier 1 — Virtual Guidance */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Virtual Guidance</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$335</p>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything you need — with expert backup.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
+                <li>Professional document review</li>
+                <li>All forms prepared and ready</li>
+                <li>Consulate and INM appointments scheduled</li>
+                <li>Step-by-step guidance throughout</li>
+                <li>Follow-up email with action steps</li>
+              </ul>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <button
+                  onClick={() => handlePayNow('Virtual Guidance')}
+                  style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer' }}
+                >
+                  Pay Now
+                </button>
+                <a
+                  href="/residency"
+                  style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}
+                >
+                  More Info
+                </a>
+              </div>
+            </div>
+
+            {/* Tier 2 — On the Ground Facilitation */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', border: '2px solid #C4622D', position: 'relative', display: 'flex', flexDirection: 'column' }}>
+              <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST POPULAR</p>
+              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>On the Ground Facilitation</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$779</p>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything in Virtual Guidance — plus an experienced INM facilitator on the ground with you.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
+                <li>All document preparation and review</li>
+                <li>Consulate and INM appointments scheduled</li>
+                <li>In-person accompaniment to every appointment</li>
+                <li>Real-time translation throughout</li>
+                <li>Final paperwork preparation</li>
+              </ul>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <button
+                  onClick={() => handlePayNow('On the Ground Facilitation')}
+                  style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer' }}
+                >
+                  Pay Now
+                </button>
+                <a
+                  href="/residency"
+                  style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}
+                >
+                  More Info
+                </a>
+              </div>
+            </div>
+
+            {/* Tier 3 — Complex Cases */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Complex Cases — Get a Quote</h3>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Renewals · Address changes · Business permits · Work permits</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px', flex: 1 }}>
+                Submit your situation using the form below and we will be in touch within 48 hours.
+              </p>
+              <a
+                href="#contact-form"
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
+              >
+                Submit Your Case
+              </a>
+            </div>
+
+          </div>
+
+          {/* Important Notice */}
+          <div style={{ backgroundColor: '#FAE8E0', border: '1px solid #8B1A2A', borderRadius: '8px', padding: '24px 28px' }}>
+            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', margin: 0 }}>
+              <strong style={{ color: '#8B1A2A' }}>Important:</strong> Government immigration filing fees are additional and vary by case. Rates above apply to straightforward temporary or permanent residency applications. We are not responsible for changes in immigration policies or processing times. Complex cases are quoted separately.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form — Complex Cases */}
+      <section id="contact-form" style={{ backgroundColor: '#2C1810', padding: '80px 40px' }}>
+        <div style={{ maxWidth: '640px', margin: '0 auto' }}>
+          <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>COMPLEX CASES</p>
+          <h2 style={{ fontSize: '36px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px', textAlign: 'center', lineHeight: '1.2' }}>
+            Tell us about your situation.
+          </h2>
+          <p style={{ fontSize: '16px', color: '#E8A598', textAlign: 'center', marginBottom: '40px', lineHeight: '1.7' }}>
+            We review every submission personally and respond within 48 hours.
+          </p>
+
+          {formState === 'success' ? (
+            <div style={{ backgroundColor: '#1A0E09', border: '1px solid #D4A017', borderRadius: '8px', padding: '40px', textAlign: 'center' }}>
+              <p style={{ fontSize: '32px', marginBottom: '16px' }}>✓</p>
+              <h3 style={{ fontSize: '22px', color: '#D4A017', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px', fontWeight: 'normal' }}>Received.</h3>
+              <p style={{ color: '#E8A598', fontSize: '15px', lineHeight: '1.7' }}>We'll be in touch within 48 hours.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div>
+                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>NAME *</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  placeholder="Your full name"
+                  style={inputStyle}
+                />
+              </div>
+              <div>
+                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>EMAIL *</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleFormChange}
+                  placeholder="your@email.com"
+                  style={inputStyle}
+                />
+              </div>
+              <div>
+                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>WHATSAPP NUMBER</label>
+                <input
+                  type="tel"
+                  name="whatsapp"
+                  value={formData.whatsapp}
+                  onChange={handleFormChange}
+                  placeholder="+1 555 000 0000"
+                  style={inputStyle}
+                />
+              </div>
+              <div>
+                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>TYPE OF CASE *</label>
+                <select
+                  name="caseType"
+                  required
+                  value={formData.caseType}
+                  onChange={handleFormChange}
+                  style={inputStyle}
+                >
+                  <option value="">Select your situation</option>
+                  <option value="Residency Renewal">Residency Renewal</option>
+                  <option value="Address Change">Address Change</option>
+                  <option value="Business Permit">Business Permit</option>
+                  <option value="Work Permit">Work Permit</option>
+                  <option value="Heritage Citizenship">Heritage Citizenship</option>
+                  <option value="Other Complex Case">Other Complex Case</option>
+                </select>
+              </div>
+              <div>
+                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>BRIEF DESCRIPTION OF YOUR SITUATION *</label>
+                <textarea
+                  name="description"
+                  required
+                  value={formData.description}
+                  onChange={handleFormChange}
+                  placeholder="Tell us about your situation, timeline, and any relevant history..."
+                  rows={5}
+                  style={{ ...inputStyle, resize: 'vertical' }}
+                />
+              </div>
+              {formState === 'error' && (
+                <p style={{ color: '#E8A598', fontSize: '14px', margin: 0 }}>
+                  Something went wrong. Please try again or message Lisa directly on WhatsApp.
+                </p>
+              )}
+              <button
+                type="submit"
+                disabled={formState === 'submitting'}
+                style={{
+                  backgroundColor: formState === 'submitting' ? '#7D3B4E' : '#C4622D',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '6px',
+                  padding: '16px 32px',
+                  fontSize: '15px',
+                  fontWeight: 700,
+                  cursor: formState === 'submitting' ? 'default' : 'pointer',
+                  transition: 'background-color 0.2s',
+                }}
+              >
+                {formState === 'submitting' ? 'Sending…' : 'Submit Your Case →'}
+              </button>
+            </form>
+          )}
+        </div>
+      </section>
+
       {/* About the Residency Service */}
-      <section style={{ backgroundColor: '#2C1810', padding: '80px 40px' }}>
+      <section style={{ backgroundColor: '#2C1810', padding: '80px 40px', borderTop: '1px solid #3D2418' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
           <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '20px' }}>MY RESIDENCY TEAM</p>
           <h2 style={{ fontSize: '40px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', lineHeight: '1.2' }}>

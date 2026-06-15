@@ -11,6 +11,8 @@ const STRIPE_LINKS: Record<string, string> = {
   'From Dream to Action Plan': 'https://buy.stripe.com/aFabJ1fLS43k3Gw9PW2880k',
   'Moving Through Fear': 'https://buy.stripe.com/3cIbJ1czG7fw1yoaU02880l',
   'Rental Showing Day': 'https://buy.stripe.com/14A8wPgPWeHYcd26DK2880m',
+  'Virtual Guidance': 'https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n',
+  'On the Ground Facilitation': 'https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o',
 }
 
 const RESIDENCY_SERVICES = [
@@ -107,13 +109,17 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
           <p style={{ marginBottom: '12px' }}>📱 Venmo — +2% fee → <a href="https://venmo.com/code?user_id=3758990584448601525&created=1781206512" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>https://venmo.com/code?user_id=3758990584448601525&created=1781206512</a></p>
           <p style={{ marginBottom: isResidency ? '0' : '12px' }}>💻 PayPal — +3% fee → <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>https://paypal.com/paypalme/lisaMayCo</a></p>
           {!isResidency && (
-            <p>
+            <div>
               {stripeUrl ? (
-                <>💳 Stripe — +3% fee → <a href={stripeUrl} target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Pay now with Stripe →</a></>
+                <p style={{ marginBottom: '0' }}>💳 Stripe — +3% fee → <a href={stripeUrl} target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Pay now with Stripe →</a></p>
               ) : (
-                <>💳 Stripe — +3% fee → <em>Link coming soon — contact Lisa via WhatsApp</em></>
+                <div>
+                  <p style={{ marginBottom: '8px' }}>💳 Stripe — +3% fee</p>
+                  <p style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href="https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Virtual Guidance $335</a></p>
+                  <p style={{ marginBottom: '0', paddingLeft: '24px' }}>→ <a href="https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>On the Ground Facilitation $779</a></p>
+                </div>
               )}
-            </p>
+            </div>
           )}
         </div>
         <p style={{ marginTop: '28px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598' }}>

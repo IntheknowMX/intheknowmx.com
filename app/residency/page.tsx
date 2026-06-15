@@ -2,21 +2,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react'
 import ResidencyChecker from '../components/ResidencyChecker'
-import PaymentModal from '../components/PaymentModal'
 
 export default function ResidencyPage() {
-  const [paymentModalOpen, setPaymentModalOpen] = useState(false)
-  const [selectedService, setSelectedService] = useState('')
-
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const [formData, setFormData] = useState({
     name: '', email: '', whatsapp: '', caseType: '', description: '',
   })
-
-  const handlePayNow = (service: string) => {
-    setSelectedService(service)
-    setPaymentModalOpen(true)
-  }
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
@@ -56,8 +47,6 @@ export default function ResidencyPage() {
 
   return (
     <main style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
-      <PaymentModal open={paymentModalOpen} onClose={() => setPaymentModalOpen(false)} service={selectedService} />
-
       {/* Navigation */}
       <nav style={{
         backgroundColor: '#FDF6F0',
@@ -147,12 +136,14 @@ export default function ResidencyPage() {
                 <li>Follow-up email with action steps</li>
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                <button
-                  onClick={() => handlePayNow('Virtual Guidance')}
-                  style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer' }}
+                <a
+                  href="https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}
                 >
                   Pay Now
-                </button>
+                </a>
                 <a
                   href="/residency"
                   style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}
@@ -176,12 +167,14 @@ export default function ResidencyPage() {
                 <li>Final paperwork preparation</li>
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                <button
-                  onClick={() => handlePayNow('On the Ground Facilitation')}
-                  style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer' }}
+                <a
+                  href="https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}
                 >
                   Pay Now
-                </button>
+                </a>
                 <a
                   href="/residency"
                   style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}

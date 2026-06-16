@@ -796,16 +796,19 @@ export default function Home() {
                 <li>🏥 Navigating Mexican healthcare vs US insurance reimbursement</li>
                 <li>👨‍⚕️ Accompanying to specialist referrals</li>
               </ul>
-              <div style={{ marginTop: 'auto', padding: '20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
+              <div style={{ marginTop: 'auto', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
                 <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8', color: '#7D3B4E' }}>
                   <div>$22/hour · Minimum 2 hours ($44)</div>
                   <div>Half Day 4 hours — $80</div>
                   <div>Full Day 8 hours — $150</div>
                 </div>
+                <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
+                  Navigating care in Mexico is hard alone. With the right person beside you, it isn't.
+                </div>
                 <button
                   onClick={() => handlePayNow('Medical Concierge')}
-                  style={{ marginTop: '16px', backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+                  style={{ marginTop: 'auto', paddingTop: '16px', backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
                 >
                   Pay Now
                 </button>
@@ -826,7 +829,7 @@ export default function Home() {
                 <p style={{ marginBottom: '14px' }}><strong>Everyday and social:</strong> consignment and thrift hopping, art class, dance class, a workout partner, rooftop happy hour, or help throwing a dinner party or event.</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", margin: 0 }}>And more, if you can dream it, we can probably do it.</p>
               </div>
-              <div style={{ marginTop: 'auto', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
+              <div style={{ marginTop: 'auto', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
                 <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8' }}>
                   <div>Hourly — $15/hour</div>
@@ -838,7 +841,7 @@ export default function Home() {
                 </div>
                 <button
                   onClick={() => handlePayNow('Local Companion')}
-                  style={{ marginTop: '16px', backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+                  style={{ marginTop: 'auto', paddingTop: '16px', backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
                 >
                   Pay Now
                 </button>

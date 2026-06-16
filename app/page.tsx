@@ -660,7 +660,7 @@ export default function Home() {
               </p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
                 <li>🛫 Flight research and booking assistance</li>
-                <li>🚌 Bus and ground transportation — ADO, local transfers, airport runs</li>
+                <li>🚌 Bus and ground transportation, ADO, BajíoGo, local transfers, airport runs</li>
                 <li>🏨 Hotel and accommodation coordination</li>
                 <li>🚗 Car rental guidance and local driving tips</li>
                 <li>📋 Travel document organization — passports, visas, entry requirements</li>

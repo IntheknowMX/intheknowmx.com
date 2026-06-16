@@ -22,11 +22,26 @@ const RESIDENCY_SERVICES = [
   'Full Residency Concierge',
 ]
 
+const CONCIERGE_SERVICES = [
+  'Personal Assistant',
+  'Tech Concierge',
+  'Travel & Logistics',
+  'Senior Concierge',
+]
+
+const CONCIERGE_STRIPE_LINKS = [
+  { label: 'Hourly $35/hour', url: 'https://buy.stripe.com/8x2bJ11V21Vc2CsbY42880s' },
+  { label: 'Starter (8 hours) $250', url: 'https://buy.stripe.com/bJe5kDary57ob8YbY42880q' },
+  { label: 'Standard (16 hours) $480', url: 'https://buy.stripe.com/5kQcN59nuarIfpe3ry2880r' },
+  { label: 'Full Support (24 hours) $700', url: 'https://buy.stripe.com/28EcN52Z69nE5OEfag2880p' },
+]
+
 export default function PaymentModal({ open, onClose, service }: PaymentModalProps) {
   if (!open) return null
 
   const stripeUrl = service ? STRIPE_LINKS[service] : undefined
   const isResidency = service ? RESIDENCY_SERVICES.includes(service) : false
+  const isConcierge = service ? CONCIERGE_SERVICES.includes(service) : false
 
   return (
     <div style={{
@@ -112,6 +127,13 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
             <div>
               {stripeUrl ? (
                 <p style={{ marginBottom: '0' }}>💳 Stripe — +3% fee → <a href={stripeUrl} target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Pay now with Stripe →</a></p>
+              ) : isConcierge ? (
+                <div>
+                  <p style={{ marginBottom: '8px' }}>💳 Credit or debit — +3% fee</p>
+                  {CONCIERGE_STRIPE_LINKS.map(({ label, url }) => (
+                    <p key={url} style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href={url} target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>{label}</a></p>
+                  ))}
+                </div>
               ) : (
                 <div>
                   <p style={{ marginBottom: '8px' }}>💳 Stripe — +3% fee</p>

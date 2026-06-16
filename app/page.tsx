@@ -598,13 +598,28 @@ export default function Home() {
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
                 Sometimes you just need an extra pair of hands. Whether it's running errands across town, picking up groceries from your favorite market, light cooking for the week, or tackling that home project that's been sitting on your list — this is where I come in.
               </p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '8px' }}>
                 <li>🚗 Errand runs using your vehicle</li>
                 <li>🛍️ Shopping — groceries, markets, specialty stores</li>
                 <li>🍳 Light cooking and meal prep</li>
                 <li>🔧 Special home projects and coordination</li>
-                <li>📦 Deliveries pickups and drop-offs</li>
+                <li>📦 Deliveries, pickups and drop-offs</li>
+                <li>🛒 Set up grocery deliveries</li>
+                <li>📺 Set up TV apps</li>
                 <li>🌿 Anything else that needs doing</li>
+              </ul>
+              <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>Office Assistance</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>📞 Business calls: local and abroad</li>
+                <li>📊 Spreadsheets, documents, and presentations</li>
+                <li>📱 Social media setup, management, and scheduling. Editing videos, shorts, and posts.</li>
+                <li>👤 Customer account management</li>
+                <li>✍️ Blog management and editing</li>
+                <li>📅 Appointments</li>
+                <li>📹 Zoom setup and call management, during and post-meeting</li>
+                <li>📝 Meeting minutes</li>
+                <li>📋 Basic project management</li>
+                <li>🎉 Event support</li>
               </ul>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You have a life to live. Let's keep it running smoothly.</p>
             </div>

@@ -555,17 +555,17 @@ export default function Home() {
             {/* What We Handle — full-width */}
             <div style={{ gridColumn: '1 / -1', backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
               <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>What We Handle</h3>
-              <ul style={{ fontSize: '14px', lineHeight: '2', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', columnCount: 2, columnGap: '40px' }}>
-                <li>Utility setup &amp; bill payment</li>
-                <li>Mexican bank account opening</li>
-                <li>SIM card &amp; internet setup</li>
-                <li>Bilingual lease review &amp; negotiation</li>
-                <li>Trusted referrals: gardeners, household help, contractors</li>
-                <li>Property management &amp; construction oversight</li>
-                <li>Reasonable home &amp; clothing shopping guidance</li>
-                <li>SSA &amp; Mexican government account setup</li>
-                <li>Post-surgery companionship &amp; recovery support</li>
-                <li>Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
+              <ul className="what-we-handle-list" style={{ fontSize: '14px', color: '#2C1810' }}>
+                <li>• Utility setup &amp; bill payment</li>
+                <li>• Mexican bank account opening</li>
+                <li>• SIM card &amp; internet setup</li>
+                <li>• Bilingual lease review &amp; negotiation</li>
+                <li>• Trusted referrals: gardeners, household help, contractors</li>
+                <li>• Property management &amp; construction oversight</li>
+                <li>• Reasonable home &amp; clothing shopping guidance</li>
+                <li>• SSA &amp; Mexican government account setup</li>
+                <li>• Post-surgery companionship &amp; recovery support</li>
+                <li>• Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
               </ul>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', margin: 0, fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>Scroll down for more detailed services.</p>
             </div>

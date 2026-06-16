@@ -36,12 +36,26 @@ const CONCIERGE_STRIPE_LINKS = [
   { label: 'Full Support (24 hours) $700', url: 'https://buy.stripe.com/28EcN52Z69nE5OEfag2880p' },
 ]
 
+const MEDICAL_CONCIERGE_STRIPE_LINKS = [
+  { label: 'Hourly $22', url: 'https://buy.stripe.com/00wfZh8jqarI0uk8LS2880t' },
+  { label: 'Half Day $80', url: 'https://buy.stripe.com/eVq28rgPWczQa4U7HO2880u' },
+  { label: 'Full Day $150', url: 'https://buy.stripe.com/8x2aEXdDKdDUelad282880v' },
+]
+
+const LOCAL_COMPANION_STRIPE_LINKS = [
+  { label: 'Hourly $15', url: 'https://buy.stripe.com/8x2aEX57e57ob8Y4vC2880y' },
+  { label: 'Half Day $56', url: 'https://buy.stripe.com/7sY7sLczG9nE5OE6DK2880w' },
+  { label: 'Full Day $96', url: 'https://buy.stripe.com/8x28wP6bi0R82Cs4vC2880x' },
+]
+
 export default function PaymentModal({ open, onClose, service }: PaymentModalProps) {
   if (!open) return null
 
   const stripeUrl = service ? STRIPE_LINKS[service] : undefined
   const isResidency = service ? RESIDENCY_SERVICES.includes(service) : false
   const isConcierge = service ? CONCIERGE_SERVICES.includes(service) : false
+  const isMedicalConcierge = service === 'Medical Concierge'
+  const isLocalCompanion = service === 'Local Companion'
 
   return (
     <div style={{
@@ -131,6 +145,20 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
                 <div>
                   <p style={{ marginBottom: '8px' }}>💳 Credit or debit — +3% fee</p>
                   {CONCIERGE_STRIPE_LINKS.map(({ label, url }) => (
+                    <p key={url} style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href={url} target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>{label}</a></p>
+                  ))}
+                </div>
+              ) : isMedicalConcierge ? (
+                <div>
+                  <p style={{ marginBottom: '8px' }}>💳 Credit or debit — +3% fee</p>
+                  {MEDICAL_CONCIERGE_STRIPE_LINKS.map(({ label, url }) => (
+                    <p key={url} style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href={url} target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>{label}</a></p>
+                  ))}
+                </div>
+              ) : isLocalCompanion ? (
+                <div>
+                  <p style={{ marginBottom: '8px' }}>💳 Credit or debit — +3% fee</p>
+                  {LOCAL_COMPANION_STRIPE_LINKS.map(({ label, url }) => (
                     <p key={url} style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href={url} target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>{label}</a></p>
                   ))}
                 </div>

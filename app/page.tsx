@@ -606,8 +606,7 @@ export default function Home() {
                 <li>📦 Deliveries pickups and drop-offs</li>
                 <li>🌿 Anything else that needs doing</li>
               </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You have a life to live. Let's keep it running smoothly.</p>
-              {renderCardActions('Personal Assistant', '#personal-assistant')}
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You have a life to live. Let's keep it running smoothly.</p>
             </div>
 
             <div id="tech-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -631,8 +630,7 @@ export default function Home() {
                 <li>🛒 Amazon.mx setup and navigation</li>
                 <li>📸 Photo backup and organization</li>
               </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If it has a screen and it is not cooperating — I can help.</p>
-              {renderCardActions('Tech Concierge', '#services')}
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If it has a screen and it is not cooperating — I can help.</p>
             </div>
 
             <div id="travel-logistics" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -651,12 +649,11 @@ export default function Home() {
                 <li>📱 Travel app setup — Uber, ADO, VivaAerobus, Aeromexico</li>
                 <li>🚨 Emergency travel support — canceled flights, lost documents, rebooking</li>
               </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on the journey. I handle the map.</p>
-              {renderCardActions('Travel & Logistics', '#services')}
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on the journey. I handle the map.</p>
             </div>
 
             {/* Shared Pricing — full-width */}
-            <div style={{ gridColumn: '1 / -1', backgroundColor: '#FAE8E0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #D4A017' }}>
+            <div id="concierge-pricing" style={{ gridColumn: '1 / -1', backgroundColor: '#FAE8E0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #D4A017' }}>
               <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Pricing</h3>
               <div style={{ fontSize: '14px', fontWeight: '600', lineHeight: '2', color: '#2C1810', marginBottom: '6px' }}>
                 Hourly — $35/hour &nbsp;·&nbsp; No minimum
@@ -745,7 +742,15 @@ export default function Home() {
                 <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
               </ul>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You didn't move to Mexico to struggle. You moved here to live.</p>
-              {renderCardActions('Senior Concierge', '#senior-concierge')}
+              <div style={{ marginTop: '24px' }}>
+                <a
+                  href="#concierge-pricing"
+                  onClick={(e) => { e.preventDefault(); document.getElementById('concierge-pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
+                  style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'inline-block' }}
+                >
+                  Pay Now
+                </a>
+              </div>
             </div>
 
             <div id="medical-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -770,12 +775,20 @@ export default function Home() {
                 <li>🏥 Navigating Mexican healthcare vs US insurance reimbursement</li>
                 <li>👨‍⚕️ Accompanying to specialist referrals</li>
               </ul>
-              <div style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '1px', marginBottom: '12px', fontWeight: '600' }}>
-                <div>$22/hour · Minimum 2 hours ($44)</div>
-                <div>Half Day 4 hours — $80</div>
-                <div>Full Day 8 hours — $150</div>
+              <div style={{ marginTop: 'auto', padding: '20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
+                <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
+                <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8', color: '#7D3B4E' }}>
+                  <div>$22/hour · Minimum 2 hours ($44)</div>
+                  <div>Half Day 4 hours — $80</div>
+                  <div>Full Day 8 hours — $150</div>
+                </div>
+                <button
+                  onClick={() => handlePayNow('Medical Concierge')}
+                  style={{ marginTop: '16px', backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+                >
+                  Pay Now
+                </button>
               </div>
-              {renderCardActions('Medical Concierge', '#medical-concierge')}
             </div>
 
             <div id="local-companion" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -786,7 +799,7 @@ export default function Home() {
                 Inspired by Japan's beloved rental person culture — sometimes you just need a trusted local by your side. Whether it's dinner for one that shouldn't be, a medical appointment, a cultural event, or simply exploring San Miguel with someone who knows every corner. I show up. No agenda. Just good company.
               </p>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>In The Know Mexico. Because having an insider makes all the difference.</p>
-              <div style={{ marginBottom: '24px', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
+              <div style={{ marginTop: 'auto', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
                 <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
                 <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8' }}>
                   <div>Hourly — $15/hour</div>
@@ -796,8 +809,13 @@ export default function Home() {
                 <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
                   Client covers all outing costs, including meals, transportation, admission fees, and activities.
                 </div>
+                <button
+                  onClick={() => handlePayNow('Local Companion')}
+                  style={{ marginTop: '16px', backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+                >
+                  Pay Now
+                </button>
               </div>
-              {renderCardActions('Local Companion', '#local-companion')}
             </div>
 
           {/* Booking & Cancellation Policy */}

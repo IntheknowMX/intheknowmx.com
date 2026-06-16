@@ -628,6 +628,9 @@ export default function Home() {
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>💻</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Tech Concierge</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Technology should make your life easier. When it doesn't — call Lisa.</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
+                Living in Mexico runs on apps these days, your bank, your ride, your prescriptions, your streaming, your government portals. When something won't connect, update, or cooperate, I sort it out, and show you how it works so it's less of a mystery next time. No condescension, no rushing. Just your devices doing what they're supposed to.
+              </p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
                 <li>💻 Laptop and tablet setup and troubleshooting</li>
                 <li>📱 Phone setup — Mexican SIM WhatsApp apps</li>
@@ -652,6 +655,9 @@ export default function Home() {
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>✈️</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Travel &amp; Logistics</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Getting there is half the adventure. Getting there smoothly is the whole point.</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
+                Mexico opens up when you can move through it with ease. I handle the moving parts, flights, buses, transfers, documents, and the apps that make it all work, so your trip starts the moment you leave the door, not after you've untangled the logistics. Whether it's a weekend in the mountains or a flight back home, you travel knowing someone has the details covered.
+              </p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
                 <li>🛫 Flight research and booking assistance</li>
                 <li>🚌 Bus and ground transportation — ADO, local transfers, airport runs</li>

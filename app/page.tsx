@@ -188,9 +188,9 @@ export default function Home() {
             <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Home & Pet</a>
             <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
             <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
-            <a className="mobile-menu-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" onClick={() => setMobileMenuOpen(false)}>Planning Call</a>
+            <a className="mobile-menu-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" onClick={() => setMobileMenuOpen(false)}>Book a Planning Call</a>
           </div>
-          <a className="button-link nav-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Planning Call</a>
+          <a className="button-link nav-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
         </div>
       </nav>
 

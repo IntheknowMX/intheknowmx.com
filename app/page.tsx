@@ -744,15 +744,15 @@ export default function Home() {
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Senior Concierge</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Mexico is extraordinary at every age. Some days it just needs a little more navigation.</p>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px' }}>
-                Why won't Amazon.mx take my card? How do I access my SSA account from Mexico? How the hell do I navigate submitting my insurance reimbursement with my Medicaid insurance? How do I find a trustworthy CNA to help me a few hours per week to cook, clean and pick up my meds from the pharmacy? How do I use the translation app to navigate my day? How do I use the Uber app to receive a cheaper rate? How do I use the bus system? How do I get to my medical appointment when I don't have a car and don't speak Spanish?
+                Why won't Amazon.mx take my card? How do I access my SSA account from Mexico? How do I find a trustworthy CNA to help a few hours a week with cooking, cleaning, and pharmacy runs? How do I get to a medical appointment when I don't have a car and don't speak Spanish?
               </p>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px' }}>
-                These are not small problems. They are the things that turn a beautiful day in San Miguel into a frustrating one. And they are completely solvable — with the right person by your side.
+                These are not small problems. They turn a beautiful day in San Miguel into a frustrating one, and they're completely solvable, with the right person by your side.
               </p>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
-                The Senior Concierge is for the person who wants to live fully, independently, and confidently in Mexico — with a trusted support system available when the details get complicated.
+                The Senior Concierge is for the person who wants to live fully, independently, and confidently in Mexico, with a trusted support system for when the details get complicated.
               </p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
                 <li>📱 Tech support — phones, apps, banking portals, streaming, Amazon.mx</li>
                 <li>🏥 Medical accompaniment and appointment coordination</li>
                 <li>💊 Pharmacy navigation and prescription support</li>
@@ -763,11 +763,11 @@ export default function Home() {
                 <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
               </ul>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You didn't move to Mexico to struggle. You moved here to live.</p>
-              <div style={{ marginTop: '24px' }}>
+              <div style={{ marginTop: 'auto' }}>
                 <a
                   href="#concierge-pricing"
                   onClick={(e) => { e.preventDefault(); document.getElementById('concierge-pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
-                  style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'inline-block' }}
+                  style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'block', textAlign: 'center', width: '100%', boxSizing: 'border-box' }}
                 >
                   Pay Now
                 </a>
@@ -798,7 +798,7 @@ export default function Home() {
               </ul>
               <div style={{ marginTop: 'auto', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
-                <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8', color: '#7D3B4E' }}>
+                <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8', color: '#2C1810' }}>
                   <div>$22/hour · Minimum 2 hours ($44)</div>
                   <div>Half Day 4 hours — $80</div>
                   <div>Full Day 8 hours — $150</div>

@@ -824,16 +824,6 @@ export default function Home() {
               </div>
             </div>
 
-          {/* Booking & Cancellation Policy */}
-          <div style={{ marginTop: '40px', backgroundColor: '#2C1810', borderRadius: '12px', padding: '32px 36px' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px' }}>Booking &amp; Cancellation Policy</h3>
-            <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#E8A598', marginBottom: '14px' }}>
-              Full payment is required to confirm your booking. Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling for hourly service is welcome with 48 hours notice, one free reschedule per booking.
-            </p>
-            <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#E8A598', margin: 0 }}>
-              Monthly packages can be rescheduled anytime during the service month.
-            </p>
-          </div>
           </div>
         </div>
       </section>

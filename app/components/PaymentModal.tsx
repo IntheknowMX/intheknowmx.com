@@ -9,7 +9,7 @@ type PaymentModalProps = {
 const STRIPE_LINKS: Record<string, string> = {
   'The Relocation Planning Call': 'https://buy.stripe.com/bJeeVddDK0R84KAd282880j',
   'From Dream to Action Plan': 'https://buy.stripe.com/aFabJ1fLS43k3Gw9PW2880k',
-  'Moving Through Fear': 'https://buy.stripe.com/3cIbJ1czG7fw1yoaU02880l',
+  'Moving Past Hesitation': 'https://buy.stripe.com/3cIbJ1czG7fw1yoaU02880l',
   'Rental Showing Day': 'https://buy.stripe.com/14A8wPgPWeHYcd26DK2880m',
   'Virtual Guidance': 'https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n',
   'On the Ground Facilitation': 'https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o',

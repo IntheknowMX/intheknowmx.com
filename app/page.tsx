@@ -424,9 +424,9 @@ export default function Home() {
               },
               {
                 emoji: '💛',
-                title: 'Moving Through Fear',
+                title: 'Moving Past Hesitation',
                 subtitle: 'Sometimes the only thing standing between you and the life you want is fear.',
-                body: "Projected fear from loved ones. Fear of the unknown. Uncertainty about healthcare, personal safety, language, or leaving things behind. These are real — and they deserve a real conversation. This call is a mindful coaching session. We talk honestly about what's holding you back, work through the emotional and practical blocks, and build concrete steps to motivate you to take that first real move. If San Miguel isn't right for you, we discuss other parts of Mexico or the world. Your fears are addressed directly — with care and acceptance.",
+                body: "The plan is ready, but you're not, and that's worth taking seriously. Whatever's holding you back, whether money, timing, or the quiet fear you haven't said out loud, we talk it through honestly.",
                 closing: "You don't need to have it all figured out. You simply need a brainstorming session.",
                 priceTag: '$89',
               },
@@ -1246,7 +1246,7 @@ export default function Home() {
             <h4>PLANNING CALLS</h4>
             <a href="#services">The Relocation Planning Call</a>
             <a href="#services">From Dream to Action Plan</a>
-            <a href="#services">Moving Through Fear</a>
+            <a href="#services">Moving Past Hesitation</a>
             <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
           </div>
           <div className="footer-col">

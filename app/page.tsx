@@ -364,17 +364,6 @@ export default function Home() {
           <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#2C1810' }}>
             The town knows me. My clients know me. Now you do too.<em> I got you.</em>
           </p>
-          <div style={{ marginTop: '32px' }}>
-            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-              backgroundColor: '#C4622D',
-              color: 'white',
-              padding: '14px 32px',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontSize: '15px',
-              fontWeight: '700'
-            }}>✦ Book a Planning Call</a>
-          </div>
         </div>
         <div style={{ flex: 1, minWidth: '280px', textAlign: 'center' }}>
           <Image

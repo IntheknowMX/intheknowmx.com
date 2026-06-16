@@ -795,10 +795,16 @@ export default function Home() {
               <div style={{ fontSize: '34px', marginBottom: '14px' }}>🤝</div>
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Local Companion</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Sometimes you just need someone who knows every corner.</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>
-                Inspired by Japan's beloved rental person culture — sometimes you just need a trusted local by your side. Whether it's dinner for one that shouldn't be, a medical appointment, a cultural event, or simply exploring San Miguel with someone who knows every corner. I show up. No agenda. Just good company.
-              </p>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>In The Know Mexico. Because having an insider makes all the difference.</p>
+              <div style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>
+                <p style={{ marginBottom: '14px' }}>
+                  Inspired by Japan's beloved rental-person culture, sometimes you just need a trusted local by your side. Whether it's dinner, a medical appointment, a cultural event, or simply exploring San Miguel with someone who knows every corner. I show up. No agenda. Just good company. This service includes any level of setup and coordination, from a simple meetup to a fully planned outing.
+                </p>
+                <p style={{ marginBottom: '10px' }}>A few things we could do together:</p>
+                <p style={{ marginBottom: '8px' }}><strong>Out and about:</strong> shopping mall runs in Queretaro, HEB / Costco / Home Depot trips, historical-town day trips, hot springs, wine vineyard visits, kayaking, scenic drives, nearby museums.</p>
+                <p style={{ marginBottom: '8px' }}><strong>Culture and nightlife:</strong> live music, supper clubs, the opera, the ballet, the circus, the carnival, art crawls, fashion shows, local holiday events.</p>
+                <p style={{ marginBottom: '14px' }}><strong>Everyday and social:</strong> consignment and thrift hopping, art class, dance class, a workout partner, rooftop happy hour, or help throwing a dinner party or event.</p>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", margin: 0 }}>And more, if you can dream it, we can probably do it.</p>
+              </div>
               <div style={{ marginTop: 'auto', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
                 <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
                 <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8' }}>

@@ -9,6 +9,8 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [paymentModalOpen, setPaymentModalOpen] = useState(false)
   const [selectedService, setSelectedService] = useState('')
+  const [contactFormState, setContactFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const [contactFormData, setContactFormData] = useState({ name: '', email: '', whatsapp: '', caseType: '', description: '' })
 
   const handlePayNow = (service: string) => {
     setSelectedService(service)
@@ -18,6 +20,30 @@ export default function Home() {
   const closePaymentModal = () => {
     setPaymentModalOpen(false)
     setSelectedService('')
+  }
+
+  const handleContactFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setContactFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
+  }
+
+  const handleContactFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setContactFormState('submitting')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(contactFormData),
+      })
+      if (res.ok) {
+        setContactFormState('success')
+        setContactFormData({ name: '', email: '', whatsapp: '', caseType: '', description: '' })
+      } else {
+        setContactFormState('error')
+      }
+    } catch {
+      setContactFormState('error')
+    }
   }
 
   const renderCardActions = (service: string, href: string) => (
@@ -429,6 +455,102 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="residency" style={{ backgroundColor: '#2C1810', padding: '80px 40px' }}>
+        <div className="content-wrapper">
+          <p style={{ color: '#D4A017', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>RESIDENCY</p>
+          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '20px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+            Mexican Residency, Sorted
+          </h2>
+          <p style={{ color: '#E8A598', fontSize: '17px', textAlign: 'center', maxWidth: '700px', margin: '0 auto 48px', lineHeight: '1.8' }}>
+            We coordinate every step, set your appointments, and walk in with you. Temporary residency, permanent residency — navigated together by people who know Mexico and this process. You don't show up to a consulate with a stack of papers you don't understand. You arrive prepared and confident. We review your eligibility together, identify the right path for your specific situation, and handle the coordination from start to finish. Our Team stays present until you are fully taken care of — from your first question to the day you hold your residency card and beyond.
+          </p>
+
+          <div className="service-grid" style={{ marginBottom: '28px' }}>
+
+            {/* Card 1 — Virtual Guidance */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Virtual Guidance</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$335</p>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything you need — with expert backup.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
+                <li>Professional document review</li>
+                <li>All forms prepared and ready</li>
+                <li>Consulate and INM appointments scheduled</li>
+                <li>Step-by-step guidance throughout</li>
+                <li>Follow-up email with action steps</li>
+              </ul>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <a href="https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
+                <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
+              </div>
+            </div>
+
+            {/* Card 2 — On the Ground Facilitation */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', border: '2px solid #C4622D', position: 'relative', display: 'flex', flexDirection: 'column' }}>
+              <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST POPULAR</p>
+              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>On the Ground Facilitation</h3>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$779</p>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything in Virtual Guidance — plus an experienced INM facilitator on the ground with you.</p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
+                <li>All document preparation and review</li>
+                <li>Consulate and INM appointments scheduled</li>
+                <li>In-person accompaniment to every appointment</li>
+                <li>Real-time translation throughout</li>
+                <li>Final paperwork preparation</li>
+              </ul>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <a href="https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
+                <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
+              </div>
+            </div>
+
+            {/* Card 3 — Complex Cases */}
+            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Complex Cases — Get a Quote</h3>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Renewals · Address changes · Business permits · Work permits</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '20px' }}>
+                Submit your situation using the form below and we'll be in touch within 48 hours.
+              </p>
+              {contactFormState === 'success' ? (
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '24px 0' }}>
+                  <p style={{ fontSize: '28px', marginBottom: '12px' }}>✓</p>
+                  <p style={{ fontSize: '18px', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px', fontWeight: 'normal' }}>Received.</p>
+                  <p style={{ fontSize: '14px', color: '#5C3A2E' }}>We'll be in touch within 48 hours.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleContactFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px', flex: 1 }}>
+                  <input type="text" name="name" required placeholder="Your name *" value={contactFormData.name} onChange={handleContactFormChange} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit' }} />
+                  <input type="email" name="email" required placeholder="Your email *" value={contactFormData.email} onChange={handleContactFormChange} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit' }} />
+                  <input type="tel" name="whatsapp" placeholder="WhatsApp number" value={contactFormData.whatsapp} onChange={handleContactFormChange} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit' }} />
+                  <select name="caseType" required value={contactFormData.caseType} onChange={handleContactFormChange} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit', backgroundColor: 'white' }}>
+                    <option value="">Type of case *</option>
+                    <option value="Residency Renewal">Residency Renewal</option>
+                    <option value="Address Change">Address Change</option>
+                    <option value="Business Permit">Business Permit</option>
+                    <option value="Work Permit">Work Permit</option>
+                    <option value="Heritage Citizenship">Heritage Citizenship</option>
+                    <option value="Other Complex Case">Other Complex Case</option>
+                  </select>
+                  <textarea name="description" required placeholder="Brief description of your situation *" value={contactFormData.description} onChange={handleContactFormChange} rows={4} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit', resize: 'vertical' }} />
+                  {contactFormState === 'error' && <p style={{ fontSize: '13px', color: '#8B1A2A', margin: 0 }}>Something went wrong. Please try again or message Lisa on WhatsApp.</p>}
+                  <button type="submit" disabled={contactFormState === 'submitting'} style={{ backgroundColor: contactFormState === 'submitting' ? '#7D3B4E' : '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: contactFormState === 'submitting' ? 'default' : 'pointer' }}>
+                    {contactFormState === 'submitting' ? 'Sending...' : 'Submit Your Case'}
+                  </button>
+                </form>
+              )}
+            </div>
+
+          </div>
+
+          {/* Notice box */}
+          <div style={{ backgroundColor: '#FAE8E0', border: '1px solid #8B1A2A', borderRadius: '8px', padding: '24px 28px' }}>
+            <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', margin: 0 }}>
+              <strong style={{ color: '#8B1A2A' }}>Important:</strong> Government immigration filing fees are additional and vary by case. Rates above apply to straightforward temporary or permanent residency applications. We are not responsible for changes in immigration policies or processing times. Complex cases are quoted separately.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="responsive-section" style={{ backgroundColor: '#7D3B4E' }}>
         <div className="content-wrapper">
           <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT I OFFER</p>
@@ -440,74 +562,6 @@ export default function Home() {
           </p>
 
           <div className="service-grid">
-
-            {/* Service - Immigration overview */}
-            <div id="residency-sorted" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛂</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Mexican Residency, Sorted</h3>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>
-                My residency team is your residency team. I coordinate every step, set your appointments, and walk in with you. Temporary residency, permanent residency, heritage citizenship — navigated together by people who know this city and this process. You don't show up to a consulate alone with a stack of papers you don't understand. You arrive prepared, accompanied, and confident. We review your eligibility together, identify the right path for your specific situation, and handle the coordination from start to finish. Not outsourced. Not handed off. Lisa and her licensed immigration team stay present until you are fully taken care of — from your first question to the day you hold your residency card and beyond.
-              </p>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>My residency team is your residency team.</p>
-              {renderCardActions('Mexican Residency, Sorted', '/residency')}
-            </div>
-
-            {/* Residency Planning Call — $89 */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛂</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Residency Planning Call</h3>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$89</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>50 minutes. Everything you need to know about your residency options. Includes a free DIY document checklist to get started on your own.</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>50-minute video or phone call</li>
-                <li>Pre-call intake questionnaire</li>
-                <li>Free DIY residency document checklist</li>
-                <li>48-hour written follow-up with summary and next steps</li>
-                <li>$89 credited toward any package upgrade</li>
-              </ul>
-              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($91), Stripe ($92), or PayPal ($92)</p>
-              {renderCardActions('Residency Planning Call', '/residency')}
-            </div>
-
-            {/* Residency Guided Package — $397 */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>📋</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Residency Guided Package</h3>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$397</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>I coordinate everything, prep you fully, and accompany you to your appointments. Attorney fees quoted separately.</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>Pre-call intake questionnaire</li>
-                <li>Full eligibility review</li>
-                <li>Document preparation guidance</li>
-                <li>Appointment coordination — consulate and INM</li>
-                <li>In-person accompaniment to all appointments</li>
-                <li>48-hour written follow-up</li>
-                <li>WhatsApp support throughout</li>
-                <li>Attorney fees quoted separately based on your case</li>
-              </ul>
-              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($406), Stripe ($410), or PayPal ($410)</p>
-              {renderCardActions('Residency Guided Package', '/residency')}
-            </div>
-
-            {/* Full Residency Concierge — $797 */}
-            <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', border: '2px solid #C4622D', position: 'relative', display: 'flex', flexDirection: 'column' }}>
-              <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST POPULAR</p>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>⭐</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Full Residency Concierge</h3>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$797</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>White glove, start to finish. Coordination, accompaniment, and attorney fees included. No surprises.</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>Everything in Guided Package</li>
-                <li>Licensed immigration attorney fees included</li>
-                <li>Full document preparation</li>
-                <li>Consulate and INM appointments secured</li>
-                <li>In-person accompaniment — every step</li>
-                <li>Priority WhatsApp support</li>
-                <li>One flat price — no surprise invoices</li>
-              </ul>
-              <p style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px', lineHeight: '1.6' }}>Pay via Zelle, Venmo ($814), Stripe ($821), or PayPal ($821)</p>
-              {renderCardActions('Full Residency Concierge', '/residency')}
-            </div>
 
             {/* Service - Concierge */}
             <div id="newcomers-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>

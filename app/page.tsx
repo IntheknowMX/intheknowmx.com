@@ -181,16 +181,16 @@ export default function Home() {
               <button className="mobile-menu-close-btn" aria-label="Close menu" onClick={() => setMobileMenuOpen(false)}>✕</button>
             </div>
             <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="#planning-calls" onClick={() => setMobileMenuOpen(false)}>Planning Call</a>
             <a href="/residency" onClick={() => setMobileMenuOpen(false)}>Residency</a>
             <a href="#services" onClick={() => setMobileMenuOpen(false)}>Concierge</a>
             <a href="#rentals" onClick={() => setMobileMenuOpen(false)}>Rentals</a>
             <a href="#properties" onClick={() => setMobileMenuOpen(false)}>Owning</a>
             <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Home & Pet</a>
             <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
-            <a className="mobile-menu-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" onClick={() => setMobileMenuOpen(false)}>Book a Planning Call</a>
+            <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
+            <a className="mobile-menu-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" onClick={() => setMobileMenuOpen(false)}>Planning Call</a>
           </div>
-          <a className="button-link nav-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
+          <a className="button-link nav-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Planning Call</a>
         </div>
       </nav>
 

@@ -639,19 +639,65 @@ export default function Home() {
             {/* Shared Pricing — full-width */}
             <div style={{ gridColumn: '1 / -1', backgroundColor: '#FAE8E0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #D4A017' }}>
               <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Pricing</h3>
+              <div style={{ fontSize: '14px', fontWeight: '600', lineHeight: '2', color: '#2C1810', marginBottom: '6px' }}>
+                Hourly — $35/hour &nbsp;·&nbsp; No minimum
+              </div>
+              <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>Monthly Retainers:</p>
               <div style={{ fontSize: '14px', fontWeight: '600', lineHeight: '2', color: '#2C1810', marginBottom: '20px' }}>
-                <div>Hourly — $35/hour &nbsp;·&nbsp; No minimum</div>
                 <div>Starter — 8 hours — $250</div>
                 <div>Standard — 16 hours — $480</div>
                 <div>Full Support — 24 hours — $700</div>
-                <div>Monthly Retainer — $480/month &nbsp;·&nbsp; 16 hours &nbsp;·&nbsp; Priority scheduling + WhatsApp availability</div>
               </div>
               <p style={{ fontSize: '14px', lineHeight: '1.75', color: '#2C1810', marginBottom: '10px' }}>
                 <strong>Includes:</strong> all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.
               </p>
-              <p style={{ fontSize: '13px', fontStyle: 'italic', color: '#7D3B4E', margin: 0 }}>
+              <p style={{ fontSize: '13px', fontStyle: 'italic', color: '#7D3B4E', marginBottom: '32px' }}>
                 This pricing applies to Personal Assistant, Tech Concierge, Travel &amp; Logistics, and Senior Concierge services.
               </p>
+
+              {/* Ready to Book? */}
+              <div style={{ backgroundColor: '#2C1810', borderRadius: '12px', padding: '32px' }}>
+                <h3 style={{ fontSize: '24px', fontWeight: 'normal', marginBottom: '10px', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>Ready to Book?</h3>
+                <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0', marginBottom: '20px' }}>
+                  Confirm booking via your preferred payment method:
+                </p>
+                <div style={{ fontSize: '15px', lineHeight: '1.9', color: '#FDF6F0' }}>
+                  <p style={{ marginBottom: '12px' }}>
+                    ✅ Zelle — no fee &rarr; <strong>sittingprettydc@gmail.com</strong>
+                  </p>
+                  <p style={{ marginBottom: '16px' }}>
+                    ✅ Wise — no fee &rarr; Contact Lisa via WhatsApp for banking details&nbsp;&nbsp;
+                    <a
+                      href="https://wa.me/5214731218554"
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{ display: 'inline-flex', alignItems: 'center', backgroundColor: '#29A745', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '4px 14px', fontSize: '13px', fontWeight: 700, verticalAlign: 'middle' }}
+                    >
+                      WhatsApp &rarr;
+                    </a>
+                  </p>
+                  <p style={{ marginBottom: '12px' }}>
+                    📱 Venmo — +2% fee &rarr;&nbsp;
+                    <a href="https://venmo.com/code?user_id=3758990584448601525&created=1781206512" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>venmo.com/lisaMayCo</a>
+                  </p>
+                  <p style={{ marginBottom: '16px' }}>
+                    💻 PayPal — +3% fee &rarr;&nbsp;
+                    <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>paypal.me/lisaMayCo</a>
+                  </p>
+                  <div style={{ marginBottom: '12px' }}>
+                    <p style={{ marginBottom: '10px' }}>💳 Credit or debit — +3% fee</p>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', paddingLeft: '28px' }}>
+                      <a href="https://buy.stripe.com/8x2bJ11V21Vc2CsbY42880s" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '8px 16px', fontSize: '13px', fontWeight: 600 }}>Hourly</a>
+                      <a href="https://buy.stripe.com/bJe5kDary57ob8YbY42880q" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '8px 16px', fontSize: '13px', fontWeight: 600 }}>Starter</a>
+                      <a href="https://buy.stripe.com/5kQcN59nuarIfpe3ry2880r" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '8px 16px', fontSize: '13px', fontWeight: 600 }}>Standard</a>
+                      <a href="https://buy.stripe.com/28EcN52Z69nE5OEfag2880p" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '8px 16px', fontSize: '13px', fontWeight: 600 }}>Full Support</a>
+                    </div>
+                  </div>
+                </div>
+                <p style={{ marginTop: '24px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598', marginBottom: 0 }}>
+                  Your booking is confirmed once full payment is received.
+                </p>
+              </div>
             </div>
 
             {/* BOTTOM ROW: Senior Concierge · Medical Concierge · Local Companion */}

@@ -183,10 +183,10 @@ export default function Home() {
             <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
             <a href="#planning-calls" onClick={() => setMobileMenuOpen(false)}>Planning Call</a>
             <a href="/residency" onClick={() => setMobileMenuOpen(false)}>Residency</a>
+            <a href="#services" onClick={() => setMobileMenuOpen(false)}>Concierge</a>
             <a href="#rentals" onClick={() => setMobileMenuOpen(false)}>Rentals</a>
             <a href="#properties" onClick={() => setMobileMenuOpen(false)}>Owning</a>
             <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Home & Pet</a>
-            <a href="#local-companion" onClick={() => setMobileMenuOpen(false)}>Local Companion</a>
             <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
             <a className="mobile-menu-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" onClick={() => setMobileMenuOpen(false)}>Book a Planning Call</a>
           </div>
@@ -362,7 +362,7 @@ export default function Home() {
             that no guidebook will tell you. <strong>Friend-level trust. Professional-grade follow-through.</strong>
           </p>
           <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#2C1810' }}>
-            The town knows me. My clients know me. Now you do too.<em> I got you.</em>
+            The town knows me. My clients know me. Now you do too.
           </p>
         </div>
         <div style={{ flex: 1, minWidth: '280px', textAlign: 'center' }}>
@@ -518,7 +518,7 @@ export default function Home() {
                     <option value="Business Permit">Business Permit</option>
                     <option value="Work Permit">Work Permit</option>
                     <option value="Heritage Citizenship">Heritage Citizenship</option>
-                    <option value="Other Complex Case">Other Complex Case</option>
+                    <option value="Other type of case">Other type of case</option>
                   </select>
                   <textarea name="description" required placeholder="Brief description of your situation *" value={contactFormData.description} onChange={handleContactFormChange} rows={4} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit', resize: 'vertical' }} />
                   {contactFormState === 'error' && <p style={{ fontSize: '13px', color: '#8B1A2A', margin: 0 }}>Something went wrong. Please try again or message Lisa on WhatsApp.</p>}
@@ -542,12 +542,12 @@ export default function Home() {
 
       <section id="services" className="responsive-section" style={{ backgroundColor: '#7D3B4E' }}>
         <div className="content-wrapper">
-          <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>WHAT I OFFER</p>
+          <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>CONCIERGE</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '16px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            Your Mexico life — built with someone who already lives it.
+            Your Mexico life, handled by an experienced expat with the tech and logistics to back it up.
           </h2>
           <p style={{ color: '#F5E0E6', fontSize: '17px', textAlign: 'center', maxWidth: '600px', margin: '0 auto 16px', lineHeight: '1.75' }}>
-            Every service is personal, in-person, and built around your specific situation. Not outsourced. Not handed off. Lisa and her team are with you every step — from your first question to the day you hold your residency card and beyond.
+            Every service is personal and built around your specific situation. The In The Know MX Team is with you every step, from your first question to the day you hold your residency card and beyond.
           </p>
 
           <div className="service-grid">
@@ -688,51 +688,71 @@ export default function Home() {
               {renderCardActions('Travel & Logistics', '#services')}
             </div>
 
-          </div>
-        </div>
-      </section>
+            {/* Local Companion card */}
+            <div id="local-companion" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🤝</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Local Companion</h3>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Sometimes you just need someone who knows every corner.</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>
+                Inspired by Japan's beloved rental person culture — sometimes you just need a trusted local by your side. Whether it's dinner for one that shouldn't be, a medical appointment, a cultural event, or simply exploring San Miguel with someone who knows every corner. I show up. No agenda. Just good company.
+              </p>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>In The Know Mexico. Because having an insider makes all the difference.</p>
+              <div style={{ marginBottom: '24px', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
+                <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
+                <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8' }}>
+                  <div>Hourly — $15/hour</div>
+                  <div>Half Day 4 hours — $56</div>
+                  <div>Full Day 8 hours — $96</div>
+                </div>
+                <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
+                  Client covers all outing costs, including meals, transportation, admission fees, and activities.
+                </div>
+              </div>
+              {renderCardActions('Local Companion', '#local-companion')}
+            </div>
 
-      {/* Senior Concierge */}
-      <section id="senior-concierge" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
-        <div className="content-wrapper">
-          <p style={{ color: '#D4A017', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>SENIOR CONCIERGE</p>
-          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '14px', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>Senior Concierge</h2>
-          <div style={{ fontSize: '34px', marginBottom: '12px' }}>🌺</div>
-          <p style={{ fontSize: '17px', color: '#7D3B4E', marginBottom: '18px', fontStyle: 'italic', maxWidth: '820px' }}>Mexico is extraordinary at every age. Some days it just needs a little more navigation.</p>
-          <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px', maxWidth: '820px' }}>
-            Why won't Amazon.mx take my card? How do I access my SSA account from Mexico? How the hell do I navigate submitting my insurance reimbursement with my Medicaid insurance? How do I find a trustworthy CNA to help me a few hours per week to cook, clean and pick up my meds from the pharmacy? How do I use the translation app to navigate my day? How do I use the Uber app to receive a cheaper rate? How do I use the bus system? How do I get to my medical appointment when I don't have a car and don't speak Spanish?
-          </p>
-          <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px', maxWidth: '820px' }}>
-            These are not small problems. They are the things that turn a beautiful day in San Miguel into a frustrating one. And they are completely solvable — with the right person by your side.
-          </p>
-          <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '18px', maxWidth: '820px' }}>
-            The Senior Concierge is for the person who wants to live fully, independently, and confidently in Mexico — with a trusted support system available when the details get complicated.
-          </p>
-          <ul style={{ fontSize: '15px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '18px', maxWidth: '820px' }}>
-            <li>📱 Tech support — phones, apps, banking portals, streaming, Amazon.mx</li>
-            <li>🏥 Medical accompaniment and appointment coordination</li>
-            <li>💊 Pharmacy navigation and prescription support</li>
-            <li>🏛️ SSA and government account setup and troubleshooting</li>
-            <li>💸 Online bill pay and money transfer support</li>
-            <li>🚗 Transportation coordination</li>
-            <li>📋 Post-surgery companionship and recovery support</li>
-            <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
-          </ul>
-          <p style={{ fontSize: '15px', color: '#7D3B4E', fontStyle: 'italic', marginBottom: '20px' }}>You didn't move to Mexico to struggle. You moved here to live.</p>
-          <div style={{ marginBottom: '24px', padding: '24px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
-            <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '12px' }}>Pricing</div>
-            <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', lineHeight: '1.75' }}>
-              <div>Hourly — $35/hour · No minimum</div>
-              <div>Starter 8 hours — $250</div>
-              <div>Standard 16 hours — $480</div>
-              <div>Full Support 24 hours — $700</div>
-              <div>Monthly Retainer — $480/month · 16 hours · Priority scheduling + WhatsApp availability</div>
+            {/* Senior Concierge card */}
+            <div id="senior-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🌺</div>
+              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Senior Concierge</h3>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Mexico is extraordinary at every age. Some days it just needs a little more navigation.</p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px' }}>
+                Why won't Amazon.mx take my card? How do I access my SSA account from Mexico? How the hell do I navigate submitting my insurance reimbursement with my Medicaid insurance? How do I find a trustworthy CNA to help me a few hours per week to cook, clean and pick up my meds from the pharmacy? How do I use the translation app to navigate my day? How do I use the Uber app to receive a cheaper rate? How do I use the bus system? How do I get to my medical appointment when I don't have a car and don't speak Spanish?
+              </p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px' }}>
+                These are not small problems. They are the things that turn a beautiful day in San Miguel into a frustrating one. And they are completely solvable — with the right person by your side.
+              </p>
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
+                The Senior Concierge is for the person who wants to live fully, independently, and confidently in Mexico — with a trusted support system available when the details get complicated.
+              </p>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
+                <li>📱 Tech support — phones, apps, banking portals, streaming, Amazon.mx</li>
+                <li>🏥 Medical accompaniment and appointment coordination</li>
+                <li>💊 Pharmacy navigation and prescription support</li>
+                <li>🏛️ SSA and government account setup and troubleshooting</li>
+                <li>💸 Online bill pay and money transfer support</li>
+                <li>🚗 Transportation coordination</li>
+                <li>📋 Post-surgery companionship and recovery support</li>
+                <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
+              </ul>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You didn't move to Mexico to struggle. You moved here to live.</p>
+              <div style={{ marginBottom: '24px', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810' }}>
+                <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
+                <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', lineHeight: '1.75' }}>
+                  <div>Hourly — $35/hour · No minimum</div>
+                  <div>Starter 8 hours — $250</div>
+                  <div>Standard 16 hours — $480</div>
+                  <div>Full Support 24 hours — $700</div>
+                  <div>Monthly Retainer — $480/month · 16 hours · Priority scheduling + WhatsApp availability</div>
+                </div>
+                <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
+                  Includes: all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and weekly usage report.
+                </div>
+              </div>
+              {renderCardActions('Senior Concierge', '#senior-concierge')}
             </div>
-            <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
-              Includes: all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and weekly usage report.
-            </div>
+
           </div>
-          {renderCardActions('Senior Concierge', '#senior-concierge')}
         </div>
       </section>
 
@@ -1016,45 +1036,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Local Companion */}
-      <section id="local-companion" className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
-        <div className="content-wrapper">
-          <p style={{ color: '#D4A017', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>LOCAL COMPANION</p>
-          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2', maxWidth: '700px' }}>
-            Sometimes you just need someone who knows every corner.
-          </h2>
-          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '720px', marginBottom: '40px' }}>
-            Inspired by Japan's beloved rental person culture — sometimes you just need a trusted local by your side.
-            Whether it's dinner for one that shouldn't be, a medical appointment, a cultural event, or simply exploring
-            San Miguel with someone who knows every corner. I show up. No agenda. Just good company.
-          </p>
-          <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-            backgroundColor: '#C4622D',
-            color: 'white',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            fontSize: '15px',
-            fontWeight: '700',
-            display: 'inline-block',
-            marginBottom: '20px'
-          }}>✦ Book a Planning Call</a>
-          <div style={{ marginBottom: '24px', padding: '24px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', maxWidth: '520px', color: '#2C1810' }}>
-            <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '12px' }}>Pricing</div>
-            <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8' }}>
-              <div>Hourly — $15/hour</div>
-              <div>Half Day 4 hours — $56</div>
-              <div>Full Day 8 hours — $96</div>
-            </div>
-            <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
-              Client covers all outing costs, including meals, transportation, admission fees, and activities.
-            </div>
-          </div>
-          <p style={{ marginTop: '0', fontSize: '14px', color: '#E8A598', lineHeight: '1.7', fontStyle: 'italic' }}>
-            In The Know Mexico. Because having an insider makes all the difference.
-          </p>
         </div>
       </section>
 

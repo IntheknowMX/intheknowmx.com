@@ -99,10 +99,10 @@ export default function Home() {
         .mobile-menu-cta { display: none; }
         .nav-cta { background-color: #C4622D; color: white; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; }
         .hero-section { position: relative; min-height: 90vh; overflow: hidden; }
-        .hero-gradient { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to left, rgba(253,246,240,0.72) 0%, rgba(253,246,240,0.54) 8%, rgba(253,246,240,0.28) 25%, rgba(253,246,240,0.08) 34.5%, rgba(253,246,240,0) 39.5%), linear-gradient(to right, rgba(253,246,240,0.72) 0%, rgba(253,246,240,0.72) 28%, rgba(253,246,240,0.55) 41%, rgba(253,246,240,0.28) 51%, rgba(253,246,240,0.08) 56.5%, rgba(253,246,240,0) 58.5%); }
+        .hero-gradient { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to left, rgba(253,246,240,0.72) 0%, rgba(253,246,240,0.54) 8%, rgba(253,246,240,0.28) 25%, rgba(253,246,240,0.08) 34.5%, rgba(253,246,240,0) 39.5%), linear-gradient(to right, rgba(253,246,240,0.91) 0%, rgba(253,246,240,0.91) 28%, rgba(253,246,240,0.65) 41%, rgba(253,246,240,0.35) 51%, rgba(253,246,240,0.10) 56.5%, rgba(253,246,240,0) 58.5%); }
         .hero-copy { position: absolute; left: 0; top: 0; bottom: 0; width: 56%; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 80px 48px 80px 92px; }
-        .hero-copy p.lead { color: #7D3B4E; font-size: 13px; letter-spacing: 5px; margin-bottom: 28px; font-weight: 700; }
-        .hero-copy h1 { color: #2C1810; font-size: 62px; line-height: 1.1; margin-bottom: 28px; font-weight: normal; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }
+        .hero-copy p.lead { color: #7D3B4E; font-size: 14px; letter-spacing: 7px; margin-bottom: 28px; font-weight: 700; }
+        .hero-copy h1 { color: #2C1810; font-size: 76px; line-height: 0.93; margin-bottom: 32px; font-weight: normal; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }
         .hero-copy h1 span { color: #7D3B4E; }
         .hero-copy .hero-description { color: #2C1810; font-size: 20px; line-height: 1.8; margin-bottom: 40px; }
         .hero-buttons { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
@@ -149,7 +149,7 @@ export default function Home() {
           .hero-section { min-height: 82vh; }
           .hero-gradient { background: linear-gradient(to right, rgba(253,246,240,0.90) 0%, rgba(253,246,240,0.90) 55%, rgba(253,246,240,0.65) 68%, rgba(253,246,240,0.28) 80%, rgba(253,246,240,0) 95%); }
           .hero-copy { width: 88%; padding: 40px 20px 40px 32px; }
-          .hero-copy h1 { font-size: 40px !important; }
+          .hero-copy h1 { font-size: 48px !important; line-height: 0.95 !important; }
           .hero-buttons { flex-direction: column; width: 100%; }
           .button-link { width: 100%; padding: 16px 20px; }
           .responsive-section { padding: 48px 20px; }
@@ -202,9 +202,10 @@ export default function Home() {
             alt="San Miguel de Allende"
             fill
             priority
-            style={{ objectFit: 'cover', objectPosition: 'center top' }}
+            style={{ objectFit: 'cover', objectPosition: 'center top', filter: 'contrast(1.06) saturate(1.08)' }}
           />
         </div>
+        <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', background: 'radial-gradient(ellipse at center, transparent 52%, rgba(18,8,4,0.26) 100%)' }} />
         <div className="hero-gradient" />
         <div className="hero-copy">
           <p className="lead">SAN MIGUEL DE ALLENDE · MEXICO</p>

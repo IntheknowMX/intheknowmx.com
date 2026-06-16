@@ -441,6 +441,17 @@ export default function Home() {
               <li>Real steps to a plan at your fingertips before the week is out</li>
             </ul>
           </div>
+
+          {/* Booking & Cancellation Policy */}
+          <div style={{ marginTop: '40px', backgroundColor: '#2C1810', borderRadius: '12px', padding: '32px 36px' }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px' }}>Booking &amp; Cancellation Policy</h3>
+            <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#E8A598', marginBottom: '14px' }}>
+              Full payment is required to confirm your booking. You will receive a confirmation email with your intake questionnaire within 24 hours of payment. Please complete it before your session so we arrive fully prepared.
+            </p>
+            <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#E8A598', margin: 0 }}>
+              Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice, one free reschedule per booking.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -535,6 +546,14 @@ export default function Home() {
           <div style={{ backgroundColor: '#FAE8E0', border: '1px solid #8B1A2A', borderRadius: '8px', padding: '24px 28px' }}>
             <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', margin: 0 }}>
               <strong style={{ color: '#8B1A2A' }}>Important:</strong> Government immigration filing fees are additional and vary by case. Rates above apply to straightforward temporary or permanent residency applications. We are not responsible for changes in immigration policies or processing times. Other residency services are quoted separately.
+            </p>
+          </div>
+
+          {/* Booking & Cancellation Policy */}
+          <div style={{ marginTop: '40px', backgroundColor: '#1A0F09', borderRadius: '12px', padding: '32px 36px', border: '1px solid #3D2418' }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px' }}>Booking &amp; Cancellation Policy</h3>
+            <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#E8A598', margin: 0 }}>
+              Full payment is required to confirm your booking. Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice, one free reschedule per booking.
             </p>
           </div>
         </div>
@@ -781,6 +800,16 @@ export default function Home() {
               {renderCardActions('Local Companion', '#local-companion')}
             </div>
 
+          {/* Booking & Cancellation Policy */}
+          <div style={{ marginTop: '40px', backgroundColor: '#2C1810', borderRadius: '12px', padding: '32px 36px' }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px' }}>Booking &amp; Cancellation Policy</h3>
+            <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#E8A598', marginBottom: '14px' }}>
+              Full payment is required to confirm your booking. Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling for hourly service is welcome with 48 hours notice, one free reschedule per booking.
+            </p>
+            <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#E8A598', margin: 0 }}>
+              Monthly packages can be rescheduled anytime during the service month.
+            </p>
+          </div>
           </div>
         </div>
       </section>

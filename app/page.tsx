@@ -99,7 +99,7 @@ export default function Home() {
         .mobile-menu-cta { display: none; }
         .nav-cta { background-color: #C4622D; color: white; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; }
         .hero-section { position: relative; min-height: 90vh; overflow: hidden; }
-        .hero-gradient { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to left, rgba(253,246,240,0.72) 0%, rgba(253,246,240,0.54) 8%, rgba(253,246,240,0.28) 24%, rgba(253,246,240,0.08) 32%, rgba(253,246,240,0) 37%), linear-gradient(to right, rgba(253,246,240,0.72) 0%, rgba(253,246,240,0.72) 26%, rgba(253,246,240,0.55) 37%, rgba(253,246,240,0.28) 47%, rgba(253,246,240,0.08) 52%, rgba(253,246,240,0) 54%); }
+        .hero-gradient { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to left, rgba(253,246,240,0.72) 0%, rgba(253,246,240,0.54) 8%, rgba(253,246,240,0.28) 25%, rgba(253,246,240,0.08) 34%, rgba(253,246,240,0) 39%), linear-gradient(to right, rgba(253,246,240,0.72) 0%, rgba(253,246,240,0.72) 28%, rgba(253,246,240,0.55) 40%, rgba(253,246,240,0.28) 50%, rgba(253,246,240,0.08) 55%, rgba(253,246,240,0) 57%); }
         .hero-copy { position: absolute; left: 0; top: 0; bottom: 0; width: 52%; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 80px 60px; }
         .hero-copy p.lead { color: #7D3B4E; font-size: 11px; letter-spacing: 5px; margin-bottom: 28px; font-weight: 700; }
         .hero-copy h1 { color: #2C1810; font-size: 52px; line-height: 1.1; margin-bottom: 28px; font-weight: normal; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }

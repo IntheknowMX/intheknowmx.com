@@ -744,15 +744,15 @@ export default function Home() {
               <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Senior Concierge</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Mexico is extraordinary at every age. Some days it just needs a little more navigation.</p>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px' }}>
-                Why won't Amazon.mx take my card? How do I access my SSA account from Mexico? How do I find a trustworthy CNA to help a few hours a week with cooking, cleaning, and pharmacy runs? How do I get to a medical appointment when I don't have a car and don't speak Spanish?
+                Why won't Amazon.mx take my card? How do I access my SSA account from Mexico? How do I get to a medical appointment when I don't have a car and don't speak Spanish?
               </p>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px' }}>
-                These are not small problems. They turn a beautiful day in San Miguel into a frustrating one, and they're completely solvable, with the right person by your side.
+                These aren't small problems. They turn a beautiful day in San Miguel into a frustrating one, and they're all solvable with the right person by your side.
               </p>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
-                The Senior Concierge is for the person who wants to live fully, independently, and confidently in Mexico, with a trusted support system for when the details get complicated.
+                The Senior Concierge is for anyone who wants to live fully and confidently in Mexico, with trusted support when the details get complicated.
               </p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
+              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
                 <li>📱 Tech support — phones, apps, banking portals, streaming, Amazon.mx</li>
                 <li>🏥 Medical accompaniment and appointment coordination</li>
                 <li>💊 Pharmacy navigation and prescription support</li>
@@ -763,15 +763,13 @@ export default function Home() {
                 <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
               </ul>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You didn't move to Mexico to struggle. You moved here to live.</p>
-              <div style={{ marginTop: 'auto' }}>
-                <a
-                  href="#concierge-pricing"
-                  onClick={(e) => { e.preventDefault(); document.getElementById('concierge-pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
-                  style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'block', textAlign: 'center', width: '100%', boxSizing: 'border-box' }}
-                >
-                  Pay Now
-                </a>
-              </div>
+              <a
+                href="#concierge-pricing"
+                onClick={(e) => { e.preventDefault(); document.getElementById('concierge-pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'block', textAlign: 'center', width: '100%', boxSizing: 'border-box' }}
+              >
+                Pay Now
+              </a>
             </div>
 
             <div id="medical-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -796,7 +794,7 @@ export default function Home() {
                 <li>🏥 Navigating Mexican healthcare vs US insurance reimbursement</li>
                 <li>👨‍⚕️ Accompanying to specialist referrals</li>
               </ul>
-              <div style={{ marginTop: 'auto', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', marginBottom: '16px' }}>
                 <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
                 <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8', color: '#2C1810' }}>
                   <div>$22/hour · Minimum 2 hours ($44)</div>
@@ -806,13 +804,13 @@ export default function Home() {
                 <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
                   Navigating care in Mexico is hard alone. With the right person beside you, it isn't.
                 </div>
-                <button
-                  onClick={() => handlePayNow('Medical Concierge')}
-                  style={{ marginTop: 'auto', paddingTop: '16px', backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
-                >
-                  Pay Now
-                </button>
               </div>
+              <button
+                onClick={() => handlePayNow('Medical Concierge')}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+              >
+                Pay Now
+              </button>
             </div>
 
             <div id="local-companion" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -829,7 +827,7 @@ export default function Home() {
                 <p style={{ marginBottom: '14px' }}><strong>Everyday and social:</strong> consignment and thrift hopping, art class, dance class, a workout partner, rooftop happy hour, or help throwing a dinner party or event.</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", margin: 0 }}>And more, if you can dream it, we can probably do it.</p>
               </div>
-              <div style={{ marginTop: 'auto', padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', marginBottom: '16px' }}>
                 <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
                 <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8' }}>
                   <div>Hourly — $15/hour</div>
@@ -839,13 +837,13 @@ export default function Home() {
                 <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
                   Client covers all outing costs, including meals, transportation, admission fees, and activities.
                 </div>
-                <button
-                  onClick={() => handlePayNow('Local Companion')}
-                  style={{ marginTop: 'auto', paddingTop: '16px', backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
-                >
-                  Pay Now
-                </button>
               </div>
+              <button
+                onClick={() => handlePayNow('Local Companion')}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+              >
+                Pay Now
+              </button>
             </div>
 
           </div>

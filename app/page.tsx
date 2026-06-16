@@ -98,9 +98,9 @@ export default function Home() {
         .mobile-menu-close-row { display: none; }
         .mobile-menu-cta { display: none; }
         .nav-cta { background-color: #C4622D; color: white; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; }
-        .hero-section { display: flex; flex-direction: row-reverse; min-height: 90vh; align-items: stretch; overflow: hidden; }
-        .hero-photo { flex: 0 0 58%; min-height: 380px; overflow: hidden; }
-        .hero-copy { flex: 0 0 42%; background-color: #FDF6F0; padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+        .hero-section { position: relative; min-height: 90vh; overflow: hidden; }
+        .hero-gradient { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to right, rgba(253,246,240,0.77) 0%, rgba(253,246,240,0.77) 26%, rgba(253,246,240,0) 55%); }
+        .hero-copy { position: absolute; left: 0; top: 0; bottom: 0; width: 52%; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 80px 60px; }
         .hero-copy p.lead { color: #7D3B4E; font-size: 11px; letter-spacing: 5px; margin-bottom: 28px; font-weight: 700; }
         .hero-copy h1 { color: #2C1810; font-size: 52px; line-height: 1.1; margin-bottom: 28px; font-weight: normal; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }
         .hero-copy h1 span { color: #7D3B4E; }
@@ -146,9 +146,9 @@ export default function Home() {
           .mobile-menu-close-row { display: flex; justify-content: flex-end; padding: 10px 16px; border-bottom: 1px solid #E8A598; }
           .mobile-menu-close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: #2C1810; padding: 4px 8px; line-height: 1; }
           .mobile-menu-cta { display: block; margin: 16px !important; background-color: #C4622D !important; color: white !important; text-align: center; padding: 16px !important; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 15px; border-bottom: none !important; }
-          .hero-section { flex-direction: column; min-height: auto; }
-          .hero-photo, .hero-copy { flex: 1 1 100%; }
-          .hero-copy { padding: 48px 20px; }
+          .hero-section { min-height: 82vh; }
+          .hero-gradient { background: linear-gradient(to right, rgba(253,246,240,0.90) 0%, rgba(253,246,240,0.90) 62%, rgba(253,246,240,0) 92%); }
+          .hero-copy { width: 86%; padding: 40px 24px; }
           .hero-copy h1 { font-size: 36px !important; }
           .hero-buttons { flex-direction: column; width: 100%; }
           .button-link { width: 100%; padding: 16px 20px; }
@@ -195,25 +195,24 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="responsive-section hero-section">
-        <div className="hero-photo">
+      <section className="hero-section">
+        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
           <Image
             src="/images/herocropped.jpg"
             alt="San Miguel de Allende"
-            className="responsive-img"
+            fill
             priority
-            width={1600}
-            height={1200}
-            style={{ objectFit: 'cover', objectPosition: 'center top', width: '100%', height: '100%', display: 'block' }}
+            style={{ objectFit: 'cover', objectPosition: 'center top' }}
           />
         </div>
+        <div className="hero-gradient" />
         <div className="hero-copy">
           <p className="lead">SAN MIGUEL DE ALLENDE · MEXICO</p>
           <h1>San Miguel<br /><span>Insider.</span></h1>
           <div style={{ width: '48px', height: '2px', backgroundColor: '#D4A017', marginBottom: '28px' }} />
           <p className="hero-description">Your person on the ground since 2015.</p>
           <div className="hero-buttons">
-            <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
+            <a className="button-link" style={{ backgroundColor: '#C4622D', color: 'white' }} href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
             <a className="button-link secondary" href="/residency">See If I Qualify →</a>
           </div>
         </div>

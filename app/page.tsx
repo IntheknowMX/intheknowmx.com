@@ -676,14 +676,14 @@ export default function Home() {
             {/* Shared Pricing — full-width */}
             <div id="concierge-pricing" style={{ gridColumn: '1 / -1', backgroundColor: '#FAE8E0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #D4A017' }}>
               <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Pricing</h3>
-              <div style={{ fontSize: '14px', fontWeight: '600', lineHeight: '2', color: '#2C1810', marginBottom: '6px' }}>
-                Hourly — $35/hour &nbsp;·&nbsp; No minimum
+              <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '14px', lineHeight: '1.5' }}>
+                Hourly — <span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$35/hour</span> &nbsp;·&nbsp; No minimum
               </div>
-              <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>Monthly Retainers:</p>
-              <div style={{ fontSize: '14px', fontWeight: '600', lineHeight: '2', color: '#2C1810', marginBottom: '20px' }}>
-                <div>Starter — 8 hours — $250</div>
-                <div>Standard — 16 hours — $480</div>
-                <div>Full Support — 24 hours — $700</div>
+              <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '20px 0 12px' }}>Monthly Retainers:</p>
+              <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '20px' }}>
+                <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Starter — 8 hours — <span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$250</span></div>
+                <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Standard — 16 hours — <span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$480</span></div>
+                <div style={{ lineHeight: '1.5' }}>Full Support — 24 hours — <span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$700</span></div>
               </div>
               <p style={{ fontSize: '14px', lineHeight: '1.75', color: '#2C1810', marginBottom: '10px' }}>
                 <strong>Includes:</strong> all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.
@@ -795,13 +795,13 @@ export default function Home() {
                 <li>👨‍⚕️ Accompanying to specialist referrals</li>
               </ul>
               <div style={{ padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', marginBottom: '16px' }}>
-                <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
-                <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8', color: '#2C1810' }}>
-                  <div>$22/hour · Minimum 2 hours ($44)</div>
-                  <div>Half Day 4 hours — $80</div>
-                  <div>Full Day 8 hours — $150</div>
+                <div style={{ fontSize: '18px', fontWeight: '700', marginBottom: '14px' }}>Pricing</div>
+                <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810' }}>
+                  <div style={{ marginBottom: '10px', lineHeight: '1.5' }}><span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$22/hour</span> · Minimum 2 hours ($44)</div>
+                  <div style={{ marginBottom: '10px', lineHeight: '1.5' }}>Half Day 4 hours — <span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$80</span></div>
+                  <div style={{ lineHeight: '1.5' }}>Full Day 8 hours — <span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$150</span></div>
                 </div>
-                <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
+                <div style={{ fontSize: '13px', marginTop: '14px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
                   Navigating care in Mexico is hard alone. With the right person beside you, it isn't.
                 </div>
               </div>
@@ -828,13 +828,13 @@ export default function Home() {
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", margin: 0 }}>And more, if you can dream it, we can probably do it.</p>
               </div>
               <div style={{ padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', marginBottom: '16px' }}>
-                <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '10px' }}>Pricing</div>
-                <div style={{ fontSize: '13px', fontWeight: '600', lineHeight: '1.8' }}>
-                  <div>Hourly — $15/hour</div>
-                  <div>Half Day 4 hours — $56</div>
-                  <div>Full Day 8 hours — $96</div>
+                <div style={{ fontSize: '18px', fontWeight: '700', marginBottom: '14px' }}>Pricing</div>
+                <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810' }}>
+                  <div style={{ marginBottom: '10px', lineHeight: '1.5' }}>Hourly — <span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$15/hour</span></div>
+                  <div style={{ marginBottom: '10px', lineHeight: '1.5' }}>Half Day 4 hours — <span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$56</span></div>
+                  <div style={{ lineHeight: '1.5' }}>Full Day 8 hours — <span style={{ fontSize: '22px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$96</span></div>
                 </div>
-                <div style={{ fontSize: '12px', marginTop: '12px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
+                <div style={{ fontSize: '13px', marginTop: '14px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
                   Client covers all outing costs, including meals, transportation, admission fees, and activities.
                 </div>
               </div>

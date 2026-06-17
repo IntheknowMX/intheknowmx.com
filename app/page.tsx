@@ -872,6 +872,8 @@ export default function Home() {
               { name: 'San Antonio', subtitle: 'Quiet, walkable, local', desc: 'Leafy and local. A quiet residential neighborhood with excellent taco stands, long-term expat community, and a slower, more authentic pace just minutes from everything.' },
               { name: 'Guadiana', subtitle: 'Leafy streets, expat community', desc: 'Tucked in a verdant ravine, Guadiana is one of the most beautiful and walkable neighborhoods in the city. Artists, writers, and longtime residents call it home.' },
               { name: 'Atascadero', subtitle: 'Views, space, serenity', desc: 'More space, more garden, more sky. A favorite for those who want a real home rather than a pied-à-terre — with stunning views and a genuine neighborhood feel.' },
+              { name: 'Los Frailes', subtitle: 'Golf, space, gated calm', desc: 'A quieter residential area near the golf course, with larger lots, newer homes, and a calm, spread-out feel. Popular with those who want more space and don\'t mind being just a ten minute drive from City Market and the Recreation Center.' },
+              { name: 'Guadalupe', subtitle: 'Art, color, creative edge', desc: 'The arts district near Centro, known for murals, galleries, and a younger creative energy. More affordable, walkable to the center, and full of character.' },
             ].map((n) => (
               <a key={n.name} href="#contact" style={{ textDecoration: 'none' }}>
                 <div style={{ backgroundColor: 'white', padding: '32px 24px', borderRadius: '8px', borderTop: '3px solid #D4A017', boxShadow: '0 2px 12px rgba(44,24,16,0.06)', height: '100%', boxSizing: 'border-box' }}>

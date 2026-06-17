@@ -335,15 +335,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Book CTA Band */}
-      <section className="responsive-section" style={{ backgroundColor: '#C4622D' }}>
-        <div className="content-wrapper button-row" style={{ textAlign: 'center', justifyContent: 'center' }}>
-          <p style={{ color: 'white', fontSize: '18px', margin: 0, fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", fontStyle: 'italic' }}>
-            Ready to make San Miguel your home?
-          </p>
-          <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">✦ Book a Planning Call Now</a>
-        </div>
-      </section>
+      {/* Divider stripe */}
+      <div style={{ backgroundColor: '#C4622D', height: '10px', width: '100%' }} />
 
       {/* About */}
       <section id="about" className="responsive-section">

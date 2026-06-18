@@ -99,6 +99,7 @@ export default function Home() {
         .mobile-menu-cta { display: none; }
         .nav-cta { background-color: #C4622D; color: white; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; }
         .hero-section { position: relative; min-height: 90vh; overflow: hidden; }
+        .hero-img { object-fit: cover; object-position: center top; }
         .hero-gradient { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to left, rgba(253,246,240,0.93) 0%, rgba(253,246,240,0.93) 8%, rgba(253,246,240,0.73) 19%, rgba(253,246,240,0.45) 30%, rgba(253,246,240,0.19) 38%, rgba(253,246,240,0) 42%), linear-gradient(to right, rgba(253,246,240,0.91) 0%, rgba(253,246,240,0.91) 28%, rgba(253,246,240,0.65) 41%, rgba(253,246,240,0.35) 51%, rgba(253,246,240,0.10) 56.5%, rgba(253,246,240,0) 58.5%); }
         .hero-copy { position: absolute; left: 0; top: 0; bottom: 0; width: 56%; z-index: 2; display: flex; flex-direction: column; justify-content: center; padding: 80px 48px 80px 92px; }
         .hero-copy p.lead { color: #7D3B4E; font-size: 14px; letter-spacing: 7px; margin-bottom: 28px; font-weight: 700; }
@@ -147,6 +148,7 @@ export default function Home() {
           .mobile-menu-close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: #2C1810; padding: 4px 8px; line-height: 1; }
           .mobile-menu-cta { display: block; margin: 16px !important; background-color: #C4622D !important; color: white !important; text-align: center; padding: 16px !important; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 15px; border-bottom: none !important; }
           .hero-section { min-height: 82vh; }
+          .hero-img { object-position: 62% top; }
           .hero-gradient { background: linear-gradient(to right, rgba(253,246,240,0.90) 0%, rgba(253,246,240,0.90) 55%, rgba(253,246,240,0.65) 68%, rgba(253,246,240,0.28) 80%, rgba(253,246,240,0) 95%); }
           .hero-copy { width: 88%; padding: 40px 20px 40px 32px; }
           .hero-copy h1 { font-size: 48px !important; line-height: 0.95 !important; }
@@ -202,7 +204,8 @@ export default function Home() {
             alt="San Miguel de Allende"
             fill
             priority
-            style={{ objectFit: 'cover', objectPosition: 'center top', filter: 'contrast(1.06) saturate(1.08)' }}
+            className="hero-img"
+            style={{ filter: 'contrast(1.06) saturate(1.08)' }}
           />
         </div>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', background: 'radial-gradient(ellipse at center, transparent 52%, rgba(18,8,4,0.26) 100%)' }} />

@@ -148,8 +148,8 @@ export default function Home() {
           .mobile-menu-close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: #2C1810; padding: 4px 8px; line-height: 1; }
           .mobile-menu-cta { display: block; margin: 16px !important; background-color: #C4622D !important; color: white !important; text-align: center; padding: 16px !important; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 15px; border-bottom: none !important; }
           .hero-section { min-height: 82vh; }
-          .hero-img { object-position: 62% top; }
-          .hero-gradient { background: linear-gradient(to right, rgba(253,246,240,0.90) 0%, rgba(253,246,240,0.90) 55%, rgba(253,246,240,0.65) 68%, rgba(253,246,240,0.28) 80%, rgba(253,246,240,0) 95%); }
+          .hero-img { object-position: 31% top; }
+          .hero-gradient { background: linear-gradient(to right, rgba(253,246,240,0.90) 0%, rgba(253,246,240,0.90) 55%, rgba(253,246,240,0.65) 68%, rgba(253,246,240,0.28) 80%, rgba(253,246,240,0) 88%); }
           .hero-copy { width: 88%; padding: 40px 20px 40px 32px; }
           .hero-copy h1 { font-size: 48px !important; line-height: 0.95 !important; }
           .hero-buttons { flex-direction: column; width: 100%; }

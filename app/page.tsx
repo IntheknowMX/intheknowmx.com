@@ -266,21 +266,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pull Quotes Band */}
-      <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
-        <div className="content-wrapper pull-quotes-grid">
-          {[
-            { quote: 'From the moment I got off the plane, Lisa showed up with kindness and clarity.', name: 'Brian Keith Webster', title: 'Author' },
-            { quote: 'She handled everything with exceptional grace and competence.', name: 'Sugar & Sandy Hudson', title: 'Mayor, Los Frailes SMA' },
-            { quote: "She's not just a concierge — she's a trusted guide.", name: 'Tiffany Paige', title: 'Licensed Real Estate Advisor, The Agency SMA' },
-          ].map((q) => (
-            <div key={q.name}>
-              <div style={{ fontSize: '64px', color: '#8B1A2A', lineHeight: '0.8', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>"</div>
-              <p style={{ fontSize: '17px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.75', color: '#2C1810', marginBottom: '20px' }}>{q.quote}</p>
-              <div style={{ fontSize: '12px', letterSpacing: '2px', color: '#C97B8A', fontWeight: '700', textTransform: 'uppercase' }}>{q.name}</div>
-              <div style={{ fontSize: '11px', letterSpacing: '1px', color: '#C97B8A', marginTop: '4px' }}>{q.title}</div>
+      {/* Google Reviews */}
+      <section className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
+        <div className="content-wrapper">
+          {/* Header */}
+          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '16px' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '50%', backgroundColor: 'white', fontSize: '15px', fontWeight: '700', color: '#4285F4', fontFamily: 'sans-serif', flexShrink: 0 }}>G</span>
+              <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', margin: 0 }}>VERIFIED GOOGLE REVIEWS</p>
             </div>
-          ))}
+            <h2 style={{ fontSize: '38px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px', lineHeight: '1.2' }}>
+              What Clients Are Saying on Google
+            </h2>
+            <div style={{ color: '#D4A017', fontSize: '22px', letterSpacing: '4px' }}>★★★★★</div>
+          </div>
+
+          {/* Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '40px' }}>
+            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
+              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
+                "Lisa is a true leader and inspiration to us all. She has a way of traversing through dilemmas with ease… she continues to help me get on the right path towards my expat conquest."
+              </p>
+              <div>
+                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Cliff Cunningham</p>
+                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
+              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
+                "If you're lucky enough to cross paths with Lisa, you'll quickly discover she's one of those rare people who seems to know how to solve just about any problem… In the Know Mexico is more than a service, it's having a trusted friend in your corner. The learning curve of life in Mexico feels a whole lot gentler with Lisa leading the way!"
+              </p>
+              <div>
+                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Brenda Miles</p>
+                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div style={{ textAlign: 'center' }}>
+            <a
+              href="https://g.page/r/CcIhG0V9IQSNEAI/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#C4622D', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '16px 40px', fontSize: '15px', fontWeight: '700' }}
+            >
+              Leave a Review →
+            </a>
+          </div>
         </div>
       </section>
 
@@ -846,6 +882,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pull Quotes Band */}
+      <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+        <div className="content-wrapper pull-quotes-grid">
+          {[
+            { quote: 'From the moment I got off the plane, Lisa showed up with kindness and clarity.', name: 'Brian Keith Webster', title: 'Author' },
+            { quote: 'She handled everything with exceptional grace and competence.', name: 'Sugar & Sandy Hudson', title: 'Mayor, Los Frailes SMA' },
+            { quote: "She's not just a concierge — she's a trusted guide.", name: 'Tiffany Paige', title: 'Licensed Real Estate Advisor, The Agency SMA' },
+          ].map((q) => (
+            <div key={q.name}>
+              <div style={{ fontSize: '64px', color: '#8B1A2A', lineHeight: '0.8', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>"</div>
+              <p style={{ fontSize: '17px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.75', color: '#2C1810', marginBottom: '20px' }}>{q.quote}</p>
+              <div style={{ fontSize: '12px', letterSpacing: '2px', color: '#C97B8A', fontWeight: '700', textTransform: 'uppercase' }}>{q.name}</div>
+              <div style={{ fontSize: '11px', letterSpacing: '1px', color: '#C97B8A', marginTop: '4px' }}>{q.title}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Booking & Cancellation Policy */}
       <section className="responsive-section" style={{ backgroundColor: '#2C1810', borderTop: '1px solid #3D2418' }}>
         <div className="content-wrapper" style={{ maxWidth: '800px', margin: '0 auto' }}>
@@ -1164,60 +1218,6 @@ export default function Home() {
               fontSize: '15px',
               fontWeight: 'bold'
             }}>✦ Book a Private Consultation</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Google Reviews */}
-      <section className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
-        <div className="content-wrapper">
-          {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '16px' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '50%', backgroundColor: 'white', fontSize: '15px', fontWeight: '700', color: '#4285F4', fontFamily: 'sans-serif', flexShrink: 0 }}>G</span>
-              <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', margin: 0 }}>VERIFIED GOOGLE REVIEWS</p>
-            </div>
-            <h2 style={{ fontSize: '38px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px', lineHeight: '1.2' }}>
-              What Clients Are Saying on Google
-            </h2>
-            <div style={{ color: '#D4A017', fontSize: '22px', letterSpacing: '4px' }}>★★★★★</div>
-          </div>
-
-          {/* Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '40px' }}>
-            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
-              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                "Lisa is a true leader and inspiration to us all. She has a way of traversing through dilemmas with ease… she continues to help me get on the right path towards my expat conquest."
-              </p>
-              <div>
-                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Cliff Cunningham</p>
-                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
-              </div>
-            </div>
-
-            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
-              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                "If you're lucky enough to cross paths with Lisa, you'll quickly discover she's one of those rare people who seems to know how to solve just about any problem… In the Know Mexico is more than a service, it's having a trusted friend in your corner. The learning curve of life in Mexico feels a whole lot gentler with Lisa leading the way!"
-              </p>
-              <div>
-                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Brenda Miles</p>
-                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div style={{ textAlign: 'center' }}>
-            <a
-              href="https://g.page/r/CcIhG0V9IQSNEAI/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#C4622D', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '16px 40px', fontSize: '15px', fontWeight: '700' }}
-            >
-              Leave a Review →
-            </a>
           </div>
         </div>
       </section>

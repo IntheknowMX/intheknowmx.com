@@ -1049,11 +1049,10 @@ export default function Home() {
           <div className="flex-stack" style={{ gap: '56px', alignItems: 'flex-start' }}>
             {/* Left: Photo + caption */}
             <div style={{ flex: '1 1 280px', maxWidth: '400px' }}>
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/images/TiffandLisa.jpeg"
                 alt="Lisa May Cobham and Tiffany Paige"
-                width={1080}
-                height={1920}
                 style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block' }}
               />
               <div style={{ textAlign: 'center', marginTop: '14px' }}>

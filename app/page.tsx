@@ -1046,27 +1046,49 @@ export default function Home() {
       {/* Buy / Properties Section */}
       <section id="properties" className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
         <div className="content-wrapper">
-          <p style={{ color: '#E8A598', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>BUY IN SAN MIGUEL</p>
-          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '28px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
-            Two Perspectives, One Home
-          </h2>
-          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '700px', marginBottom: '20px' }}>
-            When you're buying a home in San Miguel, you're not just making a property decision. You're making a life decision. That's why we work together.
-          </p>
-          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '700px', marginBottom: '20px' }}>
-            Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, the #1 ranked luxury brokerage globally. She brings deep market knowledge, access to over 1,000 listings, and strong negotiation expertise. I work alongside her on the relocation and lifestyle side, helping you understand how each neighborhood actually feels to live in, and how daily life will function beyond what a listing shows.
-          </p>
-          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '700px', marginBottom: '20px' }}>
-            We look at every search from two angles at once: what a property is on paper, and what it's like to actually live there. Most people come to us because they want more than listings. They want clarity, about where they'll feel at home, what fits their life, and the decision they're about to make.
-          </p>
-          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '700px', marginBottom: '40px' }}>
-            Together, we help bring that into focus. A home that works in real life, not just in theory.
-          </p>
-          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-            <a href="https://www.sanmiguelrealestate.com.mx/properties" target="_blank" rel="noreferrer" style={{
-              backgroundColor: '#C4622D', color: 'white', padding: '14px 36px',
-              borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700'
-            }}>Browse Properties →</a>
+          <div className="flex-stack" style={{ gap: '56px', alignItems: 'flex-start' }}>
+            {/* Left: Photo + caption */}
+            <div style={{ flex: '1 1 280px', maxWidth: '400px' }}>
+              <Image
+                src="/images/TiffandLisa.jpeg"
+                alt="Lisa May Cobham and Tiffany Paige"
+                width={1080}
+                height={1920}
+                style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block' }}
+              />
+              <div style={{ textAlign: 'center', marginTop: '14px' }}>
+                <p style={{ margin: '0 0 4px', fontSize: '16px', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", fontWeight: '600' }}>
+                  Lisa May Cobham &amp; Tiffany Paige
+                </p>
+                <p style={{ margin: 0, fontSize: '13px', color: '#9CA3AF' }}>
+                  Relocation &amp; Real Estate · San Miguel de Allende
+                </p>
+              </div>
+            </div>
+
+            {/* Right: Text content */}
+            <div style={{ flex: '1 1 300px' }}>
+              <p style={{ color: '#E8A598', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>BUY IN SAN MIGUEL</p>
+              <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '28px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
+                Two Perspectives, One Home
+              </h2>
+              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
+                When you&rsquo;re buying a home in San Miguel, you&rsquo;re not just making a property decision. You&rsquo;re making a life decision. That&rsquo;s why we work together.
+              </p>
+              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
+                Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, the #1 ranked luxury brokerage globally. She brings deep market knowledge, access to over 1,000 listings, and strong negotiation expertise. I work alongside her on the relocation and lifestyle side, helping you understand how each neighborhood actually feels to live in, and how daily life will function beyond what a listing shows.
+              </p>
+              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
+                We look at every search from two angles at once: what a property is on paper, and what it&rsquo;s like to actually live there. Most people come to us because they want more than listings. They want clarity, about where they&rsquo;ll feel at home, what fits their life, and the decision they&rsquo;re about to make.
+              </p>
+              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '36px' }}>
+                Together, we help bring that into focus. A home that works in real life, not just in theory.
+              </p>
+              <a href="https://www.sanmiguelrealestate.com.mx/properties" target="_blank" rel="noreferrer" style={{
+                display: 'inline-block', backgroundColor: '#C4622D', color: 'white', padding: '14px 36px',
+                borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700'
+              }}>Browse Properties →</a>
+            </div>
           </div>
         </div>
       </section>

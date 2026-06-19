@@ -1047,28 +1047,26 @@ export default function Home() {
       <section id="properties" className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
         <div className="content-wrapper">
           <p style={{ color: '#E8A598', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>BUY IN SAN MIGUEL</p>
-          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '20px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
-            Ready to Buy? Meet Tiffany Paige.
+          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '28px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
+            Two Perspectives, One Home
           </h2>
+          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '700px', marginBottom: '20px' }}>
+            When you're buying a home in San Miguel, you're not just making a property decision. You're making a life decision. That's why we work together.
+          </p>
+          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '700px', marginBottom: '20px' }}>
+            Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, the #1 ranked luxury brokerage globally. She brings deep market knowledge, access to over 1,000 listings, and strong negotiation expertise. I work alongside her on the relocation and lifestyle side, helping you understand how each neighborhood actually feels to live in, and how daily life will function beyond what a listing shows.
+          </p>
+          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '700px', marginBottom: '20px' }}>
+            We look at every search from two angles at once: what a property is on paper, and what it's like to actually live there. Most people come to us because they want more than listings. They want clarity, about where they'll feel at home, what fits their life, and the decision they're about to make.
+          </p>
           <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', maxWidth: '700px', marginBottom: '40px' }}>
-            When it's time to buy, I connect Mexico newcomers with my trusted partner <strong style={{ color: '#E8A598' }}>Tiffany Paige</strong>,
-            Licensed Real Estate Advisor at The Agency San Miguel. She's done this herself —
-            bought property in Mexico, navigated every step — and now guides international buyers
-            with clarity and care. Together, we cover every part of your journey.
+            Together, we help bring that into focus. A home that works in real life, not just in theory.
           </p>
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-            <a href="https://sanmiguelrealestate.com.mx/the-agency-san-miguel-featured-listings" target="_blank" style={{
+            <a href="https://www.sanmiguelrealestate.com.mx/properties" target="_blank" rel="noreferrer" style={{
               backgroundColor: '#C4622D', color: 'white', padding: '14px 36px',
               borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700'
             }}>Browse Properties →</a>
-            <a href="https://sanmiguelrealestate.com.mx" target="_blank" style={{
-              backgroundColor: 'transparent', color: '#E8A598', padding: '14px 36px',
-              borderRadius: '4px', textDecoration: 'none', fontSize: '15px', border: '1px solid #E8A598'
-            }}>Visit Tiffany's Site →</a>
-            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-              backgroundColor: 'white', color: '#2C1810', padding: '14px 36px',
-              borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700'
-            }}>✦ Book a Planning Call First</a>
           </div>
         </div>
       </section>

@@ -1168,6 +1168,60 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Google Reviews */}
+      <section className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
+        <div className="content-wrapper">
+          {/* Header */}
+          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '16px' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '50%', backgroundColor: 'white', fontSize: '15px', fontWeight: '700', color: '#4285F4', fontFamily: 'sans-serif', flexShrink: 0 }}>G</span>
+              <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', margin: 0 }}>VERIFIED GOOGLE REVIEWS</p>
+            </div>
+            <h2 style={{ fontSize: '38px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px', lineHeight: '1.2' }}>
+              What Clients Are Saying on Google
+            </h2>
+            <div style={{ color: '#D4A017', fontSize: '22px', letterSpacing: '4px' }}>★★★★★</div>
+          </div>
+
+          {/* Cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '40px' }}>
+            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
+              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
+                "Lisa is a true leader and inspiration to us all. She has a way of traversing through dilemmas with ease. I am overly astonished by this magnificent ability of hers. I have known Lisa for years and she continues to help me get on the right path towards my expat conquest. She has really inspired me to migrate from my immediate circle of comfort and travel the world and I am most grateful for that."
+              </p>
+              <div>
+                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Cliff Cunningham</p>
+                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
+              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
+                "If you're lucky enough to cross paths with Lisa, you'll quickly discover she's one of those rare people who seems to know how to solve just about any problem. A house and pet sitter for decades, Lisa has traveled the world and gathered a wealth of experience, resourcefulness, and practical wisdom along the way. Fortunately for those of us in San Miguel de Allende, she's come home to roost here and now shares that unique brand of savvy through her newcomer services. Whether you're facing a dental emergency and don't know where to turn, trying to navigate Mexico's sometimes puzzling bureaucracy, or searching tirelessly for the perfect place to call home, whether renting or buying, Lisa is there to guide you every step of the way. Her local knowledge, extensive network, generosity, and genuine desire to help make settling into life in San Miguel so much easier. In the Know Mexico is more than a service, it's having a trusted friend in your corner when you need one most. The learning curve of life in Mexico feels a whole lot gentler with Lisa leading the way!"
+              </p>
+              <div>
+                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Brenda Miles</p>
+                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div style={{ textAlign: 'center' }}>
+            <a
+              href="https://g.page/r/CcIhG0V9IQSNEAI/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#C4622D', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '16px 40px', fontSize: '15px', fontWeight: '700' }}
+            >
+              Leave a Review →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section id="testimonials" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
         <div className="content-wrapper">

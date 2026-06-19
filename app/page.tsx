@@ -137,6 +137,7 @@ export default function Home() {
         .footer-col a { color: #FDF6F0; text-decoration: none; font-size: 13px; line-height: 1.9; display: block; }
         .footer-col a:hover { color: #E8A598; }
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .payment-methods-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; }
         @media (max-width: 767px) {
           .main-nav { padding: 16px 20px; }
           .nav-cta { display: none; }
@@ -160,6 +161,7 @@ export default function Home() {
           .ticker-track { animation-duration: 55s; }
           .footer-grid { grid-template-columns: 1fr; gap: 32px; }
           .pull-quotes-grid, .why-grid, .press-grid, .service-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
+          .payment-methods-grid { grid-template-columns: 1fr; }
           .press-grid { grid-template-columns: repeat(2, 1fr); }
           .button-row { flex-direction: column; align-items: stretch; }
           .hero-columns, .two-column-stack, .flex-stack { flex-direction: column; }
@@ -730,25 +732,25 @@ export default function Home() {
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0', marginBottom: '20px' }}>
                   Confirm booking via your preferred payment method:
                 </p>
-                <div style={{ fontSize: '15px', lineHeight: '1.9', color: '#FDF6F0' }}>
-                  <p style={{ marginBottom: '12px' }}>
+                <div className="payment-methods-grid" style={{ fontSize: '14px', lineHeight: '1.8', color: '#FDF6F0' }}>
+                  <p style={{ margin: 0 }}>
                     ✅ Zelle — no fee &rarr; <strong>sittingprettydc@gmail.com</strong>
                   </p>
-                  <p style={{ marginBottom: '12px' }}>
+                  <p style={{ margin: 0 }}>
                     📱 Venmo — +2% fee &rarr;&nbsp;
                     <a href="https://venmo.com/code?user_id=3758990584448601525&created=1781206512" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>venmo.com/lisaMayCo</a>
                   </p>
-                  <p style={{ marginBottom: '16px' }}>
+                  <p style={{ margin: 0 }}>
                     💻 PayPal — +3% fee &rarr;&nbsp;
                     <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>paypal.me/lisaMayCo</a>
                   </p>
-                  <div style={{ marginBottom: '12px' }}>
-                    <p style={{ marginBottom: '10px' }}>💳 Credit or debit — +3% fee</p>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', paddingLeft: '28px' }}>
-                      <a href="https://buy.stripe.com/8x2bJ11V21Vc2CsbY42880s" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '8px 16px', fontSize: '13px', fontWeight: 600 }}>Hourly</a>
-                      <a href="https://buy.stripe.com/bJe5kDary57ob8YbY42880q" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '8px 16px', fontSize: '13px', fontWeight: 600 }}>Starter</a>
-                      <a href="https://buy.stripe.com/5kQcN59nuarIfpe3ry2880r" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '8px 16px', fontSize: '13px', fontWeight: 600 }}>Standard</a>
-                      <a href="https://buy.stripe.com/28EcN52Z69nE5OEfag2880p" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '8px 16px', fontSize: '13px', fontWeight: 600 }}>Full Support</a>
+                  <div style={{ margin: 0 }}>
+                    <p style={{ marginBottom: '8px', marginTop: 0 }}>💳 Credit or debit — +3% fee</p>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', paddingLeft: '24px' }}>
+                      <a href="https://buy.stripe.com/8x2bJ11V21Vc2CsbY42880s" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Hourly</a>
+                      <a href="https://buy.stripe.com/bJe5kDary57ob8YbY42880q" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Starter</a>
+                      <a href="https://buy.stripe.com/5kQcN59nuarIfpe3ry2880r" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Standard</a>
+                      <a href="https://buy.stripe.com/28EcN52Z69nE5OEfag2880p" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Full Support</a>
                     </div>
                   </div>
                 </div>

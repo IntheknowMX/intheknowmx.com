@@ -138,6 +138,7 @@ export default function Home() {
         .footer-col a:hover { color: #E8A598; }
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .payment-methods-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; }
+        .pricing-booking-row { display: flex; gap: 32px; align-items: flex-start; }
         @media (max-width: 767px) {
           .main-nav { padding: 16px 20px; }
           .nav-cta { display: none; }
@@ -162,6 +163,7 @@ export default function Home() {
           .footer-grid { grid-template-columns: 1fr; gap: 32px; }
           .pull-quotes-grid, .why-grid, .press-grid, .service-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
           .payment-methods-grid { grid-template-columns: 1fr; }
+          .pricing-booking-row { flex-direction: column; }
           .press-grid { grid-template-columns: repeat(2, 1fr); }
           .button-row { flex-direction: column; align-items: stretch; }
           .hero-columns, .two-column-stack, .flex-stack { flex-direction: column; }
@@ -709,54 +711,58 @@ export default function Home() {
 
             {/* Shared Pricing — full-width */}
             <div id="concierge-pricing" style={{ gridColumn: '1 / -1', backgroundColor: '#FAE8E0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #D4A017' }}>
-              <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Pricing</h3>
-              <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '14px', lineHeight: '1.5' }}>
-                Hourly — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$35/hour</span> &nbsp;·&nbsp; No minimum
-              </div>
-              <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '20px 0 12px' }}>Monthly Retainers:</p>
-              <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '20px' }}>
-                <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Starter — 8 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$250</span></div>
-                <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Standard — 16 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$480</span></div>
-                <div style={{ lineHeight: '1.5' }}>Full Support — 24 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$700</span></div>
-              </div>
-              <p style={{ fontSize: '14px', lineHeight: '1.75', color: '#2C1810', marginBottom: '10px' }}>
-                <strong>Includes:</strong> all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.
-              </p>
-              <p style={{ fontSize: '13px', fontStyle: 'italic', color: '#7D3B4E', marginBottom: '32px' }}>
-                This pricing applies to Personal Assistant, Tech Concierge, Travel &amp; Logistics, and Senior Concierge services.
-              </p>
+              <div className="pricing-booking-row">
+                <div style={{ flex: 1 }}>
+                  <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Pricing</h3>
+                  <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '14px', lineHeight: '1.5' }}>
+                    Hourly — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$35/hour</span> &nbsp;·&nbsp; No minimum
+                  </div>
+                  <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '20px 0 12px' }}>Monthly Retainers:</p>
+                  <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '20px' }}>
+                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Starter — 8 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$250</span></div>
+                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Standard — 16 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$480</span></div>
+                    <div style={{ lineHeight: '1.5' }}>Full Support — 24 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$700</span></div>
+                  </div>
+                  <p style={{ fontSize: '14px', lineHeight: '1.75', color: '#2C1810', marginBottom: '10px' }}>
+                    <strong>Includes:</strong> all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.
+                  </p>
+                  <p style={{ fontSize: '13px', fontStyle: 'italic', color: '#7D3B4E', marginBottom: 0 }}>
+                    This pricing applies to Personal Assistant, Tech Concierge, Travel &amp; Logistics, and Senior Concierge services.
+                  </p>
+                </div>
 
-              {/* Ready to Book? */}
-              <div style={{ backgroundColor: '#2C1810', borderRadius: '12px', padding: '32px' }}>
-                <h3 style={{ fontSize: '24px', fontWeight: 'normal', marginBottom: '10px', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>Ready to Book?</h3>
-                <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0', marginBottom: '20px' }}>
-                  Confirm booking via your preferred payment method:
-                </p>
-                <div className="payment-methods-grid" style={{ fontSize: '14px', lineHeight: '1.8', color: '#FDF6F0' }}>
-                  <p style={{ margin: 0 }}>
-                    ✅ Zelle — no fee &rarr; <strong>sittingprettydc@gmail.com</strong>
+                {/* Ready to Book? */}
+                <div style={{ flex: 1, backgroundColor: '#2C1810', borderRadius: '12px', padding: '32px' }}>
+                  <h3 style={{ fontSize: '24px', fontWeight: 'normal', marginBottom: '10px', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>Ready to Book?</h3>
+                  <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0', marginBottom: '20px' }}>
+                    Confirm booking via your preferred payment method:
                   </p>
-                  <p style={{ margin: 0 }}>
-                    📱 Venmo — +2% fee &rarr;&nbsp;
-                    <a href="https://venmo.com/code?user_id=3758990584448601525&created=1781206512" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>venmo.com/lisaMayCo</a>
-                  </p>
-                  <p style={{ margin: 0 }}>
-                    💻 PayPal — +3% fee &rarr;&nbsp;
-                    <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>paypal.me/lisaMayCo</a>
-                  </p>
-                  <div style={{ margin: 0 }}>
-                    <p style={{ marginBottom: '8px', marginTop: 0 }}>💳 Credit or debit — +3% fee</p>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', paddingLeft: '24px' }}>
-                      <a href="https://buy.stripe.com/8x2bJ11V21Vc2CsbY42880s" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Hourly</a>
-                      <a href="https://buy.stripe.com/bJe5kDary57ob8YbY42880q" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Starter</a>
-                      <a href="https://buy.stripe.com/5kQcN59nuarIfpe3ry2880r" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Standard</a>
-                      <a href="https://buy.stripe.com/28EcN52Z69nE5OEfag2880p" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Full Support</a>
+                  <div className="payment-methods-grid" style={{ fontSize: '14px', lineHeight: '1.8', color: '#FDF6F0' }}>
+                    <p style={{ margin: 0 }}>
+                      ✅ Zelle — no fee &rarr; <strong>sittingprettydc@gmail.com</strong>
+                    </p>
+                    <p style={{ margin: 0 }}>
+                      📱 Venmo — +2% fee &rarr;&nbsp;
+                      <a href="https://venmo.com/code?user_id=3758990584448601525&created=1781206512" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>venmo.com/lisaMayCo</a>
+                    </p>
+                    <p style={{ margin: 0 }}>
+                      💻 PayPal — +3% fee &rarr;&nbsp;
+                      <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>paypal.me/lisaMayCo</a>
+                    </p>
+                    <div style={{ margin: 0 }}>
+                      <p style={{ marginBottom: '8px', marginTop: 0 }}>💳 Credit or debit — +3% fee</p>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', paddingLeft: '24px' }}>
+                        <a href="https://buy.stripe.com/8x2bJ11V21Vc2CsbY42880s" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Hourly</a>
+                        <a href="https://buy.stripe.com/bJe5kDary57ob8YbY42880q" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Starter</a>
+                        <a href="https://buy.stripe.com/5kQcN59nuarIfpe3ry2880r" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Standard</a>
+                        <a href="https://buy.stripe.com/28EcN52Z69nE5OEfag2880p" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Full Support</a>
+                      </div>
                     </div>
                   </div>
+                  <p style={{ marginTop: '24px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598', marginBottom: 0 }}>
+                    Your booking is confirmed once full payment is received.
+                  </p>
                 </div>
-                <p style={{ marginTop: '24px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598', marginBottom: 0 }}>
-                  Your booking is confirmed once full payment is received.
-                </p>
               </div>
             </div>
 

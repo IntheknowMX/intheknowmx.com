@@ -1188,7 +1188,7 @@ export default function Home() {
             <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
               <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
               <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                "Lisa is a true leader and inspiration to us all. She has a way of traversing through dilemmas with ease. I am overly astonished by this magnificent ability of hers. I have known Lisa for years and she continues to help me get on the right path towards my expat conquest. She has really inspired me to migrate from my immediate circle of comfort and travel the world and I am most grateful for that."
+                "Lisa is a true leader and inspiration to us all. She has a way of traversing through dilemmas with ease… she continues to help me get on the right path towards my expat conquest."
               </p>
               <div>
                 <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Cliff Cunningham</p>
@@ -1199,7 +1199,7 @@ export default function Home() {
             <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
               <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
               <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                "If you're lucky enough to cross paths with Lisa, you'll quickly discover she's one of those rare people who seems to know how to solve just about any problem. A house and pet sitter for decades, Lisa has traveled the world and gathered a wealth of experience, resourcefulness, and practical wisdom along the way. Fortunately for those of us in San Miguel de Allende, she's come home to roost here and now shares that unique brand of savvy through her newcomer services. Whether you're facing a dental emergency and don't know where to turn, trying to navigate Mexico's sometimes puzzling bureaucracy, or searching tirelessly for the perfect place to call home, whether renting or buying, Lisa is there to guide you every step of the way. Her local knowledge, extensive network, generosity, and genuine desire to help make settling into life in San Miguel so much easier. In the Know Mexico is more than a service, it's having a trusted friend in your corner when you need one most. The learning curve of life in Mexico feels a whole lot gentler with Lisa leading the way!"
+                "If you're lucky enough to cross paths with Lisa, you'll quickly discover she's one of those rare people who seems to know how to solve just about any problem… In the Know Mexico is more than a service, it's having a trusted friend in your corner. The learning curve of life in Mexico feels a whole lot gentler with Lisa leading the way!"
               </p>
               <div>
                 <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Brenda Miles</p>

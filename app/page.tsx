@@ -734,17 +734,6 @@ export default function Home() {
                   <p style={{ marginBottom: '12px' }}>
                     ✅ Zelle — no fee &rarr; <strong>sittingprettydc@gmail.com</strong>
                   </p>
-                  <p style={{ marginBottom: '16px' }}>
-                    ✅ Wise — no fee &rarr; Contact Lisa via WhatsApp for banking details&nbsp;&nbsp;
-                    <a
-                      href="https://wa.me/5214731218554"
-                      target="_blank"
-                      rel="noreferrer"
-                      style={{ display: 'inline-flex', alignItems: 'center', backgroundColor: '#29A745', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '4px 14px', fontSize: '13px', fontWeight: 700, verticalAlign: 'middle' }}
-                    >
-                      WhatsApp &rarr;
-                    </a>
-                  </p>
                   <p style={{ marginBottom: '12px' }}>
                     📱 Venmo — +2% fee &rarr;&nbsp;
                     <a href="https://venmo.com/code?user_id=3758990584448601525&created=1781206512" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>venmo.com/lisaMayCo</a>

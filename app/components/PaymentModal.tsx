@@ -134,7 +134,6 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
         </p>
         <div style={{ fontSize: '15px', lineHeight: '1.9', color: '#FDF6F0' }}>
           <p style={{ marginBottom: '12px' }}>✅ Zelle — no fee → <strong>sittingprettydc@gmail.com</strong></p>
-          <p style={{ marginBottom: '12px' }}>✅ Wise — no fee → <strong>Contact Lisa via WhatsApp for banking details</strong></p>
           <p style={{ marginBottom: '12px' }}>📱 Venmo — +2% fee → <a href="https://venmo.com/code?user_id=3758990584448601525&created=1781206512" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>https://venmo.com/code?user_id=3758990584448601525&created=1781206512</a></p>
           <p style={{ marginBottom: isResidency ? '0' : '12px' }}>💻 PayPal — +3% fee → <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>https://paypal.com/paypalme/lisaMayCo</a></p>
           {!isResidency && (

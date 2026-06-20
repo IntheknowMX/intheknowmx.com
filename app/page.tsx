@@ -984,6 +984,25 @@ export default function Home() {
           <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>
             Property Showing Day Packages
           </h3>
+
+          {/* Featured client success photo */}
+          <div style={{ marginBottom: '32px' }}>
+            <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', maxWidth: '520px', margin: '0 auto' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/bree-willie-max.jpg"
+                alt="Couple with their Bernese mountain dog at their new San Miguel rental"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
+              <div style={{ position: 'absolute', top: '14px', right: '14px', backgroundColor: '#C4622D', color: '#FDF6F0', fontSize: '11px', fontWeight: '700', letterSpacing: '2.5px', padding: '5px 11px', borderRadius: '4px', textTransform: 'uppercase' }}>
+                Lease Signed
+              </div>
+            </div>
+            <p style={{ textAlign: 'center', fontSize: '13px', color: '#5C3A2E', marginTop: '10px', marginBottom: '0' }}>
+              Settled into their San Miguel rental
+            </p>
+          </div>
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '20px' }}>
 
             <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '1px solid #E8A598' }}>

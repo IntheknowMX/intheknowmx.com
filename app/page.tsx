@@ -985,44 +985,49 @@ export default function Home() {
             Property Showing Day Packages
           </h3>
 
-          {/* Featured client success photo */}
-          <div style={{ marginBottom: '32px' }}>
-            <div style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', maxWidth: '520px', margin: '0 auto' }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/bree-willie-max.jpg"
-                alt="Couple with their Bernese mountain dog at their new San Miguel rental"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-              <div style={{ position: 'absolute', top: '14px', right: '14px', backgroundColor: '#C4622D', color: '#FDF6F0', fontSize: '11px', fontWeight: '700', letterSpacing: '2.5px', padding: '5px 11px', borderRadius: '4px', textTransform: 'uppercase' }}>
-                Lease Signed
+          <div style={{ marginBottom: '20px' }}>
+
+            <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '1px solid #E8A598', display: 'flex', gap: '32px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+
+              {/* Left: pricing details */}
+              <div style={{ flex: '1 1 260px' }}>
+                <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Rental Showing Day</h4>
+                <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '4px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$150</p>
+                <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL AGENT · FULL DAY</p>
+                <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '0' }}>
+                  <li>4 property showings, pre-curated to your needs</li>
+                  <li>Private driver for the full day</li>
+                  <li>Personal escort, translation & negotiation support</li>
+                  <li>Lease review included</li>
+                  <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of newcomer concierge support</li>
+                </ul>
+                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 6px', lineHeight: '1.6' }}>1 free reschedule available</p>
+                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>No refunds within 48 hours of showing day.</p>
+                <div style={{ height: '16px' }} />
+                <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
+                  backgroundColor: '#C4622D', color: 'white', padding: '12px 24px',
+                  borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold', display: 'inline-block'
+                }}>Book This Package →</a>
               </div>
-            </div>
-            <p style={{ textAlign: 'center', fontSize: '13px', color: '#5C3A2E', marginTop: '10px', marginBottom: '0' }}>
-              Settled into their San Miguel rental
-            </p>
-          </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '20px' }}>
+              {/* Right: client success photo */}
+              <div style={{ flex: '1 1 220px' }}>
+                <div style={{ position: 'relative', borderRadius: '10px', overflow: 'hidden' }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/bree-willie-max.jpg"
+                    alt="Couple with their Bernese mountain dog at their new San Miguel rental"
+                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                  />
+                  <div style={{ position: 'absolute', top: '12px', right: '12px', backgroundColor: '#C4622D', color: '#FDF6F0', fontSize: '10px', fontWeight: '700', letterSpacing: '2px', padding: '5px 10px', borderRadius: '4px', textTransform: 'uppercase' }}>
+                    Lease Signed
+                  </div>
+                </div>
+                <p style={{ textAlign: 'center', fontSize: '12px', color: '#5C3A2E', marginTop: '8px', marginBottom: '0' }}>
+                  Settled into their San Miguel rental
+                </p>
+              </div>
 
-            <div style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', border: '1px solid #E8A598' }}>
-              <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Rental Showing Day</h4>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '4px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$150</p>
-              <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL AGENT · FULL DAY</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '0' }}>
-                <li>4 property showings, pre-curated to your needs</li>
-                <li>Private driver for the full day</li>
-                <li>Personal escort, translation & negotiation support</li>
-                <li>Lease review included</li>
-                <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of newcomer concierge support</li>
-              </ul>
-              <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 6px', lineHeight: '1.6' }}>1 free reschedule available</p>
-              <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>No refunds within 48 hours of showing day.</p>
-              <div style={{ height: '16px' }} />
-              <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-                backgroundColor: '#C4622D', color: 'white', padding: '12px 24px',
-                borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold', display: 'inline-block'
-              }}>Book This Package →</a>
             </div>
 
           </div>

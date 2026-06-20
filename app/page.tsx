@@ -1051,7 +1051,7 @@ export default function Home() {
             <div style={{ flex: '1 1 280px', maxWidth: '400px' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/TiffandLisa2.jpeg"
+                src="/images/lisa-tiffany.jpg"
                 alt="Lisa May Cobham and Tiffany Paige"
                 style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block' }}
               />

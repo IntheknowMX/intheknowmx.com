@@ -1048,18 +1048,18 @@ export default function Home() {
         <div className="content-wrapper">
           <div className="flex-stack" style={{ gap: '56px', alignItems: 'flex-start' }}>
             {/* Left: Photo + caption */}
-            <div style={{ flex: '1 1 280px', maxWidth: '400px' }}>
+            <div style={{ flex: '1 1 280px', maxWidth: '400px', position: 'relative', borderRadius: '12px', overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/lisa-tiffany.jpg"
                 alt="Lisa May Cobham and Tiffany Paige"
-                style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block' }}
+                style={{ width: '100%', height: 'auto', display: 'block' }}
               />
-              <div style={{ textAlign: 'center', marginTop: '14px' }}>
-                <p style={{ margin: '0 0 4px', fontSize: '16px', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", fontWeight: '600' }}>
+              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#FDF6F0', padding: '14px 16px', textAlign: 'center' }}>
+                <p style={{ margin: '0 0 3px', fontSize: '15px', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", fontWeight: '600', lineHeight: '1.3' }}>
                   Lisa May Cobham &amp; Tiffany Paige
                 </p>
-                <p style={{ margin: 0, fontSize: '13px', color: '#9CA3AF' }}>
+                <p style={{ margin: 0, fontSize: '12px', color: '#5C3A2E' }}>
                   Relocation &amp; Real Estate · San Miguel de Allende
                 </p>
               </div>

@@ -1057,7 +1057,7 @@ export default function Home() {
               />
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#FDF6F0', padding: '14px 16px', textAlign: 'center' }}>
                 <p style={{ margin: '0 0 3px', fontSize: '15px', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", fontWeight: '600', lineHeight: '1.3' }}>
-                  Lisa May Cobham &amp; Tiffany Paige
+                  Tiffany Paige &amp; Lisa Cobham
                 </p>
                 <p style={{ margin: 0, fontSize: '12px', color: '#5C3A2E' }}>
                   Relocation &amp; Real Estate · San Miguel de Allende

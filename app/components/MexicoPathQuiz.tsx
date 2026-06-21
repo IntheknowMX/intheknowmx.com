@@ -139,7 +139,7 @@ export default function MexicoPathQuiz() {
           Find Your Mexico Path
         </h2>
         <p style={{ fontSize: '16px', color: '#5C3A2E', textAlign: 'center', marginBottom: '48px', lineHeight: '1.7' }}>
-          5 quick questions. A personalized recommendation just for you.
+          Not sure where to start? Answer 5 questions and we&rsquo;ll point you to the right help.
         </p>
 
         <div style={{ backgroundColor: 'white', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 20px rgba(44,24,16,0.08)' }}>

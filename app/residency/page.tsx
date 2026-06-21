@@ -95,7 +95,7 @@ export default function ResidencyPage() {
         </p>
         <div style={{ width: '48px', height: '2px', backgroundColor: '#D4A017', margin: '0 auto 24px' }} />
         <p style={{ fontSize: '18px', color: '#F5D0D8', maxWidth: '560px', margin: '0 auto 40px', lineHeight: '1.75' }}>
-          Answer 6 questions and find your path to living in Mexico legally.
+          Answer 6 questions to see which residency path you qualify for.
         </p>
         <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
           backgroundColor: '#C4622D',

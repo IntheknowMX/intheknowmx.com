@@ -65,7 +65,6 @@ export default function ResidencyPage() {
         <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
           <a href="/#about" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>About</a>
           <a href="/#services" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Residency</a>
-          <a href="/residency" style={{ color: '#8B1A2A', textDecoration: 'none', fontSize: '14px', fontWeight: '600' }}>Do I Qualify?</a>
           <a href="/#rentals" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Renting</a>
           <a href="/#properties" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Owning</a>
           <a href="/#caretaking" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Property & Pet Care</a>
@@ -92,7 +91,7 @@ export default function ResidencyPage() {
           Mexican Residency, Sorted.
         </h1>
         <p style={{ fontSize: '18px', fontStyle: 'italic', color: '#FDF6F0', maxWidth: '700px', margin: '0 auto 28px', lineHeight: '1.75', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-          Not outsourced. Not handed off. Lisa and her team are with you every step — from your first question to the day you hold your residency card and beyond.
+          Whether you&rsquo;re pursuing temporary or permanent residency, or weighing your options for living here legally, Lisa and her team are with you every step, from your first question to the day you&rsquo;re settled and secure.
         </p>
         <div style={{ width: '48px', height: '2px', backgroundColor: '#D4A017', margin: '0 auto 24px' }} />
         <p style={{ fontSize: '18px', color: '#F5D0D8', maxWidth: '560px', margin: '0 auto 40px', lineHeight: '1.75' }}>

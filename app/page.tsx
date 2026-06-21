@@ -222,7 +222,7 @@ export default function Home() {
           <p className="hero-description">Your person on the ground since 2014.</p>
           <div className="hero-buttons">
             <a className="button-link" style={{ backgroundColor: '#C4622D', color: 'white' }} href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
-            <a className="button-link secondary" href="/residency">See If I Qualify →</a>
+            <a className="button-link secondary" href="/residency">Find Your Residency Path →</a>
           </div>
         </div>
       </section>
@@ -1459,7 +1459,6 @@ export default function Home() {
           <div className="footer-col">
             <h4>RESOURCES</h4>
             <a href="#find-your-path">Find Your Mexico Path</a>
-            <a href="/residency">Do I Qualify?</a>
             <a href="#welcome-table">Welcome Table</a>
             <a href="#why-san-miguel">Why San Miguel</a>
           </div>

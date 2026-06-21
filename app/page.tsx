@@ -141,6 +141,7 @@ export default function Home() {
         .pricing-booking-row { display: flex; gap: 32px; align-items: flex-start; }
         @media (max-width: 767px) {
           .main-nav { padding: 16px 20px; }
+          .nav-right { position: static; }
           .nav-cta { display: none; }
           .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #FDF6F0; box-shadow: 0 8px 24px rgba(44,24,16,.12); flex-direction: column; z-index: 110; border-top: 1px solid #E8A598; }
           .nav-links.open { display: flex; }

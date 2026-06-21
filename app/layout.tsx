@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "In The Know Mexico — San Miguel Insider | Relocation Specialist",
-  description: "Lisa May Cobham is a relocation specialist and San Miguel insider helping Mexico newcomers since 2015.",
+  description: "Lisa May Cobham is a relocation specialist and San Miguel insider helping Mexico newcomers since 2014.",
   verification: {
     google: "NAKCO41-y5bQQr2B7S7jm4h4D4qlXXXqesYG5XPIZwI",
   },

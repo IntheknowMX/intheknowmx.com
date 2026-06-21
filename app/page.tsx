@@ -219,7 +219,7 @@ export default function Home() {
           <p className="lead">SAN MIGUEL DE ALLENDE · MEXICO</p>
           <h1>San Miguel<br /><span>Insider.</span></h1>
           <div style={{ width: '48px', height: '2px', backgroundColor: '#D4A017', marginBottom: '28px' }} />
-          <p className="hero-description">Your person on the ground since 2015.</p>
+          <p className="hero-description">Your person on the ground since 2014.</p>
           <div className="hero-buttons">
             <a className="button-link" style={{ backgroundColor: '#C4622D', color: 'white' }} href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
             <a className="button-link secondary" href="/residency">See If I Qualify →</a>
@@ -388,7 +388,7 @@ export default function Home() {
           <div style={{ flex: 1, minWidth: '300px' }}>
           <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>ABOUT LISA MAY COBHAM</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', lineHeight: '1.2', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            Known here. Trusted here. Since 2015.
+            Known here. Trusted here. Since 2014.
           </h2>
           <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
             I didn't plan to stay. San Miguel charmed me into it. The joy of this city — the light, the people, the pace, the way life actually feels here — made leaving impossible. Eleven years later I am still here, still discovering, and still completely in love with this country.
@@ -1432,7 +1432,7 @@ export default function Home() {
         </div>
         <div style={{ borderTop: '1px solid #2C1810', paddingTop: '24px', marginTop: '24px' }}>
           <p style={{ color: '#FDF6F0', fontSize: '13px', margin: '0' }}>
-            © 2026 In The Know Mexico · Lisa May Cobham, Relocation Specialist · San Miguel de Allende, México · Known here since 2015.
+            © 2026 In The Know Mexico · Lisa May Cobham, Relocation Specialist · San Miguel de Allende, México · Known here since 2014.
           </p>
         </div>
       </footer>

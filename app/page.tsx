@@ -291,7 +291,7 @@ export default function Home() {
             <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
               <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
               <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                "Lisa is a true leader and inspiration to us all. She has a way of traversing through dilemmas with ease… she continues to help me get on the right path towards my expat conquest."
+                &ldquo;Lisa is a true leader and inspiration to us all. She has a way of traversing through dilemmas with ease… she continues to help me get on the right path towards my expat conquest.&rdquo;
               </p>
               <div>
                 <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Cliff Cunningham</p>
@@ -302,17 +302,58 @@ export default function Home() {
             <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
               <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
               <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                "If you're lucky enough to cross paths with Lisa, you'll quickly discover she's one of those rare people who seems to know how to solve just about any problem… In the Know Mexico is more than a service, it's having a trusted friend in your corner. The learning curve of life in Mexico feels a whole lot gentler with Lisa leading the way!"
+                &ldquo;If you&rsquo;re lucky enough to cross paths with Lisa, you&rsquo;ll quickly discover she&rsquo;s one of those rare people who seems to know how to solve just about any problem… In the Know Mexico is more than a service, it&rsquo;s having a trusted friend in your corner. The learning curve of life in Mexico feels a whole lot gentler with Lisa leading the way!&rdquo;
               </p>
               <div>
                 <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Brenda Miles</p>
                 <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
               </div>
             </div>
+
+            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
+              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
+                &ldquo;We highly recommend Lisa! We had one day to find a place to live while moving states. Lisa did an excellent job of uncovering our wants/needs and helped us find a place. Additionally, when negotiating the terms of the lease, she was active in the process and made sure we were comfortable. She is very knowledgeable about San Miguel and helped to ensure a smooth transition.&rdquo;
+              </p>
+              <div>
+                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Kirsten Guisto</p>
+                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
+              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
+                &ldquo;Lisa has the best connections with people and businesses in SMA. She brought my friend and I to a wardrobe stylist and we had the best time. Lisa&rsquo;s energy is contagious, she is definitely the person In the Know Mexico. She has helped me and my husband with banking, travel logistics, pet sitting, computer issues, and more. So helpful to two new expats. She is the best.&rdquo;
+              </p>
+              <div>
+                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Charlotte Randall</p>
+                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
+              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
+                &ldquo;I had the time of my life! Lisa was incredibly knowledgeable and made the entire experience effortless from start to finish. She thought of everything before I even arrived, from what shoes to wear and how much cash to bring for tips, to the best places to view the procession and experience the celebration like a local. Every detail of my itinerary was thoughtfully planned, and I never once felt lost or overwhelmed. This wasn&rsquo;t a tourist checklist, it was a meaningful, immersive experience. If you&rsquo;re considering a Day of the Dead trip, this is the way to experience Mexico. I cannot recommend Lisa highly enough!&rdquo;
+              </p>
+              <div>
+                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Ursula Anne</p>
+                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
+              </div>
+            </div>
           </div>
 
-          {/* CTA */}
-          <div style={{ textAlign: 'center' }}>
+          {/* CTAs */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
+            <a
+              href="https://www.google.com/maps?cid=10161283481168716226"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#8B1A2A', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '16px 40px', fontSize: '15px', fontWeight: '700' }}
+            >
+              Read all our reviews on Google →
+            </a>
             <a
               href="https://g.page/r/CcIhG0V9IQSNEAI/review"
               target="_blank"

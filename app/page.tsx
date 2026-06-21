@@ -379,7 +379,7 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '28px' }}>
             {[
               { emoji: '📍', title: 'Known in San Miguel.', body: '11 years of real relationships — landlords, attorneys, doctors, contractors, household staff, and neighbors. Not a contact list. A community.' },
-              { emoji: '🤝', title: 'Trusted by the community.', body: '500+ five-star reviews. Not because nothing ever goes wrong — but because when it does, Lisa handles it before you have to. She clears the problem. You come home to exactly what you left. Ready to welcome you back to your charmed life in San Miguel.' },
+              { emoji: '🤝', title: 'Trusted by the community.', body: '300+ five-star reviews. Not because nothing ever goes wrong — but because when it does, Lisa handles it before you have to. She clears the problem. You come home to exactly what you left. Ready to welcome you back to your charmed life in San Miguel.' },
               { emoji: '👩🏽', title: 'Lisa shows up. Every time. On time.', body: "Residency coordination. Rental showings. Bureaucratic roadblocks. The technological moments that put your life on hold — blocked SSA accounts, Mexican government portals, health insurance reimbursement, banking, money transfers, online bill pay, booking travel. Whatever stands between you and your Mexico life, Lisa shows up and gets it handled. Eleven years of building a real expat life here means the right doors tend to open." },
             ].map((card) => (
               <div key={card.title} style={{ backgroundColor: 'white', padding: '36px 28px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', boxShadow: '0 2px 12px rgba(44,24,16,0.06)' }}>

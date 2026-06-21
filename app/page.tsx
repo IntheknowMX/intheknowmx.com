@@ -1093,20 +1093,26 @@ export default function Home() {
             {/* Right: Text content */}
             <div style={{ flex: '1 1 300px' }}>
               <p style={{ color: '#E8A598', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>BUY IN SAN MIGUEL</p>
-              <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '28px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
+              <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '12px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
                 Two Perspectives, One Home
               </h2>
+              <p style={{ fontSize: '18px', fontStyle: 'italic', color: '#E8A598', marginBottom: '28px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.4' }}>
+                Dallas meets New York, in the heart of San Miguel.
+              </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
                 When you&rsquo;re buying a home in San Miguel, you&rsquo;re not just making a property decision. You&rsquo;re making a life decision. That&rsquo;s why we work together.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, the #1 ranked luxury brokerage globally. She brings deep market knowledge, access to over 1,000 listings, and strong negotiation expertise. I bring the relocation expertise, a full concierge practice guiding newcomers through residency, healthcare, banking, and daily life in Mexico since 2015. When we look at a home together, I&rsquo;m reading it for how your actual life will function there: the commute, the neighbors, the rhythm of the street, the realities a listing leaves out.
+                She&rsquo;s Dallas, I&rsquo;m New York City. Between us we bring that big-city hustle to the work, and the genuine warmth to make it feel easy. It&rsquo;s a rare combination, and it&rsquo;s why we work so well together.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                We look at every search from two angles at once: what a property is on paper, and what it&rsquo;s like to actually live there. Most people come to us because they want more than listings. They want clarity, about where they&rsquo;ll feel at home, what fits their life, and the decision they&rsquo;re about to make.
+                Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, the #1 ranked luxury brokerage globally. She brings deep market knowledge, access to over 1,000 listings, and strong negotiation expertise. I bring years of building a life abroad, and an eye for how a home will actually fit yours. I can spot when a so-called limitation is really just a lifestyle adjustment, a workaround you&rsquo;ll never think twice about, and when a beautiful listing hides a daily-life problem you&rsquo;d come to regret. The goal isn&rsquo;t the perfect house on paper. It&rsquo;s the right home for how you actually live.
+              </p>
+              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
+                What we share is how we work: honest, calm under pressure, and willing to outwork anyone for our clients. Buying a home in a new country can be a stressful transition, and our job is to help you navigate it with confidence and grace, listening carefully, and looking at every search from two angles at once: what a property is on paper, and what it&rsquo;s like to actually live there.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '36px' }}>
-                Together, we help bring that into focus. A home that works in real life, not just in theory.
+                Most people come to us because they want more than listings. They want clarity, about where they&rsquo;ll feel at home, what fits their life, and the decision they&rsquo;re about to make. Together, we help bring that into focus. A home that works in real life, not just in theory.
               </p>
               <a href="https://www.sanmiguelrealestate.com.mx/properties" target="_blank" rel="noreferrer" style={{
                 display: 'inline-block', backgroundColor: '#C4622D', color: 'white', padding: '14px 36px',

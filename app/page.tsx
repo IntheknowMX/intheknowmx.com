@@ -1177,7 +1177,7 @@ export default function Home() {
                 Your Mexico Life, Maintained.
               </h2>
               <p style={{ fontSize: '17px', color: '#7D3B4E', marginBottom: '28px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-                500+ five-star reviews from people who trusted Lisa with their most precious things while they were away.
+                300+ five-star reviews from people who trusted Lisa with their most precious things while they were away.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
                 Pipes burst. Power goes out. Staff doesn't show. These things happen — even in the most

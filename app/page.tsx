@@ -1103,16 +1103,19 @@ export default function Home() {
                 When you&rsquo;re buying a home in San Miguel, you&rsquo;re not just making a property decision. You&rsquo;re making a life decision. That&rsquo;s why we work together.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                She&rsquo;s Dallas, I&rsquo;m New York City. Between us we bring that big-city hustle to the work, and the genuine warmth to make it feel easy. It&rsquo;s a rare combination, and it&rsquo;s why we work so well together.
+                She&rsquo;s Dallas. I&rsquo;m New York. Different styles, same work ethic. Between us, we bring big-city hustle, strong intuition, and a shared commitment to helping clients make confident decisions.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, the #1 ranked luxury brokerage globally. She brings deep market knowledge, access to over 1,000 listings, and strong negotiation expertise. I bring years of building a life abroad, and an eye for how a home will actually fit yours. I can spot when a so-called limitation is really just a lifestyle adjustment, a workaround you&rsquo;ll never think twice about, and when a beautiful listing hides a daily-life problem you&rsquo;d come to regret. The goal isn&rsquo;t the perfect house on paper. It&rsquo;s the right home for how you actually live.
+                Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, the #1 ranked luxury brokerage globally. She brings deep market knowledge, access to more than 1,000 listings, and strong negotiation expertise. I bring more than 12 years of experience helping people build a life abroad, along with an eye for how a home will actually fit someone&rsquo;s lifestyle. The goal isn&rsquo;t the perfect house on paper. It&rsquo;s finding the right home for how you actually live.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                What we share is how we work: honest, calm under pressure, and willing to outwork anyone for our clients. Buying a home in a new country can be a stressful transition, and our job is to help you navigate it with confidence and grace, listening carefully, and looking at every search from two angles at once: what a property is on paper, and what it&rsquo;s like to actually live there.
+                What we share is how we show up for our clients: honest, calm under pressure, and willing to do the work. Between us, we bring decades of experience in luxury retail, client service, executive support, and relationship-driven sales. Buying a home in a new country can feel overwhelming. Our role is to help you navigate it with clarity and confidence, looking at every search from two angles at once: what a property is on paper, and what it&rsquo;s like to actually live there.
+              </p>
+              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
+                Most people come to us because they want clarity, about where they&rsquo;ll feel at home, what fits their lifestyle, and the decision they&rsquo;re about to make. Together, we help bring that into focus.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '36px' }}>
-                Most people come to us because they want more than listings. They want clarity, about where they&rsquo;ll feel at home, what fits their life, and the decision they&rsquo;re about to make. Together, we help bring that into focus. A home that works in real life, not just in theory.
+                A home that works in real life, not just in theory.
               </p>
               <a href="https://www.sanmiguelrealestate.com.mx/properties" target="_blank" rel="noreferrer" style={{
                 display: 'inline-block', backgroundColor: '#C4622D', color: 'white', padding: '14px 36px',

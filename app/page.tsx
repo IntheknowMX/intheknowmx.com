@@ -1024,7 +1024,7 @@ export default function Home() {
 
           {/* Showing Day Packages */}
           <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>
-            Property Showing Day Packages
+            The Rental Discovery Day
           </h3>
 
           <div style={{ marginBottom: '20px' }}>
@@ -1033,23 +1033,28 @@ export default function Home() {
 
               {/* Left: pricing details */}
               <div style={{ flex: '1 1 260px' }}>
-                <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Rental Showing Day</h4>
-                <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '4px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$150</p>
-                <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL AGENT · FULL DAY</p>
+                <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Rental Discovery Day</h4>
+                <div style={{ marginBottom: '4px' }}>
+                  <span style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$3,500 MXN</span>
+                  <span style={{ fontSize: '15px', color: '#7D3B4E', marginLeft: '10px', fontWeight: '600' }}>(~$190 USD)</span>
+                </div>
+                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 8px', lineHeight: '1.6' }}>+ processing fees. Card payments add a processing fee at checkout. Fee-free payment (Zelle) available, just ask.</p>
+                <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL ADVOCATE · FULL DAY</p>
                 <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '0' }}>
-                  <li>4 property showings, pre-curated to your needs</li>
-                  <li>Private driver for the full day</li>
-                  <li>Personal escort, translation & negotiation support</li>
+                  <li>A full day of my time, expertise, and advocacy</li>
+                  <li>Around four properties, pre-curated to your needs and approved by you in advance</li>
+                  <li>Private driver for the full day (no cabs, no meeting on a street corner, I come to you)</li>
+                  <li>Personal escort, translation, and negotiation throughout</li>
                   <li>Lease review included</li>
-                  <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Lease signed? 2 free hours of newcomer concierge support</li>
+                  <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Keep searching beyond the day? This day credits toward a longer search together.</li>
                 </ul>
-                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 6px', lineHeight: '1.6' }}>1 free reschedule available</p>
-                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>No refunds within 48 hours of showing day.</p>
+                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 6px', lineHeight: '1.6' }}>Reschedule once free, or cancel for a full refund, with 48 hours&#39; notice.</p>
+                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>Within 48 hours, the fee is non-refundable, as the driver and showings are confirmed.</p>
                 <div style={{ height: '16px' }} />
-                <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
+                <a href="https://buy.stripe.com/8x2fZh8jq6bsb8Y5zG2880z" target="_blank" style={{
                   backgroundColor: '#C4622D', color: 'white', padding: '12px 24px',
                   borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold', display: 'inline-block'
-                }}>Book This Package →</a>
+                }}>Reserve Your Rental Discovery Day &#8594;</a>
               </div>
 
               {/* Right: client success photo */}
@@ -1086,9 +1091,7 @@ export default function Home() {
               My Commitment to You — in Writing
             </h3>
             <p style={{ fontSize: '15px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '0' }}>
-              Every rental client receives a personal agent agreement outlining exactly what I will research,
-              verify, and deliver on your behalf — before showing day. No surprises, no shortcuts.
-              You deserve to know what you're getting. <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#E8A598', fontWeight: 'bold' }}>Book a call to receive yours.</a>
+              Other agents will show you rentals for free. But a free agent answers to the commission, which means they can rush you toward a quick signature, or quietly lose interest if you&#39;re not ready to commit today. When you hire me, you&#39;re paying for something different: my complete loyalty. I work for you. I don&#39;t politic. I advocate, fully, for what you actually need. That commitment is in writing. Every rental client receives a written agreement outlining exactly what I will research, verify, and deliver on your behalf, before your day. No surprises, no shortcuts. <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ color: '#E8A598', fontWeight: 'bold' }}>Book a call to receive yours.</a>
             </p>
           </div>
 

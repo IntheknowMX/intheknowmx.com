@@ -1042,13 +1042,14 @@ export default function Home() {
                 <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL ADVOCATE · FULL DAY</p>
                 <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '0' }}>
                   <li>A full day of my time, expertise, and advocacy</li>
-                  <li>Around four properties, pre-curated to your needs and approved by you in advance</li>
+                  <li>Up to four properties, pre-curated to your needs and approved by you in advance</li>
                   <li>Private driver for the full day (no cabs, no meeting on a street corner, I come to you)</li>
                   <li>Personal escort, translation, and negotiation throughout</li>
                   <li>Lease review included</li>
-                  <li style={{ color: '#7D3B4E', fontWeight: '700' }}>Keep searching beyond the day? This day credits toward a longer search together.</li>
                 </ul>
-                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 6px', lineHeight: '1.6' }}>Reschedule once free, or cancel for a full refund, with 48 hours&#39; notice.</p>
+                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 4px', lineHeight: '1.6' }}>For rental budgets up to 22,000 MXN/month: this is a non-refundable day fee.</p>
+                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 12px', lineHeight: '1.6' }}>For rental budgets over 22,000 MXN/month: this is a deposit, fully refunded when you sign a lease for that rental.</p>
+                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 6px', lineHeight: '1.6' }}>Reschedule once free with at least 48 hours&#39; notice.</p>
                 <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>Within 48 hours, the fee is non-refundable, as the driver and showings are confirmed.</p>
                 <div style={{ height: '16px' }} />
                 <a href="https://buy.stripe.com/8x2fZh8jq6bsb8Y5zG2880z" target="_blank" style={{

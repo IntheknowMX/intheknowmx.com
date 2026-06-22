@@ -501,7 +501,7 @@ export default function Home() {
               <div key={card.title} style={{ backgroundColor: 'white', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 12px rgba(44,24,16,0.07)' }}>
                 <div style={{ fontSize: '34px', marginBottom: '14px' }}>{card.emoji}</div>
                 <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>{card.title}</h3>
-                {card.priceTag && <p style={{ fontSize: '20px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.priceTag}</p>}
+                {card.priceTag && <div style={{ marginBottom: '8px' }}><p style={{ fontSize: '15px', fontWeight: '700', color: '#8B1A2A', margin: '0 0 2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.priceTag}</p><p style={{ fontSize: '12px', color: '#A08878', margin: '0' }}>&#8776; $90 USD</p></div>}
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>{card.subtitle}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>{card.body}</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
@@ -548,7 +548,7 @@ export default function Home() {
             {/* Card 1 — Virtual Guidance */}
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
               <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Virtual Guidance</h3>
-              <p style={{ fontSize: '20px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$6,000 MXN</p>
+              <div style={{ marginBottom: '8px' }}><p style={{ fontSize: '15px', fontWeight: '700', color: '#8B1A2A', margin: '0 0 2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$6,000 MXN</p><p style={{ fontSize: '12px', color: '#A08878', margin: '0' }}>&#8776; $345 USD</p></div>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything you need — with expert backup.</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
                 <li>Professional document review</li>
@@ -567,7 +567,7 @@ export default function Home() {
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', border: '2px solid #C4622D', position: 'relative', display: 'flex', flexDirection: 'column' }}>
               <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST POPULAR</p>
               <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>On the Ground Facilitation</h3>
-              <p style={{ fontSize: '20px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$14,000 MXN</p>
+              <div style={{ marginBottom: '8px' }}><p style={{ fontSize: '15px', fontWeight: '700', color: '#8B1A2A', margin: '0 0 2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$14,000 MXN</p><p style={{ fontSize: '12px', color: '#A08878', margin: '0' }}>&#8776; $810 USD</p></div>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything in Virtual Guidance — plus an experienced INM facilitator on the ground with you.</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
                 <li>All document preparation and review</li>
@@ -757,13 +757,13 @@ export default function Home() {
                 <div style={{ flex: 1 }}>
                   <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Pricing</h3>
                   <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '14px', lineHeight: '1.5' }}>
-                    Hourly — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$650 MXN/hour</span> &nbsp;·&nbsp; No minimum
+                    Hourly — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$650 MXN/hour</span> &nbsp;·&nbsp; No minimum<span style={{ fontSize: '12px', color: '#A08878', fontWeight: '400', display: 'block', marginTop: '2px' }}>&#8776; $38 USD</span>
                   </div>
                   <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '20px 0 12px' }}>Monthly Retainers:</p>
                   <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '20px' }}>
-                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Starter — 8 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$4,500 MXN</span></div>
-                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Standard — 16 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$8,500 MXN</span></div>
-                    <div style={{ lineHeight: '1.5' }}>Full Support — 24 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$12,500 MXN</span></div>
+                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Starter — 8 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$4,500 MXN</span><span style={{ fontSize: '12px', color: '#A08878', fontWeight: '400', display: 'block', marginTop: '2px' }}>&#8776; $260 USD</span></div>
+                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Standard — 16 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$8,500 MXN</span><span style={{ fontSize: '12px', color: '#A08878', fontWeight: '400', display: 'block', marginTop: '2px' }}>&#8776; $490 USD</span></div>
+                    <div style={{ lineHeight: '1.5' }}>Full Support — 24 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$12,500 MXN</span><span style={{ fontSize: '12px', color: '#A08878', fontWeight: '400', display: 'block', marginTop: '2px' }}>&#8776; $720 USD</span></div>
                   </div>
                   <p style={{ fontSize: '14px', lineHeight: '1.75', color: '#2C1810', marginBottom: '10px' }}>
                     <strong>Includes:</strong> all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.
@@ -1036,7 +1036,7 @@ export default function Home() {
                 <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Rental Discovery Day</h4>
                 <div style={{ marginBottom: '4px' }}>
                   <span style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$3,500 MXN</span>
-                  <span style={{ fontSize: '15px', color: '#7D3B4E', marginLeft: '10px', fontWeight: '600' }}>(~$190 USD)</span>
+                  <span style={{ fontSize: '15px', color: '#7D3B4E', marginLeft: '10px', fontWeight: '600' }}>&#8776; $200 USD</span>
                 </div>
                 <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 8px', lineHeight: '1.6' }}>+ processing fees. Card payments add a processing fee at checkout. Fee-free payment (Zelle) available, just ask.</p>
                 <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL ADVOCATE · FULL DAY</p>

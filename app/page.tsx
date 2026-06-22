@@ -479,7 +479,7 @@ export default function Home() {
                 subtitle: 'Everything in your head about Mexico — sorted.',
                 body: "You'll complete a brief pre-call questionnaire so we arrive prepared and nothing gets missed. In our one-hour conversation we map your housing, residency, budget, timeline, pets, furniture, remote income, healthcare, and your personal next steps. Within 48 hours you receive a written summary of our call, specific answers to every question you raised, any additional resources I promised, and a timeline. You don't just leave with clarity — you leave with a document that becomes your Mexico roadmap.",
                 closing: 'You will know exactly what your next step is.',
-                priceTag: '$89',
+                priceTag: '$1,600 MXN',
               },
               {
                 emoji: '📋',
@@ -487,7 +487,7 @@ export default function Home() {
                 subtitle: "You've been talking about Mexico for years. Let's turn that into a real outline.",
                 body: "This call is for the serious dreamer who needs structure. Together we build a step-by-step action plan — what to do first, what to do next, and what can wait. We identify the gaps between where you are now and where you want to be, and we close them one by one. We cover the practical questions you've been putting off — housing options, neighborhood fit, budget reality, income sources, healthcare access, and what moving actually looks like for your specific life. Nothing vague. Nothing generic. A real plan built around your real situation. You've done the dreaming. This is where the doing begins.",
                 closing: "Dreams don't move you to Mexico. Plans do.",
-                priceTag: '$89',
+                priceTag: '$1,600 MXN',
               },
               {
                 emoji: '💛',
@@ -495,7 +495,7 @@ export default function Home() {
                 subtitle: 'Sometimes the only thing standing between you and the life you want is fear.',
                 body: "The plan is ready, but you're not, and that's worth taking seriously. Whatever's holding you back, whether money, timing, or the quiet fear you haven't said out loud, we talk it through honestly.",
                 closing: "You don't need to have it all figured out. You simply need a brainstorming session.",
-                priceTag: '$89',
+                priceTag: '$1,600 MXN',
               },
             ].map((card) => (
               <div key={card.title} style={{ backgroundColor: 'white', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column', boxShadow: '0 2px 12px rgba(44,24,16,0.07)' }}>
@@ -548,7 +548,7 @@ export default function Home() {
             {/* Card 1 — Virtual Guidance */}
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
               <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Virtual Guidance</h3>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$335</p>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$6,000 MXN</p>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything you need — with expert backup.</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
                 <li>Professional document review</li>
@@ -567,7 +567,7 @@ export default function Home() {
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', border: '2px solid #C4622D', position: 'relative', display: 'flex', flexDirection: 'column' }}>
               <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST POPULAR</p>
               <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>On the Ground Facilitation</h3>
-              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$779</p>
+              <p style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', marginBottom: '8px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$14,000 MXN</p>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything in Virtual Guidance — plus an experienced INM facilitator on the ground with you.</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
                 <li>All document preparation and review</li>
@@ -757,13 +757,13 @@ export default function Home() {
                 <div style={{ flex: 1 }}>
                   <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Pricing</h3>
                   <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '14px', lineHeight: '1.5' }}>
-                    Hourly — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$35/hour</span> &nbsp;·&nbsp; No minimum
+                    Hourly — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$650 MXN/hour</span> &nbsp;·&nbsp; No minimum
                   </div>
                   <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '20px 0 12px' }}>Monthly Retainers:</p>
                   <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '20px' }}>
-                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Starter — 8 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$250</span></div>
-                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Standard — 16 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$480</span></div>
-                    <div style={{ lineHeight: '1.5' }}>Full Support — 24 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$700</span></div>
+                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Starter — 8 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$4,500 MXN</span></div>
+                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Standard — 16 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$8,500 MXN</span></div>
+                    <div style={{ lineHeight: '1.5' }}>Full Support — 24 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$12,500 MXN</span></div>
                   </div>
                   <p style={{ fontSize: '14px', lineHeight: '1.75', color: '#2C1810', marginBottom: '10px' }}>
                     <strong>Includes:</strong> all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.

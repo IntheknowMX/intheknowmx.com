@@ -195,9 +195,9 @@ export default function Home() {
             <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Home & Pet</a>
             <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
             <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
-            <a className="mobile-menu-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" onClick={() => setMobileMenuOpen(false)}>Book a Planning Call</a>
+            <a className="mobile-menu-cta" href="#planning-calls" onClick={() => setMobileMenuOpen(false)}>Book a Planning Call</a>
           </div>
-          <a className="button-link nav-cta" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
+          <a className="button-link nav-cta" href="#planning-calls">Book a Planning Call</a>
         </div>
       </nav>
 
@@ -221,7 +221,7 @@ export default function Home() {
           <div style={{ width: '48px', height: '2px', backgroundColor: '#D4A017', marginBottom: '28px' }} />
           <p className="hero-description">Your person on the ground since 2014.</p>
           <div className="hero-buttons">
-            <a className="button-link" style={{ backgroundColor: '#C4622D', color: 'white' }} href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
+            <a className="button-link" style={{ backgroundColor: '#C4622D', color: 'white' }} href="#planning-calls">Book a Planning Call</a>
             <a className="button-link secondary" href="/residency">Find Your Residency Path →</a>
           </div>
         </div>
@@ -984,7 +984,7 @@ export default function Home() {
             Not sure which neighborhood is right for you? That is exactly what a strategy session is for.
           </p>
           <div style={{ textAlign: 'center' }}>
-            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{ backgroundColor: '#C4622D', color: 'white', padding: '16px 40px', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>✦ Book a Planning Call</a>
+            <a href="#planning-calls" style={{ backgroundColor: '#C4622D', color: 'white', padding: '16px 40px', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>✦ Book a Planning Call</a>
           </div>
         </div>
       </section>
@@ -1420,7 +1420,7 @@ export default function Home() {
         <p style={{ color: '#F5E0E6', fontSize: '18px', maxWidth: '520px', margin: '0 auto 48px', lineHeight: '1.75' }}>
           And so is the person who will help you build it. Book a strategy session and let's map your Mexico — together.
         </p>
-        <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
+        <a className="button-link" href="#planning-calls" style={{
           backgroundColor: '#C4622D',
           color: 'white',
           borderRadius: '4px',
@@ -1458,7 +1458,7 @@ export default function Home() {
             <a href="#services">The Relocation Planning Call</a>
             <a href="#services">From Dream to Action Plan</a>
             <a href="#services">Moving Past Hesitation</a>
-            <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank">Book a Planning Call</a>
+            <a href="#planning-calls">Book a Planning Call</a>
           </div>
           <div className="footer-col">
             <h4>RESOURCES</h4>

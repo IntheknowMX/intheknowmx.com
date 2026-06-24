@@ -125,7 +125,7 @@ export default function ResidencyPage() {
             {/* Tier 1 — Virtual Guidance */}
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
               <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Virtual Guidance</h3>
-              <div style={{ marginBottom: '8px' }}><p style={{ fontSize: '15px', fontWeight: '700', color: '#8B1A2A', margin: '0 0 2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$6,000 MXN</p><p style={{ fontSize: '12px', color: '#A08878', margin: '0' }}>&#8776; $345 USD</p></div>
+              <div style={{ marginBottom: '8px' }}><p style={{ fontSize: '11px', fontWeight: '700', color: '#8B1A2A', margin: '0 0 2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$6,000 MXN</p><p style={{ fontSize: '10px', color: '#A08878', margin: '0' }}>&#8776; $345 USD</p></div>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything you need — with expert backup.</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
                 <li>Professional document review</li>
@@ -156,7 +156,7 @@ export default function ResidencyPage() {
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', border: '2px solid #C4622D', position: 'relative', display: 'flex', flexDirection: 'column' }}>
               <p style={{ position: 'absolute', top: '-13px', left: '28px', fontSize: '11px', backgroundColor: '#C4622D', color: 'white', padding: '4px 14px', borderRadius: '20px', fontWeight: '700', letterSpacing: '1px', margin: 0 }}>MOST POPULAR</p>
               <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>On the Ground Facilitation</h3>
-              <div style={{ marginBottom: '8px' }}><p style={{ fontSize: '15px', fontWeight: '700', color: '#8B1A2A', margin: '0 0 2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$14,000 MXN</p><p style={{ fontSize: '12px', color: '#A08878', margin: '0' }}>&#8776; $810 USD</p></div>
+              <div style={{ marginBottom: '8px' }}><p style={{ fontSize: '11px', fontWeight: '700', color: '#8B1A2A', margin: '0 0 2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$14,000 MXN</p><p style={{ fontSize: '10px', color: '#A08878', margin: '0' }}>&#8776; $810 USD</p></div>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Everything in Virtual Guidance — plus an experienced INM facilitator on the ground with you.</p>
               <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '24px', flex: 1 }}>
                 <li>All document preparation and review</li>

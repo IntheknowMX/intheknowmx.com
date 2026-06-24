@@ -1096,20 +1096,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* MLS Link */}
-          <div style={{ textAlign: 'center', padding: '40px', backgroundColor: '#FAE8E0', borderRadius: '8px' }}>
-            <p style={{ fontSize: '13px', color: '#7D3B4E', letterSpacing: '3px', marginBottom: '12px', fontWeight: '600' }}>BROWSE AVAILABLE RENTALS</p>
-            <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px' }}>
-              View San Miguel Rental Listings
-            </h3>
-            <p style={{ fontSize: '15px', color: '#2C1810', marginBottom: '24px', lineHeight: '1.7', maxWidth: '560px', margin: '0 auto 24px' }}>
-              In partnership with Tiffany Paige of The Agency San Miguel — access to the full rental market in one place.
-            </p>
-            <a href="https://sanmiguelrealestate.com.mx/san-miguel-mls-real-estate-listings" target="_blank" style={{
-              backgroundColor: '#C4622D', color: 'white', padding: '14px 36px',
-              borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block'
-            }}>Browse Rental Listings →</a>
-          </div>
         </div>
       </section>
 

@@ -155,7 +155,7 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
           </button>
           {policyExpanded && (
             <p style={{ fontSize: '13px', color: '#FDF6F0', margin: '10px 0 0', lineHeight: '1.7' }}>
-              Full payment is required to confirm your booking. You will receive a confirmation email with your intake questionnaire within 24 hours of payment. Please complete it before your session so we arrive fully prepared. Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations made less than 48 hours before your session are non-refundable, and no-shows forfeit the full session fee. Rescheduling is welcome with 48 hours&#39; notice, one free reschedule per booking.
+              Full payment is required to confirm your booking. You will receive a confirmation email with your intake questionnaire within 24 hours of payment. Please complete it before your session so we arrive fully prepared. Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations made less than 48 hours before your session are non-refundable, and no-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice, one free reschedule per booking.
             </p>
           )}
           <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginTop: '14px' }}>

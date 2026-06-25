@@ -19,8 +19,8 @@ const STRIPE_LINKS: Record<string, string> = {
   'From Dream to Action Plan': 'https://buy.stripe.com/00w28r43a6bsdh65zG2880B',
   'Moving Past Hesitation': 'https://buy.stripe.com/fZu9ATczGdDU2Csgek2880C',
   'Rental Showing Day': 'https://buy.stripe.com/14A8wPgPWeHYcd26DK2880m',
-  'Virtual Guidance': 'https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n',
-  'On the Ground Facilitation': 'https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o',
+  'Virtual Guidance': 'https://buy.stripe.com/5kQbJ18jq8jAdh6gek2880O',
+  'On the Ground Facilitation': 'https://buy.stripe.com/9B63cv57edDU2Csfag2880P',
 }
 
 const PAYPAL_LINKS: Record<string, string> = {
@@ -252,8 +252,8 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
                   ) : (
                     <div>
                       <p style={{ marginBottom: '8px' }}>💳 Stripe — +3% fee</p>
-                      <p style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href="https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n" target="_blank" rel="noreferrer" style={gatedLink}>Virtual Guidance $335</a></p>
-                      <p style={{ marginBottom: '0', paddingLeft: '24px' }}>→ <a href="https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o" target="_blank" rel="noreferrer" style={gatedLink}>On the Ground Facilitation $779</a></p>
+                      <p style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href="https://buy.stripe.com/5kQbJ18jq8jAdh6gek2880O" target="_blank" rel="noreferrer" style={gatedLink}>Virtual Guidance $335</a></p>
+                      <p style={{ marginBottom: '0', paddingLeft: '24px' }}>→ <a href="https://buy.stripe.com/9B63cv57edDU2Csfag2880P" target="_blank" rel="noreferrer" style={gatedLink}>On the Ground Facilitation $779</a></p>
                     </div>
                   )}
                 </div>

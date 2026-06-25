@@ -9,9 +9,6 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [paymentModalOpen, setPaymentModalOpen] = useState(false)
   const [selectedService, setSelectedService] = useState('')
-  const [contactFormState, setContactFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
-  const [contactFormData, setContactFormData] = useState({ name: '', email: '', whatsapp: '', caseType: '', description: '' })
-
   const handlePayNow = (service: string) => {
     setSelectedService(service)
     setPaymentModalOpen(true)
@@ -20,30 +17,6 @@ export default function Home() {
   const closePaymentModal = () => {
     setPaymentModalOpen(false)
     setSelectedService('')
-  }
-
-  const handleContactFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setContactFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
-  }
-
-  const handleContactFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setContactFormState('submitting')
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(contactFormData),
-      })
-      if (res.ok) {
-        setContactFormState('success')
-        setContactFormData({ name: '', email: '', whatsapp: '', caseType: '', description: '' })
-      } else {
-        setContactFormState('error')
-      }
-    } catch {
-      setContactFormState('error')
-    }
   }
 
   const renderCardActions = (service: string, href: string) => (
@@ -558,7 +531,7 @@ export default function Home() {
                 <li>Follow-up email with action steps</li>
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                <a href="https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
+                <a href="https://buy.stripe.com/5kQbJ18jq8jAdh6gek2880O" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
                 <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>
@@ -577,7 +550,7 @@ export default function Home() {
                 <li>Final paperwork preparation</li>
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                <a href="https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
+                <a href="https://buy.stripe.com/9B63cv57edDU2Csfag2880P" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
                 <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>
@@ -587,35 +560,14 @@ export default function Home() {
               <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Other Residency Services</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Renewals · Address changes · Business permits · Work permits</p>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '20px' }}>
-                Submit your situation using the form below and we'll be in touch within 48 hours.
+                Email Lisa to describe your situation and we'll be in touch within 48 hours.
               </p>
-              {contactFormState === 'success' ? (
-                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '24px 0' }}>
-                  <p style={{ fontSize: '28px', marginBottom: '12px' }}>✓</p>
-                  <p style={{ fontSize: '18px', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px', fontWeight: 'normal' }}>Received.</p>
-                  <p style={{ fontSize: '14px', color: '#5C3A2E' }}>We'll be in touch within 48 hours.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleContactFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px', flex: 1 }}>
-                  <input type="text" name="name" required placeholder="Your name *" value={contactFormData.name} onChange={handleContactFormChange} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit' }} />
-                  <input type="email" name="email" required placeholder="Your email *" value={contactFormData.email} onChange={handleContactFormChange} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit' }} />
-                  <input type="tel" name="whatsapp" placeholder="WhatsApp number" value={contactFormData.whatsapp} onChange={handleContactFormChange} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit' }} />
-                  <select name="caseType" required value={contactFormData.caseType} onChange={handleContactFormChange} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit', backgroundColor: 'white' }}>
-                    <option value="">Type of case *</option>
-                    <option value="Residency Renewal">Residency Renewal</option>
-                    <option value="Address Change">Address Change</option>
-                    <option value="Business Permit">Business Permit</option>
-                    <option value="Work Permit">Work Permit</option>
-                    <option value="Heritage Citizenship">Heritage Citizenship</option>
-                    <option value="Other type of case">Other type of case</option>
-                  </select>
-                  <textarea name="description" required placeholder="Brief description of your situation *" value={contactFormData.description} onChange={handleContactFormChange} rows={4} style={{ padding: '10px 14px', borderRadius: '6px', border: '1px solid #E8A598', fontSize: '14px', color: '#2C1810', fontFamily: 'inherit', resize: 'vertical' }} />
-                  {contactFormState === 'error' && <p style={{ fontSize: '13px', color: '#8B1A2A', margin: 0 }}>Something went wrong. Please try again or message Lisa on WhatsApp.</p>}
-                  <button type="submit" disabled={contactFormState === 'submitting'} style={{ backgroundColor: contactFormState === 'submitting' ? '#7D3B4E' : '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: contactFormState === 'submitting' ? 'default' : 'pointer' }}>
-                    {contactFormState === 'submitting' ? 'Sending...' : 'Submit Your Case'}
-                  </button>
-                </form>
-              )}
+              <a
+                href="mailto:lisa@intheknowmx.com?subject=Complex%20Residency%20Case%20Inquiry"
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}
+              >
+                Email Lisa
+              </a>
             </div>
 
           </div>

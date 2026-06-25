@@ -1,50 +1,8 @@
 'use client'
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from 'react'
 import ResidencyChecker from '../components/ResidencyChecker'
 
 export default function ResidencyPage() {
-  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
-  const [formData, setFormData] = useState({
-    name: '', email: '', whatsapp: '', caseType: '', description: '',
-  })
-
-  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
-  }
-
-  const handleFormSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setFormState('submitting')
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-      if (res.ok) {
-        setFormState('success')
-        setFormData({ name: '', email: '', whatsapp: '', caseType: '', description: '' })
-      } else {
-        setFormState('error')
-      }
-    } catch {
-      setFormState('error')
-    }
-  }
-
-  const inputStyle: React.CSSProperties = {
-    width: '100%',
-    padding: '12px 16px',
-    borderRadius: '6px',
-    border: '1px solid #E8A598',
-    fontSize: '15px',
-    color: '#2C1810',
-    backgroundColor: 'white',
-    boxSizing: 'border-box',
-    fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)",
-  }
-
   return (
     <main style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
       {/* Navigation */}
@@ -136,7 +94,7 @@ export default function ResidencyPage() {
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
                 <a
-                  href="https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n"
+                  href="https://buy.stripe.com/5kQbJ18jq8jAdh6gek2880O"
                   target="_blank"
                   rel="noreferrer"
                   style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}
@@ -167,7 +125,7 @@ export default function ResidencyPage() {
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
                 <a
-                  href="https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o"
+                  href="https://buy.stripe.com/9B63cv57edDU2Csfag2880P"
                   target="_blank"
                   rel="noreferrer"
                   style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}
@@ -188,13 +146,13 @@ export default function ResidencyPage() {
               <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Complex Cases — Get a Quote</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Renewals · Address changes · Business permits · Work permits</p>
               <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '24px', flex: 1 }}>
-                Submit your situation using the form below and we will be in touch within 48 hours.
+                Email Lisa to describe your situation and we will be in touch within 48 hours.
               </p>
               <a
-                href="#contact-form"
+                href="mailto:lisa@intheknowmx.com?subject=Complex%20Residency%20Case%20Inquiry"
                 style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
               >
-                Submit Your Case
+                Email Lisa
               </a>
             </div>
 
@@ -206,117 +164,6 @@ export default function ResidencyPage() {
               <strong style={{ color: '#8B1A2A' }}>Important:</strong> Government immigration filing fees are additional and vary by case. Rates above apply to straightforward temporary or permanent residency applications. We are not responsible for changes in immigration policies or processing times. Complex cases are quoted separately.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Contact Form — Complex Cases */}
-      <section id="contact-form" style={{ backgroundColor: '#2C1810', padding: '80px 40px' }}>
-        <div style={{ maxWidth: '640px', margin: '0 auto' }}>
-          <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>COMPLEX CASES</p>
-          <h2 style={{ fontSize: '36px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px', textAlign: 'center', lineHeight: '1.2' }}>
-            Tell us about your situation.
-          </h2>
-          <p style={{ fontSize: '16px', color: '#E8A598', textAlign: 'center', marginBottom: '40px', lineHeight: '1.7' }}>
-            We review every submission personally and respond within 48 hours.
-          </p>
-
-          {formState === 'success' ? (
-            <div style={{ backgroundColor: '#1A0E09', border: '1px solid #D4A017', borderRadius: '8px', padding: '40px', textAlign: 'center' }}>
-              <p style={{ fontSize: '32px', marginBottom: '16px' }}>✓</p>
-              <h3 style={{ fontSize: '22px', color: '#D4A017', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '12px', fontWeight: 'normal' }}>Received.</h3>
-              <p style={{ color: '#E8A598', fontSize: '15px', lineHeight: '1.7' }}>We'll be in touch within 48 hours.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleFormSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-              <div>
-                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>NAME *</label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  value={formData.name}
-                  onChange={handleFormChange}
-                  placeholder="Your full name"
-                  style={inputStyle}
-                />
-              </div>
-              <div>
-                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>EMAIL *</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  value={formData.email}
-                  onChange={handleFormChange}
-                  placeholder="your@email.com"
-                  style={inputStyle}
-                />
-              </div>
-              <div>
-                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>WHATSAPP NUMBER</label>
-                <input
-                  type="tel"
-                  name="whatsapp"
-                  value={formData.whatsapp}
-                  onChange={handleFormChange}
-                  placeholder="+1 555 000 0000"
-                  style={inputStyle}
-                />
-              </div>
-              <div>
-                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>TYPE OF CASE *</label>
-                <select
-                  name="caseType"
-                  required
-                  value={formData.caseType}
-                  onChange={handleFormChange}
-                  style={inputStyle}
-                >
-                  <option value="">Select your situation</option>
-                  <option value="Residency Renewal">Residency Renewal</option>
-                  <option value="Address Change">Address Change</option>
-                  <option value="Business Permit">Business Permit</option>
-                  <option value="Work Permit">Work Permit</option>
-                  <option value="Heritage Citizenship">Heritage Citizenship</option>
-                  <option value="Other Complex Case">Other Complex Case</option>
-                </select>
-              </div>
-              <div>
-                <label style={{ display: 'block', color: '#E8A598', fontSize: '13px', fontWeight: '600', letterSpacing: '1px', marginBottom: '8px' }}>BRIEF DESCRIPTION OF YOUR SITUATION *</label>
-                <textarea
-                  name="description"
-                  required
-                  value={formData.description}
-                  onChange={handleFormChange}
-                  placeholder="Tell us about your situation, timeline, and any relevant history..."
-                  rows={5}
-                  style={{ ...inputStyle, resize: 'vertical' }}
-                />
-              </div>
-              {formState === 'error' && (
-                <p style={{ color: '#E8A598', fontSize: '14px', margin: 0 }}>
-                  Something went wrong. Please try again or message Lisa directly on WhatsApp.
-                </p>
-              )}
-              <button
-                type="submit"
-                disabled={formState === 'submitting'}
-                style={{
-                  backgroundColor: formState === 'submitting' ? '#7D3B4E' : '#C4622D',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '6px',
-                  padding: '16px 32px',
-                  fontSize: '15px',
-                  fontWeight: 700,
-                  cursor: formState === 'submitting' ? 'default' : 'pointer',
-                  transition: 'background-color 0.2s',
-                }}
-              >
-                {formState === 'submitting' ? 'Sending…' : 'Submit Your Case →'}
-              </button>
-            </form>
-          )}
         </div>
       </section>
 

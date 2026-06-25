@@ -88,7 +88,7 @@ export default function Home() {
     <main className="page-root" style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
       <PaymentModal open={paymentModalOpen} onClose={closePaymentModal} service={selectedService} />
       <style>{`
-        .page-root { overflow-x: hidden; }
+        .page-root { }
         .main-nav { background-color: #FDF6F0; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E8A598; position: sticky; top: 0; z-index: 100; }
         .nav-brand { font-size: 18px; font-weight: bold; color: #7D3B4E; letter-spacing: 2px; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }
         .nav-right { display: flex; align-items: center; gap: 20px; position: relative; }

@@ -1268,37 +1268,40 @@ export default function Home() {
 
       {/* Welcome Table */}
       <section id="welcome-table" className="responsive-section" style={{ backgroundColor: '#E8A598' }}>
-        <div className="content-wrapper button-row" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>COMMUNITY</p>
-          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            The Welcome Table
-          </h2>
-          <p style={{ fontSize: '18px', lineHeight: '1.85', color: '#2C1810', maxWidth: '700px', margin: '0 auto 20px' }}>
-            Not sure where to start? That's exactly what The Welcome Table is for.
-          </p>
-          <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#5C2A35', maxWidth: '680px', margin: '0 auto 40px' }}>
-            In partnership with <strong>Tiffany Paige of The Agency San Miguel</strong>, The Welcome Table
-            is a free, no-pressure Saturday morning gathering for Mexico newcomers and anyone curious
-            about life here. Come with your questions — leave with real answers and real connections.
-            Every Saturday 10am–1pm at The Agency, Aldama 31. Always free.
-          </p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a className="button-link" href="https://sanmiguelrealestate.com.mx/welcome-table" target="_blank" style={{
-              backgroundColor: '#2C1810',
-              color: 'white',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontSize: '15px',
-              fontWeight: 'bold'
-            }}>Learn More & RSVP →</a>
-            <a className="button-link" href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-              backgroundColor: '#C4622D',
-              color: 'white',
-              borderRadius: '4px',
-              textDecoration: 'none',
-              fontSize: '15px',
-              fontWeight: 'bold'
-            }}>✦ Book a Private Consultation</a>
+        <div className="content-wrapper" style={{ display: 'flex', gap: '60px', alignItems: 'center', flexWrap: 'wrap' }}>
+          {/* Text side */}
+          <div style={{ flex: '1 1 320px' }}>
+            <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>COMMUNITY</p>
+            <p style={{ fontSize: '20px', fontStyle: 'italic', color: '#2C1810', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.4' }}>Office hours are open.</p>
+            <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#2C1810', marginBottom: '20px' }}>
+              Not sure where to start? That's exactly what The Welcome Table is for. In partnership with Tiffany Paige of The Agency San Miguel, it's a free, no-pressure Saturday gathering for Mexico newcomers and anyone curious about life here. Come with your questions, leave with real answers and real connections.
+            </p>
+            <p style={{ fontSize: '15px', color: '#2C1810', marginBottom: '32px', fontWeight: '700', lineHeight: '1.6' }}>
+              Every Saturday, 10:30am-1pm · The Agency, Aldama 31, Centro · Always free.
+            </p>
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+              <a className="button-link" href="https://sanmiguelrealestate.com.mx/welcome-table" target="_blank" rel="noreferrer" style={{
+                backgroundColor: '#2C1810',
+                color: 'white',
+                borderRadius: '4px',
+                textDecoration: 'none',
+                fontSize: '15px',
+                fontWeight: 'bold'
+              }}>Learn More</a>
+              <a className="button-link" href="#planning-calls" style={{
+                backgroundColor: '#C4622D',
+                color: 'white',
+                borderRadius: '4px',
+                textDecoration: 'none',
+                fontSize: '15px',
+                fontWeight: 'bold'
+              }}>Book a Planning Call</a>
+            </div>
+          </div>
+          {/* Image side */}
+          <div style={{ flex: '1 1 300px' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/the%20welcome%20table.jpg" alt="The Welcome Table postcard" style={{ width: '100%', borderRadius: '8px', display: 'block' }} />
           </div>
         </div>
       </section>

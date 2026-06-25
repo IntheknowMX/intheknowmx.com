@@ -460,7 +460,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="planning-calls" style={{ backgroundColor: '#FDF6F0', padding: '80px 40px' }}>
+      <section id="planning-calls" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
         <div className="content-wrapper">
           <p style={{ color: '#C4622D', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>PLAN YOUR MOVE</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '20px', textAlign: 'center', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
@@ -533,7 +533,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="residency" style={{ backgroundColor: '#2C1810', padding: '80px 40px' }}>
+      <section id="residency" className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
         <div className="content-wrapper">
           <p style={{ color: '#D4A017', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>RESIDENCY</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '20px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>

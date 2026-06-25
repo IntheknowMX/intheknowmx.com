@@ -1107,7 +1107,7 @@ export default function Home() {
             <div style={{ flex: '1 1 280px', maxWidth: '400px', position: 'relative', borderRadius: '12px', overflow: 'hidden' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/lisa-tiffany.jpg"
+                src="/images/lisa-tiffany-cropped.jpg"
                 alt="Lisa May Cobham and Tiffany Paige"
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
@@ -1152,6 +1152,26 @@ export default function Home() {
                 display: 'inline-block', backgroundColor: '#C4622D', color: 'white', padding: '14px 36px',
                 borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700'
               }}>Browse Properties →</a>
+            </div>
+          </div>
+
+          {/* Client testimonials */}
+          <div style={{ marginTop: '48px', backgroundColor: '#FDF6F0', borderLeft: '4px solid #E8A598', borderRadius: '6px', padding: '24px', display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
+            <div style={{ flex: '1 1 260px' }}>
+              <p style={{ fontSize: '15px', fontStyle: 'italic', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.75', margin: '0 0 12px' }}>
+                &ldquo;Lisa did an excellent job of uncovering our wants and needs and helped us find a place. When negotiating the terms of the lease, she was active in the process and made sure we were comfortable.&rdquo;
+              </p>
+              <p style={{ fontSize: '12px', color: '#C97B8A', fontVariant: 'small-caps', letterSpacing: '1px', margin: 0, fontWeight: '600' }}>
+                Kirsten, San Miguel de Allende
+              </p>
+            </div>
+            <div style={{ flex: '1 1 260px' }}>
+              <p style={{ fontSize: '15px', fontStyle: 'italic', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.75', margin: '0 0 12px' }}>
+                &ldquo;Tiffany took the time to actually listen to my priorities and helped me discern what neighborhoods and homes would best fit my lifestyle while being respectful of my budget.&rdquo;
+              </p>
+              <p style={{ fontSize: '12px', color: '#C97B8A', fontVariant: 'small-caps', letterSpacing: '1px', margin: 0, fontWeight: '600' }}>
+                Verified Client, The Agency SMA
+              </p>
             </div>
           </div>
         </div>

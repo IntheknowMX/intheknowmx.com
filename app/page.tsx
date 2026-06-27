@@ -224,7 +224,7 @@ export default function Home() {
             <span key={copy} className="ticker-item">
               {[
                 { text: '"We never worried once."', name: 'Amy H.' },
-                { text: '"The hardest part about having her is saying goodbye."', name: 'Michelle L., Gecko Bungalows Resort · Belize' },
+                { text: '"The hardest part about having her is saying goodbye."', name: 'Michelle & Scott' },
                 { text: '"My home was running like a well-oiled machine."', name: 'Janet A.' },
                 { text: '"Left our house perfectly clean and exactly how we left it, just a little better."', name: 'Claire H.' },
                 { text: '"I always feel safe when she sits my pets."', name: 'Karla S.' },
@@ -245,95 +245,37 @@ export default function Home() {
       </section>
 
       {/* Google Reviews */}
-      <section className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
+      <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
         <div className="content-wrapper">
-          {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '16px' }}>
-              <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '50%', backgroundColor: 'white', fontSize: '15px', fontWeight: '700', color: '#4285F4', fontFamily: 'sans-serif', flexShrink: 0 }}>G</span>
-              <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', margin: 0 }}>VERIFIED GOOGLE REVIEWS</p>
-            </div>
-            <h2 style={{ fontSize: '38px', fontWeight: 'normal', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '16px', lineHeight: '1.2' }}>
-              What Clients Are Saying on Google
-            </h2>
-            <div style={{ color: '#D4A017', fontSize: '22px', letterSpacing: '4px' }}>★★★★★</div>
+          <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '8px' }}>
+            Trusted by Real People
+          </h2>
+          <p style={{ fontSize: '16px', color: '#2C1810', textAlign: 'center', marginBottom: '32px' }}>Recent reviews from Google</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', marginBottom: '32px' }}>
+            {[
+              { name: 'Breana Foley', excerpt: 'She took the time to listen deeply, ensuring that I felt completely heard and understood. Her dedication and support made a world of difference.', time: '6 hours ago' },
+              { name: 'Charlotte Randall', excerpt: "Lisa has the best connections with people and businesses in SMA. Lisa's energy is contagious—she is definitely the person 'In the Know Mexico.'", time: '6 days ago' },
+              { name: 'Ursula Anne', excerpt: "I had the time of my life! Lisa was incredibly knowledgeable and made the entire experience effortless. This wasn't a tourist checklist—it was a meaningful, immersive experience.", time: '6 days ago' },
+              { name: 'Kirsten Guisto', excerpt: 'We highly recommend Lisa! She uncovered our wants and needs perfectly and helped ensure a smooth transition. She is very knowledgeable about San Miguel.', time: 'a week ago' },
+              { name: 'Cliff Cunningham', excerpt: 'Lisa is a true leader and inspiration. She has a way of traversing through dilemmas with ease. She continues to help me get on the right path towards my expat conquest.', time: 'a week ago' },
+              { name: 'Brenda Miles', excerpt: "If you're lucky enough to cross paths with Lisa, you'll discover she's one of those rare people who seems to know how to solve just about any problem. In the Know Mexico is having a trusted friend in your corner when you need one most.", time: 'a week ago' },
+            ].map((r) => (
+              <div key={r.name} style={{ backgroundColor: 'white', border: '1px solid #E8A598', padding: '24px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
+                <div style={{ color: '#D4A017', fontSize: '16px', marginBottom: '12px' }}>⭐⭐⭐⭐⭐</div>
+                <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#2C1810', fontStyle: 'italic', marginBottom: '12px' }}>&ldquo;{r.excerpt}&rdquo;</p>
+                <div style={{ fontWeight: 'bold', color: '#8B1A2A', fontSize: '14px' }}>{r.name}</div>
+                <div style={{ color: '#999', fontSize: '12px', marginTop: '2px' }}>{r.time}</div>
+              </div>
+            ))}
           </div>
-
-          {/* Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '40px' }}>
-            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
-              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                &ldquo;Lisa is a true leader and inspiration to us all. She has a way of traversing through dilemmas with ease… she continues to help me get on the right path towards my expat conquest.&rdquo;
-              </p>
-              <div>
-                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Cliff Cunningham</p>
-                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
-              </div>
-            </div>
-
-            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
-              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                &ldquo;If you&rsquo;re lucky enough to cross paths with Lisa, you&rsquo;ll quickly discover she&rsquo;s one of those rare people who seems to know how to solve just about any problem… In the Know Mexico is more than a service, it&rsquo;s having a trusted friend in your corner. The learning curve of life in Mexico feels a whole lot gentler with Lisa leading the way!&rdquo;
-              </p>
-              <div>
-                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Brenda Miles</p>
-                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
-              </div>
-            </div>
-
-            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
-              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                &ldquo;We highly recommend Lisa! We had one day to find a place to live while moving states. Lisa did an excellent job of uncovering our wants/needs and helped us find a place. Additionally, when negotiating the terms of the lease, she was active in the process and made sure we were comfortable. She is very knowledgeable about San Miguel and helped to ensure a smooth transition.&rdquo;
-              </p>
-              <div>
-                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Kirsten Guisto</p>
-                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
-              </div>
-            </div>
-
-            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
-              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                &ldquo;Lisa has the best connections with people and businesses in SMA. She brought my friend and I to a wardrobe stylist and we had the best time. Lisa&rsquo;s energy is contagious, she is definitely the person In the Know Mexico. She has helped me and my husband with banking, travel logistics, pet sitting, computer issues, and more. So helpful to two new expats. She is the best.&rdquo;
-              </p>
-              <div>
-                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Charlotte Randall</p>
-                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
-              </div>
-            </div>
-
-            <div style={{ backgroundColor: '#FDF6F0', padding: '32px', borderRadius: '8px', borderTop: '4px solid #8B1A2A', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ color: '#D4A017', fontSize: '18px', letterSpacing: '3px', marginBottom: '16px' }}>★★★★★</div>
-              <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px', flex: 1 }}>
-                &ldquo;I had the time of my life! Lisa was incredibly knowledgeable and made the entire experience effortless from start to finish. She thought of everything before I even arrived, from what shoes to wear and how much cash to bring for tips, to the best places to view the procession and experience the celebration like a local. Every detail of my itinerary was thoughtfully planned, and I never once felt lost or overwhelmed. This wasn&rsquo;t a tourist checklist, it was a meaningful, immersive experience. If you&rsquo;re considering a Day of the Dead trip, this is the way to experience Mexico. I cannot recommend Lisa highly enough!&rdquo;
-              </p>
-              <div>
-                <p style={{ fontSize: '14px', fontWeight: '700', color: '#8B1A2A', letterSpacing: '0.5px' }}>Ursula Anne</p>
-                <p style={{ fontSize: '12px', color: '#7D3B4E', marginTop: '4px', letterSpacing: '1px' }}>Google Review</p>
-              </div>
-            </div>
-          </div>
-
-          {/* CTAs */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
+          <div style={{ textAlign: 'center' }}>
             <a
-              href="https://www.google.com/maps?cid=10161283481168716226"
+              href="https://www.google.com/maps/place/In+The+Know+Mexico/@20.9232722,-100.7407502,17z/data=!3m1!4b1!4m6!3m5!1s0x819e4b8232f542ef:0x8d04217d451b21c2!8m2!3d20.9232722!4d-100.7407502!16s%2Fg%2F11n9p8tm40?hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#8B1A2A', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '16px 40px', fontSize: '15px', fontWeight: '700' }}
+              style={{ display: 'inline-block', backgroundColor: '#C4622D', color: '#FDF6F0', textDecoration: 'none', borderRadius: '6px', padding: '12px 28px', fontSize: '16px', fontWeight: 'bold', marginTop: '32px' }}
             >
-              Read all our reviews on Google →
-            </a>
-            <a
-              href="https://g.page/r/CcIhG0V9IQSNEAI/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#C4622D', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '16px 40px', fontSize: '15px', fontWeight: '700' }}
-            >
-              Leave a Review →
+              See all reviews on Google →
             </a>
           </div>
         </div>
@@ -1288,7 +1230,7 @@ export default function Home() {
           <div className="testimonials-grid">
             {[
               { quote: "She is tenacious, organized, and deeply caring — going above and beyond to make sure her clients feel seen, supported, and completely at ease. She's not just a relocation concierge — she's a trusted guide.", name: 'Tiffany Paige', title: 'Licensed Real Estate Advisor, The Agency SMA', date: '2026' },
-              { quote: "I could not be more pleased with Lisa! She was very responsive, reasonable and she stayed with the program until we were successful. Do business with Lisa and she will solve your problems!", name: 'Terry M.', title: 'San Miguel Expat', date: '2026' },
+              { quote: "I could not be more pleased with Lisa! She was very responsive, reasonable and she stayed with the program until we were successful. Do business with Lisa and she will solve your problems!", name: 'Terry M.', title: '', date: '2026' },
               { quote: "From the moment I got off the plane, Lisa showed up with kindness, clarity, and a deep knowledge of how things work here. She met me at my Airbnb, took me grocery shopping, helped me with the ATM, showed me around San Miguel, and helped me find my apartment. Lisa is more than a service provider — she's a support system, a guide, and a true friend.", name: 'Brian Keith Webster', title: 'Author', date: '2025' },
               { quote: "A plumbing disaster occurred while we were off the grid on a cruise — Lisa handled everything with exceptional grace and competence. She contacted neighbors, coordinated local plumbers and electricians, and ensured our pets and property were safe and cared for.", name: 'Sugar & Sandy Hudson', title: 'Mayor, Los Frailes SMA', date: '2025' },
               { quote: "Left our house perfectly clean and exactly how we left it, just a little better. Turtle was happy and healthy upon our return and we're so grateful he was in good hands.", name: 'Claire H.', title: '', date: '2023' },
@@ -1309,8 +1251,6 @@ export default function Home() {
               { quote: "Lisa was wonderful. We had a last minute booking and she was able to take good care of our three dogs. She took great care of our house and sent us photos of the dogs every day we were gone.", name: 'Alex C.', title: '', date: '2019' },
               { quote: "Lisa was great. She took great care of our home and our old dog, getting him out for walks even when it was raining. The house was clean when we got home too.", name: 'Rachel B.', title: '', date: '2019' },
               { quote: "Lisa May put me at ease. My home was running like a well-oiled machine. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May as a caring companion.", name: 'Doris O.', title: '', date: '2018' },
-              { quote: "Lisa May was a blessing to find. Friendly and professional. When we arrived home we found a cooked dinner, well kept house and a happy cat. Strongly recommend.", name: 'Neslihan S.', title: '', date: '2018' },
-              { quote: "Greetings from Belize! We have had Lisa May house sit for us on several occasions. She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success over the years. Our guests have raved about her!", name: 'Michelle & Scott Lyons', title: 'Gecko Bungalows Resort', date: '2018' },
               { quote: "Lisa had our cat well taken care of. She sent us pictures of him while we were away and I'm sure gave him lots of love. Would definitely hire her again.", name: 'Katherine A.', title: '', date: '2019' },
               { quote: "Lisa is very dependable and is great at communicating timely and thoroughly! She is very flexible and willing to adapt to my dogs daily needs.", name: 'Alicia F.', title: '', date: '2019' },
               { quote: "Lisa was AMAZING! She sent me pics and kept me up to date on everything! I would highly recommend her. I will definitely hire her again!!", name: 'Leslie F.', title: '', date: '2019' },
@@ -1322,7 +1262,6 @@ export default function Home() {
               { quote: "Lisa was super flexible despite my concierge not showing up to give her my apartment key. She walked my pup almost a full mile in a short period of time. She is extremely responsive and I will be using her again!", name: 'Madeleine H.', title: '', date: '2019' },
               { quote: "What a great sitter for my foster pup!! She takes great photos, is prompt, and leaves great summaries. I highly recommend her.", name: 'Allison A.', title: '', date: '2019' },
               { quote: "Lisa was great! She really helped me out on a day where I couldn't get home to let Louie out. Would highly recommend and use her anytime.", name: 'Erica R.', title: '', date: '2019' },
-              { quote: "Lisa was prompt, professional and everything you could want in a dog sitter. She even adjusted her schedule to take Charlie on an extra walk when our flight was delayed.", name: 'Brandon S.', title: '', date: '2019' },
               { quote: "She even managed to grab my Dog Lily when her harness failed! Amazing!", name: 'Derek S.', title: '', date: '2019' },
               { quote: "Lisa as always does a stellar job!", name: 'William S.', title: '', date: '2019' },
               { quote: "You're amazing! Thank you! I feel so good knowing they are taken care of.", name: 'Celeste G.', title: '', date: '2019' },

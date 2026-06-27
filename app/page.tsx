@@ -111,6 +111,9 @@ export default function Home() {
         .footer-col a:hover { color: #E8A598; }
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .payment-methods-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; }
+        .buy-cols { display: flex; gap: 56px; align-items: flex-start; }
+        .buy-col-text { flex: 0 0 55%; order: 1; }
+        .buy-col-img { flex: 0 0 40%; order: 2; text-align: center; }
         .pricing-booking-row { display: flex; gap: 32px; align-items: flex-start; }
         @media (max-width: 767px) {
           .main-nav { padding: 16px 20px; }
@@ -146,6 +149,8 @@ export default function Home() {
           main h3 { font-size: 20px !important; }
           main h4 { font-size: 18px !important; }
           .responsive-img { max-width: 100%; height: auto; }
+          .buy-cols { flex-direction: column; }
+          .buy-col-text, .buy-col-img { flex: 1 1 auto; width: 100%; order: unset; }
         }
       `}</style>
 
@@ -994,78 +999,49 @@ export default function Home() {
       </section>
 
       {/* Buy / Properties Section */}
-      <section id="properties" className="responsive-section" style={{ backgroundColor: '#2C1810' }}>
-        <div className="content-wrapper">
-          <div className="flex-stack" style={{ gap: '56px', alignItems: 'flex-start' }}>
-            {/* Left: Photo + caption */}
-            <div style={{ flex: '1 1 280px', maxWidth: '400px', position: 'relative', borderRadius: '12px', overflow: 'hidden' }}>
+      <section id="properties" style={{ backgroundColor: '#2C1810', padding: '90px 40px' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div className="buy-cols">
+            {/* Right column first in DOM so it appears first on mobile */}
+            <div className="buy-col-img">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/lisa-tiffany-cropped.jpg"
                 alt="Lisa May Cobham and Tiffany Paige"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
+                style={{ width: '100%', maxWidth: '400px', borderRadius: '8px', marginBottom: '32px', display: 'block', margin: '0 auto 32px' }}
               />
-              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#FDF6F0', padding: '14px 16px', textAlign: 'center' }}>
-                <p style={{ margin: '0 0 3px', fontSize: '15px', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", fontWeight: '600', lineHeight: '1.3' }}>
-                  Tiffany Paige &amp; Lisa Cobham
-                </p>
-                <p style={{ margin: 0, fontSize: '12px', color: '#5C3A2E' }}>
-                  Relocation &amp; Real Estate · San Miguel de Allende
-                </p>
+              <div style={{ textAlign: 'center' }}>
+                <p style={{ fontSize: '16px', color: '#E8A598', fontWeight: 'bold', margin: '0 0 4px' }}>Lisa May Cobham</p>
+                <p style={{ fontSize: '16px', color: '#E8A598', fontWeight: 'bold', margin: '0 0 12px' }}>Tiffany Paige</p>
+                <p style={{ fontSize: '14px', color: '#FDF6F0', margin: 0 }}>The Agency San Miguel</p>
               </div>
             </div>
 
-            {/* Right: Text content */}
-            <div style={{ flex: '1 1 300px' }}>
-              <p style={{ color: '#E8A598', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>BUY IN SAN MIGUEL</p>
-              <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '12px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
-                Two Perspectives, One Home
-              </h2>
-              <p style={{ fontSize: '18px', fontStyle: 'italic', color: '#E8A598', marginBottom: '28px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.4' }}>
-                Dallas meets New York, in the heart of San Miguel.
-              </p>
-              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                When you&rsquo;re buying a home in San Miguel, you&rsquo;re not just making a property decision. You&rsquo;re making a life decision. That&rsquo;s why we work together.
-              </p>
-              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                She&rsquo;s Dallas. I&rsquo;m New York. Different styles, same work ethic. Between us, we bring big-city hustle, strong intuition, and a shared commitment to helping clients make confident decisions.
-              </p>
-              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, the #1 ranked luxury brokerage globally. She brings deep market knowledge, access to more than 1,000 listings, and strong negotiation expertise. I bring more than 12 years of experience helping people build a life abroad, along with an eye for how a home will actually fit someone&rsquo;s lifestyle. The goal isn&rsquo;t the perfect house on paper. It&rsquo;s finding the right home for how you actually live.
-              </p>
-              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                What we share is how we show up for our clients: honest, calm under pressure, and willing to do the work. Between us, we bring decades of experience in luxury retail, client service, executive support, and relationship-driven sales. Buying a home in a new country can feel overwhelming. Our role is to help you navigate it with clarity and confidence, looking at every search from two angles at once: what a property is on paper, and what it&rsquo;s like to actually live there.
-              </p>
-              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '20px' }}>
-                Most people come to us because they want clarity, about where they&rsquo;ll feel at home, what fits their lifestyle, and the decision they&rsquo;re about to make. Together, we help bring that into focus.
-              </p>
-              <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#FDF6F0', marginBottom: '36px' }}>
-                A home that works in real life, not just in theory.
-              </p>
-              <a href="https://www.sanmiguelrealestate.com.mx/properties" target="_blank" rel="noreferrer" style={{
-                display: 'inline-block', backgroundColor: '#C4622D', color: 'white', padding: '14px 36px',
-                borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700'
-              }}>Browse Properties →</a>
-            </div>
-          </div>
+            {/* Left column: text */}
+            <div className="buy-col-text">
+              <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>A different kind of decision</h2>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '60px' }}>Buying a home in San Miguel de Allende isn&rsquo;t just a property decision. It&rsquo;s a life decision. Where you live shapes your rhythm, your routines, and your experience of daily life in ways that don&rsquo;t show up in listings. This process requires more than options. It requires clarity.</p>
 
-          {/* Client testimonials */}
-          <div style={{ marginTop: '48px', backgroundColor: '#FDF6F0', borderLeft: '4px solid #E8A598', borderRadius: '6px', padding: '24px', display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
-            <div style={{ flex: '1 1 260px' }}>
-              <p style={{ fontSize: '15px', fontStyle: 'italic', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.75', margin: '0 0 12px' }}>
-                &ldquo;Lisa did an excellent job of uncovering our wants and needs and helped us find a place. When negotiating the terms of the lease, she was active in the process and made sure we were comfortable.&rdquo;
-              </p>
-              <p style={{ fontSize: '12px', color: '#C97B8A', fontVariant: 'small-caps', letterSpacing: '1px', margin: 0, fontWeight: '600' }}>
-                Kirsten, San Miguel de Allende
-              </p>
-            </div>
-            <div style={{ flex: '1 1 260px' }}>
-              <p style={{ fontSize: '15px', fontStyle: 'italic', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.75', margin: '0 0 12px' }}>
-                &ldquo;Tiffany took the time to actually listen to my priorities and helped me discern what neighborhoods and homes would best fit my lifestyle while being respectful of my budget.&rdquo;
-              </p>
-              <p style={{ fontSize: '12px', color: '#C97B8A', fontVariant: 'small-caps', letterSpacing: '1px', margin: 0, fontWeight: '600' }}>
-                Verified Client, The Agency SMA
-              </p>
+              <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>What most people miss</h2>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '60px' }}>On paper, many homes look similar. In reality, they feel completely different once you live in them. Neighborhood energy. Daily flow. Walkability. Quiet. Convenience. Pace. These are not details you can fully see online. They are experienced. And they are often what determines whether a home truly fits—or doesn&rsquo;t.</p>
+
+              <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>Two perspectives, one decision</h2>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '20px' }}>This is why we work together. You&rsquo;re not getting one point of view. You&rsquo;re getting two, aligned.</p>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '16px' }}><span style={{ fontWeight: 'bold', color: '#E8A598' }}>Local &amp; lifestyle perspective</span> — I focus on how a place actually lives—its rhythm, energy, and day-to-day experience in San Miguel.</p>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '16px' }}><span style={{ fontWeight: 'bold', color: '#E8A598' }}>Market &amp; advisory perspective</span> — Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, part of a global luxury brokerage network. She brings market access, negotiation expertise, and structured real estate guidance.</p>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '60px' }}><span style={{ fontWeight: 'bold', color: '#E8A598' }}>Together</span> — We evaluate every home through both lenses at once: what it is—and what it feels like to live there.</p>
+
+              <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>How we work</h2>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '60px' }}>We don&rsquo;t overwhelm you with options. We refine. Each home is evaluated for both market value and lifestyle fit. We walk properties with context, not just observation. And we narrow decisions based on clarity, not volume. Fewer choices. Better decisions.</p>
+
+              <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>Clarity from the start</h2>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '60px' }}>We believe you should understand the structure of your decision before you make it. We coordinate with your notary early so you understand costs and requirements before committing. No assumptions. No surprises. A clear, structured process from the beginning.</p>
+
+              <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>The outcome</h2>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '60px' }}>A home that fits is not just visually right. It works in your life. You understand why it fits—before you commit. And you move forward with clarity, not uncertainty.</p>
+
+              <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>The right home</h2>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '60px' }}>The right home isn&rsquo;t just a property. It&rsquo;s alignment between place and life. We help you see that clearly—before you decide.</p>
             </div>
           </div>
         </div>

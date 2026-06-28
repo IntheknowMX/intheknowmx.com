@@ -678,30 +678,23 @@ export default function Home() {
 
                 {/* Ready to Book? */}
                 <div style={{ flex: 1, backgroundColor: '#2C1810', borderRadius: '12px', padding: '32px' }}>
+                  <p style={{ fontSize: '12px', fontWeight: '700', color: '#E8A598', textTransform: 'uppercase', letterSpacing: '1px', margin: '0 0 12px' }}>💳 Credit or debit — +3% fee</p>
+                  <div style={{ fontSize: '14px', lineHeight: '2.1', color: '#FDF6F0', marginBottom: '28px' }}>
+                    <div>Hourly &nbsp;→&nbsp; <a href="https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Stripe</a> &nbsp;|&nbsp; <a href="https://www.paypal.com/ncp/payment/M4Q2XASL63F42" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>PayPal</a></div>
+                    <div>Starter &nbsp;→&nbsp; <a href="https://buy.stripe.com/aFacN58jq0R8fpe3ry2880Y" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Stripe</a> &nbsp;|&nbsp; <a href="https://www.paypal.com/ncp/payment/MTLDLWHWTV7H6" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>PayPal</a></div>
+                    <div>Standard &nbsp;→&nbsp; <a href="https://buy.stripe.com/14AfZh7fm8jAb8Y0fm2880Z" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Stripe</a> &nbsp;|&nbsp; <a href="https://www.paypal.com/ncp/payment/3DVWJNJK6UXH2" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>PayPal</a></div>
+                    <div>Full Support &nbsp;→&nbsp; <a href="https://buy.stripe.com/6oU3cv43aarI5OEd2828810" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Stripe</a> &nbsp;|&nbsp; <a href="https://www.paypal.com/ncp/payment/3KG54FZ69BVBL" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>PayPal</a></div>
+                  </div>
                   <h3 style={{ fontSize: '24px', fontWeight: 'normal', marginBottom: '10px', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>Ready to Book?</h3>
-                  <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0', marginBottom: '20px' }}>
-                    Confirm booking via your preferred payment method:
+                  <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0', marginBottom: '16px' }}>
+                    Confirm service via your preferred payment method:
                   </p>
-                  <div className="payment-methods-grid" style={{ fontSize: '14px', lineHeight: '1.8', color: '#FDF6F0' }}>
-                    <p style={{ margin: 0 }}>
-                      ✅ Zelle — no fee &rarr; <strong>sittingprettydc@gmail.com</strong>
-                    </p>
-                    <p style={{ margin: 0 }}>
-                      💻 PayPal — +3% fee &rarr;&nbsp;
-                      <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>paypal.me/lisaMayCo</a>
-                    </p>
-                    <div style={{ margin: 0 }}>
-                      <p style={{ marginBottom: '8px', marginTop: 0 }}>💳 Credit or debit — +3% fee</p>
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', paddingLeft: '24px' }}>
-                        <a href="https://buy.stripe.com/8x2bJ11V21Vc2CsbY42880s" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Hourly</a>
-                        <a href="https://buy.stripe.com/bJe5kDary57ob8YbY42880q" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Starter</a>
-                        <a href="https://buy.stripe.com/5kQcN59nuarIfpe3ry2880r" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Standard</a>
-                        <a href="https://buy.stripe.com/28EcN52Z69nE5OEfag2880p" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#5B4FBE', color: 'white', textDecoration: 'none', borderRadius: '6px', padding: '6px 14px', fontSize: '12px', fontWeight: 600 }}>Full Support</a>
-                      </div>
-                    </div>
+                  <div style={{ fontSize: '14px', lineHeight: '1.9', color: '#FDF6F0' }}>
+                    <p style={{ margin: '0 0 8px' }}>✅ Zelle — no fee → <strong>sittingprettydc@gmail.com</strong></p>
+                    <p style={{ margin: 0 }}>💻 PayPal — +3% fee → <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>paypal.com/paypalme/lisaMayCo</a></p>
                   </div>
                   <p style={{ marginTop: '24px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598', marginBottom: 0 }}>
-                    You will receive a link to your pre-call questionnaire and booking link after payment. I'm looking forward to working with you!
+                    You will receive a link to your pre-service questionnaire and booking link after payment. I'm looking forward to working with you!
                   </p>
                 </div>
               </div>

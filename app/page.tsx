@@ -252,6 +252,10 @@ export default function Home() {
       {/* Google Reviews */}
       <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
         <div className="content-wrapper">
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', marginBottom: '16px' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '28px', height: '28px', borderRadius: '50%', backgroundColor: 'white', fontSize: '15px', fontWeight: '700', color: '#4285F4', fontFamily: 'sans-serif', flexShrink: 0 }}>G</span>
+            <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', margin: 0 }}>VERIFIED GOOGLE REVIEWS</p>
+          </div>
           <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '8px' }}>
             Trusted by Real People
           </h2>

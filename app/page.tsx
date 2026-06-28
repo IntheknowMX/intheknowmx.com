@@ -356,7 +356,7 @@ export default function Home() {
             Known here. Trusted here. Since 2014.
           </h2>
           <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
-            I didn't plan to stay. San Miguel charmed me into it. The joy of this city — the light, the people, the pace, the way life actually feels here — made leaving impossible. Eleven years later I am still here, still discovering, and still completely in love with this country.
+            I didn't plan to stay. San Miguel charmed me into it. The joy of this city — the light, the people, the pace, the way life actually feels here — made leaving impossible. Twelve years later I am still in Mexico, still discovering, and still completely in love with this country.
           </p>
           <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
             I work with <strong>Mexico newcomers</strong> who need more than a checklist. They need someone

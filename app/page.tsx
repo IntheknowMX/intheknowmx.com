@@ -257,7 +257,7 @@ export default function Home() {
             <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', margin: 0 }}>VERIFIED GOOGLE REVIEWS</p>
           </div>
           <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '8px' }}>
-            Trusted by Real People
+            What Clients Are Saying
           </h2>
           <p style={{ fontSize: '16px', color: '#2C1810', textAlign: 'center', marginBottom: '32px' }}>Recent reviews from Google</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', marginBottom: '32px' }}>

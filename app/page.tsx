@@ -683,10 +683,6 @@ export default function Home() {
                       ✅ Zelle — no fee &rarr; <strong>sittingprettydc@gmail.com</strong>
                     </p>
                     <p style={{ margin: 0 }}>
-                      📱 Venmo — +2% fee &rarr;&nbsp;
-                      <a href="https://venmo.com/code?user_id=3758990584448601525&created=1781206512" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>venmo.com/lisaMayCo</a>
-                    </p>
-                    <p style={{ margin: 0 }}>
                       💻 PayPal — +3% fee &rarr;&nbsp;
                       <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>paypal.me/lisaMayCo</a>
                     </p>
@@ -1042,6 +1038,30 @@ export default function Home() {
 
               <h2 style={{ fontSize: '32px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>The right home</h2>
               <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '60px' }}>The right home isn&rsquo;t just a property. It&rsquo;s alignment between place and life. We help you see that clearly—before you decide.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial card — Buy section */}
+      <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
+        <div className="content-wrapper">
+          <div style={{ backgroundColor: '#FDF6F0', borderLeft: '2px solid #E8A598', padding: '32px 36px', borderRadius: '8px' }}>
+            <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
+              <div style={{ flex: '1 1 280px' }}>
+                <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+                  "Lisa did an excellent job of uncovering our wants and needs and helped us find a place. When negotiating the terms of the lease, she was active in the process and made sure we were comfortable."
+                </p>
+                <div style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E' }}>Kirsten</div>
+                <div style={{ fontSize: '12px', color: '#C97B8A', marginTop: '2px' }}>San Miguel de Allende</div>
+              </div>
+              <div style={{ flex: '1 1 280px' }}>
+                <p style={{ fontSize: '15px', lineHeight: '1.85', color: '#2C1810', fontStyle: 'italic', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+                  "Tiffany took the time to actually listen to my priorities and helped me discern what neighborhoods and homes would best fit my lifestyle while being respectful of my budget."
+                </p>
+                <div style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E' }}>Verified Client</div>
+                <div style={{ fontSize: '12px', color: '#C97B8A', marginTop: '2px' }}>The Agency SMA</div>
+              </div>
             </div>
           </div>
         </div>

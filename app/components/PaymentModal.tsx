@@ -145,7 +145,7 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
         {/* Cancellation policy block */}
         <div style={{ marginBottom: '22px', padding: '14px 16px', backgroundColor: 'rgba(255,255,255,0.07)', borderRadius: '8px' }}>
           <p style={{ fontSize: '13px', color: '#E8A598', margin: '0 0 8px', lineHeight: '1.6' }}>
-            Full payment confirms your booking. Cancellations 48+ hours before your session receive full credit; under 48 hours are non-refundable.
+            Full payment confirms your service. Cancellations 48+ hours before your scheduled session receive full credit; under 48 hours are non-refundable.
           </p>
           <button
             onClick={() => setPolicyExpanded(!policyExpanded)}

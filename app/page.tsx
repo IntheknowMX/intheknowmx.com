@@ -482,7 +482,8 @@ export default function Home() {
                 <li>Follow-up email with action steps</li>
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                <a href="https://buy.stripe.com/5kQbJ18jq8jAdh6gek2880O" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
+                <a href="https://buy.stripe.com/fZu9ATgPWarI7WM7HO2880U" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Stripe</a>
+                <a href="https://www.paypal.com/ncp/payment/HMK3DGTSXGUCC" target="_blank" rel="noreferrer" style={{ backgroundColor: '#003087', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>PayPal</a>
                 <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>
@@ -501,7 +502,8 @@ export default function Home() {
                 <li>Final paperwork preparation</li>
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                <a href="https://buy.stripe.com/9B63cv57edDU2Csfag2880P" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
+                <a href="https://buy.stripe.com/cNicN52Z61Vc2Cs4vC2880W" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Stripe</a>
+                <a href="https://www.paypal.com/ncp/payment/RRNW9ALGBZ6J2" target="_blank" rel="noreferrer" style={{ backgroundColor: '#003087', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>PayPal</a>
                 <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>
@@ -510,15 +512,13 @@ export default function Home() {
             <div style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
               <h3 style={{ fontSize: '21px', marginBottom: '8px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Other Residency Services</h3>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Renewals · Address changes · Business permits · Work permits</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '20px' }}>
-                Email Lisa to describe your situation and we'll be in touch within 48 hours.
+              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '20px', flex: 1 }}>
+                Message or email Lisa to describe your situation and we'll be in touch within 48 hours.
               </p>
-              <a
-                href="mailto:lisa@intheknowmx.com?subject=Complex%20Residency%20Case%20Inquiry"
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}
-              >
-                Email Lisa
-              </a>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <a href="https://wa.me/5214731218554" target="_blank" rel="noreferrer" style={{ backgroundColor: '#29A745', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>WhatsApp Lisa</a>
+                <a href="mailto:lisa@intheknowmx.com" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>Lisa@intheknowmx.com</a>
+              </div>
             </div>
 
           </div>

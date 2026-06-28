@@ -263,7 +263,7 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
         )}
 
         <p style={{ marginTop: '28px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598' }}>
-          Your booking is confirmed once payment is received.
+          You will receive a link to your pre-call questionnaire and booking link after payment. I&apos;m looking forward to working with you!
         </p>
       </div>
     </div>

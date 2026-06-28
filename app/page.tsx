@@ -697,7 +697,7 @@ export default function Home() {
                     </div>
                   </div>
                   <p style={{ marginTop: '24px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598', marginBottom: 0 }}>
-                    Your booking is confirmed once full payment is received.
+                    You will receive a link to your pre-call questionnaire and booking link after payment. I'm looking forward to working with you!
                   </p>
                 </div>
               </div>

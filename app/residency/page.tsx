@@ -55,16 +55,6 @@ export default function ResidencyPage() {
         <p style={{ fontSize: '18px', color: '#F5D0D8', maxWidth: '560px', margin: '0 auto 40px', lineHeight: '1.75' }}>
           Answer 6 questions to see which residency path you qualify for.
         </p>
-        <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-          backgroundColor: '#C4622D',
-          color: 'white',
-          padding: '16px 40px',
-          borderRadius: '4px',
-          textDecoration: 'none',
-          fontSize: '15px',
-          fontWeight: '700',
-          display: 'inline-block',
-        }}>✦ Skip the Quiz — Book a Strategy Session</a>
       </section>
 
       {/* Eligibility Checker */}

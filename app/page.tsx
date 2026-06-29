@@ -221,8 +221,8 @@ export default function Home() {
           {[
             { number: '12+', label: 'Years in Mexico' },
             { number: '100%', label: 'In-Person Service' },
-            { number: '300+', label: 'Five-Star Reviews' },
-            { number: '124+', label: 'Repeat Clients' },
+            { number: '150+', label: 'Reviews' },
+            { number: '62+', label: 'Repeat Clients' },
             { number: '24/7', label: 'On the Ground' },
           ].map((stat) => (
             <div key={stat.label} className="stats-card">
@@ -274,16 +274,17 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', marginBottom: '32px' }}>
             {[
               { name: 'Breana Foley', excerpt: 'She took the time to listen deeply, ensuring that I felt completely heard and understood. Her dedication and support made a world of difference.', time: '6 hours ago' },
-              { name: 'Charlotte Randall', excerpt: "Lisa has the best connections with people and businesses in SMA. Lisa's energy is contagious—she is definitely the person 'In the Know Mexico.'", time: '6 days ago' },
-              { name: 'Ursula Anne', excerpt: "I had the time of my life! Lisa was incredibly knowledgeable and made the entire experience effortless. This wasn't a tourist checklist—it was a meaningful, immersive experience.", time: '6 days ago' },
+              { name: 'Charlotte Randall', excerpt: "Lisa has the best connections with people and businesses in SMA. Lisa's energy is contagious—she is definitely the person 'In the Know Mexico.'", time: '6 days ago', repeat: true },
+              { name: 'Ursula Anne', excerpt: "I had the time of my life! Lisa was incredibly knowledgeable and made the entire experience effortless. This wasn't a tourist checklist—it was a meaningful, immersive experience.", time: '6 days ago', repeat: true },
               { name: 'Kirsten Guisto', excerpt: 'We highly recommend Lisa! She uncovered our wants and needs perfectly and helped ensure a smooth transition. She is very knowledgeable about San Miguel.', time: 'a week ago' },
-              { name: 'Cliff Cunningham', excerpt: 'Lisa is a true leader and inspiration. She has a way of traversing through dilemmas with ease. She continues to help me get on the right path towards my expat conquest.', time: 'a week ago' },
+              { name: 'Cliff Cunningham', excerpt: 'Lisa is a true leader and inspiration. She has a way of traversing through dilemmas with ease. She continues to help me get on the right path towards my expat conquest.', time: 'a week ago', repeat: true },
               { name: 'Brenda Miles', excerpt: "If you're lucky enough to cross paths with Lisa, you'll discover she's one of those rare people who seems to know how to solve just about any problem. In the Know Mexico is having a trusted friend in your corner when you need one most.", time: 'a week ago' },
             ].map((r) => (
               <div key={r.name} style={{ backgroundColor: 'white', border: '1px solid #E8A598', padding: '24px', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
                 <div style={{ color: '#D4A017', fontSize: '16px', marginBottom: '12px' }}>⭐⭐⭐⭐⭐</div>
                 <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#2C1810', fontStyle: 'italic', marginBottom: '12px' }}>&ldquo;{r.excerpt}&rdquo;</p>
                 <div style={{ fontWeight: 'bold', color: '#8B1A2A', fontSize: '14px' }}>{r.name}</div>
+                {r.repeat && <span style={{ display: 'inline-block', backgroundColor: '#D4A017', color: 'white', fontSize: '10px', fontWeight: '700', letterSpacing: '0.5px', padding: '2px 8px', borderRadius: '10px', marginTop: '4px' }}>Repeat Client</span>}
                 <div style={{ color: '#999', fontSize: '12px', marginTop: '2px' }}>{r.time}</div>
               </div>
             ))}
@@ -1290,9 +1291,9 @@ export default function Home() {
           </h2>
           <div className="testimonials-grid">
             {[
-              { quote: "She is tenacious, organized, and deeply caring — going above and beyond to make sure her clients feel seen, supported, and completely at ease. She's not just a relocation concierge — she's a trusted guide.", name: 'Tiffany Paige', title: 'Licensed Real Estate Advisor, The Agency SMA', date: '2026' },
+              { quote: "She is tenacious, organized, and deeply caring — going above and beyond to make sure her clients feel seen, supported, and completely at ease. She's not just a relocation concierge — she's a trusted guide.", name: 'Tiffany Paige', title: 'Licensed Real Estate Advisor, The Agency SMA', date: '2026', repeat: true },
               { quote: "I could not be more pleased with Lisa! She was very responsive, reasonable and she stayed with the program until we were successful. Do business with Lisa and she will solve your problems!", name: 'Terry M.', title: '', date: '2026' },
-              { quote: "From the moment I got off the plane, Lisa showed up with kindness, clarity, and a deep knowledge of how things work here. She met me at my Airbnb, took me grocery shopping, helped me with the ATM, showed me around San Miguel, and helped me find my apartment. Lisa is more than a service provider — she's a support system, a guide, and a true friend.", name: 'Brian Keith Webster', title: 'Author', date: '2025' },
+              { quote: "From the moment I got off the plane, Lisa showed up with kindness, clarity, and a deep knowledge of how things work here. She met me at my Airbnb, took me grocery shopping, helped me with the ATM, showed me around San Miguel, and helped me find my apartment. Lisa is more than a service provider — she's a support system, a guide, and a true friend.", name: 'Brian Keith Webster', title: 'Author', date: '2025', repeat: true },
               { quote: "A plumbing disaster occurred while we were off the grid on a cruise — Lisa handled everything with exceptional grace and competence. She contacted neighbors, coordinated local plumbers and electricians, and ensured our pets and property were safe and cared for.", name: 'Sugar & Sandy Hudson', title: 'Mayor, Los Frailes SMA', date: '2025' },
               { quote: "Left our house perfectly clean and exactly how we left it, just a little better. Turtle was happy and healthy upon our return and we're so grateful he was in good hands.", name: 'Claire H.', title: '', date: '2023' },
               { quote: "Oh my gosh! Lisa was amazing and so great to work with. She took great care of Miss Prissy and our house. I hope to use her again in the future.", name: 'Joni S.', title: '', date: '2023' },
@@ -1303,14 +1304,14 @@ export default function Home() {
               { quote: "She is dedicated and took very good care of my older dog who had health issues. She went beyond the call of duty on some errands I needed while I was in the hospital and was very flexible with me.", name: 'Paula P.', title: '', date: '2021' },
               { quote: "She took care of our 3 dogs, cat and bird for almost 2 weeks including pool and greenhouse. Her experience with pets and homes made it so easy to leave our fur babies. I have never had any house sitter clean the sheets on the bed she used before. If you are lucky enough to use Lisa's many services, you will not be disappointed.", name: 'Wendy E.', title: '', date: '2021' },
               { quote: "We have a daughter that is in and out of the hospital out of state. Lisa has been so accommodating and even willing to stay extra days when needed. Such a stress relief knowing she's taking care of our pup.", name: 'Kathryn W.', title: '', date: '2020' },
-              { quote: "Lisa was prompt, professional and everything you could want in a dog sitter. She even adjusted her schedule to take Charlie on an extra walk when our flight was delayed. I cannot say enough good things about her.", name: 'Brandon S.', title: '', date: '2019' },
-              { quote: "When we arrived home we found a cooked dinner, well kept house — cleaner than we left it — and a happy cat. Strongly recommend her to anyone who is in need of house and pet sitting.", name: 'Neslihan S.', title: '', date: '2018' },
+              { quote: "Lisa was prompt, professional and everything you could want in a dog sitter. She even adjusted her schedule to take Charlie on an extra walk when our flight was delayed. I cannot say enough good things about her.", name: 'Brandon S.', title: '', date: '2019', repeat: true },
+              { quote: "When we arrived home we found a cooked dinner, well kept house — cleaner than we left it — and a happy cat. Strongly recommend her to anyone who is in need of house and pet sitting.", name: 'Neslihan S.', title: '', date: '2018', repeat: true },
               { quote: "My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May.", name: 'Janet A.', title: '', date: '2018' },
-              { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success. Our guests have raved about her! The hardest part about having her is saying goodbye.", name: 'Michelle & Scott Lyons', title: 'Gecko Bungalows Resort · Belize', date: '2018' },
+              { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success. Our guests have raved about her! The hardest part about having her is saying goodbye.", name: 'Michelle & Scott Lyons', title: 'Gecko Bungalows Resort · Belize', date: '2018', repeat: true },
               { quote: "Lisa was fantastic with our puppy! Great communication as well.", name: 'Sue C.', title: '', date: '2019' },
               { quote: "Lisa was great with our 4-month old puppy Puddin. Excellent communication and pictures of their walk. I would encourage you to hire her.", name: 'Sue C.', title: '', date: '2019' },
               { quote: "Lisa was wonderful. We had a last minute booking and she was able to take good care of our three dogs. She took great care of our house and sent us photos of the dogs every day we were gone.", name: 'Alex C.', title: '', date: '2019' },
-              { quote: "Lisa was great. She took great care of our home and our old dog, getting him out for walks even when it was raining. The house was clean when we got home too.", name: 'Rachel B.', title: '', date: '2019' },
+              { quote: "Lisa was great. She took great care of our home and our old dog, getting him out for walks even when it was raining. The house was clean when we got home too.", name: 'Rachel B.', title: '', date: '2019', repeat: true },
               { quote: "Lisa May put me at ease. My home was running like a well-oiled machine. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May as a caring companion.", name: 'Doris O.', title: '', date: '2018' },
               { quote: "Lisa had our cat well taken care of. She sent us pictures of him while we were away and I'm sure gave him lots of love. Would definitely hire her again.", name: 'Katherine A.', title: '', date: '2019' },
               { quote: "Lisa is very dependable and is great at communicating timely and thoroughly! She is very flexible and willing to adapt to my dogs daily needs.", name: 'Alicia F.', title: '', date: '2019' },
@@ -1323,7 +1324,7 @@ export default function Home() {
               { quote: "Lisa was super flexible despite my concierge not showing up to give her my apartment key. She walked my pup almost a full mile in a short period of time. She is extremely responsive and I will be using her again!", name: 'Madeleine H.', title: '', date: '2019' },
               { quote: "What a great sitter for my foster pup!! She takes great photos, is prompt, and leaves great summaries. I highly recommend her.", name: 'Allison A.', title: '', date: '2019' },
               { quote: "Lisa was great! She really helped me out on a day where I couldn't get home to let Louie out. Would highly recommend and use her anytime.", name: 'Erica R.', title: '', date: '2019' },
-              { quote: "She even managed to grab my Dog Lily when her harness failed! Amazing!", name: 'Derek S.', title: '', date: '2019' },
+              { quote: "She even managed to grab my Dog Lily when her harness failed! Amazing!", name: 'Derek S.', title: '', date: '2019', repeat: true },
               { quote: "Lisa as always does a stellar job!", name: 'William S.', title: '', date: '2019' },
               { quote: "You're amazing! Thank you! I feel so good knowing they are taken care of.", name: 'Celeste G.', title: '', date: '2019' },
               { quote: "Lisa was great and sent very good updates!", name: 'Casey S.', title: '', date: '2019' },
@@ -1356,7 +1357,7 @@ export default function Home() {
               { quote: "Lisa was friendly, professional, and sweet to our dog. This was our first experience with Rover and everything went smoothly.", name: 'Drew H.', title: '', date: '2021' },
               { quote: "I highly recommend Lisa without any hesitation!! She went beyond the call of duty and my house was left in pristine condition.", name: 'Paula P.', title: '', date: '2021' },
               { quote: "Lisa watched our house and dog when we went to Mexico. She was very communicative throughout and everything was taken care of when we got home.", name: 'Emily M.', title: '', date: '2021' },
-              { quote: "Lisa took great care of Henry.", name: 'William F.', title: '', date: '2023' },
+              { quote: "Lisa took great care of Henry.", name: 'William F.', title: '', date: '2023', repeat: true },
               { quote: "Lisa is a total pro. Left our house perfectly clean and exactly how we left it, just a little better.", name: 'Claire H.', title: '', date: '2023' },
             ].map((t, i) => (
               <div key={t.name + t.date + i} style={{ backgroundColor: 'white', padding: '28px 24px', borderRadius: '8px', borderLeft: '4px solid #E8A598' }}>
@@ -1364,6 +1365,7 @@ export default function Home() {
                   "{t.quote}"
                 </p>
                 <div style={{ color: '#7D3B4E', fontWeight: 'bold', fontSize: '14px' }}>{t.name}</div>
+                {t.repeat && <span style={{ display: 'inline-block', backgroundColor: '#D4A017', color: 'white', fontSize: '10px', fontWeight: '700', letterSpacing: '0.5px', padding: '2px 8px', borderRadius: '10px', marginTop: '4px' }}>Repeat Client</span>}
                 {t.title && <div style={{ color: '#C97B8A', fontSize: '12px', marginTop: '3px' }}>{t.title}</div>}
                 <div style={{ display: 'inline-block', marginTop: '6px', fontSize: '11px', color: '#C97B8A', letterSpacing: '1px', fontWeight: '600', backgroundColor: '#FDF6F0', padding: '2px 8px', borderRadius: '10px' }}>{t.date}</div>
               </div>

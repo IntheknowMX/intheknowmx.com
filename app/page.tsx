@@ -5,18 +5,47 @@ import { useState } from 'react'
 import MexicoPathQuiz from './components/MexicoPathQuiz'
 import PaymentModal from './components/PaymentModal'
 
+const CONCIERGE_TIERS = [
+  { id: 'Hourly', label: 'Hourly', stripe: 'https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X', paypal: 'https://www.paypal.com/ncp/payment/M4Q2XASL63F42' },
+  { id: 'Starter', label: 'Starter (8 hrs)', stripe: 'https://buy.stripe.com/aFacN58jq0R8fpe3ry2880Y', paypal: 'https://www.paypal.com/ncp/payment/MTLDLWHWTV7H6' },
+  { id: 'Standard', label: 'Standard (16 hrs)', stripe: 'https://buy.stripe.com/14AfZh7fm8jAb8Y0fm2880Z', paypal: 'https://www.paypal.com/ncp/payment/3DVWJNJK6UXH2' },
+  { id: 'Full Support', label: 'Full Support (24 hrs)', stripe: 'https://buy.stripe.com/6oU3cv43aarI5OEd2828810', paypal: 'https://www.paypal.com/ncp/payment/3KG54FZ69BVBL' },
+]
+
+const MEDICAL_TIERS = [
+  { id: 'Hourly', label: 'Hourly ($22/hr, min 2 hrs)', stripe: 'https://buy.stripe.com/00wfZh8jqarI0uk8LS2880t' },
+  { id: 'Half Day', label: 'Half Day — $80', stripe: 'https://buy.stripe.com/eVq28rgPWczQa4U7HO2880u' },
+  { id: 'Full Day', label: 'Full Day — $150', stripe: 'https://buy.stripe.com/8x2aEXdDKdDUelad282880v' },
+]
+
+const COMPANION_TIERS = [
+  { id: 'Hourly', label: 'Hourly ($15/hr)', stripe: 'https://buy.stripe.com/8x2aEX57e57ob8Y4vC2880y' },
+  { id: 'Half Day', label: 'Half Day — $56', stripe: 'https://buy.stripe.com/7sY7sLczG9nE5OE6DK2880w' },
+  { id: 'Full Day', label: 'Full Day — $96', stripe: 'https://buy.stripe.com/8x28wP6bi0R82Cs4vC2880x' },
+]
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [paymentModalOpen, setPaymentModalOpen] = useState(false)
   const [selectedService, setSelectedService] = useState('')
-  const handlePayNow = (service: string) => {
+  const [modalStripeUrl, setModalStripeUrl] = useState<string | undefined>()
+  const [modalPaypalUrl, setModalPaypalUrl] = useState<string | undefined>()
+  const [conciergeTier, setConciergeTier] = useState('Hourly')
+  const [medicalTier, setMedicalTier] = useState('Hourly')
+  const [companionTier, setCompanionTier] = useState('Hourly')
+
+  const handlePayNow = (service: string, stripeUrl?: string, paypalUrl?: string) => {
     setSelectedService(service)
+    setModalStripeUrl(stripeUrl)
+    setModalPaypalUrl(paypalUrl)
     setPaymentModalOpen(true)
   }
 
   const closePaymentModal = () => {
     setPaymentModalOpen(false)
     setSelectedService('')
+    setModalStripeUrl(undefined)
+    setModalPaypalUrl(undefined)
   }
 
   const renderCardActions = (service: string, href: string) => (
@@ -59,7 +88,7 @@ export default function Home() {
 
   return (
     <main className="page-root" style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
-      <PaymentModal open={paymentModalOpen} onClose={closePaymentModal} service={selectedService} />
+      <PaymentModal open={paymentModalOpen} onClose={closePaymentModal} service={selectedService} stripeUrl={modalStripeUrl} paypalUrl={modalPaypalUrl} />
       <style>{`
         .page-root { }
         .main-nav { background-color: #FDF6F0; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E8A598; position: sticky; top: 0; z-index: 100; }
@@ -482,8 +511,7 @@ export default function Home() {
                 <li>Follow-up email with action steps</li>
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '24px' }}>
-                <a href="https://buy.stripe.com/fZu9ATgPWarI7WM7HO2880U" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>Pay Now</a>
-                <a href="https://www.paypal.com/ncp/payment/HMK3DGTSXGUCC" target="_blank" rel="noreferrer" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>PayPal</a>
+                <button onClick={() => handlePayNow('Virtual Guidance')} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Pay Now</button>
                 <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>
@@ -502,8 +530,7 @@ export default function Home() {
                 <li>Final paperwork preparation</li>
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '24px' }}>
-                <a href="https://buy.stripe.com/cNicN52Z61Vc2Cs4vC2880W" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>Pay Now</a>
-                <a href="https://www.paypal.com/ncp/payment/RRNW9ALGBZ6J2" target="_blank" rel="noreferrer" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>PayPal</a>
+                <button onClick={() => handlePayNow('On the Ground Facilitation')} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Pay Now</button>
                 <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>
@@ -678,24 +705,37 @@ export default function Home() {
 
                 {/* Ready to Book? */}
                 <div style={{ flex: 1, backgroundColor: '#2C1810', borderRadius: '12px', padding: '32px' }}>
-                  <p style={{ fontSize: '12px', fontWeight: '700', color: '#E8A598', textTransform: 'uppercase', letterSpacing: '1px', margin: '0 0 12px' }}>💳 Credit or debit — +3% fee</p>
-                  <div style={{ fontSize: '14px', lineHeight: '2.1', color: '#FDF6F0', marginBottom: '28px' }}>
-                    <div>Hourly &nbsp;→&nbsp; <a href="https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Stripe</a> &nbsp;|&nbsp; <a href="https://www.paypal.com/ncp/payment/M4Q2XASL63F42" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>PayPal</a></div>
-                    <div>Starter &nbsp;→&nbsp; <a href="https://buy.stripe.com/aFacN58jq0R8fpe3ry2880Y" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Stripe</a> &nbsp;|&nbsp; <a href="https://www.paypal.com/ncp/payment/MTLDLWHWTV7H6" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>PayPal</a></div>
-                    <div>Standard &nbsp;→&nbsp; <a href="https://buy.stripe.com/14AfZh7fm8jAb8Y0fm2880Z" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Stripe</a> &nbsp;|&nbsp; <a href="https://www.paypal.com/ncp/payment/3DVWJNJK6UXH2" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>PayPal</a></div>
-                    <div>Full Support &nbsp;→&nbsp; <a href="https://buy.stripe.com/6oU3cv43aarI5OEd2828810" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>Stripe</a> &nbsp;|&nbsp; <a href="https://www.paypal.com/ncp/payment/3KG54FZ69BVBL" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>PayPal</a></div>
+                  <h3 style={{ fontSize: '20px', fontWeight: 'normal', marginBottom: '16px', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>Select Your Plan</h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
+                    {CONCIERGE_TIERS.map((tier) => (
+                      <button
+                        key={tier.id}
+                        onClick={() => setConciergeTier(tier.id)}
+                        style={{
+                          backgroundColor: conciergeTier === tier.id ? '#C4622D' : 'rgba(255,255,255,0.08)',
+                          color: '#FDF6F0',
+                          border: conciergeTier === tier.id ? 'none' : '1px solid rgba(255,255,255,0.2)',
+                          borderRadius: '6px',
+                          padding: '10px 16px',
+                          fontSize: '14px',
+                          fontWeight: conciergeTier === tier.id ? 700 : 400,
+                          cursor: 'pointer',
+                          textAlign: 'left',
+                        }}
+                      >
+                        {tier.label}
+                      </button>
+                    ))}
                   </div>
-                  <h3 style={{ fontSize: '24px', fontWeight: 'normal', marginBottom: '10px', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>Ready to Book?</h3>
-                  <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0', marginBottom: '16px' }}>
-                    Confirm service via your preferred payment method:
-                  </p>
-                  <div style={{ fontSize: '14px', lineHeight: '1.9', color: '#FDF6F0' }}>
-                    <p style={{ margin: '0 0 8px' }}>✅ Zelle — no fee → <strong>sittingprettydc@gmail.com</strong></p>
-                    <p style={{ margin: 0 }}>💻 PayPal — +3% fee → <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={{ color: '#FDF6F0', textDecoration: 'underline' }}>paypal.com/paypalme/lisaMayCo</a></p>
-                  </div>
-                  <p style={{ marginTop: '24px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598', marginBottom: 0 }}>
-                    You will receive a link to your pre-service questionnaire and booking link after payment. I'm looking forward to working with you!
-                  </p>
+                  <button
+                    onClick={() => {
+                      const tier = CONCIERGE_TIERS.find(t => t.id === conciergeTier)
+                      if (tier) handlePayNow('Concierge', tier.stripe, tier.paypal)
+                    }}
+                    style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+                  >
+                    Pay Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -768,8 +808,32 @@ export default function Home() {
                   Navigating care in Mexico is hard alone. With the right person beside you, it isn't.
                 </div>
               </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '10px' }}>
+                {MEDICAL_TIERS.map((tier) => (
+                  <button
+                    key={tier.id}
+                    onClick={() => setMedicalTier(tier.id)}
+                    style={{
+                      backgroundColor: medicalTier === tier.id ? '#C4622D' : '#FAE8E0',
+                      color: medicalTier === tier.id ? 'white' : '#2C1810',
+                      border: '1px solid #C4622D',
+                      borderRadius: '6px',
+                      padding: '8px 16px',
+                      fontSize: '13px',
+                      fontWeight: medicalTier === tier.id ? 700 : 400,
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                    }}
+                  >
+                    {tier.label}
+                  </button>
+                ))}
+              </div>
               <button
-                onClick={() => handlePayNow('Medical Concierge')}
+                onClick={() => {
+                  const tier = MEDICAL_TIERS.find(t => t.id === medicalTier)
+                  if (tier) handlePayNow('Medical Concierge', tier.stripe)
+                }}
                 style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
               >
                 Pay Now
@@ -801,8 +865,32 @@ export default function Home() {
                   Client covers all outing costs, including meals, transportation, admission fees, and activities.
                 </div>
               </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '10px' }}>
+                {COMPANION_TIERS.map((tier) => (
+                  <button
+                    key={tier.id}
+                    onClick={() => setCompanionTier(tier.id)}
+                    style={{
+                      backgroundColor: companionTier === tier.id ? '#C4622D' : '#FAE8E0',
+                      color: companionTier === tier.id ? 'white' : '#2C1810',
+                      border: '1px solid #C4622D',
+                      borderRadius: '6px',
+                      padding: '8px 16px',
+                      fontSize: '13px',
+                      fontWeight: companionTier === tier.id ? 700 : 400,
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                    }}
+                  >
+                    {tier.label}
+                  </button>
+                ))}
+              </div>
               <button
-                onClick={() => handlePayNow('Local Companion')}
+                onClick={() => {
+                  const tier = COMPANION_TIERS.find(t => t.id === companionTier)
+                  if (tier) handlePayNow('Local Companion', tier.stripe)
+                }}
                 style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
               >
                 Pay Now
@@ -944,10 +1032,10 @@ export default function Home() {
                 <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 6px', lineHeight: '1.6' }}>Reschedule once free with at least 48 hours&#39; notice.</p>
                 <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>Within 48 hours, the fee is non-refundable, as the driver and showings are confirmed.</p>
                 <div style={{ height: '16px' }} />
-                <a href="https://buy.stripe.com/8x2fZh8jq6bsb8Y5zG2880z" target="_blank" style={{
-                  backgroundColor: '#C4622D', color: 'white', padding: '12px 24px',
-                  borderRadius: '4px', textDecoration: 'none', fontSize: '14px', fontWeight: 'bold', display: 'inline-block'
-                }}>Reserve Your Rental Discovery Day &#8594;</a>
+                <button
+                  onClick={() => handlePayNow('Rental Showing Day')}
+                  style={{ backgroundColor: '#C4622D', color: 'white', padding: '12px 24px', borderRadius: '4px', border: 'none', fontSize: '14px', fontWeight: 'bold', display: 'inline-block', cursor: 'pointer' }}
+                >Reserve Your Rental Discovery Day →</button>
               </div>
 
               {/* Right: client success photo */}

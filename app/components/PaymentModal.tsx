@@ -6,63 +6,34 @@ type PaymentModalProps = {
   open: boolean
   onClose: () => void
   service?: string
+  stripeUrl?: string
+  paypalUrl?: string
 }
-
-const PLANNING_CALL_SERVICES = [
-  'The Relocation Planning Call',
-  'From Dream to Action Plan',
-  'Moving Past Hesitation',
-]
 
 const STRIPE_LINKS: Record<string, string> = {
   'The Relocation Planning Call': 'https://buy.stripe.com/14A5kD7fm7fw7WMd282880A',
   'From Dream to Action Plan': 'https://buy.stripe.com/00w28r43a6bsdh65zG2880B',
   'Moving Past Hesitation': 'https://buy.stripe.com/fZu9ATczGdDU2Csgek2880C',
   'Rental Showing Day': 'https://buy.stripe.com/14A8wPgPWeHYcd26DK2880m',
-  'Virtual Guidance': 'https://buy.stripe.com/5kQbJ18jq8jAdh6gek2880O',
-  'On the Ground Facilitation': 'https://buy.stripe.com/9B63cv57edDU2Csfag2880P',
+  'Virtual Guidance': 'https://buy.stripe.com/fZu9ATgPWarI7WM7HO2880U',
+  'On the Ground Facilitation': 'https://buy.stripe.com/cNicN52Z61Vc2Cs4vC2880W',
 }
 
 const PAYPAL_LINKS: Record<string, string> = {
   'The Relocation Planning Call': 'https://www.paypal.com/ncp/payment/SHVFXNG3ZMN68',
   'From Dream to Action Plan': 'https://www.paypal.com/ncp/payment/7M97LFD396424',
   'Moving Past Hesitation': 'https://www.paypal.com/ncp/payment/8FKYYZFUEJ7HJ',
+  'Virtual Guidance': 'https://www.paypal.com/ncp/payment/HMK3DGTSXGUCC',
+  'On the Ground Facilitation': 'https://www.paypal.com/ncp/payment/RRNW9ALGBZ6J2',
 }
 
-const RESIDENCY_SERVICES = [
-  'Mexican Residency, Sorted',
-  'Residency Planning Call',
-  'Residency Guided Package',
-  'Full Residency Concierge',
+const PRE_CALL_SERVICES = [
+  'The Relocation Planning Call',
+  'From Dream to Action Plan',
+  'Moving Past Hesitation',
 ]
 
-const CONCIERGE_SERVICES = [
-  'Personal Assistant',
-  'Tech Concierge',
-  'Travel & Logistics',
-  'Senior Concierge',
-]
-
-const CONCIERGE_STRIPE_LINKS = [
-  { label: 'Hourly $35/hour', url: 'https://buy.stripe.com/8x2bJ11V21Vc2CsbY42880s' },
-  { label: 'Starter (8 hours) $250', url: 'https://buy.stripe.com/bJe5kDary57ob8YbY42880q' },
-  { label: 'Standard (16 hours) $480', url: 'https://buy.stripe.com/5kQcN59nuarIfpe3ry2880r' },
-  { label: 'Full Support (24 hours) $700', url: 'https://buy.stripe.com/28EcN52Z69nE5OEfag2880p' },
-]
-
-const MEDICAL_CONCIERGE_STRIPE_LINKS = [
-  { label: 'Hourly $22', url: 'https://buy.stripe.com/00wfZh8jqarI0uk8LS2880t' },
-  { label: 'Half Day $80', url: 'https://buy.stripe.com/eVq28rgPWczQa4U7HO2880u' },
-  { label: 'Full Day $150', url: 'https://buy.stripe.com/8x2aEXdDKdDUelad282880v' },
-]
-
-const LOCAL_COMPANION_STRIPE_LINKS = [
-  { label: 'Hourly $15', url: 'https://buy.stripe.com/8x2aEX57e57ob8Y4vC2880y' },
-  { label: 'Half Day $56', url: 'https://buy.stripe.com/7sY7sLczG9nE5OE6DK2880w' },
-  { label: 'Full Day $96', url: 'https://buy.stripe.com/8x28wP6bi0R82Cs4vC2880x' },
-]
-
-export default function PaymentModal({ open, onClose, service }: PaymentModalProps) {
+export default function PaymentModal({ open, onClose, service, stripeUrl: stripeOverride, paypalUrl: paypalOverride }: PaymentModalProps) {
   const [policyAgreed, setPolicyAgreed] = useState(false)
   const [policyExpanded, setPolicyExpanded] = useState(false)
 
@@ -75,20 +46,28 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
 
   if (!open) return null
 
-  const stripeUrl = service ? STRIPE_LINKS[service] : undefined
-  const paypalUrl = service ? PAYPAL_LINKS[service] : undefined
-  const isPlanningCall = service ? PLANNING_CALL_SERVICES.includes(service) : false
-  const isResidency = service ? RESIDENCY_SERVICES.includes(service) : false
-  const isConcierge = service ? CONCIERGE_SERVICES.includes(service) : false
-  const isMedicalConcierge = service === 'Medical Concierge'
-  const isLocalCompanion = service === 'Local Companion'
+  const resolvedStripeUrl = stripeOverride || (service ? STRIPE_LINKS[service] : undefined)
+  const resolvedPaypalUrl = paypalOverride || (service ? PAYPAL_LINKS[service] : undefined)
+  const isPreCall = service ? PRE_CALL_SERVICES.includes(service) : false
 
-  const gated: React.CSSProperties = policyAgreed
-    ? {}
-    : { opacity: 0.4, pointerEvents: 'none' }
-
-  const linkBase: React.CSSProperties = { color: '#FDF6F0', textDecoration: 'underline' }
-  const gatedLink: React.CSSProperties = { ...linkBase, ...gated }
+  const btnStyle = (color: string): React.CSSProperties => ({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    padding: '14px 20px',
+    borderRadius: '8px',
+    fontSize: '15px',
+    fontWeight: 700,
+    textDecoration: 'none',
+    border: 'none',
+    cursor: policyAgreed ? 'pointer' : 'default',
+    marginBottom: '10px',
+    backgroundColor: color,
+    color: 'white',
+    opacity: policyAgreed ? 1 : 0.35,
+    pointerEvents: (policyAgreed ? 'auto' : 'none') as React.CSSProperties['pointerEvents'],
+  })
 
   return (
     <div style={{
@@ -102,7 +81,7 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
       zIndex: 200,
     }}>
       <div style={{
-        maxWidth: '560px',
+        maxWidth: '520px',
         width: '100%',
         backgroundColor: '#2C1810',
         color: '#FDF6F0',
@@ -133,6 +112,7 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
         >
           ×
         </button>
+
         <h2 style={{ fontSize: '32px', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", color: '#FDF6F0' }}>
           Ready to Book?
         </h2>
@@ -142,8 +122,8 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
           </p>
         )}
 
-        {/* Cancellation policy block */}
-        <div style={{ marginBottom: '22px', padding: '14px 16px', backgroundColor: 'rgba(255,255,255,0.07)', borderRadius: '8px' }}>
+        {/* Cancellation policy + checkbox gate */}
+        <div style={{ marginBottom: '24px', padding: '14px 16px', backgroundColor: 'rgba(255,255,255,0.07)', borderRadius: '8px' }}>
           <p style={{ fontSize: '13px', color: '#E8A598', margin: '0 0 8px', lineHeight: '1.6' }}>
             Full payment confirms your service. Cancellations 48+ hours before your scheduled session receive full credit; under 48 hours are non-refundable.
           </p>
@@ -172,98 +152,33 @@ export default function PaymentModal({ open, onClose, service }: PaymentModalPro
           </div>
         </div>
 
-        {isPlanningCall ? (
-          <>
-            <p style={{ marginBottom: '18px', fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0' }}>
-              Confirm your booking via your preferred payment method:
-            </p>
-            <div style={{ fontSize: '15px', lineHeight: '1.9', color: '#FDF6F0' }}>
-              <p style={{ marginBottom: '12px' }}>
-                ✅ <a href="https://wa.me/5214731218554" target="_blank" rel="noreferrer" style={gatedLink}>Zelle (no fee) — message me on WhatsApp for my details</a>
-              </p>
-              {paypalUrl && (
-                <p style={{ marginBottom: '12px' }}>
-                  💻 <a href={paypalUrl} target="_blank" rel="noreferrer" style={gatedLink}>PayPal (+3% fee)</a>
-                </p>
-              )}
-              {stripeUrl && (
-                <p style={{ marginBottom: '0' }}>
-                  💳 <a href={stripeUrl} target="_blank" rel="noreferrer" style={gatedLink}>Credit or debit (+3% fee)</a>
-                </p>
-              )}
-            </div>
-          </>
-        ) : (
-          <>
-            <p style={{ marginBottom: '18px', fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0' }}>
-              Step 1 — Message Lisa on WhatsApp to confirm your service, date, and amount.
-            </p>
-            <a
-              href="https://wa.me/5214731218554"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: '#29A745',
-                color: 'white',
-                textDecoration: 'none',
-                borderRadius: '8px',
-                padding: '14px 22px',
-                fontSize: '15px',
-                fontWeight: 700,
-                marginBottom: '24px',
-              }}
-            >
-              Message Lisa on WhatsApp →
+        {/* Payment buttons — gated until checkbox checked */}
+        <div>
+          {resolvedStripeUrl && (
+            <a href={resolvedStripeUrl} target="_blank" rel="noreferrer" style={btnStyle('#C4622D')}>
+              💳 Credit or Debit (+3% fee)
             </a>
-            <p style={{ marginBottom: '16px', fontSize: '15px', lineHeight: '1.8', color: '#FDF6F0' }}>
-              Step 2 — Once confirmed, send payment via your preferred method:
-            </p>
-            <div style={{ fontSize: '15px', lineHeight: '1.9', color: '#FDF6F0' }}>
-              <p style={{ marginBottom: '12px' }}>✅ Zelle — no fee → <strong>sittingprettydc@gmail.com</strong></p>
-              <p style={{ marginBottom: isResidency ? '0' : '12px' }}>💻 PayPal — +3% fee → <a href="https://paypal.com/paypalme/lisaMayCo" target="_blank" rel="noreferrer" style={gatedLink}>https://paypal.com/paypalme/lisaMayCo</a></p>
-              {!isResidency && (
-                <div>
-                  {stripeUrl ? (
-                    <p style={{ marginBottom: '0' }}>💳 Stripe — +3% fee → <a href={stripeUrl} target="_blank" rel="noreferrer" style={gatedLink}>Pay now with Stripe →</a></p>
-                  ) : isConcierge ? (
-                    <div>
-                      <p style={{ marginBottom: '8px' }}>💳 Credit or debit — +3% fee</p>
-                      {CONCIERGE_STRIPE_LINKS.map(({ label, url }) => (
-                        <p key={url} style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href={url} target="_blank" rel="noreferrer" style={gatedLink}>{label}</a></p>
-                      ))}
-                    </div>
-                  ) : isMedicalConcierge ? (
-                    <div>
-                      <p style={{ marginBottom: '8px' }}>💳 Credit or debit — +3% fee</p>
-                      {MEDICAL_CONCIERGE_STRIPE_LINKS.map(({ label, url }) => (
-                        <p key={url} style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href={url} target="_blank" rel="noreferrer" style={gatedLink}>{label}</a></p>
-                      ))}
-                    </div>
-                  ) : isLocalCompanion ? (
-                    <div>
-                      <p style={{ marginBottom: '8px' }}>💳 Credit or debit — +3% fee</p>
-                      {LOCAL_COMPANION_STRIPE_LINKS.map(({ label, url }) => (
-                        <p key={url} style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href={url} target="_blank" rel="noreferrer" style={gatedLink}>{label}</a></p>
-                      ))}
-                    </div>
-                  ) : (
-                    <div>
-                      <p style={{ marginBottom: '8px' }}>💳 Stripe — +3% fee</p>
-                      <p style={{ marginBottom: '6px', paddingLeft: '24px' }}>→ <a href="https://buy.stripe.com/5kQbJ18jq8jAdh6gek2880O" target="_blank" rel="noreferrer" style={gatedLink}>Virtual Guidance $335</a></p>
-                      <p style={{ marginBottom: '0', paddingLeft: '24px' }}>→ <a href="https://buy.stripe.com/9B63cv57edDU2Csfag2880P" target="_blank" rel="noreferrer" style={gatedLink}>On the Ground Facilitation $779</a></p>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          </>
-        )}
+          )}
+          {resolvedPaypalUrl && (
+            <a href={resolvedPaypalUrl} target="_blank" rel="noreferrer" style={btnStyle('#003087')}>
+              PayPal (+3% fee)
+            </a>
+          )}
+          <a
+            href="https://wa.me/5214731218554"
+            target="_blank"
+            rel="noreferrer"
+            style={{ ...btnStyle('#198754'), marginBottom: 0 }}
+          >
+            Zelle (no fee) — message me on WhatsApp
+          </a>
+        </div>
 
-        <p style={{ marginTop: '28px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598' }}>
-          You will receive a link to your pre-call questionnaire and booking link after payment. I&apos;m looking forward to working with you!
+        <p style={{ marginTop: '24px', fontSize: '13px', fontStyle: 'italic', color: '#E8A598' }}>
+          {isPreCall
+            ? "You will receive a link to your pre-call questionnaire and booking link after payment. I’m looking forward to working with you!"
+            : "You will receive a link to your pre-service questionnaire and booking link after payment. I’m looking forward to working with you!"
+          }
         </p>
       </div>
     </div>

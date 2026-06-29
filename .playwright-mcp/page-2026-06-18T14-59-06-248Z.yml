@@ -1,0 +1,1100 @@
+- main [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]: IN THE KNOW MEXICO
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "About" [ref=e7] [cursor=pointer]:
+          - /url: "#about"
+        - link "Residency" [ref=e8] [cursor=pointer]:
+          - /url: /residency
+        - link "Concierge" [ref=e9] [cursor=pointer]:
+          - /url: "#services"
+        - link "Rentals" [ref=e10] [cursor=pointer]:
+          - /url: "#rentals"
+        - link "Owning" [ref=e11] [cursor=pointer]:
+          - /url: "#properties"
+        - link "Home & Pet" [ref=e12] [cursor=pointer]:
+          - /url: "#caretaking"
+        - link "Welcome Table" [ref=e13] [cursor=pointer]:
+          - /url: "#welcome-table"
+        - link "Testimonials" [ref=e14] [cursor=pointer]:
+          - /url: "#testimonials"
+      - link "Book a Planning Call" [ref=e15] [cursor=pointer]:
+        - /url: https://calendar.app.google/qfwutaFsrSaqWVkw7
+  - generic [ref=e16]:
+    - img "San Miguel de Allende" [ref=e18]
+    - generic [ref=e19]:
+      - paragraph [ref=e20]: SAN MIGUEL DE ALLENDE · MEXICO
+      - heading "San Miguel Insider." [level=1] [ref=e21]:
+        - text: San Miguel
+        - text: Insider.
+      - paragraph [ref=e23]: Your person on the ground since 2015.
+      - generic [ref=e24]:
+        - link "Book a Planning Call" [ref=e25] [cursor=pointer]:
+          - /url: https://calendar.app.google/qfwutaFsrSaqWVkw7
+        - link "See If I Qualify →" [ref=e26] [cursor=pointer]:
+          - /url: /residency
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]: 12+
+      - generic [ref=e31]: Years in Mexico
+    - generic [ref=e32]:
+      - generic [ref=e33]: 100%
+      - generic [ref=e34]: In-Person Service
+    - generic [ref=e35]:
+      - generic [ref=e36]: 300+
+      - generic [ref=e37]: Five-Star Reviews
+    - generic [ref=e38]:
+      - generic [ref=e39]: 124+
+      - generic [ref=e40]: Repeat Clients
+    - generic [ref=e41]:
+      - generic [ref=e42]: 24/7
+      - generic [ref=e43]: On the Ground
+  - generic [ref=e45]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]: ⭐⭐⭐⭐⭐
+        - generic [ref=e49]: "\"We never worried once.\""
+        - generic [ref=e50]: — Amy H.
+        - generic [ref=e51]: · · ·
+      - generic [ref=e52]:
+        - generic [ref=e53]: ⭐⭐⭐⭐⭐
+        - generic [ref=e54]: "\"The hardest part about having her is saying goodbye.\""
+        - generic [ref=e55]: — Michelle L., Gecko Bungalows Resort · Belize
+        - generic [ref=e56]: · · ·
+      - generic [ref=e57]:
+        - generic [ref=e58]: ⭐⭐⭐⭐⭐
+        - generic [ref=e59]: "\"My home was running like a well-oiled machine.\""
+        - generic [ref=e60]: — Janet A.
+        - generic [ref=e61]: · · ·
+      - generic [ref=e62]:
+        - generic [ref=e63]: ⭐⭐⭐⭐⭐
+        - generic [ref=e64]: "\"Left our house perfectly clean and exactly how we left it, just a little better.\""
+        - generic [ref=e65]: — Claire H.
+        - generic [ref=e66]: · · ·
+      - generic [ref=e67]:
+        - generic [ref=e68]: ⭐⭐⭐⭐⭐
+        - generic [ref=e69]: "\"I always feel safe when she sits my pets.\""
+        - generic [ref=e70]: — Karla S.
+        - generic [ref=e71]: · · ·
+      - generic [ref=e72]:
+        - generic [ref=e73]: ⭐⭐⭐⭐⭐
+        - generic [ref=e74]: "\"Lisa is a god send.\""
+        - generic [ref=e75]: — Amy H.
+        - generic [ref=e76]: · · ·
+      - generic [ref=e77]:
+        - generic [ref=e78]: ⭐⭐⭐⭐⭐
+        - generic [ref=e79]: "\"You will not be disappointed.\""
+        - generic [ref=e80]: — Maggie G.
+        - generic [ref=e81]: · · ·
+      - generic [ref=e82]:
+        - generic [ref=e83]: ⭐⭐⭐⭐⭐
+        - generic [ref=e84]: "\"She goes above and beyond.\""
+        - generic [ref=e85]: — Kathryn W.
+        - generic [ref=e86]: · · ·
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]: ⭐⭐⭐⭐⭐
+        - generic [ref=e90]: "\"We never worried once.\""
+        - generic [ref=e91]: — Amy H.
+        - generic [ref=e92]: · · ·
+      - generic [ref=e93]:
+        - generic [ref=e94]: ⭐⭐⭐⭐⭐
+        - generic [ref=e95]: "\"The hardest part about having her is saying goodbye.\""
+        - generic [ref=e96]: — Michelle L., Gecko Bungalows Resort · Belize
+        - generic [ref=e97]: · · ·
+      - generic [ref=e98]:
+        - generic [ref=e99]: ⭐⭐⭐⭐⭐
+        - generic [ref=e100]: "\"My home was running like a well-oiled machine.\""
+        - generic [ref=e101]: — Janet A.
+        - generic [ref=e102]: · · ·
+      - generic [ref=e103]:
+        - generic [ref=e104]: ⭐⭐⭐⭐⭐
+        - generic [ref=e105]: "\"Left our house perfectly clean and exactly how we left it, just a little better.\""
+        - generic [ref=e106]: — Claire H.
+        - generic [ref=e107]: · · ·
+      - generic [ref=e108]:
+        - generic [ref=e109]: ⭐⭐⭐⭐⭐
+        - generic [ref=e110]: "\"I always feel safe when she sits my pets.\""
+        - generic [ref=e111]: — Karla S.
+        - generic [ref=e112]: · · ·
+      - generic [ref=e113]:
+        - generic [ref=e114]: ⭐⭐⭐⭐⭐
+        - generic [ref=e115]: "\"Lisa is a god send.\""
+        - generic [ref=e116]: — Amy H.
+        - generic [ref=e117]: · · ·
+      - generic [ref=e118]:
+        - generic [ref=e119]: ⭐⭐⭐⭐⭐
+        - generic [ref=e120]: "\"You will not be disappointed.\""
+        - generic [ref=e121]: — Maggie G.
+        - generic [ref=e122]: · · ·
+      - generic [ref=e123]:
+        - generic [ref=e124]: ⭐⭐⭐⭐⭐
+        - generic [ref=e125]: "\"She goes above and beyond.\""
+        - generic [ref=e126]: — Kathryn W.
+        - generic [ref=e127]: · · ·
+  - generic [ref=e129]:
+    - generic [ref=e130]:
+      - generic [ref=e131]: "\""
+      - paragraph [ref=e132]: From the moment I got off the plane, Lisa showed up with kindness and clarity.
+      - generic [ref=e133]: Brian Keith Webster
+      - generic [ref=e134]: Author
+    - generic [ref=e135]:
+      - generic [ref=e136]: "\""
+      - paragraph [ref=e137]: She handled everything with exceptional grace and competence.
+      - generic [ref=e138]: Sugar & Sandy Hudson
+      - generic [ref=e139]: Mayor, Los Frailes SMA
+    - generic [ref=e140]:
+      - generic [ref=e141]: "\""
+      - paragraph [ref=e142]: She's not just a concierge — she's a trusted guide.
+      - generic [ref=e143]: Tiffany Paige
+      - generic [ref=e144]: Licensed Real Estate Advisor, The Agency SMA
+  - generic [ref=e146]:
+    - paragraph [ref=e147]: WHY LISA & THE IN THE KNOW MEXICO TEAM
+    - heading "Mexico is a life, not a checklist." [level=2] [ref=e148]
+    - paragraph [ref=e149]: Residency and housing are just the beginning. The real work is building a life you actually love — your grocery store, your doctor, your gym, your people, your Saturday morning, your favorite table at your favorite restaurant. That's where we come in.
+    - generic [ref=e150]:
+      - generic [ref=e151]:
+        - generic [ref=e152]: 📍
+        - heading "Known in San Miguel." [level=3] [ref=e153]
+        - paragraph [ref=e154]: 11 years of real relationships — landlords, attorneys, doctors, contractors, household staff, and neighbors. Not a contact list. A community.
+      - generic [ref=e155]:
+        - generic [ref=e156]: 🤝
+        - heading "Trusted by the community." [level=3] [ref=e157]
+        - paragraph [ref=e158]: 500+ five-star reviews. Not because nothing ever goes wrong — but because when it does, Lisa handles it before you have to. She clears the problem. You come home to exactly what you left. Ready to welcome you back to your charmed life in San Miguel.
+      - generic [ref=e159]:
+        - generic [ref=e160]: 👩🏽
+        - heading "Lisa shows up. Every time. On time." [level=3] [ref=e161]
+        - paragraph [ref=e162]: Residency coordination. Rental showings. Bureaucratic roadblocks. The technological moments that put your life on hold — blocked SSA accounts, Mexican government portals, health insurance reimbursement, banking, money transfers, online bill pay, booking travel. Whatever stands between you and your Mexico life, Lisa shows up and gets it handled. Eleven years of building a real expat life here means the right doors tend to open.
+  - generic [ref=e164]:
+    - paragraph [ref=e165]: FIND YOUR PATH
+    - heading "Find Your Mexico Path" [level=2] [ref=e166]
+    - paragraph [ref=e167]: 5 quick questions. A personalized recommendation just for you.
+    - generic [ref=e170]:
+      - paragraph [ref=e171]: QUESTION 1 OF 5
+      - heading "Where are you in your Mexico journey?" [level=3] [ref=e172]
+      - generic [ref=e173]:
+        - button "✨ Just dreaming about it" [ref=e174] [cursor=pointer]
+        - button "📋 Actively planning my move" [ref=e175] [cursor=pointer]
+        - button "📦 Moving soon or in progress" [ref=e176] [cursor=pointer]
+        - button "🌮 Already living in Mexico" [ref=e177] [cursor=pointer]
+  - generic [ref=e179]:
+    - paragraph [ref=e180]: AS SEEN & HEARD
+    - heading "Lisa May Cobham in the Media" [level=2] [ref=e181]
+    - generic [ref=e182]:
+      - link "Business Insider Business Insider" [ref=e183] [cursor=pointer]:
+        - /url: https://www.businessinsider.com/how-to-be-an-expat-digital-nomad-living-abroad-2016-10
+        - img "Business Insider" [ref=e184]
+        - generic [ref=e185]: Business Insider
+      - link "American Real American Real" [ref=e186] [cursor=pointer]:
+        - /url: https://youtu.be/F7Nowbi5Am8
+        - img "American Real" [ref=e187]
+        - generic [ref=e188]: American Real
+      - link "London Real · Real Talk London Real · Real Talk" [ref=e189] [cursor=pointer]:
+        - /url: https://youtu.be/xKV6V0BRjvk
+        - img "London Real · Real Talk" [ref=e190]
+        - generic [ref=e191]: London Real · Real Talk
+      - link "A Quiet Broad Abroad A Quiet Broad Abroad" [ref=e192] [cursor=pointer]:
+        - /url: https://www.youtube.com/live/YY3Jkjbcbeg
+        - img "A Quiet Broad Abroad" [ref=e193]
+        - generic [ref=e194]: A Quiet Broad Abroad
+      - link "Over 50 Expat Interview Over 50 Expat Interview" [ref=e195] [cursor=pointer]:
+        - /url: https://www.youtube.com/live/YY3Jkjbcbeg
+        - img "Over 50 Expat Interview" [ref=e196]
+        - generic [ref=e197]: Over 50 Expat Interview
+  - generic [ref=e200]:
+    - generic [ref=e201]:
+      - paragraph [ref=e202]: ABOUT LISA MAY COBHAM
+      - heading "Known here. Trusted here. Since 2015." [level=2] [ref=e203]
+      - paragraph [ref=e204]: I didn't plan to stay. San Miguel charmed me into it. The joy of this city — the light, the people, the pace, the way life actually feels here — made leaving impossible. Eleven years later I am still here, still discovering, and still completely in love with this country.
+      - paragraph [ref=e205]:
+        - text: I work with
+        - strong [ref=e206]: Mexico newcomers
+        - text: who need more than a checklist. They need someone who already knows the plumber, the notary, the landlord, and the unspoken rules that no guidebook will tell you.
+        - strong [ref=e207]: Friend-level trust. Professional-grade follow-through.
+      - paragraph [ref=e208]: The town knows me. My clients know me. Now you do too.
+    - generic [ref=e209]:
+      - img "Lisa May Cobham — Relocation Specialist, In The Know Mexico" [ref=e210]
+      - paragraph [ref=e211]: 📍 San Miguel de Allende, Mexico
+  - generic [ref=e213]:
+    - paragraph [ref=e214]: PLAN YOUR MOVE
+    - heading "Planning Call" [level=2] [ref=e215]
+    - paragraph [ref=e216]: Before you pack a single box or fill out a single form — let's talk. A planning call is where clarity begins. Whether you are still dreaming, ready to act, or working through fear — there is a call designed for exactly where you are right now.
+    - generic [ref=e217]:
+      - generic [ref=e218]:
+        - generic [ref=e219]: 🗺️
+        - heading "The Relocation Planning Call" [level=3] [ref=e220]
+        - paragraph [ref=e221]: $89
+        - paragraph [ref=e222]: Everything in your head about Mexico — sorted.
+        - paragraph [ref=e223]: You'll complete a brief pre-call questionnaire so we arrive prepared and nothing gets missed. In our one-hour conversation we map your housing, residency, budget, timeline, pets, furniture, remote income, healthcare, and your personal next steps. Within 48 hours you receive a written summary of our call, specific answers to every question you raised, any additional resources I promised, and a timeline. You don't just leave with clarity — you leave with a document that becomes your Mexico roadmap.
+        - paragraph [ref=e224]: You will know exactly what your next step is.
+        - generic [ref=e225]:
+          - button "Pay Now" [ref=e226] [cursor=pointer]
+          - link "More Info" [ref=e227] [cursor=pointer]:
+            - /url: "#planning-calls"
+      - generic [ref=e228]:
+        - generic [ref=e229]: 📋
+        - heading "From Dream to Action Plan" [level=3] [ref=e230]
+        - paragraph [ref=e231]: $89
+        - paragraph [ref=e232]: You've been talking about Mexico for years. Let's turn that into a real outline.
+        - paragraph [ref=e233]: This call is for the serious dreamer who needs structure. Together we build a step-by-step action plan — what to do first, what to do next, and what can wait. We identify the gaps between where you are now and where you want to be, and we close them one by one. We cover the practical questions you've been putting off — housing options, neighborhood fit, budget reality, income sources, healthcare access, and what moving actually looks like for your specific life. Nothing vague. Nothing generic. A real plan built around your real situation. You've done the dreaming. This is where the doing begins.
+        - paragraph [ref=e234]: Dreams don't move you to Mexico. Plans do.
+        - generic [ref=e235]:
+          - button "Pay Now" [ref=e236] [cursor=pointer]
+          - link "More Info" [ref=e237] [cursor=pointer]:
+            - /url: "#planning-calls"
+      - generic [ref=e238]:
+        - generic [ref=e239]: 💛
+        - heading "Moving Past Hesitation" [level=3] [ref=e240]
+        - paragraph [ref=e241]: $89
+        - paragraph [ref=e242]: Sometimes the only thing standing between you and the life you want is fear.
+        - paragraph [ref=e243]: The plan is ready, but you're not, and that's worth taking seriously. Whatever's holding you back, whether money, timing, or the quiet fear you haven't said out loud, we talk it through honestly.
+        - paragraph [ref=e244]: You don't need to have it all figured out. You simply need a brainstorming session.
+        - generic [ref=e245]:
+          - button "Pay Now" [ref=e246] [cursor=pointer]
+          - link "More Info" [ref=e247] [cursor=pointer]:
+            - /url: "#planning-calls"
+    - generic [ref=e248]:
+      - paragraph [ref=e249]: "All Planning Calls Include:"
+      - list [ref=e250]:
+        - listitem [ref=e251]: A pre-call questionnaire so we arrive prepared and nothing gets missed
+        - listitem [ref=e252]: A 48-hour written follow-up with a summary, specific answers to every question you raised, and any resources promised during our call
+        - listitem [ref=e253]: Real steps to a plan at your fingertips before the week is out
+    - generic [ref=e254]:
+      - heading "Booking & Cancellation Policy" [level=3] [ref=e255]
+      - paragraph [ref=e256]: Full payment is required to confirm your booking. You will receive a confirmation email with your intake questionnaire within 24 hours of payment. Please complete it before your session so we arrive fully prepared.
+      - paragraph [ref=e257]: Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice, one free reschedule per booking.
+  - generic [ref=e259]:
+    - paragraph [ref=e260]: RESIDENCY
+    - heading "Mexican Residency, Sorted" [level=2] [ref=e261]
+    - paragraph [ref=e262]: We coordinate every step, set your appointments, and walk in with you. Temporary residency, permanent residency — navigated together by people who know Mexico and this process. You don't show up to a consulate with a stack of papers you don't understand. You arrive prepared and confident. We review your eligibility together, identify the right path for your specific situation, and handle the coordination from start to finish. Our Team stays present until you are fully taken care of — from your first question to the day you hold your residency card and beyond.
+    - generic [ref=e263]:
+      - generic [ref=e264]:
+        - heading "Virtual Guidance" [level=3] [ref=e265]
+        - paragraph [ref=e266]: $335
+        - paragraph [ref=e267]: Everything you need — with expert backup.
+        - list [ref=e268]:
+          - listitem [ref=e269]: Professional document review
+          - listitem [ref=e270]: All forms prepared and ready
+          - listitem [ref=e271]: Consulate and INM appointments scheduled
+          - listitem [ref=e272]: Step-by-step guidance throughout
+          - listitem [ref=e273]: Follow-up email with action steps
+        - generic [ref=e274]:
+          - link "Pay Now" [ref=e275] [cursor=pointer]:
+            - /url: https://buy.stripe.com/eVqaEX2Z60R83Gw2nu2880n
+          - link "More Info" [ref=e276] [cursor=pointer]:
+            - /url: /residency
+      - generic [ref=e277]:
+        - paragraph [ref=e278]: MOST POPULAR
+        - heading "On the Ground Facilitation" [level=3] [ref=e279]
+        - paragraph [ref=e280]: $779
+        - paragraph [ref=e281]: Everything in Virtual Guidance — plus an experienced INM facilitator on the ground with you.
+        - list [ref=e282]:
+          - listitem [ref=e283]: All document preparation and review
+          - listitem [ref=e284]: Consulate and INM appointments scheduled
+          - listitem [ref=e285]: In-person accompaniment to every appointment
+          - listitem [ref=e286]: Real-time translation throughout
+          - listitem [ref=e287]: Final paperwork preparation
+        - generic [ref=e288]:
+          - link "Pay Now" [ref=e289] [cursor=pointer]:
+            - /url: https://buy.stripe.com/6oUbJ1dDK0R81yoaU02880o
+          - link "More Info" [ref=e290] [cursor=pointer]:
+            - /url: /residency
+      - generic [ref=e291]:
+        - heading "Other Residency Services" [level=3] [ref=e292]
+        - paragraph [ref=e293]: Renewals · Address changes · Business permits · Work permits
+        - paragraph [ref=e294]: Submit your situation using the form below and we'll be in touch within 48 hours.
+        - generic [ref=e295]:
+          - textbox "Your name *" [ref=e296]
+          - textbox "Your email *" [ref=e297]
+          - textbox "WhatsApp number" [ref=e298]
+          - combobox [ref=e299]:
+            - option "Type of case *" [selected]
+            - option "Residency Renewal"
+            - option "Address Change"
+            - option "Business Permit"
+            - option "Work Permit"
+            - option "Heritage Citizenship"
+            - option "Other type of case"
+          - textbox "Brief description of your situation *" [ref=e300]
+          - button "Submit Your Case" [ref=e301] [cursor=pointer]
+    - paragraph [ref=e303]:
+      - strong [ref=e304]: "Important:"
+      - text: Government immigration filing fees are additional and vary by case. Rates above apply to straightforward temporary or permanent residency applications. We are not responsible for changes in immigration policies or processing times. Other residency services are quoted separately.
+    - generic [ref=e305]:
+      - heading "Booking & Cancellation Policy" [level=3] [ref=e306]
+      - paragraph [ref=e307]: Full payment is required to confirm your booking. Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice, one free reschedule per booking.
+  - generic [ref=e309]:
+    - paragraph [ref=e310]: CONCIERGE
+    - heading "Your Mexico life, handled by an experienced expat with the tech and logistics to back it up." [level=2] [ref=e311]
+    - paragraph [ref=e312]: Newcomer concierge support, right at your fingertips. Mexico has a learning curve. Everyone hits it. The difference is whether you hit it alone or with someone who has already figured it out. I can do it for you, or I can show you how Mexico works. Banking, utilities, household staff, lease review, internet setup, government accounts, healthcare, post-surgery support, Mexican driver's license, car nationalization, setting up a business, travel assistance, home and pet security while you are away, Mexican phone number, we will handle it together until you take the reins. That's the goal.
+    - generic [ref=e313]:
+      - generic [ref=e314]:
+        - heading "What We Handle" [level=3] [ref=e315]
+        - list [ref=e316]:
+          - listitem [ref=e317]: • Utility setup & bill payment
+          - listitem [ref=e318]: • Mexican bank account opening
+          - listitem [ref=e319]: • SIM card & internet setup
+          - listitem [ref=e320]: • Bilingual lease review & negotiation
+          - listitem [ref=e321]: "• Trusted referrals: gardeners, household help, contractors"
+          - listitem [ref=e322]: • Property management & construction oversight
+          - listitem [ref=e323]: • Reasonable home & clothing shopping guidance
+          - listitem [ref=e324]: • SSA & Mexican government account setup
+          - listitem [ref=e325]: • Post-surgery companionship & recovery support
+          - listitem [ref=e326]: • Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot
+        - paragraph [ref=e327]: Scroll down for more detailed services.
+      - generic [ref=e328]:
+        - generic [ref=e329]: 🛒
+        - heading "Personal Assistant" [level=3] [ref=e330]
+        - paragraph [ref=e331]: The errands, the projects, the things that pile up when life gets busy.
+        - paragraph [ref=e332]: Sometimes you just need an extra pair of hands. Whether it's running errands across town, picking up groceries from your favorite market, light cooking for the week, or tackling that home project that's been sitting on your list — this is where I come in.
+        - list [ref=e333]:
+          - listitem [ref=e334]: 🚗 Errand runs using your vehicle
+          - listitem [ref=e335]: 🛍️ Shopping — groceries, markets, specialty stores
+          - listitem [ref=e336]: 🍳 Light cooking and meal prep
+          - listitem [ref=e337]: 🔧 Special home projects and coordination
+          - listitem [ref=e338]: 📦 Deliveries, pickups and drop-offs
+          - listitem [ref=e339]: 🛒 Set up grocery deliveries
+          - listitem [ref=e340]: 📺 Set up TV apps
+          - listitem [ref=e341]: 🌿 Anything else that needs doing
+        - paragraph [ref=e342]: Office Assistance
+        - list [ref=e343]:
+          - listitem [ref=e344]: "📞 Business calls: local and abroad"
+          - listitem [ref=e345]: 📊 Spreadsheets, documents, and presentations
+          - listitem [ref=e346]: 📱 Social media setup, management, and scheduling. Editing videos, shorts, and posts.
+          - listitem [ref=e347]: 👤 Customer account management
+          - listitem [ref=e348]: ✍️ Blog management and editing
+          - listitem [ref=e349]: 📅 Appointments
+          - listitem [ref=e350]: 📹 Zoom setup and call management, during and post-meeting
+          - listitem [ref=e351]: 📝 Meeting minutes
+          - listitem [ref=e352]: 📋 Basic project management
+          - listitem [ref=e353]: 🎉 Event support
+        - paragraph [ref=e354]: You have a life to live. Let's keep it running smoothly.
+      - generic [ref=e355]:
+        - generic [ref=e356]: 💻
+        - heading "Tech Concierge" [level=3] [ref=e357]
+        - paragraph [ref=e358]: Technology should make your life easier. When it doesn't — call Lisa.
+        - paragraph [ref=e359]: Living in Mexico runs on apps these days, your bank, your ride, your prescriptions, your streaming, your government portals. When something won't connect, update, or cooperate, I sort it out, and show you how it works so it's less of a mystery next time. No condescension, no rushing. Just your devices doing what they're supposed to.
+        - list [ref=e360]:
+          - listitem [ref=e361]: 💻 Laptop and tablet setup and troubleshooting
+          - listitem [ref=e362]: 📱 Phone setup — Mexican SIM WhatsApp apps
+          - listitem [ref=e363]: 🔒 VPN setup and internet security
+          - listitem [ref=e364]: ✈️ Mexican travel apps — Uber ADO bus VivaAerobus Aeromexico
+          - listitem [ref=e365]: 💊 Health apps and medical record management
+          - listitem [ref=e366]: 🏦 Online banking and money transfer apps
+          - listitem [ref=e367]: 📺 Streaming setup — Netflix Amazon Prime Disney+
+          - listitem [ref=e368]: 🖨️ Printer setup and scanning
+          - listitem [ref=e369]: 📧 Email organization and management
+          - listitem [ref=e370]: 🔐 Password management setup
+          - listitem [ref=e371]: 📹 Video calling — Zoom FaceTime WhatsApp Video
+          - listitem [ref=e372]: 🌐 Google Translate and essential Mexico apps
+          - listitem [ref=e373]: 📋 SSA and government portal navigation
+          - listitem [ref=e374]: 🛒 Amazon.mx setup and navigation
+          - listitem [ref=e375]: 📸 Photo backup and organization
+        - paragraph [ref=e376]: If it has a screen and it is not cooperating — I can help.
+      - generic [ref=e377]:
+        - generic [ref=e378]: ✈️
+        - heading "Travel & Logistics" [level=3] [ref=e379]
+        - paragraph [ref=e380]: Getting there is half the adventure. Getting there smoothly is the whole point.
+        - paragraph [ref=e381]: Mexico opens up when you can move through it with ease. I handle the moving parts, flights, buses, transfers, documents, and the apps that make it all work, so your trip starts the moment you leave the door, not after you've untangled the logistics. Whether it's a weekend in the mountains or a flight back home, you travel knowing someone has the details covered.
+        - list [ref=e382]:
+          - listitem [ref=e383]: 🛫 Flight research and booking assistance
+          - listitem [ref=e384]: 🚌 Bus and ground transportation, ADO, BajíoGo, local transfers, airport runs
+          - listitem [ref=e385]: 🏨 Hotel and accommodation coordination
+          - listitem [ref=e386]: 🚗 Car rental guidance and local driving tips
+          - listitem [ref=e387]: 📋 Travel document organization — passports, visas, entry requirements
+          - listitem [ref=e388]: 🧳 Packing and shipping coordination
+          - listitem [ref=e389]: 🗺️ Custom itinerary planning for Mexico travel
+          - listitem [ref=e390]: 🔄 Layover and connection logistics
+          - listitem [ref=e391]: 📱 Travel app setup — Uber, ADO, VivaAerobus, Aeromexico
+          - listitem [ref=e392]: 🚨 Emergency travel support — canceled flights, lost documents, rebooking
+        - paragraph [ref=e393]: You focus on the journey. I handle the map.
+      - generic [ref=e394]:
+        - heading "Pricing" [level=3] [ref=e395]
+        - generic [ref=e396]: Hourly — $35/hour · No minimum
+        - paragraph [ref=e397]: "Monthly Retainers:"
+        - generic [ref=e398]:
+          - generic [ref=e399]: Starter — 8 hours — $250
+          - generic [ref=e400]: Standard — 16 hours — $480
+          - generic [ref=e401]: Full Support — 24 hours — $700
+        - paragraph [ref=e402]:
+          - strong [ref=e403]: "Includes:"
+          - text: all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.
+        - paragraph [ref=e404]: This pricing applies to Personal Assistant, Tech Concierge, Travel & Logistics, and Senior Concierge services.
+        - generic [ref=e405]:
+          - heading "Ready to Book?" [level=3] [ref=e406]
+          - paragraph [ref=e407]: "Confirm booking via your preferred payment method:"
+          - generic [ref=e408]:
+            - paragraph [ref=e409]:
+              - text: ✅ Zelle — no fee →
+              - strong [ref=e410]: sittingprettydc@gmail.com
+            - paragraph [ref=e411]:
+              - text: ✅ Wise — no fee → Contact Lisa via WhatsApp for banking details
+              - link "WhatsApp →" [ref=e412] [cursor=pointer]:
+                - /url: https://wa.me/5214731218554
+            - paragraph [ref=e413]:
+              - text: 📱 Venmo — +2% fee →
+              - link "venmo.com/lisaMayCo" [ref=e414] [cursor=pointer]:
+                - /url: https://venmo.com/code?user_id=3758990584448601525&created=1781206512
+            - paragraph [ref=e415]:
+              - text: 💻 PayPal — +3% fee →
+              - link "paypal.me/lisaMayCo" [ref=e416] [cursor=pointer]:
+                - /url: https://paypal.com/paypalme/lisaMayCo
+            - generic [ref=e417]:
+              - paragraph [ref=e418]: 💳 Credit or debit — +3% fee
+              - generic [ref=e419]:
+                - link "Hourly" [ref=e420] [cursor=pointer]:
+                  - /url: https://buy.stripe.com/8x2bJ11V21Vc2CsbY42880s
+                - link "Starter" [ref=e421] [cursor=pointer]:
+                  - /url: https://buy.stripe.com/bJe5kDary57ob8YbY42880q
+                - link "Standard" [ref=e422] [cursor=pointer]:
+                  - /url: https://buy.stripe.com/5kQcN59nuarIfpe3ry2880r
+                - link "Full Support" [ref=e423] [cursor=pointer]:
+                  - /url: https://buy.stripe.com/28EcN52Z69nE5OEfag2880p
+          - paragraph [ref=e424]: Your booking is confirmed once full payment is received.
+      - generic [ref=e425]:
+        - generic [ref=e426]: 🌺
+        - heading "Senior Concierge" [level=3] [ref=e427]
+        - paragraph [ref=e428]: Mexico is extraordinary at every age. Some days it just needs a little more navigation.
+        - paragraph [ref=e429]: Why won't Amazon.mx take my card? How do I access my SSA account from Mexico? How do I get to a medical appointment when I don't have a car and don't speak Spanish?
+        - paragraph [ref=e430]: These aren't small problems. They turn a beautiful day in San Miguel into a frustrating one, and they're all solvable with the right person by your side.
+        - paragraph [ref=e431]: The Senior Concierge is for anyone who wants to live fully and confidently in Mexico, with trusted support when the details get complicated.
+        - list [ref=e432]:
+          - listitem [ref=e433]: 📱 Tech support — phones, apps, banking portals, streaming, Amazon.mx
+          - listitem [ref=e434]: 🏥 Medical accompaniment and appointment coordination
+          - listitem [ref=e435]: 💊 Pharmacy navigation and prescription support
+          - listitem [ref=e436]: 🏛️ SSA and government account setup and troubleshooting
+          - listitem [ref=e437]: 💸 Online bill pay and money transfer support
+          - listitem [ref=e438]: 🚗 Transportation coordination
+          - listitem [ref=e439]: 📋 Post-surgery companionship and recovery support
+          - listitem [ref=e440]: 🤝 Trusted referrals for home care, housekeeping, and healthcare providers
+        - paragraph [ref=e441]: You didn't move to Mexico to struggle. You moved here to live.
+        - link "Pay Now" [ref=e442] [cursor=pointer]:
+          - /url: "#concierge-pricing"
+      - generic [ref=e443]:
+        - generic [ref=e444]: 🏥
+        - heading "Medical Concierge" [level=3] [ref=e445]
+        - paragraph [ref=e446]: Navigating Mexican healthcare should not be something you do alone.
+        - list [ref=e447]:
+          - listitem [ref=e448]: 🔍 Pre-appointment research — finding the right specialist confirming English spoken verifying insurance acceptance
+          - listitem [ref=e449]: 🚗 Transportation coordination to and from appointment
+          - listitem [ref=e450]: ♿ Wheelchair assistance and physical accompaniment
+          - listitem [ref=e451]: 🗣️ Doctor communication and real-time translation
+          - listitem [ref=e452]: 🧪 Helping navigate any medical tests — labs imaging procedures
+          - listitem [ref=e453]: 📋 Recording and organizing all medical information and records
+          - listitem [ref=e454]: 📝 Post-appointment written summary — diagnosis instructions medications follow-up dates
+          - listitem [ref=e455]: 💊 Prescription pickup on appointment day
+          - listitem [ref=e456]: 💊 Explaining each medication — what it is for dosage where to fill it affordably
+          - listitem [ref=e457]: 📄 Filling out all forms in Spanish and English
+          - listitem [ref=e458]: 💳 Facilitating payments
+          - listitem [ref=e459]: 📅 Follow-up appointment scheduling
+          - listitem [ref=e460]: 📞 Communication with family back home if needed
+          - listitem [ref=e461]: 🚨 Emergency contact coordination
+          - listitem [ref=e462]: 🏥 Navigating Mexican healthcare vs US insurance reimbursement
+          - listitem [ref=e463]: 👨‍⚕️ Accompanying to specialist referrals
+        - generic [ref=e464]:
+          - generic [ref=e465]: Pricing
+          - generic [ref=e466]:
+            - generic [ref=e467]: $22/hour · Minimum 2 hours ($44)
+            - generic [ref=e468]: Half Day 4 hours — $80
+            - generic [ref=e469]: Full Day 8 hours — $150
+          - generic [ref=e470]: Navigating care in Mexico is hard alone. With the right person beside you, it isn't.
+        - button "Pay Now" [ref=e471] [cursor=pointer]
+      - generic [ref=e472]:
+        - generic [ref=e473]: 🤝
+        - heading "Local Companion" [level=3] [ref=e474]
+        - paragraph [ref=e475]: Sometimes you just need someone who knows every corner.
+        - generic [ref=e476]:
+          - paragraph [ref=e477]: Inspired by Japan's beloved rental-person culture, sometimes you just need a trusted local by your side. Whether it's dinner, a medical appointment, a cultural event, or simply exploring San Miguel with someone who knows every corner. I show up. No agenda. Just good company. This service includes any level of setup and coordination, from a simple meetup to a fully planned outing.
+          - paragraph [ref=e478]: "A few things we could do together:"
+          - paragraph [ref=e479]:
+            - strong [ref=e480]: "Out and about:"
+            - text: shopping mall runs in Queretaro, HEB / Costco / Home Depot trips, historical-town day trips, hot springs, wine vineyard visits, kayaking, scenic drives, nearby museums.
+          - paragraph [ref=e481]:
+            - strong [ref=e482]: "Culture and nightlife:"
+            - text: live music, supper clubs, the opera, the ballet, the circus, the carnival, art crawls, fashion shows, local holiday events.
+          - paragraph [ref=e483]:
+            - strong [ref=e484]: "Everyday and social:"
+            - text: consignment and thrift hopping, art class, dance class, a workout partner, rooftop happy hour, or help throwing a dinner party or event.
+          - paragraph [ref=e485]: And more, if you can dream it, we can probably do it.
+        - generic [ref=e486]:
+          - generic [ref=e487]: Pricing
+          - generic [ref=e488]:
+            - generic [ref=e489]: Hourly — $15/hour
+            - generic [ref=e490]: Half Day 4 hours — $56
+            - generic [ref=e491]: Full Day 8 hours — $96
+          - generic [ref=e492]: Client covers all outing costs, including meals, transportation, admission fees, and activities.
+        - button "Pay Now" [ref=e493] [cursor=pointer]
+  - generic [ref=e495]:
+    - heading "Booking & Cancellation Policy" [level=3] [ref=e496]
+    - paragraph [ref=e497]: Full payment is required to confirm your booking. You will receive a confirmation email with your intake questionnaire within 24 hours of payment. Please complete it before your session so we arrive fully prepared.
+    - paragraph [ref=e498]: Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice — one free reschedule per booking.
+  - generic [ref=e500]:
+    - paragraph [ref=e501]: WHY SAN MIGUEL DE ALLENDE
+    - heading "There is a reason people come here and never leave." [level=2] [ref=e502]:
+      - text: There is a reason people come here
+      - text: and never leave.
+    - paragraph [ref=e503]: UNESCO World Heritage city. World-class food, art, and community. And the most beautiful light you have ever seen.
+    - generic [ref=e504]:
+      - link "Centro THE HEART OF IT ALL The historic heart — cobblestone streets, the iconic Parroquia, world-class restaurants, and rooftop bars above 300-year-old buildings. Where everyone starts and many stay." [ref=e505] [cursor=pointer]:
+        - /url: "#contact"
+        - generic [ref=e506]:
+          - heading "Centro" [level=3] [ref=e507]
+          - paragraph [ref=e508]: THE HEART OF IT ALL
+          - paragraph [ref=e509]: The historic heart — cobblestone streets, the iconic Parroquia, world-class restaurants, and rooftop bars above 300-year-old buildings. Where everyone starts and many stay.
+      - link "San Antonio QUIET, WALKABLE, LOCAL Leafy and local. A quiet residential neighborhood with excellent taco stands, long-term expat community, and a slower, more authentic pace just minutes from everything." [ref=e510] [cursor=pointer]:
+        - /url: "#contact"
+        - generic [ref=e511]:
+          - heading "San Antonio" [level=3] [ref=e512]
+          - paragraph [ref=e513]: QUIET, WALKABLE, LOCAL
+          - paragraph [ref=e514]: Leafy and local. A quiet residential neighborhood with excellent taco stands, long-term expat community, and a slower, more authentic pace just minutes from everything.
+      - link "Guadiana LEAFY STREETS, EXPAT COMMUNITY Tucked in a verdant ravine, Guadiana is one of the most beautiful and walkable neighborhoods in the city. Artists, writers, and longtime residents call it home." [ref=e515] [cursor=pointer]:
+        - /url: "#contact"
+        - generic [ref=e516]:
+          - heading "Guadiana" [level=3] [ref=e517]
+          - paragraph [ref=e518]: LEAFY STREETS, EXPAT COMMUNITY
+          - paragraph [ref=e519]: Tucked in a verdant ravine, Guadiana is one of the most beautiful and walkable neighborhoods in the city. Artists, writers, and longtime residents call it home.
+      - link "Atascadero VIEWS, SPACE, SERENITY More space, more garden, more sky. A favorite for those who want a real home rather than a pied-à-terre — with stunning views and a genuine neighborhood feel." [ref=e520] [cursor=pointer]:
+        - /url: "#contact"
+        - generic [ref=e521]:
+          - heading "Atascadero" [level=3] [ref=e522]
+          - paragraph [ref=e523]: VIEWS, SPACE, SERENITY
+          - paragraph [ref=e524]: More space, more garden, more sky. A favorite for those who want a real home rather than a pied-à-terre — with stunning views and a genuine neighborhood feel.
+      - link "Los Frailes GOLF, SPACE, GATED CALM A quieter residential area near the golf course, with larger lots, newer homes, and a calm, spread-out feel. Popular with those who want more space and don't mind being just a ten minute drive from City Market and the Recreation Center." [ref=e525] [cursor=pointer]:
+        - /url: "#contact"
+        - generic [ref=e526]:
+          - heading "Los Frailes" [level=3] [ref=e527]
+          - paragraph [ref=e528]: GOLF, SPACE, GATED CALM
+          - paragraph [ref=e529]: A quieter residential area near the golf course, with larger lots, newer homes, and a calm, spread-out feel. Popular with those who want more space and don't mind being just a ten minute drive from City Market and the Recreation Center.
+      - link "Guadalupe ART, COLOR, CREATIVE EDGE The arts district near Centro, known for murals, galleries, and a younger creative energy. More affordable, walkable to the center, and full of character." [ref=e530] [cursor=pointer]:
+        - /url: "#contact"
+        - generic [ref=e531]:
+          - heading "Guadalupe" [level=3] [ref=e532]
+          - paragraph [ref=e533]: ART, COLOR, CREATIVE EDGE
+          - paragraph [ref=e534]: The arts district near Centro, known for murals, galleries, and a younger creative energy. More affordable, walkable to the center, and full of character.
+    - paragraph [ref=e535]: Not sure which neighborhood is right for you? That is exactly what a strategy session is for.
+    - link "✦ Book a Planning Call" [ref=e537] [cursor=pointer]:
+      - /url: https://calendar.app.google/qfwutaFsrSaqWVkw7
+  - generic [ref=e539]:
+    - paragraph [ref=e540]: RENTAL PROPERTIES
+    - heading "Find Your Home in San Miguel — with a Personal Agent at Your Side" [level=2] [ref=e541]:
+      - text: Find Your Home in San Miguel —
+      - text: with a Personal Agent at Your Side
+    - paragraph [ref=e542]: Finding a rental in Mexico is not like searching Zillow. The best homes aren't always listed publicly, landlords expect a trusted connection, and leases are written in Spanish. As your personal representative, I do the research and coordination — so you see only the properties that are genuinely suited to you.
+    - generic [ref=e543]:
+      - heading "What I do for you as your personal rental agent:" [level=3] [ref=e544]
+      - generic [ref=e545]:
+        - paragraph [ref=e546]: 🔍 Before we look at a single property, you complete a 10-minute survey. Your answers will shape my search for you — neighborhood, budget, must-haves, and dealbreakers. We will focus on matching showings and avoid any surprises.
+        - paragraph [ref=e547]: 🏠 Pre-screening every property — For virtual clients, every property is previewed before you arrive. Photos, video walkthroughs, and honest assessments are sent as your eyes to make an educated decision.
+        - paragraph [ref=e548]: 📍 Knowledge of every colonia — matched to your lifestyle — Centro, San Antonio, Guadiana, Atascadero — each neighborhood has a different feel, pace, and price point. I'll match you to the colonia that fits how you live day to day.
+        - paragraph [ref=e549]: 🗝️ Coordinated property showings until we find the right fit — We can do an all-day search or keep looking until the right property appears.
+        - paragraph [ref=e550]: 🗣️ Full translation and cultural context during every property showing — Language, lease implications, neighborhood realities, and the unspoken customs of Mexican rental culture that turns a confusing process into a clear one.
+        - paragraph [ref=e551]: 📝 Bilingual lease review — section by section — Nothing gets signed until you understand every line. We'll review your lease in both languages, flag anything unusual, and explain what it actually means for your daily life.
+        - paragraph [ref=e552]: 💬 Negotiation on your behalf with landlords — Price, terms, included furnishings, maintenance responsibilities — negotiated by someone who knows what is standard, what is flexible, and what is worth pushing back on.
+        - paragraph [ref=e553]: ✅ Final walkthrough checklist before you sign anything — A documented condition report of the property before keys change hands. Your protection from day one.
+        - paragraph [ref=e554]: 🤝 Ongoing support after you move in — Questions don't stop at move-in. When you sign your lease, you receive 2 free hours of newcomer concierge support — home setup, utilities, domestic staff, banking, grocery delivery, Mexican SIM setup, pet grooming, healthcare, or whatever you need to completely settle in.
+    - heading "Property Showing Day Packages" [level=3] [ref=e555]
+    - generic [ref=e557]:
+      - heading "Rental Showing Day" [level=4] [ref=e558]
+      - paragraph [ref=e559]: $150
+      - paragraph [ref=e560]: PERSONAL AGENT · FULL DAY
+      - list [ref=e561]:
+        - listitem [ref=e562]: 4 property showings, pre-curated to your needs
+        - listitem [ref=e563]: Private driver for the full day
+        - listitem [ref=e564]: Personal escort, translation & negotiation support
+        - listitem [ref=e565]: Lease review included
+        - listitem [ref=e566]: Lease signed? 2 free hours of newcomer concierge support
+      - paragraph [ref=e567]: 1 free reschedule available
+      - paragraph [ref=e568]: No refunds within 48 hours of showing day.
+      - link "Book This Package →" [ref=e570] [cursor=pointer]:
+        - /url: https://calendar.app.google/qfwutaFsrSaqWVkw7
+    - paragraph [ref=e571]:
+      - text: Customized showing packages available — simply send your needs via
+      - link "WhatsApp" [ref=e572] [cursor=pointer]:
+        - /url: https://wa.me/5214731218554
+      - text: or
+      - link "email" [ref=e573] [cursor=pointer]:
+        - /url: mailto:Lisa@InTheKnowMx.com
+      - text: .
+    - generic [ref=e574]:
+      - heading "My Commitment to You — in Writing" [level=3] [ref=e575]
+      - paragraph [ref=e576]:
+        - text: Every rental client receives a personal agent agreement outlining exactly what I will research, verify, and deliver on your behalf — before showing day. No surprises, no shortcuts. You deserve to know what you're getting.
+        - link "Book a call to receive yours." [ref=e577] [cursor=pointer]:
+          - /url: https://calendar.app.google/qfwutaFsrSaqWVkw7
+    - generic [ref=e578]:
+      - paragraph [ref=e579]: BROWSE AVAILABLE RENTALS
+      - heading "View San Miguel Rental Listings" [level=3] [ref=e580]
+      - paragraph [ref=e581]: In partnership with Tiffany Paige of The Agency San Miguel — access to the full rental market in one place.
+      - link "Browse Rental Listings →" [ref=e582] [cursor=pointer]:
+        - /url: https://sanmiguelrealestate.com.mx/san-miguel-mls-real-estate-listings
+  - generic [ref=e584]:
+    - paragraph [ref=e585]: BUY IN SAN MIGUEL
+    - heading "Ready to Buy? Meet Tiffany Paige." [level=2] [ref=e586]
+    - paragraph [ref=e587]:
+      - text: When it's time to buy, I connect Mexico newcomers with my trusted partner
+      - strong [ref=e588]: Tiffany Paige
+      - text: ", Licensed Real Estate Advisor at The Agency San Miguel. She's done this herself — bought property in Mexico, navigated every step — and now guides international buyers with clarity and care. Together, we cover every part of your journey."
+    - generic [ref=e589]:
+      - link "Browse Properties →" [ref=e590] [cursor=pointer]:
+        - /url: https://sanmiguelrealestate.com.mx/the-agency-san-miguel-featured-listings
+      - link "Visit Tiffany's Site →" [ref=e591] [cursor=pointer]:
+        - /url: https://sanmiguelrealestate.com.mx
+      - link "✦ Book a Planning Call First" [ref=e592] [cursor=pointer]:
+        - /url: https://calendar.app.google/qfwutaFsrSaqWVkw7
+  - generic [ref=e595]:
+    - generic [ref=e596]:
+      - paragraph [ref=e597]: PROPERTY & PET CARE
+      - heading "Your Mexico Life, Maintained." [level=2] [ref=e598]
+      - paragraph [ref=e599]: 500+ five-star reviews from people who trusted Lisa with their most precious things while they were away.
+      - paragraph [ref=e600]: Pipes burst. Power goes out. Staff doesn't show. These things happen — even in the most beautiful homes in San Miguel. The question is who do you trust to handle it.
+      - paragraph [ref=e601]:
+        - strong [ref=e602]: When you leave, I stay.
+        - text: I am your eyes, your voice, and your most trusted presence on the ground. The town knows me. Your neighbors know me. Your home is safe.
+      - generic [ref=e603]:
+        - paragraph [ref=e604]: "What this looks like in practice:"
+        - generic [ref=e605]:
+          - paragraph [ref=e606]: 🐾 Pet sitting — drop-in or live-in
+          - paragraph [ref=e607]: 🔒 Live-in home security
+          - paragraph [ref=e608]: 🏊 Pool & jacuzzi upkeep
+          - paragraph [ref=e609]: 🌿 Plants, cats, dogs, birds
+          - paragraph [ref=e610]: 💸 Bill payments while you're away
+          - paragraph [ref=e611]: 🏦 Bank-to-bank transfer support
+          - paragraph [ref=e612]: 👷 Staff payments & oversight
+          - paragraph [ref=e613]: 📦 Receiving deliveries
+          - paragraph [ref=e614]: 🔑 Regular home walk-throughs
+          - paragraph [ref=e615]: 📱 WhatsApp photo updates
+          - paragraph [ref=e616]: 🚨 Emergency response 24/7
+          - paragraph [ref=e617]: 🧹 Housekeeper & gardener oversight
+      - generic [ref=e618]:
+        - generic [ref=e619]:
+          - paragraph [ref=e620]: "\"My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May as a caring companion.\""
+          - generic [ref=e621]: Janet A.
+          - generic [ref=e622]: November 2018 · 3 dogs, 8 cats, pool
+        - generic [ref=e623]:
+          - paragraph [ref=e624]: "\"We have a daughter in and out of the hospital out of state. Lisa has been so accommodating and even willing to stay extra days when needed. It's such a stress relief to me and my husband knowing she's taking care of our pup.\""
+          - generic [ref=e625]: Kathryn W.
+          - generic [ref=e626]: October 2020 · 105lb rescue dog
+        - generic [ref=e627]:
+          - paragraph [ref=e628]: "\"She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success over the years. Our guests have raved about her! We recommend Lisa May wholeheartedly — you'll be able to enjoy your time away and return to a clean home and happy pets.\""
+          - generic [ref=e629]: Michelle & Scott Lyons, Gecko Bungalows Resort · Belize · 2018
+          - generic [ref=e630]: November 2018 · Belize
+      - generic [ref=e631]:
+        - button "Pay Now" [ref=e632] [cursor=pointer]
+        - link "More Info" [ref=e633] [cursor=pointer]:
+          - /url: "#caretaking"
+      - generic [ref=e634]:
+        - generic [ref=e635]: WITHOUT PETS
+        - generic [ref=e636]:
+          - generic [ref=e637]:
+            - strong [ref=e638]: Daily
+            - text: 250 pesos · $1.56 USD
+          - generic [ref=e639]:
+            - strong [ref=e640]: Weekly
+            - text: 1,500 pesos · $9.35 USD
+          - generic [ref=e641]:
+            - strong [ref=e642]: Monthly
+            - text: 5,500 pesos · $34 USD
+        - generic [ref=e643]: "Includes: home walk-through, WhatsApp photo updates, mail and deliveries, plant watering, emergency response."
+        - generic [ref=e644]: WITH 1 PET
+        - generic [ref=e645]:
+          - generic [ref=e646]:
+            - strong [ref=e647]: Daily
+            - text: 350 pesos · $2.18 USD
+          - generic [ref=e648]:
+            - strong [ref=e649]: Weekly
+            - text: 2,100 pesos · $13 USD
+          - generic [ref=e650]:
+            - strong [ref=e651]: Monthly
+            - text: 7,700 pesos · $48 USD
+        - generic [ref=e652]: "Includes: everything above plus 2-3 feedings, 2 walks, 1-2 litter changes per day."
+        - generic [ref=e653]: ADD-ONS per day/week/month
+        - generic [ref=e654]:
+          - generic [ref=e655]: Additional animal +$100 pesos per day
+          - generic [ref=e656]: "Oral medication up to 2x daily: +$30 / $210 / $840 pesos"
+          - generic [ref=e657]: "Medical injection: +$25 / $175 / $700 pesos"
+          - generic [ref=e658]: "Asthma inhaler: +$25 / $175 / $700 pesos"
+    - generic [ref=e659]:
+      - img "Beautiful home in San Miguel de Allende" [ref=e660]
+      - generic [ref=e661]:
+        - text: "\"I absolutely cannot leave without knowing Lisa is there.\""
+        - generic [ref=e662]: — THE FEELING EVERY CLIENT HAS
+  - generic [ref=e664]:
+    - paragraph [ref=e665]: COMMUNITY
+    - heading "The Welcome Table" [level=2] [ref=e666]
+    - paragraph [ref=e667]: Not sure where to start? That's exactly what The Welcome Table is for.
+    - paragraph [ref=e668]:
+      - text: In partnership with
+      - strong [ref=e669]: Tiffany Paige of The Agency San Miguel
+      - text: ", The Welcome Table is a free, no-pressure Saturday morning gathering for Mexico newcomers and anyone curious about life here. Come with your questions — leave with real answers and real connections. Every Saturday 10am–1pm at The Agency, Aldama 31. Always free."
+    - generic [ref=e670]:
+      - link "Learn More & RSVP →" [ref=e671] [cursor=pointer]:
+        - /url: https://sanmiguelrealestate.com.mx/welcome-table
+      - link "✦ Book a Private Consultation" [ref=e672] [cursor=pointer]:
+        - /url: https://calendar.app.google/qfwutaFsrSaqWVkw7
+  - generic [ref=e674]:
+    - paragraph [ref=e675]: WHAT CLIENTS SAY
+    - heading "The town knows. Now hear it from them." [level=2] [ref=e676]
+    - generic [ref=e677]:
+      - generic [ref=e678]:
+        - paragraph [ref=e679]: "\"She is tenacious, organized, and deeply caring — going above and beyond to make sure her clients feel seen, supported, and completely at ease. She's not just a relocation concierge — she's a trusted guide.\""
+        - generic [ref=e680]: Tiffany Paige
+        - generic [ref=e681]: Licensed Real Estate Advisor, The Agency SMA
+        - generic [ref=e682]: "2026"
+      - generic [ref=e683]:
+        - paragraph [ref=e684]: "\"I could not be more pleased with Lisa! She was very responsive, reasonable and she stayed with the program until we were successful. Do business with Lisa and she will solve your problems!\""
+        - generic [ref=e685]: Terry M.
+        - generic [ref=e686]: San Miguel Expat
+        - generic [ref=e687]: "2026"
+      - generic [ref=e688]:
+        - paragraph [ref=e689]: "\"From the moment I got off the plane, Lisa showed up with kindness, clarity, and a deep knowledge of how things work here. She met me at my Airbnb, took me grocery shopping, helped me with the ATM, showed me around San Miguel, and helped me find my apartment. Lisa is more than a service provider — she's a support system, a guide, and a true friend.\""
+        - generic [ref=e690]: Brian Keith Webster
+        - generic [ref=e691]: Author
+        - generic [ref=e692]: "2025"
+      - generic [ref=e693]:
+        - paragraph [ref=e694]: "\"A plumbing disaster occurred while we were off the grid on a cruise — Lisa handled everything with exceptional grace and competence. She contacted neighbors, coordinated local plumbers and electricians, and ensured our pets and property were safe and cared for.\""
+        - generic [ref=e695]: Sugar & Sandy Hudson
+        - generic [ref=e696]: Mayor, Los Frailes SMA
+        - generic [ref=e697]: "2025"
+      - generic [ref=e698]:
+        - paragraph [ref=e699]: "\"Left our house perfectly clean and exactly how we left it, just a little better. Turtle was happy and healthy upon our return and we're so grateful he was in good hands.\""
+        - generic [ref=e700]: Claire H.
+        - generic [ref=e701]: "2023"
+      - generic [ref=e702]:
+        - paragraph [ref=e703]: "\"Oh my gosh! Lisa was amazing and so great to work with. She took great care of Miss Prissy and our house. I hope to use her again in the future.\""
+        - generic [ref=e704]: Joni S.
+        - generic [ref=e705]: "2023"
+      - generic [ref=e706]:
+        - paragraph [ref=e707]: "\"Lisa is wonderful! She took care of our two big dogs and watched our home any time we traveled. My husband and I are very particular about who watches our dogs, and she met every single criteria and need. You will not regret hiring her!\""
+        - generic [ref=e708]: Maggie G.
+        - generic [ref=e709]: "2023"
+      - generic [ref=e710]:
+        - paragraph [ref=e711]: "\"Lisa was a great pet and house sitter. Very conscientious and helpful. I would recommend her fully!\""
+        - generic [ref=e712]: Tina H.
+        - generic [ref=e713]: "2023"
+      - generic [ref=e714]:
+        - paragraph [ref=e715]: "\"There ended up being severe storms so our return flights were canceled and we didn't know when we'd get home and she was very understanding and flexible, making sure our dog was taken care of. It was a huge weight off our shoulders!\""
+        - generic [ref=e716]: Emily M.
+        - generic [ref=e717]: "2021"
+      - generic [ref=e718]:
+        - paragraph [ref=e719]: "\"Coming home to a wonderfully clean home is just priceless! She loves and cares for our pets like we would. She knows their personalities and treats them accordingly.\""
+        - generic [ref=e720]: Amy H.
+        - generic [ref=e721]: "2021"
+      - generic [ref=e722]:
+        - paragraph [ref=e723]: "\"She is dedicated and took very good care of my older dog who had health issues. She went beyond the call of duty on some errands I needed while I was in the hospital and was very flexible with me.\""
+        - generic [ref=e724]: Paula P.
+        - generic [ref=e725]: "2021"
+      - generic [ref=e726]:
+        - paragraph [ref=e727]: "\"She took care of our 3 dogs, cat and bird for almost 2 weeks including pool and greenhouse. Her experience with pets and homes made it so easy to leave our fur babies. I have never had any house sitter clean the sheets on the bed she used before. If you are lucky enough to use Lisa's many services, you will not be disappointed.\""
+        - generic [ref=e728]: Wendy E.
+        - generic [ref=e729]: "2021"
+      - generic [ref=e730]:
+        - paragraph [ref=e731]: "\"We have a daughter that is in and out of the hospital out of state. Lisa has been so accommodating and even willing to stay extra days when needed. Such a stress relief knowing she's taking care of our pup.\""
+        - generic [ref=e732]: Kathryn W.
+        - generic [ref=e733]: "2020"
+      - generic [ref=e734]:
+        - paragraph [ref=e735]: "\"Lisa was prompt, professional and everything you could want in a dog sitter. She even adjusted her schedule to take Charlie on an extra walk when our flight was delayed. I cannot say enough good things about her.\""
+        - generic [ref=e736]: Brandon S.
+        - generic [ref=e737]: "2019"
+      - generic [ref=e738]:
+        - paragraph [ref=e739]: "\"When we arrived home we found a cooked dinner, well kept house — cleaner than we left it — and a happy cat. Strongly recommend her to anyone who is in need of house and pet sitting.\""
+        - generic [ref=e740]: Neslihan S.
+        - generic [ref=e741]: "2018"
+      - generic [ref=e742]:
+        - paragraph [ref=e743]: "\"My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May.\""
+        - generic [ref=e744]: Janet A.
+        - generic [ref=e745]: "2018"
+      - generic [ref=e746]:
+        - paragraph [ref=e747]: "\"She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success. Our guests have raved about her! The hardest part about having her is saying goodbye.\""
+        - generic [ref=e748]: Michelle & Scott Lyons
+        - generic [ref=e749]: Gecko Bungalows Resort · Belize
+        - generic [ref=e750]: "2018"
+      - generic [ref=e751]:
+        - paragraph [ref=e752]: "\"Lisa was fantastic with our puppy! Great communication as well.\""
+        - generic [ref=e753]: Sue C.
+        - generic [ref=e754]: "2019"
+      - generic [ref=e755]:
+        - paragraph [ref=e756]: "\"Lisa was great with our 4-month old puppy Puddin. Excellent communication and pictures of their walk. I would encourage you to hire her.\""
+        - generic [ref=e757]: Sue C.
+        - generic [ref=e758]: "2019"
+      - generic [ref=e759]:
+        - paragraph [ref=e760]: "\"Lisa was wonderful. We had a last minute booking and she was able to take good care of our three dogs. She took great care of our house and sent us photos of the dogs every day we were gone.\""
+        - generic [ref=e761]: Alex C.
+        - generic [ref=e762]: "2019"
+      - generic [ref=e763]:
+        - paragraph [ref=e764]: "\"Lisa was great. She took great care of our home and our old dog, getting him out for walks even when it was raining. The house was clean when we got home too.\""
+        - generic [ref=e765]: Rachel B.
+        - generic [ref=e766]: "2019"
+      - generic [ref=e767]:
+        - paragraph [ref=e768]: "\"Lisa May put me at ease. My home was running like a well-oiled machine. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May as a caring companion.\""
+        - generic [ref=e769]: Doris O.
+        - generic [ref=e770]: "2018"
+      - generic [ref=e771]:
+        - paragraph [ref=e772]: "\"Lisa May was a blessing to find. Friendly and professional. When we arrived home we found a cooked dinner, well kept house and a happy cat. Strongly recommend.\""
+        - generic [ref=e773]: Neslihan S.
+        - generic [ref=e774]: "2018"
+      - generic [ref=e775]:
+        - paragraph [ref=e776]: "\"Greetings from Belize! We have had Lisa May house sit for us on several occasions. She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success over the years. Our guests have raved about her!\""
+        - generic [ref=e777]: Michelle & Scott Lyons
+        - generic [ref=e778]: Gecko Bungalows Resort
+        - generic [ref=e779]: "2018"
+      - generic [ref=e780]:
+        - paragraph [ref=e781]: "\"Lisa had our cat well taken care of. She sent us pictures of him while we were away and I'm sure gave him lots of love. Would definitely hire her again.\""
+        - generic [ref=e782]: Katherine A.
+        - generic [ref=e783]: "2019"
+      - generic [ref=e784]:
+        - paragraph [ref=e785]: "\"Lisa is very dependable and is great at communicating timely and thoroughly! She is very flexible and willing to adapt to my dogs daily needs.\""
+        - generic [ref=e786]: Alicia F.
+        - generic [ref=e787]: "2019"
+      - generic [ref=e788]:
+        - paragraph [ref=e789]: "\"Lisa was AMAZING! She sent me pics and kept me up to date on everything! I would highly recommend her. I will definitely hire her again!!\""
+        - generic [ref=e790]: Leslie F.
+        - generic [ref=e791]: "2019"
+      - generic [ref=e792]:
+        - paragraph [ref=e793]: "\"Lisa took great care of our girls Lola and Hershey! She was quick to respond, sent pictures, and was sweet with our difficult-one-when-we-are-gone Lola!\""
+        - generic [ref=e794]: Nicole H.
+        - generic [ref=e795]: "2019"
+      - generic [ref=e796]:
+        - paragraph [ref=e797]: "\"Lisa has been a great help to us with all of our travel! Would highly recommend!\""
+        - generic [ref=e798]: Amanda C.
+        - generic [ref=e799]: "2019"
+      - generic [ref=e800]:
+        - paragraph [ref=e801]: "\"I'm so sorry about the accident! Thank you again for moving the plant inside.\""
+        - generic [ref=e802]: Emily B.
+        - generic [ref=e803]: "2019"
+      - generic [ref=e804]:
+        - paragraph [ref=e805]: "\"Lisa was timely and reliable and friendly with my pup. I would definitely use her again!\""
+        - generic [ref=e806]: Ashley H.
+        - generic [ref=e807]: "2019"
+      - generic [ref=e808]:
+        - paragraph [ref=e809]: "\"Lisa was so great caring for my cat! I loved getting pictures and detailed updates.\""
+        - generic [ref=e810]: Jordan L.
+        - generic [ref=e811]: "2019"
+      - generic [ref=e812]:
+        - paragraph [ref=e813]: "\"Lisa was super flexible despite my concierge not showing up to give her my apartment key. She walked my pup almost a full mile in a short period of time. She is extremely responsive and I will be using her again!\""
+        - generic [ref=e814]: Madeleine H.
+        - generic [ref=e815]: "2019"
+      - generic [ref=e816]:
+        - paragraph [ref=e817]: "\"What a great sitter for my foster pup!! She takes great photos, is prompt, and leaves great summaries. I highly recommend her.\""
+        - generic [ref=e818]: Allison A.
+        - generic [ref=e819]: "2019"
+      - generic [ref=e820]:
+        - paragraph [ref=e821]: "\"Lisa was great! She really helped me out on a day where I couldn't get home to let Louie out. Would highly recommend and use her anytime.\""
+        - generic [ref=e822]: Erica R.
+        - generic [ref=e823]: "2019"
+      - generic [ref=e824]:
+        - paragraph [ref=e825]: "\"Lisa was prompt, professional and everything you could want in a dog sitter. She even adjusted her schedule to take Charlie on an extra walk when our flight was delayed.\""
+        - generic [ref=e826]: Brandon S.
+        - generic [ref=e827]: "2019"
+      - generic [ref=e828]:
+        - paragraph [ref=e829]: "\"She even managed to grab my Dog Lily when her harness failed! Amazing!\""
+        - generic [ref=e830]: Derek S.
+        - generic [ref=e831]: "2019"
+      - generic [ref=e832]:
+        - paragraph [ref=e833]: "\"Lisa as always does a stellar job!\""
+        - generic [ref=e834]: William S.
+        - generic [ref=e835]: "2019"
+      - generic [ref=e836]:
+        - paragraph [ref=e837]: "\"You're amazing! Thank you! I feel so good knowing they are taken care of.\""
+        - generic [ref=e838]: Celeste G.
+        - generic [ref=e839]: "2019"
+      - generic [ref=e840]:
+        - paragraph [ref=e841]: "\"Lisa was great and sent very good updates!\""
+        - generic [ref=e842]: Casey S.
+        - generic [ref=e843]: "2019"
+      - generic [ref=e844]:
+        - paragraph [ref=e845]: "\"We feel very comfortable leaving our fur-babies in her care.\""
+        - generic [ref=e846]: Maggie G.
+        - generic [ref=e847]: "2019"
+      - generic [ref=e848]:
+        - paragraph [ref=e849]: "\"Lisa was great! I knew Charlie was in good hands!\""
+        - generic [ref=e850]: Courtney D.
+        - generic [ref=e851]: "2019"
+      - generic [ref=e852]:
+        - paragraph [ref=e853]: "\"Feels great knowing your dog is in good hands!\""
+        - generic [ref=e854]: Michael K.
+        - generic [ref=e855]: "2019"
+      - generic [ref=e856]:
+        - paragraph [ref=e857]: "\"You are amazing! Thank you so much for attending to mine and Poppy's needs!!!\""
+        - generic [ref=e858]: Amber K.
+        - generic [ref=e859]: "2019"
+      - generic [ref=e860]:
+        - paragraph [ref=e861]: "\"Professional. Made me feel comfortable while I was away. Highly recommend.\""
+        - generic [ref=e862]: Elyse T.
+        - generic [ref=e863]: "2019"
+      - generic [ref=e864]:
+        - paragraph [ref=e865]: "\"Lisa was great with Hazel! Super perceptive and very proactive and reliable.\""
+        - generic [ref=e866]: Yangzi L.
+        - generic [ref=e867]: "2019"
+      - generic [ref=e868]:
+        - paragraph [ref=e869]: "\"Lisa was very patient with Miller and took great photos of him along the way.\""
+        - generic [ref=e870]: Catherine N.
+        - generic [ref=e871]: "2019"
+      - generic [ref=e872]:
+        - paragraph [ref=e873]: "\"Lisa was timely and attentive! Would use again!\""
+        - generic [ref=e874]: Ellen C.
+        - generic [ref=e875]: "2019"
+      - generic [ref=e876]:
+        - paragraph [ref=e877]: "\"Great communicator, would recommend.\""
+        - generic [ref=e878]: Reggie & Katie F.
+        - generic [ref=e879]: "2020"
+      - generic [ref=e880]:
+        - paragraph [ref=e881]: "\"Lisa was very patient and helpful with my very skittish dog!\""
+        - generic [ref=e882]: Chalet B.
+        - generic [ref=e883]: "2020"
+      - generic [ref=e884]:
+        - paragraph [ref=e885]: "\"Love Lisa, will use her again for sure!\""
+        - generic [ref=e886]: Jenny W.
+        - generic [ref=e887]: "2020"
+      - generic [ref=e888]:
+        - paragraph [ref=e889]: "\"Lisa is great at communicating and goes out of the way to make sure my Pretzel gets everything he needs while I'm away.\""
+        - generic [ref=e890]: Sarah M.
+        - generic [ref=e891]: "2019"
+      - generic [ref=e892]:
+        - paragraph [ref=e893]: "\"Lisa was great! Showed up early!\""
+        - generic [ref=e894]: Kyle S.
+        - generic [ref=e895]: "2019"
+      - generic [ref=e896]:
+        - paragraph [ref=e897]: "\"Amazing for my first time experience!!\""
+        - generic [ref=e898]: Meghan M.
+        - generic [ref=e899]: "2019"
+      - generic [ref=e900]:
+        - paragraph [ref=e901]: "\"Loved the pictures!\""
+        - generic [ref=e902]: Tyler N.
+        - generic [ref=e903]: "2019"
+      - generic [ref=e904]:
+        - paragraph [ref=e905]: "\"Lisa is awesome! She watched my two dogs and did a great job.\""
+        - generic [ref=e906]: Marlow A.
+        - generic [ref=e907]: "2021"
+      - generic [ref=e908]:
+        - paragraph [ref=e909]: "\"We were so happy with Lisa. We came home to a happy, calm dog and clean house.\""
+        - generic [ref=e910]: Cindy M.
+        - generic [ref=e911]: "2020"
+      - generic [ref=e912]:
+        - paragraph [ref=e913]: "\"Lisa stayed with our two fur-babies and did a great job. One of them got sick while we were gone and Lisa took good care of him.\""
+        - generic [ref=e914]: Mary K.
+        - generic [ref=e915]: "2020"
+      - generic [ref=e916]:
+        - paragraph [ref=e917]: "\"Lisa was wonderful! Very communicative and Otto loved her!\""
+        - generic [ref=e918]: Jeana M.
+        - generic [ref=e919]: "2020"
+      - generic [ref=e920]:
+        - paragraph [ref=e921]: "\"Lisa was excellent in every way! She has a beautiful personality.\""
+        - generic [ref=e922]: Paula P.
+        - generic [ref=e923]: "2020"
+      - generic [ref=e924]:
+        - paragraph [ref=e925]: "\"Lisa has been nothing short of spectacular! She goes above and beyond sending pics of our pup.\""
+        - generic [ref=e926]: Kathryn W.
+        - generic [ref=e927]: "2020"
+      - generic [ref=e928]:
+        - paragraph [ref=e929]: "\"Lisa was great with Zeus! She took notes at our meet up to ensure she knew how to properly take care of him.\""
+        - generic [ref=e930]: Sarah H.
+        - generic [ref=e931]: "2020"
+      - generic [ref=e932]:
+        - paragraph [ref=e933]: "\"Lisa was incredible. She accepted a request last minute and saved us!\""
+        - generic [ref=e934]: Jazmine O.
+        - generic [ref=e935]: "2021"
+      - generic [ref=e936]:
+        - paragraph [ref=e937]: "\"Lisa was AMAZING. We never worried once!!!\""
+        - generic [ref=e938]: Amy H.
+        - generic [ref=e939]: "2021"
+      - generic [ref=e940]:
+        - paragraph [ref=e941]: "\"Lisa took great care of my dog and home while on vacation. Will rebook again.\""
+        - generic [ref=e942]: Oliver E.
+        - generic [ref=e943]: "2021"
+      - generic [ref=e944]:
+        - paragraph [ref=e945]: "\"Lisa did a great job taking care of my dog and home. Very conscientious and helpful.\""
+        - generic [ref=e946]: Heather H.
+        - generic [ref=e947]: "2021"
+      - generic [ref=e948]:
+        - paragraph [ref=e949]: "\"Lisa was friendly, professional, and sweet to our dog. This was our first experience with Rover and everything went smoothly.\""
+        - generic [ref=e950]: Drew H.
+        - generic [ref=e951]: "2021"
+      - generic [ref=e952]:
+        - paragraph [ref=e953]: "\"I highly recommend Lisa without any hesitation!! She went beyond the call of duty and my house was left in pristine condition.\""
+        - generic [ref=e954]: Paula P.
+        - generic [ref=e955]: "2021"
+      - generic [ref=e956]:
+        - paragraph [ref=e957]: "\"Lisa watched our house and dog when we went to Mexico. She was very communicative throughout and everything was taken care of when we got home.\""
+        - generic [ref=e958]: Emily M.
+        - generic [ref=e959]: "2021"
+      - generic [ref=e960]:
+        - paragraph [ref=e961]: "\"Lisa took great care of Henry.\""
+        - generic [ref=e962]: William F.
+        - generic [ref=e963]: "2023"
+      - generic [ref=e964]:
+        - paragraph [ref=e965]: "\"Lisa is a total pro. Left our house perfectly clean and exactly how we left it, just a little better.\""
+        - generic [ref=e966]: Claire H.
+        - generic [ref=e967]: "2023"
+  - generic [ref=e968]:
+    - paragraph [ref=e969]: YOUR NEXT STEP
+    - heading "The life you came here looking for is absolutely real." [level=2] [ref=e970]
+    - paragraph [ref=e971]: And so is the person who will help you build it. Book a strategy session and let's map your Mexico — together.
+    - link "✦ Book a Planning Call" [ref=e972] [cursor=pointer]:
+      - /url: https://calendar.app.google/qfwutaFsrSaqWVkw7
+    - generic [ref=e973]:
+      - link "Lisa@InTheKnowMx.com" [ref=e974] [cursor=pointer]:
+        - /url: mailto:Lisa@InTheKnowMx.com
+      - link "Instagram" [ref=e975] [cursor=pointer]:
+        - /url: https://www.instagram.com/in.the.know.mexico/
+      - link "Facebook" [ref=e976] [cursor=pointer]:
+        - /url: https://www.facebook.com/InTheKnowMex
+      - link "Facebook Group" [ref=e977] [cursor=pointer]:
+        - /url: https://www.facebook.com/groups/655871853479437
+      - link "LinkedIn" [ref=e978] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/lisamcobham
+  - generic [ref=e979]:
+    - generic [ref=e980]:
+      - generic [ref=e981]:
+        - heading "SERVICES" [level=4] [ref=e982]
+        - link "Concierge" [ref=e983] [cursor=pointer]:
+          - /url: "#services"
+        - link "Residency" [ref=e984] [cursor=pointer]:
+          - /url: /residency
+        - link "Rental Properties" [ref=e985] [cursor=pointer]:
+          - /url: "#rentals"
+        - link "Buy in SMA" [ref=e986] [cursor=pointer]:
+          - /url: "#properties"
+        - link "Property & Pet Care" [ref=e987] [cursor=pointer]:
+          - /url: "#caretaking"
+        - link "Senior Concierge" [ref=e988] [cursor=pointer]:
+          - /url: "#senior-concierge"
+        - link "Local Companion" [ref=e989] [cursor=pointer]:
+          - /url: "#local-companion"
+      - generic [ref=e990]:
+        - heading "PLANNING CALLS" [level=4] [ref=e991]
+        - link "The Relocation Planning Call" [ref=e992] [cursor=pointer]:
+          - /url: "#services"
+        - link "From Dream to Action Plan" [ref=e993] [cursor=pointer]:
+          - /url: "#services"
+        - link "Moving Past Hesitation" [ref=e994] [cursor=pointer]:
+          - /url: "#services"
+        - link "Book a Planning Call" [ref=e995] [cursor=pointer]:
+          - /url: https://calendar.app.google/qfwutaFsrSaqWVkw7
+      - generic [ref=e996]:
+        - heading "RESOURCES" [level=4] [ref=e997]
+        - link "Find Your Mexico Path" [ref=e998] [cursor=pointer]:
+          - /url: "#find-your-path"
+        - link "Do I Qualify?" [ref=e999] [cursor=pointer]:
+          - /url: /residency
+        - link "Welcome Table" [ref=e1000] [cursor=pointer]:
+          - /url: "#welcome-table"
+        - link "Why San Miguel" [ref=e1001] [cursor=pointer]:
+          - /url: "#why-san-miguel"
+      - generic [ref=e1002]:
+        - heading "CONNECT" [level=4] [ref=e1003]
+        - link "About Lisa" [ref=e1004] [cursor=pointer]:
+          - /url: "#about"
+        - link "Testimonials" [ref=e1005] [cursor=pointer]:
+          - /url: "#testimonials"
+        - link "Press & Media" [ref=e1006] [cursor=pointer]:
+          - /url: "#press"
+        - link "Instagram" [ref=e1007] [cursor=pointer]:
+          - /url: https://www.instagram.com/in.the.know.mexico/
+        - link "Facebook" [ref=e1008] [cursor=pointer]:
+          - /url: https://www.facebook.com/InTheKnowMex
+        - link "Facebook Group" [ref=e1009] [cursor=pointer]:
+          - /url: https://www.facebook.com/groups/655871853479437
+        - link "LinkedIn" [ref=e1010] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/lisamcobham
+    - paragraph [ref=e1012]: © 2026 In The Know Mexico · Lisa May Cobham, Relocation Specialist · San Miguel de Allende, México · Known here since 2015.

@@ -48,7 +48,7 @@ export default function Home() {
     setModalPaypalUrl(undefined)
   }
 
-  const renderCardActions = (service: string, href: string) => (
+  const renderCardActions = (service: string) => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '24px' }}>
       <button
         onClick={() => handlePayNow(service)}
@@ -65,24 +65,6 @@ export default function Home() {
       >
         Pay Now
       </button>
-      <a
-        className="button-link secondary"
-        href={href}
-        style={{
-          color: '#2C1810',
-          backgroundColor: '#FDF6F0',
-          border: '1px solid #C4622D',
-          borderRadius: '6px',
-          textDecoration: 'none',
-          fontWeight: 700,
-          padding: '12px 24px',
-          display: 'inline-flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        More Info
-      </a>
     </div>
   )
 
@@ -446,7 +428,7 @@ export default function Home() {
                 emoji: '💛',
                 title: 'Moving Past Hesitation',
                 subtitle: 'Sometimes the only thing standing between you and the life you want is fear.',
-                body: "The plan is ready, but you're not, and that's worth taking seriously. Whatever's holding you back, whether money, timing, or the quiet fear you haven't said out loud, we talk it through honestly.",
+                body: "The plan is ready, but you're not, and that's worth taking seriously. Whatever's holding you back, whether money, timing, or the quiet fear you haven't said out loud, we talk it through honestly. We look at what's real versus what's imagined, what's a legitimate obstacle versus what's resistance. Most people who book this call already know they want to go. They just need someone to think it through with — not to be sold, but to be heard and helped. You leave with clarity on whether Mexico is actually right for you right now — and if it is, what your real next step is.",
                 closing: "You don't need to have it all figured out. You simply need a brainstorming session.",
                 priceTag: '$1,600 MXN',
               },
@@ -458,7 +440,7 @@ export default function Home() {
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>{card.subtitle}</p>
                 <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>{card.body}</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{card.closing}</p>
-                {renderCardActions(card.title, '#planning-calls')}
+                {renderCardActions(card.title)}
               </div>
             ))}
           </div>
@@ -512,7 +494,6 @@ export default function Home() {
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '24px' }}>
                 <button onClick={() => handlePayNow('Virtual Guidance')} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Pay Now</button>
-                <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>
 
@@ -531,7 +512,6 @@ export default function Home() {
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '24px' }}>
                 <button onClick={() => handlePayNow('On the Ground Facilitation')} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>Pay Now</button>
-                <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>
 
@@ -1206,7 +1186,7 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              {renderCardActions('Property & Pet Care', '#caretaking')}
+              {renderCardActions('Property & Pet Care')}
               <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', marginBottom: '24px' }}>
                 <div style={{ marginBottom: '12px', fontWeight: '700' }}>WITHOUT PETS</div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>

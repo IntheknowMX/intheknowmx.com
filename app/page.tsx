@@ -481,9 +481,9 @@ export default function Home() {
                 <li>Step-by-step guidance throughout</li>
                 <li>Follow-up email with action steps</li>
               </ul>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                <a href="https://buy.stripe.com/fZu9ATgPWarI7WM7HO2880U" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
-                <a href="https://www.paypal.com/ncp/payment/HMK3DGTSXGUCC" target="_blank" rel="noreferrer" style={{ backgroundColor: '#003087', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>PayPal</a>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '24px' }}>
+                <a href="https://buy.stripe.com/fZu9ATgPWarI7WM7HO2880U" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>Pay Now</a>
+                <a href="https://www.paypal.com/ncp/payment/HMK3DGTSXGUCC" target="_blank" rel="noreferrer" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>PayPal</a>
                 <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>
@@ -501,9 +501,9 @@ export default function Home() {
                 <li>Real-time translation throughout</li>
                 <li>Final paperwork preparation</li>
               </ul>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
-                <a href="https://buy.stripe.com/cNicN52Z61Vc2Cs4vC2880W" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>Pay Now</a>
-                <a href="https://www.paypal.com/ncp/payment/RRNW9ALGBZ6J2" target="_blank" rel="noreferrer" style={{ backgroundColor: '#003087', color: 'white', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-block' }}>PayPal</a>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginTop: '24px' }}>
+                <a href="https://buy.stripe.com/cNicN52Z61Vc2Cs4vC2880W" target="_blank" rel="noreferrer" style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>Pay Now</a>
+                <a href="https://www.paypal.com/ncp/payment/RRNW9ALGBZ6J2" target="_blank" rel="noreferrer" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>PayPal</a>
                 <a href="/residency" style={{ color: '#2C1810', backgroundColor: '#FDF6F0', border: '1px solid #C4622D', borderRadius: '6px', textDecoration: 'none', fontWeight: 700, padding: '12px 24px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px' }}>More Info</a>
               </div>
             </div>

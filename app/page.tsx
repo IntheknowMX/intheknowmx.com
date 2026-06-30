@@ -1004,20 +1004,19 @@ export default function Home() {
               <div style={{ flex: '1 1 260px' }}>
                 <h4 style={{ fontSize: '19px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '8px' }}>Rental Discovery Day</h4>
                 <div style={{ marginBottom: '4px' }}>
-                  <span style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$3,500 MXN</span>
-                  <span style={{ fontSize: '15px', color: '#7D3B4E', marginLeft: '10px', fontWeight: '600' }}>&#8776; $200 USD</span>
+                  <span style={{ fontSize: '28px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$1,750 MXN</span>
+                  <span style={{ fontSize: '15px', color: '#7D3B4E', marginLeft: '10px', fontWeight: '600' }}>&#8776; $100 USD</span>
                 </div>
                 <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 8px', lineHeight: '1.6' }}>+ processing fees. Card payments add a processing fee at checkout. Fee-free payment (Zelle) available, just ask.</p>
                 <p style={{ fontSize: '13px', color: '#7D3B4E', marginBottom: '16px', letterSpacing: '1px' }}>PERSONAL ADVOCATE · FULL DAY</p>
-                <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '0' }}>
+                <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '12px' }}>
                   <li>A full day of my time, expertise, and advocacy</li>
                   <li>Up to four properties, pre-curated to your needs and approved by you in advance</li>
-                  <li>Private driver for the full day (no cabs, no meeting on a street corner, I come to you)</li>
+                  <li>Private driver available for an additional $1,300 MXN (no cabs, no meeting on a street corner, I come to you)</li>
                   <li>Personal escort, translation, and negotiation throughout</li>
                   <li>Lease review included</li>
+                  <li>Negotiation on your behalf</li>
                 </ul>
-                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '12px 0 4px', lineHeight: '1.6' }}>For rental budgets up to 22,000 MXN/month: this is a non-refundable day fee.</p>
-                <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 12px', lineHeight: '1.6' }}>For rental budgets over 22,000 MXN/month: this is a deposit, fully refunded when you sign a lease for that rental.</p>
                 <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 6px', lineHeight: '1.6' }}>Reschedule once free with at least 48 hours&#39; notice.</p>
                 <p style={{ fontSize: '13px', color: '#C97B8A', margin: '0 0 16px', lineHeight: '1.6' }}>Within 48 hours, the fee is non-refundable, as the driver and showings are confirmed.</p>
                 <div style={{ height: '16px' }} />

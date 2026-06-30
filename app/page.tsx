@@ -917,6 +917,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Booking & Cancellation Policy */}
+      <section className="responsive-section" style={{ backgroundColor: '#2C1810', borderTop: '1px solid #3D2418' }}>
+        <div className="content-wrapper" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '28px', textAlign: 'center' }}>Booking &amp; Cancellation Policy</h3>
+          <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598', marginBottom: '20px' }}>
+            Full payment is required to confirm your booking. You will receive a confirmation email with your intake questionnaire within 24 hours of payment. Please complete it before your session so we arrive fully prepared.
+          </p>
+          <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598' }}>
+            Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice — one free reschedule per booking.
+          </p>
+        </div>
+      </section>
+
       {/* Pull Quotes Band */}
       <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
         <div className="content-wrapper pull-quotes-grid">
@@ -932,19 +945,6 @@ export default function Home() {
               <div style={{ fontSize: '11px', letterSpacing: '1px', color: '#C97B8A', marginTop: '4px' }}>{q.title}</div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Booking & Cancellation Policy */}
-      <section className="responsive-section" style={{ backgroundColor: '#2C1810', borderTop: '1px solid #3D2418' }}>
-        <div className="content-wrapper" style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h3 style={{ fontSize: '28px', fontWeight: 'normal', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '28px', textAlign: 'center' }}>Booking &amp; Cancellation Policy</h3>
-          <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598', marginBottom: '20px' }}>
-            Full payment is required to confirm your booking. You will receive a confirmation email with your intake questionnaire within 24 hours of payment. Please complete it before your session so we arrive fully prepared.
-          </p>
-          <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598' }}>
-            Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice — one free reschedule per booking.
-          </p>
         </div>
       </section>
 

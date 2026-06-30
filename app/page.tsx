@@ -563,15 +563,16 @@ export default function Home() {
 
           <div className="service-grid">
 
-            {/* What We Handle — full-width */}
+            {/* What Is Handled — full-width */}
             <div style={{ gridColumn: '1 / -1', backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
-              <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>What We Handle</h3>
+              <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>What Is Handled</h3>
               <ul className="what-we-handle-list" style={{ fontSize: '14px', color: '#2C1810' }}>
                 <li>• Utility setup &amp; bill payment</li>
                 <li>• Mexican bank account opening</li>
                 <li>• SIM card &amp; internet setup</li>
                 <li>• Bilingual lease review &amp; negotiation</li>
                 <li>• Trusted referrals: gardeners, household help, contractors</li>
+                <li>• And so much more!</li>
                 <li>• Property management &amp; construction oversight</li>
                 <li>• Reasonable home &amp; clothing shopping guidance</li>
                 <li>• SSA &amp; Mexican government account setup</li>

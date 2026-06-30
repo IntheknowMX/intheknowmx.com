@@ -184,12 +184,12 @@ export default function Home() {
             <a href="#services" onClick={() => setMobileMenuOpen(false)}>Concierge</a>
             <a href="#rentals" onClick={() => setMobileMenuOpen(false)}>Rentals</a>
             <a href="#properties" onClick={() => setMobileMenuOpen(false)}>Owning</a>
-            <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>PROPERTY & PET CARE</a>
+            <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Property & Pet Care</a>
             <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
             <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
             <a className="mobile-menu-cta" href="#planning-calls" onClick={() => setMobileMenuOpen(false)}>Book a Planning Call</a>
           </div>
-          <a className="button-link nav-cta" href="#planning-calls">Book a Planning Call</a>
+          <a className="nav-cta" href="#planning-calls">Book a Planning Call</a>
         </div>
       </nav>
 

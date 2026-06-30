@@ -6,7 +6,7 @@ import MexicoPathQuiz from './components/MexicoPathQuiz'
 import PaymentModal from './components/PaymentModal'
 
 const CONCIERGE_TIERS = [
-  { id: 'Hourly', label: 'Hourly — $650 MXN/hour', stripe: 'https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X', paypal: 'https://paypal.com/ncp/payment/M4Q2XASL63F42' },
+  { id: 'Hourly', label: 'Hourly (2hr min) — $1,300 MXN', stripe: 'https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X', paypal: 'https://paypal.com/ncp/payment/M4Q2XASL63F42' },
   { id: 'Starter', label: 'Starter — 8 hrs — $4,500 MXN', stripe: 'https://buy.stripe.com/aFacN58jq0R8fpe3ry2880Y', paypal: 'https://paypal.com/ncp/payment/MTLDLWHWTV7H6' },
   { id: 'Standard', label: 'Standard — 16 hrs — $8,500 MXN', stripe: 'https://buy.stripe.com/14AfZh7fm8jAb8Y0fm2880Z', paypal: 'https://paypal.com/ncp/payment/3DVWJNJK6UXH2' },
   { id: 'Full Support', label: 'Full Support — 24 hrs — $12,500 MXN', stripe: 'https://buy.stripe.com/6oU3cv43aarI5OEd2828810', paypal: 'https://paypal.com/ncp/payment/3KG54FZ69BVBL' },

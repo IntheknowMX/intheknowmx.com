@@ -6,22 +6,22 @@ import MexicoPathQuiz from './components/MexicoPathQuiz'
 import PaymentModal from './components/PaymentModal'
 
 const CONCIERGE_TIERS = [
-  { id: 'Hourly', label: 'Hourly', stripe: 'https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X', paypal: 'https://www.paypal.com/ncp/payment/M4Q2XASL63F42' },
-  { id: 'Starter', label: 'Starter (8 hrs)', stripe: 'https://buy.stripe.com/aFacN58jq0R8fpe3ry2880Y', paypal: 'https://www.paypal.com/ncp/payment/MTLDLWHWTV7H6' },
-  { id: 'Standard', label: 'Standard (16 hrs)', stripe: 'https://buy.stripe.com/14AfZh7fm8jAb8Y0fm2880Z', paypal: 'https://www.paypal.com/ncp/payment/3DVWJNJK6UXH2' },
-  { id: 'Full Support', label: 'Full Support (24 hrs)', stripe: 'https://buy.stripe.com/6oU3cv43aarI5OEd2828810', paypal: 'https://www.paypal.com/ncp/payment/3KG54FZ69BVBL' },
+  { id: 'Hourly', label: 'Hourly — $650 MXN', stripe: 'https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X', paypal: 'https://paypal.com/ncp/payment/M4Q2XASL63F42' },
+  { id: 'Starter', label: 'Starter — 8 hrs — $4,500 MXN', stripe: 'https://buy.stripe.com/aFacN58jq0R8fpe3ry2880Y', paypal: 'https://paypal.com/ncp/payment/MTLDLWHWTV7H6' },
+  { id: 'Standard', label: 'Standard — 16 hrs — $8,500 MXN', stripe: 'https://buy.stripe.com/14AfZh7fm8jAb8Y0fm2880Z', paypal: 'https://paypal.com/ncp/payment/3DVWJNJK6UXH2' },
+  { id: 'Full Support', label: 'Full Support — 24 hrs — $12,500 MXN', stripe: 'https://buy.stripe.com/6oU3cv43aarI5OEd2828810', paypal: 'https://paypal.com/ncp/payment/3KG54FZ69BVBL' },
 ]
 
 const MEDICAL_TIERS = [
-  { id: 'Hourly', label: 'Hourly ($22/hr, min 2 hrs)', stripe: 'https://buy.stripe.com/00wfZh8jqarI0uk8LS2880t' },
-  { id: 'Half Day', label: 'Half Day — $80', stripe: 'https://buy.stripe.com/eVq28rgPWczQa4U7HO2880u' },
-  { id: 'Full Day', label: 'Full Day — $150', stripe: 'https://buy.stripe.com/8x2aEXdDKdDUelad282880v' },
+  { id: 'Hourly', label: 'Hourly (2hr min) — $830 MXN', stripe: 'https://buy.stripe.com/bJe00j1V21Vc90Q5zG2880L', paypal: 'https://paypal.com/ncp/payment/28EMS92CF2KFN' },
+  { id: 'Half Day', label: 'Half Day — $1,400 MXN', stripe: 'https://buy.stripe.com/aFa9AT2Z60R8gti2nu2880M', paypal: 'https://paypal.com/ncp/payment/WCR7QZ5VG7N38' },
+  { id: 'Full Day', label: 'Full Day — $2,625 MXN', stripe: 'https://buy.stripe.com/fZu7sL1V2fM27WM2nu2880I', paypal: 'https://paypal.com/ncp/payment/RT8QXN3KYXCKQ' },
 ]
 
 const COMPANION_TIERS = [
-  { id: 'Hourly', label: 'Hourly ($15/hr)', stripe: 'https://buy.stripe.com/8x2aEX57e57ob8Y4vC2880y' },
-  { id: 'Half Day', label: 'Half Day — $56', stripe: 'https://buy.stripe.com/7sY7sLczG9nE5OE6DK2880w' },
-  { id: 'Full Day', label: 'Full Day — $96', stripe: 'https://buy.stripe.com/8x28wP6bi0R82Cs4vC2880x' },
+  { id: 'Hourly', label: 'Hourly — $275 MXN', stripe: 'https://buy.stripe.com/dRmeVdeHOgQ60uk8LS2880G', paypal: 'https://paypal.com/ncp/payment/VACFQ8BYBSV7Q' },
+  { id: 'Half Day', label: 'Half Day (4 hrs) — $1,020 MXN', stripe: 'https://buy.stripe.com/eVqaEX43aczQ2Cs1jq28812', paypal: 'https://paypal.com/ncp/payment/LLUHD65U5LB7G' },
+  { id: 'Full Day', label: 'Full Day (8 hrs) — $1,750 MXN', stripe: 'https://buy.stripe.com/8x228r1V29nE3GwbY42880F', paypal: 'https://paypal.com/ncp/payment/A7FCQUWXAXGZW' },
 ]
 
 export default function Home() {
@@ -813,7 +813,7 @@ export default function Home() {
               <button
                 onClick={() => {
                   const tier = MEDICAL_TIERS.find(t => t.id === medicalTier)
-                  if (tier) handlePayNow('Medical Concierge', tier.stripe)
+                  if (tier) handlePayNow('Medical Concierge', tier.stripe, tier.paypal)
                 }}
                 style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
               >
@@ -870,7 +870,7 @@ export default function Home() {
               <button
                 onClick={() => {
                   const tier = COMPANION_TIERS.find(t => t.id === companionTier)
-                  if (tier) handlePayNow('Local Companion', tier.stripe)
+                  if (tier) handlePayNow('Local Companion', tier.stripe, tier.paypal)
                 }}
                 style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
               >

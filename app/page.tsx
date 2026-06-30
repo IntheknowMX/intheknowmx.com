@@ -952,32 +952,42 @@ export default function Home() {
       <section id="rentals" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
         <div className="content-wrapper">
           <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>RENTAL PROPERTIES</p>
-          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '20px', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
-            Find Your Home in San Miguel —<br />with a Personal Agent at Your Side
+          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '24px', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2', maxWidth: '780px' }}>
+            Finding a rental in Mexico isn&rsquo;t like searching for rentals back home.
           </h2>
-          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#2C1810', maxWidth: '780px', marginBottom: '20px' }}>
-            Finding a rental in Mexico is not like searching Zillow. The best homes aren't always listed publicly, landlords expect a trusted connection, and leases are written in Spanish. As your personal representative, I do the research and coordination — so you see only the properties that are genuinely suited to you.
+          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#2C1810', maxWidth: '780px', marginBottom: '18px' }}>
+            The process is far more relationship-driven. Many of the best homes are shared through trusted local networks rather than public websites, and every lease is negotiated between the landlord and tenant based on their individual needs and expectations.
+          </p>
+          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#2C1810', maxWidth: '780px', marginBottom: '18px' }}>
+            Success often depends on having someone who understands both the language and the local customs, and who can represent your interests throughout the process.
+          </p>
+          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#2C1810', maxWidth: '780px', marginBottom: '18px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+            Every lease is a conversation before it becomes a contract.
+          </p>
+          <p style={{ fontSize: '17px', lineHeight: '1.85', color: '#2C1810', maxWidth: '780px', marginBottom: '48px' }}>
+            That&rsquo;s why I begin by understanding you first. Before I search for a single property, I learn how you live, what matters most to you, and what will truly make a house feel like home. From there, I advocate for your interests every step of the way.
           </p>
 
-          {/* What I Do For You */}
-          <div style={{ backgroundColor: '#FAE8E0', padding: '36px', borderRadius: '8px', marginBottom: '40px', borderLeft: '4px solid #C4622D' }}>
-            <h3 style={{ fontSize: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '20px' }}>
-              What I do for you as your personal rental agent:
-            </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
-              {[
-                '🔍 Before we look at a single property, you complete a 10-minute survey. Your answers will shape my search for you — neighborhood, budget, must-haves, and dealbreakers. We will focus on matching showings and avoid any surprises.',
-                '🏠 Pre-screening every property — For virtual clients, every property is previewed before you arrive. Photos, video walkthroughs, and honest assessments are sent as your eyes to make an educated decision.',
-                '📍 Knowledge of every colonia — matched to your lifestyle — Centro, San Antonio, Guadiana, Atascadero — each neighborhood has a different feel, pace, and price point. I\'ll match you to the colonia that fits how you live day to day.',
-                '🗝️ Coordinated property showings until we find the right fit — We can do an all-day search or keep looking until the right property appears.',
-                '🗣️ Full translation and cultural context during every property showing — Language, lease implications, neighborhood realities, and the unspoken customs of Mexican rental culture that turns a confusing process into a clear one.',
-                '📝 Bilingual lease review — section by section — Nothing gets signed until you understand every line. We\'ll review your lease in both languages, flag anything unusual, and explain what it actually means for your daily life.',
-                '💬 Negotiation on your behalf with landlords — Price, terms, included furnishings, maintenance responsibilities — negotiated by someone who knows what is standard, what is flexible, and what is worth pushing back on.',
-                '✅ Final walkthrough checklist before you sign anything — A documented condition report of the property before keys change hands. Your protection from day one.',
-                '🤝 Ongoing support after you move in — Questions don\'t stop at move-in. When you sign your lease, you receive 2 free hours of newcomer concierge support — home setup, utilities, domestic staff, banking, grocery delivery, Mexican SIM setup, pet grooming, healthcare, or whatever you need to completely settle in.',
-              ].map((item) => (
-                <p key={item} style={{ fontSize: '14px', color: '#2C1810', margin: '4px 0', lineHeight: '1.6' }}>{item}</p>
-              ))}
+          {/* Editorial narrative bridge */}
+          <div style={{ display: 'flex', gap: '60px', alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: '56px' }}>
+            <div style={{ flex: '1 1 360px', minWidth: '260px' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/Rental-Interior.png"
+                alt="A warmly furnished rental home in San Miguel de Allende"
+                style={{ width: '100%', borderRadius: '8px', display: 'block' }}
+              />
+            </div>
+            <div style={{ flex: '1 1 360px', minWidth: '260px', maxWidth: '540px' }}>
+              <p style={{ fontSize: '17px', lineHeight: '1.9', color: '#2C1810', marginBottom: '24px' }}>
+                Rentals here are rarely found through a listing site. The homes that feel right — quiet courtyard, good light, the right neighborhood energy — move through trusted networks, offered person to person before they ever appear online, if they appear at all.
+              </p>
+              <p style={{ fontSize: '17px', lineHeight: '1.9', color: '#2C1810', marginBottom: '24px' }}>
+                Every lease is negotiated individually. There is no standard template, no fixed price, and no assumed terms. What you pay, what the landlord includes, and what you can ask for all depend on context — the building, the colonia, the landlord&rsquo;s history, and how the conversation begins. Knowing which neighborhoods suit different ways of living, and which questions to ask before you fall in love with a space, changes everything.
+              </p>
+              <p style={{ fontSize: '17px', lineHeight: '1.9', color: '#2C1810', marginBottom: 0 }}>
+                My role is to carry the uncertainty for you. I interpret context, ask the right questions, and make sure that what you sign reflects what you actually want — not just what was offered.
+              </p>
             </div>
           </div>
 

@@ -31,6 +31,7 @@ export default function Home() {
   const [modalStripeUrl, setModalStripeUrl] = useState<string | undefined>()
   const [modalPaypalUrl, setModalPaypalUrl] = useState<string | undefined>()
   const [conciergeTier, setConciergeTier] = useState('Hourly')
+  const [seniorConciergeTier, setSeniorConciergeTier] = useState('Hourly')
   const [medicalTier, setMedicalTier] = useState('Hourly')
   const [companionTier, setCompanionTier] = useState('Hourly')
 
@@ -728,13 +729,36 @@ export default function Home() {
                 <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
               </ul>
               <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You didn't move to Mexico to struggle. You moved here to live.</p>
-              <a
-                href="#concierge-pricing"
-                onClick={(e) => { e.preventDefault(); document.getElementById('concierge-pricing')?.scrollIntoView({ behavior: 'smooth' }); }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', textDecoration: 'none', display: 'block', textAlign: 'center', width: '100%', boxSizing: 'border-box' }}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                {CONCIERGE_TIERS.map((tier) => (
+                  <button
+                    key={tier.id}
+                    onClick={() => setSeniorConciergeTier(tier.id)}
+                    style={{
+                      backgroundColor: seniorConciergeTier === tier.id ? '#C4622D' : '#FDF6F0',
+                      color: seniorConciergeTier === tier.id ? 'white' : '#2C1810',
+                      border: seniorConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
+                      borderRadius: '6px',
+                      padding: '10px 16px',
+                      fontSize: '14px',
+                      fontWeight: seniorConciergeTier === tier.id ? 700 : 400,
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                    }}
+                  >
+                    {tier.label}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => {
+                  const tier = CONCIERGE_TIERS.find(t => t.id === seniorConciergeTier)
+                  if (tier) handlePayNow('Senior Concierge', tier.stripe, tier.paypal)
+                }}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
               >
                 Pay Now
-              </a>
+              </button>
             </div>
 
             <div id="medical-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -869,43 +893,6 @@ export default function Home() {
           <p style={{ fontSize: '16px', lineHeight: '1.85', color: '#E8A598' }}>
             Cancellations made 48 hours or more before your session receive a full credit toward a future booking. Cancellations within 24 hours of your session are non-refundable. No-shows forfeit the full session fee. Rescheduling is welcome with 48 hours notice — one free reschedule per booking.
           </p>
-        </div>
-      </section>
-
-      {/* Why San Miguel */}
-      <section className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
-        <div className="content-wrapper">
-          <p style={{ color: '#D4A017', fontSize: '11px', letterSpacing: '5px', fontWeight: '700', marginBottom: '16px', textAlign: 'center' }}>WHY SAN MIGUEL DE ALLENDE</p>
-          <h2 style={{ fontSize: '42px', fontWeight: 'normal', color: '#2C1810', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textAlign: 'center', marginBottom: '12px', lineHeight: '1.2' }}>
-            There is a reason people come here<br />and never leave.
-          </h2>
-          <p style={{ fontSize: '17px', color: '#5C3A2E', textAlign: 'center', marginBottom: '56px', lineHeight: '1.7' }}>
-            UNESCO World Heritage city. World-class food, art, and community. And the most beautiful light you have ever seen.
-          </p>
-          <div className="why-grid" style={{ marginBottom: '56px' }}>
-            {[
-              { name: 'Centro', subtitle: 'The heart of it all', desc: 'The historic heart — cobblestone streets, the iconic Parroquia, world-class restaurants, and rooftop bars above 300-year-old buildings. Where everyone starts and many stay.' },
-              { name: 'San Antonio', subtitle: 'Quiet, walkable, local', desc: 'Leafy and local. A quiet residential neighborhood with excellent taco stands, long-term expat community, and a slower, more authentic pace just minutes from everything.' },
-              { name: 'Guadiana', subtitle: 'Leafy streets, expat community', desc: 'Tucked in a verdant ravine, Guadiana is one of the most beautiful and walkable neighborhoods in the city. Artists, writers, and longtime residents call it home.' },
-              { name: 'Atascadero', subtitle: 'Views, space, serenity', desc: 'More space, more garden, more sky. A favorite for those who want a real home rather than a pied-à-terre — with stunning views and a genuine neighborhood feel.' },
-              { name: 'Los Frailes', subtitle: 'Golf, space, gated calm', desc: 'A quieter residential area near the golf course, with larger lots, newer homes, and a calm, spread-out feel. Popular with those who want more space and don\'t mind being just a ten minute drive from City Market and the Recreation Center.' },
-              { name: 'Guadalupe', subtitle: 'Art, color, creative edge', desc: 'The arts district near Centro, known for murals, galleries, and a younger creative energy. More affordable, walkable to the center, and full of character.' },
-            ].map((n) => (
-              <a key={n.name} href="#contact" style={{ textDecoration: 'none' }}>
-                <div style={{ backgroundColor: 'white', padding: '32px 24px', borderRadius: '8px', borderTop: '3px solid #D4A017', boxShadow: '0 2px 12px rgba(44,24,16,0.06)', height: '100%', boxSizing: 'border-box' }}>
-                  <h3 style={{ fontSize: '20px', fontWeight: 'normal', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '4px' }}>{n.name}</h3>
-                  <p style={{ fontSize: '12px', color: '#D4A017', letterSpacing: '2px', fontWeight: '600', marginBottom: '12px' }}>{n.subtitle.toUpperCase()}</p>
-                  <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810' }}>{n.desc}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-          <p style={{ textAlign: 'center', fontSize: '16px', color: '#5C3A2E', lineHeight: '1.8', maxWidth: '600px', margin: '0 auto 32px' }}>
-            Not sure which neighborhood is right for you? That is exactly what a strategy session is for.
-          </p>
-          <div style={{ textAlign: 'center' }}>
-            <a href="#planning-calls" style={{ backgroundColor: '#C4622D', color: 'white', padding: '16px 40px', borderRadius: '4px', textDecoration: 'none', fontSize: '15px', fontWeight: '700', display: 'inline-block' }}>✦ Book a Planning Call</a>
-          </div>
         </div>
       </section>
 

@@ -986,7 +986,7 @@ export default function Home() {
             </div>
             <div style={{ flex: '1 1 360px', minWidth: '260px', maxWidth: '540px' }}>
               <p style={{ fontSize: '17px', lineHeight: '1.9', color: '#2C1810', marginBottom: '24px' }}>
-                Rentals here are rarely found through a listing site. The homes that feel right — quiet courtyard, good light, the right neighborhood energy — move through trusted networks, offered person to person before they ever appear online, if they appear at all.
+                The homes that feel right — quiet courtyard, good light, the right neighborhood energy — often move through trusted local networks first. Some never make it online at all; others can be found, but only with the right search terms, the right timing, and the patience to look in the right places before they&rsquo;re gone.
               </p>
               <p style={{ fontSize: '17px', lineHeight: '1.9', color: '#2C1810', marginBottom: '24px' }}>
                 Every lease is negotiated individually. There is no standard template, no fixed price, and no assumed terms. What you pay, what the landlord includes, and what you can ask for all depend on context — the building, the colonia, the landlord&rsquo;s history, and how the conversation begins. Knowing which neighborhoods suit different ways of living, and which questions to ask before you fall in love with a space, changes everything.

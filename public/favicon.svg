@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Bougainvillea: three papery bracts rotated 120° apart -->
+  <!-- Bract 1: top -->
+  <ellipse cx="50" cy="26" rx="14" ry="22" fill="#E8A598" transform="rotate(0 50 50)"/>
+  <!-- Bract 2: lower-right -->
+  <ellipse cx="50" cy="26" rx="14" ry="22" fill="#D4849A" transform="rotate(120 50 50)"/>
+  <!-- Bract 3: lower-left -->
+  <ellipse cx="50" cy="26" rx="14" ry="22" fill="#C4627A" transform="rotate(240 50 50)"/>
+  <!-- Cream center -->
+  <circle cx="50" cy="50" r="9" fill="#FDF6F0"/>
+  <!-- Three tiny true flowers (terracotta dots) -->
+  <circle cx="50" cy="44" r="2.5" fill="#C4622D"/>
+  <circle cx="45" cy="53" r="2.5" fill="#C4622D"/>
+  <circle cx="55" cy="53" r="2.5" fill="#C4622D"/>
+</svg>

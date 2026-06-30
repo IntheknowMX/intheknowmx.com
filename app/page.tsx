@@ -1149,15 +1149,15 @@ export default function Home() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'space-between', alignItems: 'center', marginBottom: '48px', padding: '32px', backgroundColor: '#FAE8E0', borderRadius: '8px' }}>
             {[
               { src: '/images/Lock-door.jpg', label: 'Home Security' },
-              { src: '/images/Nose-to-cat.jpg', label: 'Pet Care' },
+              { src: '/images/Nose-to-cat.jpg', label: 'Cat Company' },
               { src: '/images/Packages.jpg', label: 'Deliveries' },
-              { src: '/images/Strips.jpg', label: 'Medications' },
+              { src: '/images/Strips.jpg', label: 'Doggy Velcro' },
               { src: '/images/Water-garden.jpg', label: 'Plants & Garden' },
-              { src: '/images/Paw-Prints.jpg', label: 'Walks & Feeding' },
+              { src: '/images/Paw-Prints.jpg', label: 'Paw Feedback' },
             ].map((icon) => (
-              <div key={icon.src} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', flex: '1 1 80px' }}>
+              <div key={icon.src} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', flex: '1 1 110px' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={icon.src} alt={icon.label} style={{ height: '70px', width: '70px', objectFit: 'cover', borderRadius: '8px' }} />
+                <img src={icon.src} alt={icon.label} style={{ height: '110px', width: '110px', objectFit: 'cover', borderRadius: '8px' }} />
                 <span style={{ fontSize: '11px', color: '#2C1810', fontWeight: '600', letterSpacing: '0.5px', textAlign: 'center' }}>{icon.label}</span>
               </div>
             ))}

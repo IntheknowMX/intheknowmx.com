@@ -184,7 +184,7 @@ export default function Home() {
             <a href="#services" onClick={() => setMobileMenuOpen(false)}>Concierge</a>
             <a href="#rentals" onClick={() => setMobileMenuOpen(false)}>Rentals</a>
             <a href="#properties" onClick={() => setMobileMenuOpen(false)}>Owning</a>
-            <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Home & Pet</a>
+            <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>PROPERTY & PET CARE</a>
             <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
             <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
             <a className="mobile-menu-cta" href="#planning-calls" onClick={() => setMobileMenuOpen(false)}>Book a Planning Call</a>
@@ -1131,107 +1131,75 @@ export default function Home() {
       {/* Home Caretaking */}
       <section id="caretaking" className="responsive-section" style={{ backgroundColor: '#FDF6F0' }}>
         <div className="content-wrapper">
-          <div className="flex-stack">
-            <div style={{ flex: 1, minWidth: '300px' }}>
-              <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>PROPERTY & PET CARE</p>
-              <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '8px', color: '#2C1810', lineHeight: '1.2', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-                Your Mexico Life, Maintained.
-              </h2>
-              <p style={{ fontSize: '17px', color: '#7D3B4E', marginBottom: '28px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-                300+ five-star reviews from people who trusted Lisa with their most precious things while they were away.
-              </p>
-              <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
-                Pipes burst. Power goes out. Staff doesn't show. These things happen — even in the most
-                beautiful homes in San Miguel. The question is who do you trust to handle it.
-              </p>
-              <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '28px', color: '#2C1810' }}>
-                <strong>When you leave, I stay.</strong> I am your eyes, your voice, and your most trusted
-                presence on the ground. The town knows me. Your neighbors know me. Your home is safe.
-              </p>
-              <div style={{ backgroundColor: '#FAE8E0', padding: '32px', borderRadius: '8px', marginBottom: '28px' }}>
-                <p style={{ fontSize: '15px', fontWeight: 'bold', color: '#7D3B4E', marginBottom: '18px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>What this looks like in practice:</p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-                  {[
-                    '🐾 Pet sitting — drop-in or live-in',
-                    '🔒 Live-in home security',
-                    '🏊 Pool & jacuzzi upkeep',
-                    '🌿 Plants, cats, dogs, birds',
-                    '💸 Bill payments while you\'re away',
-                    '🏦 Bank-to-bank transfer support',
-                    '👷 Staff payments & oversight',
-                    '📦 Receiving deliveries',
-                    '🔑 Regular home walk-throughs',
-                    '📱 WhatsApp photo updates',
-                    '🚨 Emergency response 24/7',
-                    '🧹 Housekeeper & gardener oversight',
-                  ].map((item) => (
-                    <p key={item} style={{ fontSize: '14px', color: '#2C1810', margin: '4px 0', lineHeight: '1.6' }}>{item}</p>
-                  ))}
-                </div>
+          <p style={{ color: '#7D3B4E', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', fontWeight: '600' }}>PROPERTY & PET CARE</p>
+          <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '8px', color: '#2C1810', lineHeight: '1.2', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+            Your Mexico Life, Maintained.
+          </h2>
+          <p style={{ fontSize: '17px', color: '#7D3B4E', marginBottom: '28px', fontStyle: 'italic', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
+            150+ five-star reviews from people who trusted Lisa with their most precious things while they were away.
+          </p>
+          <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '20px', color: '#2C1810' }}>
+            Pipes burst. Power goes out. Staff doesn't show. These things happen — even in the most beautiful homes in San Miguel. The question is who do you trust to handle it.
+          </p>
+          <p style={{ fontSize: '17px', lineHeight: '1.85', marginBottom: '40px', color: '#2C1810' }}>
+            When you leave, I stay. I am your eyes, your voice, and your most trusted presence on the ground. The town knows me. Your neighbors know me. Your home is safe.
+          </p>
+
+          {/* Icon row */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'space-between', alignItems: 'center', marginBottom: '48px', padding: '32px', backgroundColor: '#FAE8E0', borderRadius: '8px' }}>
+            {[
+              { src: '/images/Lock-door.jpg', label: 'Home Security' },
+              { src: '/images/Nose-to-cat.jpg', label: 'Pet Care' },
+              { src: '/images/Packages.jpg', label: 'Deliveries' },
+              { src: '/images/Strips.jpg', label: 'Medications' },
+              { src: '/images/Water-garden.jpg', label: 'Plants & Garden' },
+              { src: '/images/Paw-Prints.jpg', label: 'Walks & Feeding' },
+            ].map((icon) => (
+              <div key={icon.src} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', flex: '1 1 80px' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={icon.src} alt={icon.label} style={{ height: '70px', width: '70px', objectFit: 'cover', borderRadius: '8px' }} />
+                <span style={{ fontSize: '11px', color: '#2C1810', fontWeight: '600', letterSpacing: '0.5px', textAlign: 'center' }}>{icon.label}</span>
               </div>
-              <div style={{ marginBottom: '28px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                {[
-                  { quote: "My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May as a caring companion.", name: 'Janet A.', date: 'November 2018', detail: '3 dogs, 8 cats, pool' },
-                  { quote: "We have a daughter in and out of the hospital out of state. Lisa has been so accommodating and even willing to stay extra days when needed. It's such a stress relief to me and my husband knowing she's taking care of our pup.", name: 'Kathryn W.', date: 'October 2020', detail: '105lb rescue dog' },
-                  { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success over the years. Our guests have raved about her! We recommend Lisa May wholeheartedly — you'll be able to enjoy your time away and return to a clean home and happy pets.", name: 'Michelle & Scott Lyons, Gecko Bungalows Resort · Belize · 2018', date: 'November 2018', detail: 'Belize' },
-                ].map((r) => (
-                  <div key={r.name} style={{ backgroundColor: 'white', padding: '24px 20px', borderRadius: '8px', borderLeft: '4px solid #E8A598' }}>
-                    <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', fontStyle: 'italic', marginBottom: '12px' }}>"{r.quote}"</p>
-                    <div style={{ fontSize: '13px', fontWeight: 'bold', color: '#7D3B4E' }}>{r.name}</div>
-                    <div style={{ fontSize: '12px', color: '#C97B8A', marginTop: '2px' }}>{r.date} · {r.detail}</div>
-                  </div>
-                ))}
+            ))}
+          </div>
+
+          {/* Three-column review cards */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', marginBottom: '32px' }}>
+            {[
+              { quote: "My home was running like a well-oiled machine. She had a pork chop dinner waiting for me once I woke up. As a professional dog groomer with high expectations on animal care, I would highly recommend Lisa May as a caring companion.", name: 'Janet A.', sub: '3 dogs, 8 cats, pool' },
+              { quote: "We have a daughter in and out of the hospital out of state. Lisa has been so accommodating and even willing to stay extra days when needed. It's such a stress relief to me and my husband knowing she's taking care of our pup.", name: 'Kathryn W.', sub: '105lb rescue dog' },
+              { quote: "She has cared for our 3 large indoor/outdoor dogs, kitty, and bustling guest cottage with great success over the years. Our guests have raved about her! We recommend Lisa May wholeheartedly — you'll be able to enjoy your time away and return to a clean home and happy pets.", name: 'Michelle & Scott Lyons', sub: 'Gecko Bungalows Resort · Belize' },
+            ].map((r) => (
+              <div key={r.name} style={{ backgroundColor: 'white', padding: '24px 20px', borderRadius: '8px', borderLeft: '4px solid #E8A598' }}>
+                <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', fontStyle: 'italic', marginBottom: '12px' }}>"{r.quote}"</p>
+                <div style={{ fontSize: '13px', fontWeight: 'bold', color: '#7D3B4E' }}>{r.name}</div>
+                <div style={{ fontSize: '12px', color: '#C97B8A', marginTop: '2px' }}>{r.sub}</div>
               </div>
-              {renderCardActions('Property & Pet Care')}
-              <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', marginBottom: '24px' }}>
-                <div style={{ marginBottom: '12px', fontWeight: '700' }}>WITHOUT PETS</div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
-                  <div><strong>Daily</strong><br/>250 pesos · $1.56 USD</div>
-                  <div><strong>Weekly</strong><br/>1,500 pesos · $9.35 USD</div>
-                  <div><strong>Monthly</strong><br/>5,500 pesos · $34 USD</div>
-                </div>
-                <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '12px' }}>Includes: home walk-through, WhatsApp photo updates, mail and deliveries, plant watering, emergency response.</div>
-                <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>WITH 1 PET</div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
-                  <div><strong>Daily</strong><br/>350 pesos · $2.18 USD</div>
-                  <div><strong>Weekly</strong><br/>2,100 pesos · $13 USD</div>
-                  <div><strong>Monthly</strong><br/>7,700 pesos · $48 USD</div>
-                </div>
-                <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px' }}>Includes: everything above plus 2-3 feedings, 2 walks, 1-2 litter changes per day.</div>
-                <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>ADD-ONS per day/week/month</div>
-                <div style={{ fontSize: '12px', color: '#7D3B4E' }}>
-                  <div>Additional animal +$100 pesos per day</div>
-                  <div>Oral medication up to 2x daily: +$30 / $210 / $840 pesos</div>
-                  <div>Medical injection: +$25 / $175 / $700 pesos</div>
-                  <div>Asthma inhaler: +$25 / $175 / $700 pesos</div>
-                </div>
-              </div>
+            ))}
+          </div>
+
+          {renderCardActions('Property & Pet Care')}
+          <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', marginBottom: '24px' }}>
+            <div style={{ marginBottom: '12px', fontWeight: '700' }}>WITHOUT PETS</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
+              <div><strong>Daily</strong><br/>250 pesos · $1.56 USD</div>
+              <div><strong>Weekly</strong><br/>1,500 pesos · $9.35 USD</div>
+              <div><strong>Monthly</strong><br/>5,500 pesos · $34 USD</div>
             </div>
-            <div style={{ flex: 1, minWidth: '280px' }}>
-              <Image
-                src="/images/home-care.jpg"
-                alt="Beautiful home in San Miguel de Allende"
-                className="responsive-img"
-                loading="lazy"
-                width={900}
-                height={600}
-                style={{ width: '100%', borderRadius: '8px', marginBottom: '20px' }}
-              />
-              <div style={{
-                backgroundColor: '#7D3B4E',
-                padding: '28px',
-                borderRadius: '8px',
-                color: 'white',
-                fontStyle: 'italic',
-                fontSize: '18px',
-                lineHeight: '1.7',
-                fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)"
-              }}>
-                "I absolutely cannot leave without knowing Lisa is there."
-                <div style={{ fontSize: '12px', color: '#E8A598', marginTop: '14px', fontStyle: 'normal', letterSpacing: '2px', fontFamily: "var(--font-inter, 'Inter', sans-serif)", fontWeight: '600' }}>
-                  — THE FEELING EVERY CLIENT HAS
-                </div>
-              </div>
+            <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '12px' }}>Includes: home walk-through, WhatsApp photo updates, mail and deliveries, plant watering, emergency response.</div>
+            <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>WITH 1 PET</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
+              <div><strong>Daily</strong><br/>350 pesos · $2.18 USD</div>
+              <div><strong>Weekly</strong><br/>2,100 pesos · $13 USD</div>
+              <div><strong>Monthly</strong><br/>7,700 pesos · $48 USD</div>
+            </div>
+            <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px' }}>Includes: everything above plus 2-3 feedings, 2 walks, 1-2 litter changes per day.</div>
+            <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>ADD-ONS per day/week/month</div>
+            <div style={{ fontSize: '12px', color: '#7D3B4E' }}>
+              <div>Additional animal +$100 pesos per day</div>
+              <div>Oral medication up to 2x daily: +$30 / $210 / $840 pesos</div>
+              <div>Medical injection: +$25 / $175 / $700 pesos</div>
+              <div>Asthma inhaler: +$25 / $175 / $700 pesos</div>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import MexicoPathQuiz from './components/MexicoPathQuiz'
 import PaymentModal from './components/PaymentModal'
 
 const CONCIERGE_TIERS = [
-  { id: 'Hourly', label: 'Hourly — $650 MXN', stripe: 'https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X', paypal: 'https://paypal.com/ncp/payment/M4Q2XASL63F42' },
+  { id: 'Hourly', label: 'Hourly — $650 MXN/hour', stripe: 'https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X', paypal: 'https://paypal.com/ncp/payment/M4Q2XASL63F42' },
   { id: 'Starter', label: 'Starter — 8 hrs — $4,500 MXN', stripe: 'https://buy.stripe.com/aFacN58jq0R8fpe3ry2880Y', paypal: 'https://paypal.com/ncp/payment/MTLDLWHWTV7H6' },
   { id: 'Standard', label: 'Standard — 16 hrs — $8,500 MXN', stripe: 'https://buy.stripe.com/14AfZh7fm8jAb8Y0fm2880Z', paypal: 'https://paypal.com/ncp/payment/3DVWJNJK6UXH2' },
   { id: 'Full Support', label: 'Full Support — 24 hrs — $12,500 MXN', stripe: 'https://buy.stripe.com/6oU3cv43aarI5OEd2828810', paypal: 'https://paypal.com/ncp/payment/3KG54FZ69BVBL' },
@@ -14,14 +14,14 @@ const CONCIERGE_TIERS = [
 
 const MEDICAL_TIERS = [
   { id: 'Hourly', label: 'Hourly (2hr min) — $830 MXN', stripe: 'https://buy.stripe.com/bJe00j1V21Vc90Q5zG2880L', paypal: 'https://paypal.com/ncp/payment/28EMS92CF2KFN' },
-  { id: 'Half Day', label: 'Half Day — $1,400 MXN', stripe: 'https://buy.stripe.com/aFa9AT2Z60R8gti2nu2880M', paypal: 'https://paypal.com/ncp/payment/WCR7QZ5VG7N38' },
-  { id: 'Full Day', label: 'Full Day — $2,625 MXN', stripe: 'https://buy.stripe.com/fZu7sL1V2fM27WM2nu2880I', paypal: 'https://paypal.com/ncp/payment/RT8QXN3KYXCKQ' },
+  { id: 'Half Day', label: 'Half Day, 4 hrs — $1,400 MXN', stripe: 'https://buy.stripe.com/aFa9AT2Z60R8gti2nu2880M', paypal: 'https://paypal.com/ncp/payment/WCR7QZ5VG7N38' },
+  { id: 'Full Day', label: 'Full Day, 8 hrs — $2,625 MXN', stripe: 'https://buy.stripe.com/fZu7sL1V2fM27WM2nu2880I', paypal: 'https://paypal.com/ncp/payment/RT8QXN3KYXCKQ' },
 ]
 
 const COMPANION_TIERS = [
   { id: 'Hourly', label: 'Hourly — $275 MXN', stripe: 'https://buy.stripe.com/dRmeVdeHOgQ60uk8LS2880G', paypal: 'https://paypal.com/ncp/payment/VACFQ8BYBSV7Q' },
-  { id: 'Half Day', label: 'Half Day (4 hrs) — $1,020 MXN', stripe: 'https://buy.stripe.com/eVqaEX43aczQ2Cs1jq28812', paypal: 'https://paypal.com/ncp/payment/LLUHD65U5LB7G' },
-  { id: 'Full Day', label: 'Full Day (8 hrs) — $1,750 MXN', stripe: 'https://buy.stripe.com/8x228r1V29nE3GwbY42880F', paypal: 'https://paypal.com/ncp/payment/A7FCQUWXAXGZW' },
+  { id: 'Half Day', label: 'Half Day, 4 hrs — $1,020 MXN', stripe: 'https://buy.stripe.com/eVqaEX43aczQ2Cs1jq28812', paypal: 'https://paypal.com/ncp/payment/LLUHD65U5LB7G' },
+  { id: 'Full Day', label: 'Full Day, 8 hrs — $1,750 MXN', stripe: 'https://buy.stripe.com/8x228r1V29nE3GwbY42880F', paypal: 'https://paypal.com/ncp/payment/A7FCQUWXAXGZW' },
 ]
 
 export default function Home() {
@@ -663,62 +663,43 @@ export default function Home() {
             </div>
 
             {/* Shared Pricing — full-width */}
-            <div id="concierge-pricing" style={{ gridColumn: '1 / -1', backgroundColor: '#FAE8E0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #D4A017' }}>
-              <div className="pricing-booking-row">
-                <div style={{ flex: 1 }}>
-                  <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Pricing</h3>
-                  <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '14px', lineHeight: '1.5' }}>
-                    Hourly — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$650 MXN/hour</span> &nbsp;·&nbsp; No minimum<span style={{ fontSize: '12px', color: '#A08878', fontWeight: '400', display: 'block', marginTop: '2px' }}>&#8776; $38 USD</span>
-                  </div>
-                  <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '20px 0 12px' }}>Monthly Retainers:</p>
-                  <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810', marginBottom: '20px' }}>
-                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Starter — 8 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$4,500 MXN</span><span style={{ fontSize: '12px', color: '#A08878', fontWeight: '400', display: 'block', marginTop: '2px' }}>&#8776; $260 USD</span></div>
-                    <div style={{ marginBottom: '12px', lineHeight: '1.5' }}>Standard — 16 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$8,500 MXN</span><span style={{ fontSize: '12px', color: '#A08878', fontWeight: '400', display: 'block', marginTop: '2px' }}>&#8776; $490 USD</span></div>
-                    <div style={{ lineHeight: '1.5' }}>Full Support — 24 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$12,500 MXN</span><span style={{ fontSize: '12px', color: '#A08878', fontWeight: '400', display: 'block', marginTop: '2px' }}>&#8776; $720 USD</span></div>
-                  </div>
-                  <p style={{ fontSize: '14px', lineHeight: '1.75', color: '#2C1810', marginBottom: '10px' }}>
-                    <strong>Includes:</strong> all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.
-                  </p>
-                  <p style={{ fontSize: '13px', fontStyle: 'italic', color: '#7D3B4E', marginBottom: 0 }}>
-                    This pricing applies to Personal Assistant, Tech Concierge, Travel &amp; Logistics, and Senior Concierge services.
-                  </p>
-                </div>
-
-                {/* Ready to Book? */}
-                <div style={{ flex: 1, backgroundColor: '#2C1810', borderRadius: '12px', padding: '32px' }}>
-                  <h3 style={{ fontSize: '20px', fontWeight: 'normal', marginBottom: '16px', color: '#FDF6F0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>Select Your Plan</h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
-                    {CONCIERGE_TIERS.map((tier) => (
-                      <button
-                        key={tier.id}
-                        onClick={() => setConciergeTier(tier.id)}
-                        style={{
-                          backgroundColor: conciergeTier === tier.id ? '#C4622D' : 'rgba(255,255,255,0.08)',
-                          color: '#FDF6F0',
-                          border: conciergeTier === tier.id ? 'none' : '1px solid rgba(255,255,255,0.2)',
-                          borderRadius: '6px',
-                          padding: '10px 16px',
-                          fontSize: '14px',
-                          fontWeight: conciergeTier === tier.id ? 700 : 400,
-                          cursor: 'pointer',
-                          textAlign: 'left',
-                        }}
-                      >
-                        {tier.label}
-                      </button>
-                    ))}
-                  </div>
+            <div id="concierge-pricing" style={{ gridColumn: '1 / -1', backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #D4A017' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                {CONCIERGE_TIERS.map((tier) => (
                   <button
-                    onClick={() => {
-                      const tier = CONCIERGE_TIERS.find(t => t.id === conciergeTier)
-                      if (tier) handlePayNow('Concierge', tier.stripe, tier.paypal)
+                    key={tier.id}
+                    onClick={() => setConciergeTier(tier.id)}
+                    style={{
+                      backgroundColor: conciergeTier === tier.id ? '#C4622D' : '#FDF6F0',
+                      color: conciergeTier === tier.id ? 'white' : '#2C1810',
+                      border: conciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
+                      borderRadius: '6px',
+                      padding: '10px 16px',
+                      fontSize: '14px',
+                      fontWeight: conciergeTier === tier.id ? 700 : 400,
+                      cursor: 'pointer',
+                      textAlign: 'left',
                     }}
-                    style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
                   >
-                    Pay Now
+                    {tier.label}
                   </button>
-                </div>
+                ))}
               </div>
+              <button
+                onClick={() => {
+                  const tier = CONCIERGE_TIERS.find(t => t.id === conciergeTier)
+                  if (tier) handlePayNow('Concierge', tier.stripe, tier.paypal)
+                }}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%', marginBottom: '20px' }}
+              >
+                Pay Now
+              </button>
+              <p style={{ fontSize: '14px', lineHeight: '1.75', color: '#2C1810', marginBottom: '10px' }}>
+                <strong>Includes:</strong> all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.
+              </p>
+              <p style={{ fontSize: '13px', fontStyle: 'italic', color: '#7D3B4E', marginBottom: 0 }}>
+                This pricing applies to Personal Assistant, Tech Concierge, Travel &amp; Logistics, and Senior Concierge services.
+              </p>
             </div>
 
             {/* BOTTOM ROW: Senior Concierge · Medical Concierge · Local Companion */}
@@ -778,29 +759,18 @@ export default function Home() {
                 <li>🏥 Navigating Mexican healthcare vs US insurance reimbursement</li>
                 <li>👨‍⚕️ Accompanying to specialist referrals</li>
               </ul>
-              <div style={{ padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', marginBottom: '16px' }}>
-                <div style={{ fontSize: '18px', fontWeight: '700', marginBottom: '14px' }}>Pricing</div>
-                <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810' }}>
-                  <div style={{ marginBottom: '10px', lineHeight: '1.5' }}><span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$22/hour</span> · Minimum 2 hours ($44)</div>
-                  <div style={{ marginBottom: '10px', lineHeight: '1.5' }}>Half Day 4 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$80</span></div>
-                  <div style={{ lineHeight: '1.5' }}>Full Day 8 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$150</span></div>
-                </div>
-                <div style={{ fontSize: '13px', marginTop: '14px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
-                  Navigating care in Mexico is hard alone. With the right person beside you, it isn't.
-                </div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '10px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
                 {MEDICAL_TIERS.map((tier) => (
                   <button
                     key={tier.id}
                     onClick={() => setMedicalTier(tier.id)}
                     style={{
-                      backgroundColor: medicalTier === tier.id ? '#C4622D' : '#FAE8E0',
+                      backgroundColor: medicalTier === tier.id ? '#C4622D' : '#FDF6F0',
                       color: medicalTier === tier.id ? 'white' : '#2C1810',
-                      border: '1px solid #C4622D',
+                      border: medicalTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
                       borderRadius: '6px',
-                      padding: '8px 16px',
-                      fontSize: '13px',
+                      padding: '10px 16px',
+                      fontSize: '14px',
                       fontWeight: medicalTier === tier.id ? 700 : 400,
                       cursor: 'pointer',
                       textAlign: 'left',
@@ -815,7 +785,7 @@ export default function Home() {
                   const tier = MEDICAL_TIERS.find(t => t.id === medicalTier)
                   if (tier) handlePayNow('Medical Concierge', tier.stripe, tier.paypal)
                 }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
               >
                 Pay Now
               </button>
@@ -835,29 +805,18 @@ export default function Home() {
                 <p style={{ marginBottom: '14px' }}><strong>Everyday and social:</strong> consignment and thrift hopping, art class, dance class, a workout partner, rooftop happy hour, or help throwing a dinner party or event.</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", margin: 0 }}>And more, if you can dream it, we can probably do it.</p>
               </div>
-              <div style={{ padding: '22px 20px', backgroundColor: 'white', borderRadius: '10px', border: '1px solid #D4A017', color: '#2C1810', marginBottom: '16px' }}>
-                <div style={{ fontSize: '18px', fontWeight: '700', marginBottom: '14px' }}>Pricing</div>
-                <div style={{ fontSize: '18px', fontWeight: '400', color: '#2C1810' }}>
-                  <div style={{ marginBottom: '10px', lineHeight: '1.5' }}>Hourly — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$15/hour</span></div>
-                  <div style={{ marginBottom: '10px', lineHeight: '1.5' }}>Half Day 4 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$56</span></div>
-                  <div style={{ lineHeight: '1.5' }}>Full Day 8 hours — <span style={{ fontSize: '19px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>$96</span></div>
-                </div>
-                <div style={{ fontSize: '13px', marginTop: '14px', color: '#7D3B4E', fontWeight: 'normal', lineHeight: '1.6' }}>
-                  Client covers all outing costs, including meals, transportation, admission fees, and activities.
-                </div>
-              </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '10px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
                 {COMPANION_TIERS.map((tier) => (
                   <button
                     key={tier.id}
                     onClick={() => setCompanionTier(tier.id)}
                     style={{
-                      backgroundColor: companionTier === tier.id ? '#C4622D' : '#FAE8E0',
+                      backgroundColor: companionTier === tier.id ? '#C4622D' : '#FDF6F0',
                       color: companionTier === tier.id ? 'white' : '#2C1810',
-                      border: '1px solid #C4622D',
+                      border: companionTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
                       borderRadius: '6px',
-                      padding: '8px 16px',
-                      fontSize: '13px',
+                      padding: '10px 16px',
+                      fontSize: '14px',
                       fontWeight: companionTier === tier.id ? 700 : 400,
                       cursor: 'pointer',
                       textAlign: 'left',
@@ -872,7 +831,7 @@ export default function Home() {
                   const tier = COMPANION_TIERS.find(t => t.id === companionTier)
                   if (tier) handlePayNow('Local Companion', tier.stripe, tier.paypal)
                 }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '10px 20px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
               >
                 Pay Now
               </button>

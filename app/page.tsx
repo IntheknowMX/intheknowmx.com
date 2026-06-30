@@ -1098,7 +1098,15 @@ export default function Home() {
               <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '28px' }}>Buying a home in San Miguel de Allende isn&rsquo;t just a property decision — it&rsquo;s a life decision. Where you live shapes your rhythm, your routines, and your daily experience in ways that don&rsquo;t show up in listings. On paper, many homes look similar. In reality, they feel completely different once you live in them: neighborhood energy, daily flow, walkability, quiet, pace. These aren&rsquo;t details you can see online. They&rsquo;re experienced — and they&rsquo;re often what determines whether a home truly fits, or doesn&rsquo;t.</p>
               <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '28px' }}>This is why we work together. You&rsquo;re not getting one point of view — you&rsquo;re getting two, aligned. I focus on how a place actually lives, its rhythm and day-to-day reality in San Miguel. Tiffany is a Licensed Real Estate Advisor with The Agency San Miguel, part of a global luxury brokerage network, bringing market access, negotiation expertise, and structured guidance. Together, we evaluate every home through both lenses at once: what it is, and what it feels like to live there.</p>
               <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '28px' }}>We don&rsquo;t overwhelm you with options. We refine. Each home is evaluated for both market value and lifestyle fit, walked with context rather than just observed, narrowed based on clarity rather than volume. We coordinate with your notary early so you understand costs and requirements before committing — no assumptions, no surprises.</p>
-              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '60px' }}>The right home isn&rsquo;t just a property. It&rsquo;s alignment between place and life, and you understand why it fits before you decide.</p>
+              <p style={{ fontSize: '16px', color: '#FDF6F0', lineHeight: '1.8', marginBottom: '32px' }}>The right home isn&rsquo;t just a property. It&rsquo;s alignment between place and life, and you understand why it fits before you decide.</p>
+              <a
+                href="https://www.sanmiguelrealestate.com.mx/properties"
+                target="_blank"
+                rel="noreferrer"
+                style={{ display: 'inline-block', backgroundColor: '#C4622D', color: 'white', padding: '14px 32px', borderRadius: '6px', fontSize: '15px', fontWeight: '700', textDecoration: 'none', marginBottom: '60px' }}
+              >
+                Browse Properties
+              </a>
             </div>
           </div>
         </div>

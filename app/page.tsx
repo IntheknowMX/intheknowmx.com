@@ -975,8 +975,14 @@ export default function Home() {
               <img
                 src="/images/Rental-Interior.jpg"
                 alt="A warmly furnished rental home in San Miguel de Allende"
-                style={{ width: '100%', borderRadius: '8px', display: 'block' }}
+                style={{ width: '100%', borderRadius: '8px', display: 'block', marginBottom: '12px' }}
               />
+              <p style={{ fontSize: '16px', fontWeight: 'normal', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", margin: '0 0 8px' }}>Barrio Santo</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                {['2br', '2 + 1/2 Bath', 'Built: 2022', 'Mexican Modern', 'Carport', 'Pool', 'Gated Community'].map((stat) => (
+                  <span key={stat} style={{ fontSize: '11px', color: '#2C1810', border: '1px solid #C4622D', borderRadius: '20px', padding: '3px 10px', whiteSpace: 'nowrap', lineHeight: '1.4' }}>{stat}</span>
+                ))}
+              </div>
             </div>
             <div style={{ flex: '1 1 360px', minWidth: '260px', maxWidth: '540px' }}>
               <p style={{ fontSize: '17px', lineHeight: '1.9', color: '#2C1810', marginBottom: '24px' }}>

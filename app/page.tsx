@@ -565,7 +565,7 @@ export default function Home() {
 
             {/* What We Handle — full-width */}
             <div style={{ gridColumn: '1 / -1', backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
-              <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>What We Handle</h3>
+              <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>What Is Handled</h3>
               <ul className="what-we-handle-list" style={{ fontSize: '14px', color: '#2C1810' }}>
                 <li>• Utility setup &amp; bill payment</li>
                 <li>• Mexican bank account opening</li>
@@ -973,7 +973,7 @@ export default function Home() {
             <div style={{ flex: '1 1 360px', minWidth: '260px' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/Rental-Interior.png"
+                src="/images/Rental-Interior.jpg"
                 alt="A warmly furnished rental home in San Miguel de Allende"
                 style={{ width: '100%', borderRadius: '8px', display: 'block' }}
               />

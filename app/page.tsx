@@ -30,7 +30,6 @@ export default function Home() {
   const [selectedService, setSelectedService] = useState('')
   const [modalStripeUrl, setModalStripeUrl] = useState<string | undefined>()
   const [modalPaypalUrl, setModalPaypalUrl] = useState<string | undefined>()
-  const [conciergeTier, setConciergeTier] = useState('Hourly')
   const [seniorConciergeTier, setSeniorConciergeTier] = useState('Hourly')
   const [personalAssistantTier, setPersonalAssistantTier] = useState('Hourly')
   const [techConciergeTier, setTechConciergeTier] = useState('Hourly')
@@ -754,46 +753,6 @@ export default function Home() {
               >
                 Pay Now
               </button>
-            </div>
-
-            {/* Shared Pricing — full-width */}
-            <div id="concierge-pricing" style={{ gridColumn: '1 / -1', backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #D4A017' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
-                {CONCIERGE_TIERS.map((tier) => (
-                  <button
-                    key={tier.id}
-                    onClick={() => setConciergeTier(tier.id)}
-                    style={{
-                      backgroundColor: conciergeTier === tier.id ? '#C4622D' : '#FDF6F0',
-                      color: conciergeTier === tier.id ? 'white' : '#2C1810',
-                      border: conciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
-                      borderRadius: '6px',
-                      padding: '10px 16px',
-                      fontSize: '14px',
-                      fontWeight: conciergeTier === tier.id ? 700 : 400,
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                    }}
-                  >
-                    {tier.label}
-                  </button>
-                ))}
-              </div>
-              <button
-                onClick={() => {
-                  const tier = CONCIERGE_TIERS.find(t => t.id === conciergeTier)
-                  if (tier) handlePayNow('Concierge', tier.stripe, tier.paypal)
-                }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%', marginBottom: '20px' }}
-              >
-                Pay Now
-              </button>
-              <p style={{ fontSize: '14px', lineHeight: '1.75', color: '#2C1810', marginBottom: '10px' }}>
-                <strong>Includes:</strong> all WhatsApp communication, research time, coordination time, travel time to appointments, all calls and messages on your behalf, document review and translation, and a weekly usage report.
-              </p>
-              <p style={{ fontSize: '13px', fontStyle: 'italic', color: '#7D3B4E', marginBottom: 0 }}>
-                This pricing applies to Personal Assistant, Tech Concierge, Travel &amp; Logistics, and Senior Concierge services.
-              </p>
             </div>
 
             {/* BOTTOM ROW: Senior Concierge · Medical Concierge · Local Companion */}

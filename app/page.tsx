@@ -1179,28 +1179,59 @@ export default function Home() {
           </div>
 
           {renderCardActions('Property & Pet Care')}
-          <div style={{ fontSize: '13px', color: '#2C1810', fontWeight: '600', marginBottom: '24px' }}>
-            <div style={{ marginBottom: '12px', fontWeight: '700' }}>WITHOUT PETS</div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
-              <div><strong>Daily</strong><br/>250 pesos · $1.56 USD</div>
-              <div><strong>Weekly</strong><br/>1,500 pesos · $9.35 USD</div>
-              <div><strong>Monthly</strong><br/>5,500 pesos · $34 USD</div>
+          <div style={{ backgroundColor: '#FDF6F0', border: '1px solid #D4A017', borderTop: '4px solid #D4A017', borderRadius: '8px', padding: '36px 32px', marginBottom: '24px' }}>
+
+            {/* WITHOUT PETS */}
+            <h4 style={{ fontSize: '15px', fontWeight: '700', color: '#2C1810', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '16px' }}>Without Pets</h4>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '12px' }}>
+              {[
+                { period: 'Daily', price: '$250 MXN' },
+                { period: 'Weekly', price: '$1,500 MXN' },
+                { period: 'Monthly', price: '$5,500 MXN' },
+              ].map((row) => (
+                <div key={row.period}>
+                  <div style={{ fontSize: '12px', color: '#7D3B4E', fontWeight: '600', letterSpacing: '0.5px', marginBottom: '2px' }}>{row.period}</div>
+                  <div style={{ fontSize: '18px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{row.price}</div>
+                </div>
+              ))}
             </div>
-            <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '12px' }}>Includes: home walk-through, WhatsApp photo updates, mail and deliveries, plant watering, emergency response.</div>
-            <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>WITH 1 PET</div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '16px', fontSize: '12px' }}>
-              <div><strong>Daily</strong><br/>350 pesos · $2.18 USD</div>
-              <div><strong>Weekly</strong><br/>2,100 pesos · $13 USD</div>
-              <div><strong>Monthly</strong><br/>7,700 pesos · $48 USD</div>
+            <p style={{ fontSize: '13px', color: '#5C3A2E', lineHeight: '1.6', marginBottom: '28px' }}>Includes: home walk-through, WhatsApp photo updates, mail and deliveries, plant watering, emergency response.</p>
+
+            <hr style={{ border: 'none', borderTop: '1px solid #E8A598', marginBottom: '28px' }} />
+
+            {/* WITH 1 PET */}
+            <h4 style={{ fontSize: '15px', fontWeight: '700', color: '#2C1810', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '16px' }}>With 1 Pet</h4>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '12px' }}>
+              {[
+                { period: 'Daily', price: '$350 MXN' },
+                { period: 'Weekly', price: '$2,100 MXN' },
+                { period: 'Monthly', price: '$7,700 MXN' },
+              ].map((row) => (
+                <div key={row.period}>
+                  <div style={{ fontSize: '12px', color: '#7D3B4E', fontWeight: '600', letterSpacing: '0.5px', marginBottom: '2px' }}>{row.period}</div>
+                  <div style={{ fontSize: '18px', fontWeight: '700', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>{row.price}</div>
+                </div>
+              ))}
             </div>
-            <div style={{ fontSize: '12px', color: '#7D3B4E', marginBottom: '16px' }}>Includes: everything above plus 2-3 feedings, 2 walks, 1-2 litter changes per day.</div>
-            <div style={{ marginBottom: '12px', fontWeight: '700', marginTop: '16px' }}>ADD-ONS per day/week/month</div>
-            <div style={{ fontSize: '12px', color: '#7D3B4E' }}>
-              <div>Additional animal +$100 pesos per day</div>
-              <div>Oral medication up to 2x daily: +$30 / $210 / $840 pesos</div>
-              <div>Medical injection: +$25 / $175 / $700 pesos</div>
-              <div>Asthma inhaler: +$25 / $175 / $700 pesos</div>
-            </div>
+            <p style={{ fontSize: '13px', color: '#5C3A2E', lineHeight: '1.6', marginBottom: '28px' }}>Includes: everything above plus 2–3 feedings, 2 walks, 1–2 litter changes per day.</p>
+
+            <hr style={{ border: 'none', borderTop: '1px solid #E8A598', marginBottom: '28px' }} />
+
+            {/* ADD-ONS */}
+            <h4 style={{ fontSize: '15px', fontWeight: '700', color: '#2C1810', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '16px' }}>Add-Ons <span style={{ fontSize: '12px', fontWeight: '400', color: '#7D3B4E', letterSpacing: '0', textTransform: 'none' }}>per day / week / month</span></h4>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {[
+                'Additional animal: +$100 MXN per day',
+                'Oral medication up to 2x daily: +$30 / $210 / $840 MXN',
+                'Medical injection: +$25 / $175 / $700 MXN',
+                'Asthma inhaler: +$25 / $175 / $700 MXN',
+              ].map((item) => (
+                <li key={item} style={{ fontSize: '13px', color: '#2C1810', lineHeight: '1.6', paddingLeft: '14px', position: 'relative' }}>
+                  <span style={{ position: 'absolute', left: 0, color: '#C4622D' }}>–</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

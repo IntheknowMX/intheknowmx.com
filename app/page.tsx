@@ -32,6 +32,9 @@ export default function Home() {
   const [modalPaypalUrl, setModalPaypalUrl] = useState<string | undefined>()
   const [conciergeTier, setConciergeTier] = useState('Hourly')
   const [seniorConciergeTier, setSeniorConciergeTier] = useState('Hourly')
+  const [personalAssistantTier, setPersonalAssistantTier] = useState('Hourly')
+  const [techConciergeTier, setTechConciergeTier] = useState('Hourly')
+  const [travelLogisticsTier, setTravelLogisticsTier] = useState('Hourly')
   const [medicalTier, setMedicalTier] = useState('Hourly')
   const [companionTier, setCompanionTier] = useState('Hourly')
 
@@ -611,7 +614,37 @@ export default function Home() {
                 <li>📋 Basic project management</li>
                 <li>🎉 Event support</li>
               </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You have a life to live. Let's keep it running smoothly.</p>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You have a life to live. Let's keep it running smoothly.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                {CONCIERGE_TIERS.map((tier) => (
+                  <button
+                    key={tier.id}
+                    onClick={() => setPersonalAssistantTier(tier.id)}
+                    style={{
+                      backgroundColor: personalAssistantTier === tier.id ? '#C4622D' : '#FDF6F0',
+                      color: personalAssistantTier === tier.id ? 'white' : '#2C1810',
+                      border: personalAssistantTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
+                      borderRadius: '6px',
+                      padding: '10px 16px',
+                      fontSize: '14px',
+                      fontWeight: personalAssistantTier === tier.id ? 700 : 400,
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                    }}
+                  >
+                    {tier.label}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => {
+                  const tier = CONCIERGE_TIERS.find(t => t.id === personalAssistantTier)
+                  if (tier) handlePayNow('Personal Assistant', tier.stripe, tier.paypal)
+                }}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+              >
+                Pay Now
+              </button>
             </div>
 
             <div id="tech-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -638,7 +671,37 @@ export default function Home() {
                 <li>🛒 Amazon.mx setup and navigation</li>
                 <li>📸 Photo backup and organization</li>
               </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If it has a screen and it is not cooperating — I can help.</p>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If it has a screen and it is not cooperating — I can help.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                {CONCIERGE_TIERS.map((tier) => (
+                  <button
+                    key={tier.id}
+                    onClick={() => setTechConciergeTier(tier.id)}
+                    style={{
+                      backgroundColor: techConciergeTier === tier.id ? '#C4622D' : '#FDF6F0',
+                      color: techConciergeTier === tier.id ? 'white' : '#2C1810',
+                      border: techConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
+                      borderRadius: '6px',
+                      padding: '10px 16px',
+                      fontSize: '14px',
+                      fontWeight: techConciergeTier === tier.id ? 700 : 400,
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                    }}
+                  >
+                    {tier.label}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => {
+                  const tier = CONCIERGE_TIERS.find(t => t.id === techConciergeTier)
+                  if (tier) handlePayNow('Tech Concierge', tier.stripe, tier.paypal)
+                }}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+              >
+                Pay Now
+              </button>
             </div>
 
             <div id="travel-logistics" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
@@ -660,7 +723,37 @@ export default function Home() {
                 <li>📱 Travel app setup — Uber, ADO, VivaAerobus, Aeromexico</li>
                 <li>🚨 Emergency travel support — canceled flights, lost documents, rebooking</li>
               </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on the journey. I handle the map.</p>
+              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on the journey. I handle the map.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                {CONCIERGE_TIERS.map((tier) => (
+                  <button
+                    key={tier.id}
+                    onClick={() => setTravelLogisticsTier(tier.id)}
+                    style={{
+                      backgroundColor: travelLogisticsTier === tier.id ? '#C4622D' : '#FDF6F0',
+                      color: travelLogisticsTier === tier.id ? 'white' : '#2C1810',
+                      border: travelLogisticsTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
+                      borderRadius: '6px',
+                      padding: '10px 16px',
+                      fontSize: '14px',
+                      fontWeight: travelLogisticsTier === tier.id ? 700 : 400,
+                      cursor: 'pointer',
+                      textAlign: 'left',
+                    }}
+                  >
+                    {tier.label}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => {
+                  const tier = CONCIERGE_TIERS.find(t => t.id === travelLogisticsTier)
+                  if (tier) handlePayNow('Travel & Logistics', tier.stripe, tier.paypal)
+                }}
+                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
+              >
+                Pay Now
+              </button>
             </div>
 
             {/* Shared Pricing — full-width */}

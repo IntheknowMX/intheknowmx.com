@@ -599,10 +599,10 @@ export default function Home() {
                   <li>Zoom setup &amp; meeting support</li>
                 </ul>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on settling in. The list gets handled.</p>
-                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', marginTop: 'auto', marginBottom: '16px' }} />
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
                   {CONCIERGE_TIERS.map((tier) => (
-                    <button key={tier.id} onClick={() => setPersonalAssistantTier(tier.id)} style={{ backgroundColor: personalAssistantTier === tier.id ? '#C4622D' : '#FDF6F0', color: personalAssistantTier === tier.id ? 'white' : '#2C1810', border: personalAssistantTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: personalAssistantTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                    <button key={tier.id} onClick={() => setPersonalAssistantTier(tier.id)} style={{ backgroundColor: personalAssistantTier === tier.id ? '#C4622D' : '#FDF6F0', color: personalAssistantTier === tier.id ? 'white' : '#2C1810', border: personalAssistantTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: personalAssistantTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left', whiteSpace: 'nowrap', minHeight: '48px', display: 'flex', alignItems: 'center' }}>{tier.label}</button>
                   ))}
                 </div>
                 <button onClick={() => { const tier = CONCIERGE_TIERS.find(t => t.id === personalAssistantTier); if (tier) handlePayNow('Personal Assistant', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
@@ -629,10 +629,10 @@ export default function Home() {
                   <li>Email, password management &amp; photo backup</li>
                 </ul>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If it has a screen and it isn&rsquo;t cooperating — I can fix it.</p>
-                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', marginTop: 'auto', marginBottom: '16px' }} />
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
                   {CONCIERGE_TIERS.map((tier) => (
-                    <button key={tier.id} onClick={() => setTechConciergeTier(tier.id)} style={{ backgroundColor: techConciergeTier === tier.id ? '#C4622D' : '#FDF6F0', color: techConciergeTier === tier.id ? 'white' : '#2C1810', border: techConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: techConciergeTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                    <button key={tier.id} onClick={() => setTechConciergeTier(tier.id)} style={{ backgroundColor: techConciergeTier === tier.id ? '#C4622D' : '#FDF6F0', color: techConciergeTier === tier.id ? 'white' : '#2C1810', border: techConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: techConciergeTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left', whiteSpace: 'nowrap', minHeight: '48px', display: 'flex', alignItems: 'center' }}>{tier.label}</button>
                   ))}
                 </div>
                 <button onClick={() => { const tier = CONCIERGE_TIERS.find(t => t.id === techConciergeTier); if (tier) handlePayNow('Tech Concierge', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
@@ -659,10 +659,10 @@ export default function Home() {
                   <li>Emergency travel support — canceled flights, lost documents, rebooking</li>
                 </ul>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on the destination. I handle the logistics.</p>
-                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', marginTop: 'auto', marginBottom: '16px' }} />
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
                   {CONCIERGE_TIERS.map((tier) => (
-                    <button key={tier.id} onClick={() => setTravelLogisticsTier(tier.id)} style={{ backgroundColor: travelLogisticsTier === tier.id ? '#C4622D' : '#FDF6F0', color: travelLogisticsTier === tier.id ? 'white' : '#2C1810', border: travelLogisticsTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: travelLogisticsTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                    <button key={tier.id} onClick={() => setTravelLogisticsTier(tier.id)} style={{ backgroundColor: travelLogisticsTier === tier.id ? '#C4622D' : '#FDF6F0', color: travelLogisticsTier === tier.id ? 'white' : '#2C1810', border: travelLogisticsTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: travelLogisticsTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left', whiteSpace: 'nowrap', minHeight: '48px', display: 'flex', alignItems: 'center' }}>{tier.label}</button>
                   ))}
                 </div>
                 <button onClick={() => { const tier = CONCIERGE_TIERS.find(t => t.id === travelLogisticsTier); if (tier) handlePayNow('Travel & Logistics', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
@@ -689,10 +689,10 @@ export default function Home() {
                   <li>Trusted referrals for home care, healthcare &amp; household help</li>
                 </ul>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You didn&rsquo;t move to Mexico to struggle with logistics.</p>
-                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', marginTop: 'auto', marginBottom: '16px' }} />
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
                   {CONCIERGE_TIERS.map((tier) => (
-                    <button key={tier.id} onClick={() => setSeniorConciergeTier(tier.id)} style={{ backgroundColor: seniorConciergeTier === tier.id ? '#C4622D' : '#FDF6F0', color: seniorConciergeTier === tier.id ? 'white' : '#2C1810', border: seniorConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: seniorConciergeTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                    <button key={tier.id} onClick={() => setSeniorConciergeTier(tier.id)} style={{ backgroundColor: seniorConciergeTier === tier.id ? '#C4622D' : '#FDF6F0', color: seniorConciergeTier === tier.id ? 'white' : '#2C1810', border: seniorConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: seniorConciergeTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left', whiteSpace: 'nowrap', minHeight: '48px', display: 'flex', alignItems: 'center' }}>{tier.label}</button>
                   ))}
                 </div>
                 <button onClick={() => { const tier = CONCIERGE_TIERS.find(t => t.id === seniorConciergeTier); if (tier) handlePayNow('Senior Concierge', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
@@ -720,10 +720,10 @@ export default function Home() {
                   <li>Emergency contact coordination</li>
                 </ul>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You leave every appointment knowing exactly what happened and what&rsquo;s next.</p>
-                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', marginTop: 'auto', marginBottom: '16px' }} />
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
                   {MEDICAL_TIERS.map((tier) => (
-                    <button key={tier.id} onClick={() => setMedicalTier(tier.id)} style={{ backgroundColor: medicalTier === tier.id ? '#C4622D' : '#FDF6F0', color: medicalTier === tier.id ? 'white' : '#2C1810', border: medicalTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: medicalTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                    <button key={tier.id} onClick={() => setMedicalTier(tier.id)} style={{ backgroundColor: medicalTier === tier.id ? '#C4622D' : '#FDF6F0', color: medicalTier === tier.id ? 'white' : '#2C1810', border: medicalTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: medicalTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left', whiteSpace: 'nowrap', minHeight: '48px', display: 'flex', alignItems: 'center' }}>{tier.label}</button>
                   ))}
                 </div>
                 <button onClick={() => { const tier = MEDICAL_TIERS.find(t => t.id === medicalTier); if (tier) handlePayNow('Medical Concierge', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
@@ -744,10 +744,10 @@ export default function Home() {
                 <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', marginBottom: '8px' }}><strong>Culture &amp; nightlife:</strong> live music, opera, ballet, art crawls, local events</p>
                 <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}><strong>Everyday &amp; social:</strong> thrift shopping, fitness classes, dinner parties, event support</p>
                 <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If you can dream it, we can probably do it.</p>
-                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', marginTop: 'auto', marginBottom: '16px' }} />
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
                   {COMPANION_TIERS.map((tier) => (
-                    <button key={tier.id} onClick={() => setCompanionTier(tier.id)} style={{ backgroundColor: companionTier === tier.id ? '#C4622D' : '#FDF6F0', color: companionTier === tier.id ? 'white' : '#2C1810', border: companionTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: companionTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                    <button key={tier.id} onClick={() => setCompanionTier(tier.id)} style={{ backgroundColor: companionTier === tier.id ? '#C4622D' : '#FDF6F0', color: companionTier === tier.id ? 'white' : '#2C1810', border: companionTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: companionTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left', whiteSpace: 'nowrap', minHeight: '48px', display: 'flex', alignItems: 'center' }}>{tier.label}</button>
                   ))}
                 </div>
                 <button onClick={() => { const tier = COMPANION_TIERS.find(t => t.id === companionTier); if (tier) handlePayNow('Local Companion', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>

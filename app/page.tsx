@@ -1376,32 +1376,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Contact */}
       <section className="responsive-section" style={{ backgroundColor: '#7D3B4E', textAlign: 'center' }}>
-        <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '20px', fontWeight: '600' }}>YOUR NEXT STEP</p>
-        <h2 style={{ fontSize: '46px', fontWeight: 'normal', marginBottom: '24px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.2' }}>
-          The life you came here looking for is absolutely real.
-        </h2>
-        <p style={{ color: '#F5E0E6', fontSize: '18px', maxWidth: '520px', margin: '0 auto 48px', lineHeight: '1.75' }}>
-          And so is the person who will help you build it. Book a strategy session and let's map your Mexico — together.
+        <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '24px', fontWeight: '600' }}>CONTACT</p>
+        <p style={{ color: '#F5E0E6', fontSize: '17px', maxWidth: '480px', margin: '0 auto 48px', lineHeight: '1.7' }}>
+          Choose the way you prefer to connect. We respond personally and directly.
         </p>
-        <a className="button-link" href="#planning-calls" style={{
-          backgroundColor: '#C4622D',
-          color: 'white',
-          borderRadius: '4px',
-          textDecoration: 'none',
-          fontSize: '18px',
-          fontWeight: '700',
-          letterSpacing: '0.5px',
-          display: 'inline-block',
-          marginBottom: '40px'
-        }}>✦ Book a Planning Call</a>
-        <div className="button-row" style={{ justifyContent: 'center', marginTop: '16px' }}>
-          <a href="mailto:Lisa@InTheKnowMx.com" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Lisa@InTheKnowMx.com</a>
-          <a href="https://www.instagram.com/in.the.know.mexico/" target="_blank" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Instagram</a>
-          <a href="https://www.facebook.com/InTheKnowMex" target="_blank" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Facebook</a>
-          <a href="https://www.facebook.com/groups/655871853479437" target="_blank" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>Facebook Group</a>
-          <a href="https://www.linkedin.com/in/lisamcobham" target="_blank" style={{ color: '#F5E0E6', textDecoration: 'none', fontSize: '14px' }}>LinkedIn</a>
+
+        {/* WhatsApp — primary */}
+        <div style={{ marginBottom: '32px' }}>
+          <a
+            href="https://wa.me/5214731218554"
+            target="_blank"
+            rel="noreferrer"
+            style={{ display: 'inline-block', backgroundColor: '#C4622D', color: 'white', padding: '18px 40px', borderRadius: '8px', fontSize: '17px', fontWeight: '700', textDecoration: 'none', width: '100%', maxWidth: '420px', boxSizing: 'border-box' as const }}
+          >
+            Message on WhatsApp to get started
+          </a>
+        </div>
+
+        {/* US Phone — secondary */}
+        <div style={{ marginBottom: '24px' }}>
+          <p style={{ fontSize: '12px', letterSpacing: '2px', color: '#E8C47A', fontWeight: '600', marginBottom: '6px' }}>CALL OR TEXT (US NUMBER)</p>
+          <a
+            href="tel:+12025799814"
+            style={{ fontSize: '22px', fontWeight: '700', color: 'white', textDecoration: 'none', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", letterSpacing: '0.5px' }}
+          >
+            +1 (202) 579-9814
+          </a>
+        </div>
+
+        {/* Email — tertiary */}
+        <div>
+          <p style={{ fontSize: '12px', letterSpacing: '2px', color: '#E8C47A', fontWeight: '600', marginBottom: '6px' }}>EMAIL</p>
+          <a
+            href="mailto:lisa@intheknowmx.com"
+            style={{ fontSize: '15px', color: '#F5E0E6', textDecoration: 'none' }}
+          >
+            lisa@intheknowmx.com
+          </a>
         </div>
       </section>
 

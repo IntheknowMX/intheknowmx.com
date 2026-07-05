@@ -36,6 +36,7 @@ export default function Home() {
   const [travelLogisticsTier, setTravelLogisticsTier] = useState('Hourly')
   const [medicalTier, setMedicalTier] = useState('Hourly')
   const [companionTier, setCompanionTier] = useState('Hourly')
+  const [expandedCard, setExpandedCard] = useState<string | null>(null)
 
   const handlePayNow = (service: string, stripeUrl?: string, paypalUrl?: string) => {
     setSelectedService(service)
@@ -120,6 +121,8 @@ export default function Home() {
         .buy-col-text { flex: 0 0 55%; order: 1; }
         .buy-col-img { flex: 0 0 40%; order: 2; text-align: center; }
         .pricing-booking-row { display: flex; gap: 32px; align-items: flex-start; }
+        .concierge-card-body { display: flex; flex-direction: column; flex: 1; }
+        .concierge-expand-icon { display: none; }
         @media (max-width: 767px) {
           .hero-section { min-height: 82vh; }
           .hero-img { object-position: 31% top; }
@@ -145,6 +148,10 @@ export default function Home() {
           main h4 { font-size: 18px !important; }
           .responsive-img { max-width: 100%; height: auto; }
           .buy-cols { flex-direction: column; }
+          .concierge-card-header { cursor: pointer; }
+          .concierge-expand-icon { display: inline !important; float: right; color: #C4622D; font-style: normal; }
+          .concierge-card-body { display: none; }
+          .concierge-card-body.open { display: flex; flex-direction: column; }
           .buy-col-text, .buy-col-img { flex: 1 1 auto; width: 100%; order: unset; }
         }
       `}</style>
@@ -513,362 +520,244 @@ export default function Home() {
         <div className="content-wrapper">
           <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', textAlign: 'center', fontWeight: '600' }}>CONCIERGE</p>
           <h2 style={{ fontSize: '42px', fontWeight: 'normal', marginBottom: '16px', textAlign: 'center', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>
-            Your Mexico life, handled by an experienced expat with the tech and logistics to back it up.
+            Your Mexico life, handled.
           </h2>
-          <p style={{ color: '#F5E0E6', fontSize: '17px', textAlign: 'center', maxWidth: '700px', margin: '0 auto 40px', lineHeight: '1.75' }}>
-            Newcomer concierge support, right at your fingertips. Mexico has a learning curve. Everyone hits it. The difference is whether you hit it alone or with someone who has already figured it out. I can do it for you, or I can show you how Mexico works. Banking, utilities, household staff, lease review, internet setup, government accounts, healthcare, post-surgery support, Mexican driver's license, car nationalization, setting up a business, travel assistance, home and pet security while you are away, Mexican phone number, we will handle it together until you take the reins. That's the goal.
+          <p style={{ color: '#F5E0E6', fontSize: '17px', textAlign: 'center', maxWidth: '680px', margin: '0 auto 48px', lineHeight: '1.75' }}>
+            Mexico has a learning curve. I handle the parts that take the most time to figure out — banking, utilities, healthcare, government accounts, technology, and everything in between. We work together until you don&rsquo;t need me anymore.
           </p>
 
           <div className="service-grid">
 
-            {/* What We Handle — full-width */}
+            {/* What Is Handled — 4 grouped categories */}
             <div style={{ gridColumn: '1 / -1', backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D' }}>
-              <h3 style={{ fontSize: '21px', marginBottom: '20px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>What Is Handled</h3>
-              <ul className="what-we-handle-list" style={{ fontSize: '14px', color: '#2C1810' }}>
-                <li>• Utility setup &amp; bill payment</li>
-                <li>• Mexican bank account opening</li>
-                <li>• SIM card &amp; internet setup</li>
-                <li>• Bilingual lease review &amp; negotiation</li>
-                <li>• Trusted referrals: gardeners, household help, contractors</li>
-                <li>• Property management &amp; construction oversight</li>
-                <li>• Reasonable home &amp; clothing shopping guidance</li>
-                <li>• SSA &amp; Mexican government account setup</li>
-                <li>• Post-surgery companionship &amp; recovery support</li>
-                <li>• Shipping logistics, visa preparation, finding your gym, your doctor, your favorite coffee spot</li>
-              </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', margin: 0, fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>Scroll down for more detailed services.</p>
+              <h3 style={{ fontSize: '21px', marginBottom: '28px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>What Is Handled</h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '28px' }}>
+                <div>
+                  <p style={{ fontSize: '11px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', color: '#8B1A2A', marginBottom: '12px' }}>Home &amp; Utilities Setup</p>
+                  <ul style={{ fontSize: '14px', lineHeight: '1.85', color: '#2C1810', paddingLeft: '16px', margin: 0 }}>
+                    <li>Utility setup &amp; bill payment</li>
+                    <li>Mexican bank account opening</li>
+                    <li>SIM card &amp; internet setup</li>
+                    <li>Home furnishing &amp; supply runs</li>
+                    <li>Trusted referrals: gardeners, household help, contractors</li>
+                    <li>Property management &amp; construction oversight</li>
+                  </ul>
+                </div>
+                <div>
+                  <p style={{ fontSize: '11px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', color: '#8B1A2A', marginBottom: '12px' }}>Financial &amp; Government Systems</p>
+                  <ul style={{ fontSize: '14px', lineHeight: '1.85', color: '#2C1810', paddingLeft: '16px', margin: 0 }}>
+                    <li>SSA &amp; Mexican government account setup</li>
+                    <li>Online bill pay &amp; money transfer support</li>
+                    <li>Mexican driver&rsquo;s license coordination</li>
+                    <li>Car nationalization support</li>
+                    <li>Business setup assistance</li>
+                    <li>Post-surgery companionship &amp; recovery support</li>
+                  </ul>
+                </div>
+                <div>
+                  <p style={{ fontSize: '11px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', color: '#8B1A2A', marginBottom: '12px' }}>Health &amp; Wellbeing Support</p>
+                  <ul style={{ fontSize: '14px', lineHeight: '1.85', color: '#2C1810', paddingLeft: '16px', margin: 0 }}>
+                    <li>Healthcare navigation &amp; doctor referrals</li>
+                    <li>Pharmacy navigation &amp; prescription support</li>
+                    <li>Medical accompaniment &amp; appointment coordination</li>
+                    <li>Post-surgery companionship &amp; recovery support</li>
+                    <li>Finding your gym, doctor, favorite coffee spot</li>
+                  </ul>
+                </div>
+                <div>
+                  <p style={{ fontSize: '11px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', color: '#8B1A2A', marginBottom: '12px' }}>Daily Life &amp; Errands</p>
+                  <ul style={{ fontSize: '14px', lineHeight: '1.85', color: '#2C1810', paddingLeft: '16px', margin: 0 }}>
+                    <li>Reasonable home &amp; clothing shopping guidance</li>
+                    <li>Shipping logistics &amp; visa preparation</li>
+                    <li>Errand runs using your vehicle</li>
+                    <li>Grocery shopping — HEB, markets, specialty stores</li>
+                    <li>Deliveries, pickups &amp; drop-offs</li>
+                    <li>And so much more!</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            {/* TOP ROW: Personal Assistant · Tech Concierge · Travel & Logistics */}
-
+            {/* Personal Assistant */}
             <div id="personal-assistant" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛒</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Personal Assistant</h3>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>The errands, the projects, the things that pile up when life gets busy.</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
-                Sometimes you just need an extra pair of hands. Whether it's running errands across town, picking up groceries from your favorite market, light cooking for the week, or tackling that home project that's been sitting on your list — this is where I come in.
-              </p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '8px' }}>
-                <li>🚗 Errand runs using your vehicle</li>
-                <li>🛍️ Shopping — groceries, markets, specialty stores</li>
-                <li>🍳 Light cooking and meal prep</li>
-                <li>🔧 Special home projects and coordination</li>
-                <li>📦 Deliveries, pickups and drop-offs</li>
-                <li>🛒 Set up grocery deliveries</li>
-                <li>📺 Set up TV apps</li>
-                <li>🌿 Anything else that needs doing</li>
-              </ul>
-              <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>Office Assistance</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>📞 Business calls: local and abroad</li>
-                <li>📊 Spreadsheets, documents, and presentations</li>
-                <li>📱 Social media setup, management, and scheduling. Editing videos, shorts, and posts.</li>
-                <li>👤 Customer account management</li>
-                <li>✍️ Blog management and editing</li>
-                <li>📅 Appointments</li>
-                <li>📹 Zoom setup and call management, during and post-meeting</li>
-                <li>📝 Meeting minutes</li>
-                <li>📋 Basic project management</li>
-                <li>🎉 Event support</li>
-              </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You have a life to live. Let's keep it running smoothly.</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
-                {CONCIERGE_TIERS.map((tier) => (
-                  <button
-                    key={tier.id}
-                    onClick={() => setPersonalAssistantTier(tier.id)}
-                    style={{
-                      backgroundColor: personalAssistantTier === tier.id ? '#C4622D' : '#FDF6F0',
-                      color: personalAssistantTier === tier.id ? 'white' : '#2C1810',
-                      border: personalAssistantTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
-                      borderRadius: '6px',
-                      padding: '10px 16px',
-                      fontSize: '14px',
-                      fontWeight: personalAssistantTier === tier.id ? 700 : 400,
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                    }}
-                  >
-                    {tier.label}
-                  </button>
-                ))}
+              <div className="concierge-card-header" onClick={() => setExpandedCard(expandedCard === 'pa' ? null : 'pa')}>
+                <div style={{ fontSize: '34px', marginBottom: '14px' }}>🛒</div>
+                <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Personal Assistant <span className="concierge-expand-icon">{expandedCard === 'pa' ? '▴' : '▾'}</span></h3>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Errands piling up while you figure out how things work here?</p>
               </div>
-              <button
-                onClick={() => {
-                  const tier = CONCIERGE_TIERS.find(t => t.id === personalAssistantTier)
-                  if (tier) handlePayNow('Personal Assistant', tier.stripe, tier.paypal)
-                }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
-              >
-                Pay Now
-              </button>
+              <div className={`concierge-card-body${expandedCard === 'pa' ? ' open' : ''}`}>
+                <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>A reliable extra pair of hands for daily tasks and admin.</p>
+                <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>Running errands, managing projects, handling the things that stack up when you&rsquo;re building a new life. Whether it&rsquo;s groceries, home coordination, light cooking, or office support — I take things off your plate.</p>
+                <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
+                  <li>Errand runs using your vehicle</li>
+                  <li>Grocery shopping — HEB, markets, specialty stores</li>
+                  <li>Deliveries, pickups &amp; drop-offs</li>
+                  <li>Light cooking &amp; meal prep</li>
+                  <li>Home projects &amp; contractor coordination</li>
+                  <li>Business calls, calendars &amp; document management</li>
+                  <li>Social media setup &amp; scheduling</li>
+                  <li>Zoom setup &amp; meeting support</li>
+                </ul>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on settling in. The list gets handled.</p>
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                  {CONCIERGE_TIERS.map((tier) => (
+                    <button key={tier.id} onClick={() => setPersonalAssistantTier(tier.id)} style={{ backgroundColor: personalAssistantTier === tier.id ? '#C4622D' : '#FDF6F0', color: personalAssistantTier === tier.id ? 'white' : '#2C1810', border: personalAssistantTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: personalAssistantTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                  ))}
+                </div>
+                <button onClick={() => { const tier = CONCIERGE_TIERS.find(t => t.id === personalAssistantTier); if (tier) handlePayNow('Personal Assistant', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
+              </div>
             </div>
 
+            {/* Tech Concierge */}
             <div id="tech-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>💻</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Tech Concierge</h3>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Technology should make your life easier. When it doesn't — call Lisa.</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
-                Living in Mexico runs on apps these days, your bank, your ride, your prescriptions, your streaming, your government portals. When something won't connect, update, or cooperate, I sort it out, and show you how it works so it's less of a mystery next time. No condescension, no rushing. Just your devices doing what they're supposed to.
-              </p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>💻 Laptop and tablet setup and troubleshooting</li>
-                <li>📱 Phone setup — Mexican SIM WhatsApp apps</li>
-                <li>🔒 VPN setup and internet security</li>
-                <li>✈️ Mexican travel apps — Uber ADO bus VivaAerobus Aeromexico</li>
-                <li>💊 Health apps and medical record management</li>
-                <li>🏦 Online banking and money transfer apps</li>
-                <li>📺 Streaming setup — Netflix Amazon Prime Disney+</li>
-                <li>🖨️ Printer setup and scanning</li>
-                <li>📧 Email organization and management</li>
-                <li>🔐 Password management setup</li>
-                <li>📹 Video calling — Zoom FaceTime WhatsApp Video</li>
-                <li>🌐 Google Translate and essential Mexico apps</li>
-                <li>📋 SSA and government portal navigation</li>
-                <li>🛒 Amazon.mx setup and navigation</li>
-                <li>📸 Photo backup and organization</li>
-              </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If it has a screen and it is not cooperating — I can help.</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
-                {CONCIERGE_TIERS.map((tier) => (
-                  <button
-                    key={tier.id}
-                    onClick={() => setTechConciergeTier(tier.id)}
-                    style={{
-                      backgroundColor: techConciergeTier === tier.id ? '#C4622D' : '#FDF6F0',
-                      color: techConciergeTier === tier.id ? 'white' : '#2C1810',
-                      border: techConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
-                      borderRadius: '6px',
-                      padding: '10px 16px',
-                      fontSize: '14px',
-                      fontWeight: techConciergeTier === tier.id ? 700 : 400,
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                    }}
-                  >
-                    {tier.label}
-                  </button>
-                ))}
+              <div className="concierge-card-header" onClick={() => setExpandedCard(expandedCard === 'tc' ? null : 'tc')}>
+                <div style={{ fontSize: '34px', marginBottom: '14px' }}>💻</div>
+                <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Tech Concierge <span className="concierge-expand-icon">{expandedCard === 'tc' ? '▴' : '▾'}</span></h3>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Nothing connecting, updating, or cooperating?</p>
               </div>
-              <button
-                onClick={() => {
-                  const tier = CONCIERGE_TIERS.find(t => t.id === techConciergeTier)
-                  if (tier) handlePayNow('Tech Concierge', tier.stripe, tier.paypal)
-                }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
-              >
-                Pay Now
-              </button>
+              <div className={`concierge-card-body${expandedCard === 'tc' ? ' open' : ''}`}>
+                <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>Your devices, apps, and portals — set up and working.</p>
+                <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>Living in Mexico runs on apps. Your bank, your prescriptions, your streaming, your government portals. When something won&rsquo;t work, I sort it out — and show you how it works so it&rsquo;s less of a mystery next time.</p>
+                <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
+                  <li>Laptop, tablet &amp; phone setup</li>
+                  <li>Mexican SIM &amp; WhatsApp configuration</li>
+                  <li>VPN &amp; internet security</li>
+                  <li>Online banking &amp; money transfer apps</li>
+                  <li>SSA &amp; government portal navigation</li>
+                  <li>Streaming &amp; travel app setup</li>
+                  <li>Email, password management &amp; photo backup</li>
+                </ul>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If it has a screen and it isn&rsquo;t cooperating — I can fix it.</p>
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                  {CONCIERGE_TIERS.map((tier) => (
+                    <button key={tier.id} onClick={() => setTechConciergeTier(tier.id)} style={{ backgroundColor: techConciergeTier === tier.id ? '#C4622D' : '#FDF6F0', color: techConciergeTier === tier.id ? 'white' : '#2C1810', border: techConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: techConciergeTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                  ))}
+                </div>
+                <button onClick={() => { const tier = CONCIERGE_TIERS.find(t => t.id === techConciergeTier); if (tier) handlePayNow('Tech Concierge', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
+              </div>
             </div>
 
+            {/* Travel & Logistics */}
             <div id="travel-logistics" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>✈️</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Travel &amp; Logistics</h3>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Getting there is half the adventure. Getting there smoothly is the whole point.</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
-                Mexico opens up when you can move through it with ease. I handle the moving parts, flights, buses, transfers, documents, and the apps that make it all work, so your trip starts the moment you leave the door, not after you've untangled the logistics. Whether it's a weekend in the mountains or a flight back home, you travel knowing someone has the details covered.
-              </p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>🛫 Flight research and booking assistance</li>
-                <li>🚌 Bus and ground transportation, ADO, BajíoGo, local transfers, airport runs</li>
-                <li>🏨 Hotel and accommodation coordination</li>
-                <li>🚗 Car rental guidance and local driving tips</li>
-                <li>📋 Travel document organization — passports, visas, entry requirements</li>
-                <li>🧳 Packing and shipping coordination</li>
-                <li>🗺️ Custom itinerary planning for Mexico travel</li>
-                <li>🔄 Layover and connection logistics</li>
-                <li>📱 Travel app setup — Uber, ADO, VivaAerobus, Aeromexico</li>
-                <li>🚨 Emergency travel support — canceled flights, lost documents, rebooking</li>
-              </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on the journey. I handle the map.</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
-                {CONCIERGE_TIERS.map((tier) => (
-                  <button
-                    key={tier.id}
-                    onClick={() => setTravelLogisticsTier(tier.id)}
-                    style={{
-                      backgroundColor: travelLogisticsTier === tier.id ? '#C4622D' : '#FDF6F0',
-                      color: travelLogisticsTier === tier.id ? 'white' : '#2C1810',
-                      border: travelLogisticsTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
-                      borderRadius: '6px',
-                      padding: '10px 16px',
-                      fontSize: '14px',
-                      fontWeight: travelLogisticsTier === tier.id ? 700 : 400,
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                    }}
-                  >
-                    {tier.label}
-                  </button>
-                ))}
+              <div className="concierge-card-header" onClick={() => setExpandedCard(expandedCard === 'tl' ? null : 'tl')}>
+                <div style={{ fontSize: '34px', marginBottom: '14px' }}>✈️</div>
+                <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Travel &amp; Logistics <span className="concierge-expand-icon">{expandedCard === 'tl' ? '▴' : '▾'}</span></h3>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Trying to piece together a trip when you don&rsquo;t know how the system works?</p>
               </div>
-              <button
-                onClick={() => {
-                  const tier = CONCIERGE_TIERS.find(t => t.id === travelLogisticsTier)
-                  if (tier) handlePayNow('Travel & Logistics', tier.stripe, tier.paypal)
-                }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
-              >
-                Pay Now
-              </button>
+              <div className={`concierge-card-body${expandedCard === 'tl' ? ' open' : ''}`}>
+                <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>Flights, buses, transfers, documents — coordinated.</p>
+                <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>Mexico opens up when you can move through it easily. I handle the moving parts — flights, buses, transfers, documents, and the apps that make it work — so your trip starts at the door, not after untangling logistics.</p>
+                <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
+                  <li>Flight research &amp; booking assistance</li>
+                  <li>Bus &amp; ground transportation (ADO, BajíoGo, local transfers)</li>
+                  <li>Hotel &amp; accommodation coordination</li>
+                  <li>Travel document organization</li>
+                  <li>Custom itinerary planning</li>
+                  <li>Packing &amp; shipping coordination</li>
+                  <li>Emergency travel support — canceled flights, lost documents, rebooking</li>
+                </ul>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You focus on the destination. I handle the logistics.</p>
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                  {CONCIERGE_TIERS.map((tier) => (
+                    <button key={tier.id} onClick={() => setTravelLogisticsTier(tier.id)} style={{ backgroundColor: travelLogisticsTier === tier.id ? '#C4622D' : '#FDF6F0', color: travelLogisticsTier === tier.id ? 'white' : '#2C1810', border: travelLogisticsTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: travelLogisticsTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                  ))}
+                </div>
+                <button onClick={() => { const tier = CONCIERGE_TIERS.find(t => t.id === travelLogisticsTier); if (tier) handlePayNow('Travel & Logistics', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
+              </div>
             </div>
 
-            {/* BOTTOM ROW: Senior Concierge · Medical Concierge · Local Companion */}
-
+            {/* Senior Concierge */}
             <div id="senior-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🌺</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Senior Concierge</h3>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Mexico is extraordinary at every age. Some days it just needs a little more navigation.</p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px' }}>
-                Why won't Amazon.mx take my card? How do I access my SSA account from Mexico? How do I get to a medical appointment when I don't have a car and don't speak Spanish?
-              </p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '12px' }}>
-                These aren't small problems. They turn a beautiful day in San Miguel into a frustrating one, and they're all solvable with the right person by your side.
-              </p>
-              <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>
-                The Senior Concierge is for anyone who wants to live fully and confidently in Mexico, with trusted support when the details get complicated.
-              </p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>📱 Tech support — phones, apps, banking portals, streaming, Amazon.mx</li>
-                <li>🏥 Medical accompaniment and appointment coordination</li>
-                <li>💊 Pharmacy navigation and prescription support</li>
-                <li>🏛️ SSA and government account setup and troubleshooting</li>
-                <li>💸 Online bill pay and money transfer support</li>
-                <li>🚗 Transportation coordination</li>
-                <li>📋 Post-surgery companionship and recovery support</li>
-                <li>🤝 Trusted referrals for home care, housekeeping, and healthcare providers</li>
-              </ul>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You didn't move to Mexico to struggle. You moved here to live.</p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
-                {CONCIERGE_TIERS.map((tier) => (
-                  <button
-                    key={tier.id}
-                    onClick={() => setSeniorConciergeTier(tier.id)}
-                    style={{
-                      backgroundColor: seniorConciergeTier === tier.id ? '#C4622D' : '#FDF6F0',
-                      color: seniorConciergeTier === tier.id ? 'white' : '#2C1810',
-                      border: seniorConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
-                      borderRadius: '6px',
-                      padding: '10px 16px',
-                      fontSize: '14px',
-                      fontWeight: seniorConciergeTier === tier.id ? 700 : 400,
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                    }}
-                  >
-                    {tier.label}
-                  </button>
-                ))}
+              <div className="concierge-card-header" onClick={() => setExpandedCard(expandedCard === 'sc' ? null : 'sc')}>
+                <div style={{ fontSize: '34px', marginBottom: '14px' }}>🌺</div>
+                <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Senior Concierge <span className="concierge-expand-icon">{expandedCard === 'sc' ? '▴' : '▾'}</span></h3>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Why won&rsquo;t it work — and who do you call when it doesn&rsquo;t?</p>
               </div>
-              <button
-                onClick={() => {
-                  const tier = CONCIERGE_TIERS.find(t => t.id === seniorConciergeTier)
-                  if (tier) handlePayNow('Senior Concierge', tier.stripe, tier.paypal)
-                }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
-              >
-                Pay Now
-              </button>
+              <div className={`concierge-card-body${expandedCard === 'sc' ? ' open' : ''}`}>
+                <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>Trusted support for everything Mexico throws at you.</p>
+                <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>SSA accounts, medical appointments, technology, transportation, pharmacy runs. These obstacles compound. This is for anyone who wants to live fully and confidently here, with a trusted person available when the details get complicated.</p>
+                <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
+                  <li>Tech support — phones, apps, banking, Amazon.mx</li>
+                  <li>SSA &amp; government account setup &amp; troubleshooting</li>
+                  <li>Online bill pay &amp; money transfer support</li>
+                  <li>Medical accompaniment &amp; appointment coordination</li>
+                  <li>Pharmacy navigation &amp; prescription support</li>
+                  <li>Transportation coordination</li>
+                  <li>Trusted referrals for home care, healthcare &amp; household help</li>
+                </ul>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You didn&rsquo;t move to Mexico to struggle with logistics.</p>
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                  {CONCIERGE_TIERS.map((tier) => (
+                    <button key={tier.id} onClick={() => setSeniorConciergeTier(tier.id)} style={{ backgroundColor: seniorConciergeTier === tier.id ? '#C4622D' : '#FDF6F0', color: seniorConciergeTier === tier.id ? 'white' : '#2C1810', border: seniorConciergeTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: seniorConciergeTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                  ))}
+                </div>
+                <button onClick={() => { const tier = CONCIERGE_TIERS.find(t => t.id === seniorConciergeTier); if (tier) handlePayNow('Senior Concierge', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
+              </div>
             </div>
 
+            {/* Medical Concierge */}
             <div id="medical-concierge" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🏥</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Medical Concierge</h3>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Navigating Mexican healthcare should not be something you do alone.</p>
-              <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px', flex: 1 }}>
-                <li>🔍 Pre-appointment research — finding the right specialist confirming English spoken verifying insurance acceptance</li>
-                <li>🚗 Transportation coordination to and from appointment</li>
-                <li>♿ Wheelchair assistance and physical accompaniment</li>
-                <li>🗣️ Doctor communication and real-time translation</li>
-                <li>🧪 Helping navigate any medical tests — labs imaging procedures</li>
-                <li>📋 Recording and organizing all medical information and records</li>
-                <li>📝 Post-appointment written summary — diagnosis instructions medications follow-up dates</li>
-                <li>💊 Prescription pickup on appointment day</li>
-                <li>💊 Explaining each medication — what it is for dosage where to fill it affordably</li>
-                <li>📄 Filling out all forms in Spanish and English</li>
-                <li>💳 Facilitating payments</li>
-                <li>📅 Follow-up appointment scheduling</li>
-                <li>📞 Communication with family back home if needed</li>
-                <li>🚨 Emergency contact coordination</li>
-                <li>🏥 Navigating Mexican healthcare vs US insurance reimbursement</li>
-                <li>👨‍⚕️ Accompanying to specialist referrals</li>
-              </ul>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
-                {MEDICAL_TIERS.map((tier) => (
-                  <button
-                    key={tier.id}
-                    onClick={() => setMedicalTier(tier.id)}
-                    style={{
-                      backgroundColor: medicalTier === tier.id ? '#C4622D' : '#FDF6F0',
-                      color: medicalTier === tier.id ? 'white' : '#2C1810',
-                      border: medicalTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
-                      borderRadius: '6px',
-                      padding: '10px 16px',
-                      fontSize: '14px',
-                      fontWeight: medicalTier === tier.id ? 700 : 400,
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                    }}
-                  >
-                    {tier.label}
-                  </button>
-                ))}
+              <div className="concierge-card-header" onClick={() => setExpandedCard(expandedCard === 'mc' ? null : 'mc')}>
+                <div style={{ fontSize: '34px', marginBottom: '14px' }}>🏥</div>
+                <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Medical Concierge <span className="concierge-expand-icon">{expandedCard === 'mc' ? '▴' : '▾'}</span></h3>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Facing a medical appointment in a language you don&rsquo;t speak?</p>
               </div>
-              <button
-                onClick={() => {
-                  const tier = MEDICAL_TIERS.find(t => t.id === medicalTier)
-                  if (tier) handlePayNow('Medical Concierge', tier.stripe, tier.paypal)
-                }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
-              >
-                Pay Now
-              </button>
+              <div className={`concierge-card-body${expandedCard === 'mc' ? ' open' : ''}`}>
+                <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>Accompaniment, translation, and coordination from first call to follow-up.</p>
+                <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>Finding the right doctor, getting there, understanding what&rsquo;s said, knowing what comes next. I handle every step so you leave an appointment informed, not overwhelmed.</p>
+                <ul style={{ fontSize: '14px', lineHeight: '1.9', color: '#2C1810', paddingLeft: '18px', marginBottom: '16px' }}>
+                  <li>Specialist research &amp; appointment coordination</li>
+                  <li>Transportation to &amp; from appointments</li>
+                  <li>Real-time translation &amp; doctor communication</li>
+                  <li>Medical records organization &amp; post-visit written summary</li>
+                  <li>Prescription pickup &amp; medication explanation</li>
+                  <li>Lab &amp; imaging navigation</li>
+                  <li>Insurance reimbursement guidance</li>
+                  <li>Emergency contact coordination</li>
+                </ul>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>You leave every appointment knowing exactly what happened and what&rsquo;s next.</p>
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                  {MEDICAL_TIERS.map((tier) => (
+                    <button key={tier.id} onClick={() => setMedicalTier(tier.id)} style={{ backgroundColor: medicalTier === tier.id ? '#C4622D' : '#FDF6F0', color: medicalTier === tier.id ? 'white' : '#2C1810', border: medicalTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: medicalTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                  ))}
+                </div>
+                <button onClick={() => { const tier = MEDICAL_TIERS.find(t => t.id === medicalTier); if (tier) handlePayNow('Medical Concierge', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
+              </div>
             </div>
 
+            {/* Local Companion */}
             <div id="local-companion" style={{ backgroundColor: '#FDF6F0', padding: '40px 32px', borderRadius: '8px', borderTop: '4px solid #C4622D', display: 'flex', flexDirection: 'column' }}>
-              <div style={{ fontSize: '34px', marginBottom: '14px' }}>🤝</div>
-              <h3 style={{ fontSize: '21px', marginBottom: '14px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Local Companion</h3>
-              <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '16px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Sometimes you just need someone who knows every corner.</p>
-              <div style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px', flex: 1 }}>
-                <p style={{ marginBottom: '14px' }}>
-                  Inspired by Japan's beloved rental-person culture, sometimes you just need a trusted local by your side. Whether it's dinner, a medical appointment, a cultural event, or simply exploring San Miguel with someone who knows every corner. I show up. No agenda. Just good company. This service includes any level of setup and coordination, from a simple meetup to a fully planned outing.
-                </p>
-                <p style={{ marginBottom: '10px' }}>A few things we could do together:</p>
-                <p style={{ marginBottom: '8px' }}><strong>Out and about:</strong> shopping mall runs in Queretaro, HEB / Costco / Home Depot trips, historical-town day trips, hot springs, wine vineyard visits, kayaking, scenic drives, nearby museums.</p>
-                <p style={{ marginBottom: '8px' }}><strong>Culture and nightlife:</strong> live music, supper clubs, the opera, the ballet, the circus, the carnival, art crawls, fashion shows, local holiday events.</p>
-                <p style={{ marginBottom: '14px' }}><strong>Everyday and social:</strong> consignment and thrift hopping, art class, dance class, a workout partner, rooftop happy hour, or help throwing a dinner party or event.</p>
-                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", margin: 0 }}>And more, if you can dream it, we can probably do it.</p>
+              <div className="concierge-card-header" onClick={() => setExpandedCard(expandedCard === 'lc' ? null : 'lc')}>
+                <div style={{ fontSize: '34px', marginBottom: '14px' }}>🤝</div>
+                <h3 style={{ fontSize: '21px', marginBottom: '10px', color: '#7D3B4E', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.3' }}>Local Companion <span className="concierge-expand-icon">{expandedCard === 'lc' ? '▴' : '▾'}</span></h3>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#5C3A2E', marginBottom: '0', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", lineHeight: '1.6' }}>Want to actually experience this city — with someone who knows every corner?</p>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
-                {COMPANION_TIERS.map((tier) => (
-                  <button
-                    key={tier.id}
-                    onClick={() => setCompanionTier(tier.id)}
-                    style={{
-                      backgroundColor: companionTier === tier.id ? '#C4622D' : '#FDF6F0',
-                      color: companionTier === tier.id ? 'white' : '#2C1810',
-                      border: companionTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810',
-                      borderRadius: '6px',
-                      padding: '10px 16px',
-                      fontSize: '14px',
-                      fontWeight: companionTier === tier.id ? 700 : 400,
-                      cursor: 'pointer',
-                      textAlign: 'left',
-                    }}
-                  >
-                    {tier.label}
-                  </button>
-                ))}
+              <div className={`concierge-card-body${expandedCard === 'lc' ? ' open' : ''}`}>
+                <p style={{ fontSize: '13px', fontWeight: '700', color: '#7D3B4E', textTransform: 'uppercase', letterSpacing: '1px', margin: '16px 0 8px' }}>A trusted local by your side for whatever the day calls for.</p>
+                <p style={{ fontSize: '15px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}>Inspired by Japan&rsquo;s rental-person culture — dinner, a day trip, a cultural event, a rooftop happy hour. I show up. No agenda. Whatever makes the day worth having.</p>
+                <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', marginBottom: '8px' }}><strong>Out &amp; about:</strong> Querétaro shopping, HEB/Costco runs, day trips, hot springs, wine country</p>
+                <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', marginBottom: '8px' }}><strong>Culture &amp; nightlife:</strong> live music, opera, ballet, art crawls, local events</p>
+                <p style={{ fontSize: '14px', lineHeight: '1.8', color: '#2C1810', marginBottom: '16px' }}><strong>Everyday &amp; social:</strong> thrift shopping, fitness classes, dinner parties, event support</p>
+                <p style={{ fontSize: '14px', fontStyle: 'italic', color: '#8B1A2A', marginBottom: '20px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)" }}>If you can dream it, we can probably do it.</p>
+                <hr style={{ border: 'none', borderTop: '1px solid #E8A598', margin: '0 0 16px' }} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                  {COMPANION_TIERS.map((tier) => (
+                    <button key={tier.id} onClick={() => setCompanionTier(tier.id)} style={{ backgroundColor: companionTier === tier.id ? '#C4622D' : '#FDF6F0', color: companionTier === tier.id ? 'white' : '#2C1810', border: companionTier === tier.id ? '1px solid #C4622D' : '1px solid #2C1810', borderRadius: '6px', padding: '10px 16px', fontSize: '14px', fontWeight: companionTier === tier.id ? 700 : 400, cursor: 'pointer', textAlign: 'left' }}>{tier.label}</button>
+                  ))}
+                </div>
+                <button onClick={() => { const tier = COMPANION_TIERS.find(t => t.id === companionTier); if (tier) handlePayNow('Local Companion', tier.stripe, tier.paypal) }} style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}>Pay Now</button>
               </div>
-              <button
-                onClick={() => {
-                  const tier = COMPANION_TIERS.find(t => t.id === companionTier)
-                  if (tier) handlePayNow('Local Companion', tier.stripe, tier.paypal)
-                }}
-                style={{ backgroundColor: '#C4622D', color: 'white', border: 'none', borderRadius: '6px', padding: '12px 24px', fontSize: '14px', fontWeight: 700, cursor: 'pointer', width: '100%' }}
-              >
-                Pay Now
-              </button>
+            </div>
+
+            {/* Closing CTA */}
+            <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '40px 0 8px' }}>
+              <p style={{ fontSize: '20px', color: 'white', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", marginBottom: '24px' }}>Not sure where to start?</p>
+              <a href="https://wa.me/5214731218554" target="_blank" rel="noreferrer" style={{ display: 'inline-block', backgroundColor: '#C4622D', color: 'white', padding: '16px 40px', borderRadius: '8px', fontSize: '16px', fontWeight: '700', textDecoration: 'none' }}>Message me on WhatsApp</a>
             </div>
 
           </div>

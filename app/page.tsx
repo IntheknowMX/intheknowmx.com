@@ -1379,10 +1379,6 @@ export default function Home() {
       {/* Contact */}
       <section className="responsive-section" style={{ backgroundColor: '#7D3B4E', textAlign: 'center' }}>
         <p style={{ color: '#E8C47A', fontSize: '12px', letterSpacing: '4px', marginBottom: '24px', fontWeight: '600' }}>CONTACT</p>
-        <p style={{ color: '#F5E0E6', fontSize: '17px', maxWidth: '480px', margin: '0 auto 48px', lineHeight: '1.7' }}>
-          Choose the way you prefer to connect. We respond personally and directly.
-        </p>
-
         {/* WhatsApp — primary */}
         <div style={{ marginBottom: '32px' }}>
           <a

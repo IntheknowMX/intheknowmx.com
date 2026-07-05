@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import MexicoPathQuiz from './components/MexicoPathQuiz'
 import PaymentModal from './components/PaymentModal'
+import NavBar from './components/NavBar'
 
 const CONCIERGE_TIERS = [
   { id: 'Hourly', label: 'Hourly (2hr min) — $1,300 MXN', stripe: 'https://buy.stripe.com/bJe8wPgPW0R8dh6d282880X', paypal: 'https://paypal.com/ncp/payment/M4Q2XASL63F42' },
@@ -25,7 +26,6 @@ const COMPANION_TIERS = [
 ]
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [paymentModalOpen, setPaymentModalOpen] = useState(false)
   const [selectedService, setSelectedService] = useState('')
   const [modalStripeUrl, setModalStripeUrl] = useState<string | undefined>()
@@ -76,15 +76,6 @@ export default function Home() {
       <PaymentModal open={paymentModalOpen} onClose={closePaymentModal} service={selectedService} stripeUrl={modalStripeUrl} paypalUrl={modalPaypalUrl} />
       <style>{`
         .page-root { }
-        .main-nav { background-color: #FDF6F0; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E8A598; position: sticky; top: 0; z-index: 100; }
-        .nav-brand { font-size: 18px; font-weight: bold; color: #7D3B4E; letter-spacing: 2px; font-family: var(--font-playfair, 'Playfair Display', Georgia, serif); }
-        .nav-right { display: flex; align-items: center; gap: 20px; position: relative; }
-        .nav-links { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
-        .nav-links a { color: #2C1810; text-decoration: none; font-size: 14px; }
-        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px 8px; font-size: 24px; color: #2C1810; line-height: 1; }
-        .mobile-menu-close-row { display: none; }
-        .mobile-menu-cta { display: none; }
-        .nav-cta { background-color: #C4622D; color: white; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap; }
         .hero-section { position: relative; min-height: 90vh; overflow: hidden; }
         .hero-img { object-fit: cover; object-position: center top; }
         .hero-gradient { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to left, rgba(253,246,240,0.93) 0%, rgba(253,246,240,0.93) 8%, rgba(253,246,240,0.73) 19%, rgba(253,246,240,0.45) 30%, rgba(253,246,240,0.19) 38%, rgba(253,246,240,0) 42%), linear-gradient(to right, rgba(253,246,240,0.91) 0%, rgba(253,246,240,0.91) 28%, rgba(253,246,240,0.65) 41%, rgba(253,246,240,0.35) 51%, rgba(253,246,240,0.10) 56.5%, rgba(253,246,240,0) 58.5%); }
@@ -130,16 +121,6 @@ export default function Home() {
         .buy-col-img { flex: 0 0 40%; order: 2; text-align: center; }
         .pricing-booking-row { display: flex; gap: 32px; align-items: flex-start; }
         @media (max-width: 767px) {
-          .main-nav { padding: 16px 20px; }
-          .nav-right { position: static; }
-          .nav-cta { display: none; }
-          .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #FDF6F0; box-shadow: 0 8px 24px rgba(44,24,16,.12); flex-direction: column; z-index: 110; border-top: 1px solid #E8A598; }
-          .nav-links.open { display: flex; }
-          .nav-links a { padding: 14px 24px; border-bottom: 1px solid #E8A598; color: #2C1810; font-size: 15px; }
-          .nav-toggle { display: flex; align-items: center; justify-content: center; }
-          .mobile-menu-close-row { display: flex; justify-content: flex-end; padding: 10px 16px; border-bottom: 1px solid #E8A598; }
-          .mobile-menu-close-btn { background: none; border: none; font-size: 22px; cursor: pointer; color: #2C1810; padding: 4px 8px; line-height: 1; }
-          .mobile-menu-cta { display: block; margin: 16px !important; background-color: #C4622D !important; color: white !important; text-align: center; padding: 16px !important; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 15px; border-bottom: none !important; }
           .hero-section { min-height: 82vh; }
           .hero-img { object-position: 31% top; }
           .hero-gradient { background: linear-gradient(to right, rgba(253,246,240,0.90) 0%, rgba(253,246,240,0.90) 55%, rgba(253,246,240,0.65) 68%, rgba(253,246,240,0.28) 80%, rgba(253,246,240,0) 88%); }
@@ -168,30 +149,7 @@ export default function Home() {
         }
       `}</style>
 
-      {/* Navigation */}
-      <nav className="main-nav">
-        <div className="nav-brand">IN THE KNOW MEXICO</div>
-        <div className="nav-right">
-          <button className="nav-toggle" aria-label="Toggle navigation" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            ☰
-          </button>
-          <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-            <div className="mobile-menu-close-row">
-              <button className="mobile-menu-close-btn" aria-label="Close menu" onClick={() => setMobileMenuOpen(false)}>✕</button>
-            </div>
-            <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-            <a href="/residency" onClick={() => setMobileMenuOpen(false)}>Residency</a>
-            <a href="#services" onClick={() => setMobileMenuOpen(false)}>Concierge</a>
-            <a href="#rentals" onClick={() => setMobileMenuOpen(false)}>Rentals</a>
-            <a href="#properties" onClick={() => setMobileMenuOpen(false)}>Owning</a>
-            <a href="#caretaking" onClick={() => setMobileMenuOpen(false)}>Property & Pet Care</a>
-            <a href="#welcome-table" onClick={() => setMobileMenuOpen(false)}>Welcome Table</a>
-            <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
-            <a className="mobile-menu-cta" href="#planning-calls" onClick={() => setMobileMenuOpen(false)}>Book a Planning Call</a>
-          </div>
-          <a className="nav-cta" href="#planning-calls">Book a Planning Call</a>
-        </div>
-      </nav>
+      <NavBar />
 
       {/* Hero */}
       <section className="hero-section">

@@ -1,46 +1,11 @@
-'use client'
 /* eslint-disable react/no-unescaped-entities */
 import ResidencyChecker from '../components/ResidencyChecker'
+import NavBar from '../components/NavBar'
 
 export default function ResidencyPage() {
   return (
     <main style={{ fontFamily: "var(--font-inter, 'Inter', 'Helvetica Neue', sans-serif)", backgroundColor: '#FDF6F0', color: '#2C1810' }}>
-      {/* Navigation */}
-      <nav style={{
-        backgroundColor: '#FDF6F0',
-        padding: '20px 40px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        borderBottom: '1px solid #E8A598',
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-      }}>
-        <a href="/" style={{ fontSize: '18px', fontWeight: 'bold', color: '#7D3B4E', letterSpacing: '2px', fontFamily: "var(--font-playfair, 'Playfair Display', Georgia, serif)", textDecoration: 'none' }}>
-          IN THE KNOW MEXICO
-        </a>
-        <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-          <a href="/#about" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>About</a>
-          <a href="/#services" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Residency</a>
-          <a href="/#rentals" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Renting</a>
-          <a href="/#properties" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Owning</a>
-          <a href="/#caretaking" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Property & Pet Care</a>
-          <a href="/#local-companion" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Local Companion</a>
-          <a href="/#welcome-table" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Welcome Table</a>
-          <a href="/#testimonials" style={{ color: '#2C1810', textDecoration: 'none', fontSize: '14px' }}>Testimonials</a>
-          <a href="https://calendar.app.google/qfwutaFsrSaqWVkw7" target="_blank" style={{
-            backgroundColor: '#C4622D',
-            color: 'white',
-            padding: '10px 22px',
-            borderRadius: '4px',
-            textDecoration: 'none',
-            fontSize: '14px',
-            fontWeight: '600',
-            letterSpacing: '0.5px',
-          }}>Strategy Session</a>
-        </div>
-      </nav>
+      <NavBar basePath="/" />
 
       {/* Hero */}
       <section style={{ backgroundColor: '#8B1A2A', padding: '90px 40px', textAlign: 'center' }}>
